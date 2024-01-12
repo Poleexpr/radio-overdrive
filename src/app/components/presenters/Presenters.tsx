@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import { Element } from 'react-scroll'
 
 import Image from 'next/image'
 import styles from './presenters.module.scss'
@@ -102,12 +103,14 @@ const Presenters = () => {
 	))
 
 	return (
-		<section id='presenters'>
-			<div className={styles.container}>
-				<h2 className={uikit.title2}>Ведущие</h2>
-				<div className={styles.cards_container}>{cardElements}</div>
-			</div>
-		</section>
+		<Element name='presenters' className='element'>
+			<section>
+				<div className={styles.container}>
+					<h2 className={uikit.title2}>Ведущие</h2>
+					<div className={styles.cards_container}>{cardElements}</div>
+				</div>
+			</section>
+		</Element>
 	)
 }
 
