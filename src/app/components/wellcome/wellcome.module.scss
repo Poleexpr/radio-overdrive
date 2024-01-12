@@ -1,0 +1,29 @@
+.container {
+	margin-top: 230px;
+	margin-bottom: 200px;
+	display: grid;
+	justify-content: center;
+}
+
+.title {
+	margin-top: 10px;
+}
+
+.description_container {
+	margin-top: 70px;
+	display: flex;
+	gap: 100px;
+	justify-self: center;
+	align-items: center;
+}
+
+.donation_wrapper {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+.slogan {
+	margin-top: 10px;
+	margin-bottom: 15px;
+}

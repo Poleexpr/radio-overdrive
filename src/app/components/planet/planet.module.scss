@@ -1,0 +1,21 @@
+.planet_wrapper {
+	background: url(../../../../public/texture.png),
+		linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%),
+		url(../../../../public/over-planet.png) center bottom no-repeat;
+	background-size: cover;
+	width: 100%;
+}
+
+.container {
+	width: 100%;
+	display: grid;
+	grid-template-rows: 1fr;
+	gap: 310px;
+	align-items: end;
+	padding-top: 50px;
+}
+
+.link_subscribe {
+	justify-self: center;
+	margin-bottom: 200px;
+}

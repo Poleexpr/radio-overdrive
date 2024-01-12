@@ -1,0 +1,26 @@
+.swiper-slide-active{
+    opacity: 1 !important;
+}
+
+swiper-slide{
+    opacity: 0.2;
+}
+
+.custom-navigation{
+    position: relative;
+    top: 30px;
+}
+
+.custom-next, .custom-prev{
+    position: absolute;
+    top: 90%;
+    z-index: 10;
+}
+
+.custom-next{
+    left: 57vw;
+}
+
+.custom-prev{
+    left: 40%;
+}

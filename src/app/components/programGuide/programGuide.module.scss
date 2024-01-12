@@ -1,0 +1,27 @@
+.container {
+	width: 90vw;
+	margin: 0 auto;
+	padding-top: 200px;
+}
+
+.title {
+	margin-bottom: 120px;
+}
+
+.description_wrapper {
+	width: 90vw;
+	margin: 0 auto;
+	margin-top: 130px;
+	display: flex;
+	justify-content: center;
+}
+
+.description {
+	width: 30%;
+	text-align: center;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}

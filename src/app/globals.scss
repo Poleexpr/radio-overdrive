@@ -1,0 +1,22 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	color: #fff;
+	background: #000;
+	font-family: var(--micraDi);
+	background-color: black;
+	background-image: url(../../public/texture.png);
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
