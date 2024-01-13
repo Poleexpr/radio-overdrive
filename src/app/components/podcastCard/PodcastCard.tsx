@@ -32,7 +32,7 @@ const PodcastCard = ({ posts = [] }) => {
 								{post.pubDate}
 							</div>
 							<h4 className={`${uikit.title5} ${styles.title}`}>
-								{post.title}
+								{post.title.slice(post.title.indexOf('#'))}
 							</h4>
 							<div className={`${uikit.text} ${styles.content}`}>
 								{post.content}
