@@ -11,7 +11,7 @@ const ProgramGuide = () => {
 			<div className={styles.description_wrapper}>
 				<p className={`${styles.description} ${uikit.text}`}>
 					И — всю неделю новые релизы топовых музыкантов. Не забудь подписаться
-					на нас в Телеграм, чтобы больше ничего не пропустить.
+					на нас в Телеграм, чтобы больше ничего не пропустить.
 				</p>
 			</div>
 		</section>

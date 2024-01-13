@@ -1,26 +1,27 @@
-.swiper-slide-active{
-    opacity: 1 !important;
+.swiper-slide-active {
+	opacity: 1 !important;
 }
 
-swiper-slide{
-    opacity: 0.2;
+swiper-slide {
+	opacity: 0.2;
 }
 
-.custom-navigation{
-    position: relative;
-    top: 30px;
+.custom-navigation {
+	position: relative;
+	top: 0px;
 }
 
-.custom-next, .custom-prev{
-    position: absolute;
-    top: 90%;
-    z-index: 10;
+.custom-next,
+.custom-prev {
+	position: absolute;
+	top: 0px;
+	z-index: 10;
 }
 
-.custom-next{
-    left: 57vw;
+.custom-next {
+	right: calc(50% - 160px);
 }
 
-.custom-prev{
-    left: 40%;
+.custom-prev {
+	left: calc(50% - 160px);
 }
