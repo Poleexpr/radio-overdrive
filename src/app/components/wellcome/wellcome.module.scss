@@ -1,5 +1,5 @@
 .container {
-	margin-top: 230px;
+	margin-top: 265px;
 	margin-bottom: 200px;
 	display: grid;
 	justify-content: center;
@@ -12,7 +12,7 @@
 .description_container {
 	margin-top: 70px;
 	display: flex;
-	gap: 100px;
+	gap: 85px;
 	justify-self: center;
 	align-items: center;
 }
@@ -26,4 +26,15 @@
 .slogan {
 	margin-top: 10px;
 	margin-bottom: 15px;
+}
+
+@media screen and (max-width: 1440px) {
+	.container {
+		margin-top: 310px;
+		margin-bottom: 230px;
+	}
+
+	.description_container {
+		gap: 75px;
+	}
 }
