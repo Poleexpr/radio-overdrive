@@ -1,3 +1,7 @@
+'use client'
+
+import { ReactSVG } from 'react-svg'
+
 import styles from './footer.module.scss'
 import uikit from '../uikit.module.scss'
 import Image from 'next/image'
@@ -44,14 +48,7 @@ const Footer = () => {
 				<div className={styles.subcontainer_second}>
 					<a href='#' className={styles.mail_link}>
 						<div className={styles.mail_logo_wrapper}>
-							<Image
-								className={styles.mail_logo}
-								src='/mail.svg'
-								alt='mail logo'
-								width={35}
-								height={23}
-								priority
-							/>
+							<ReactSVG src='mail.svg' />
 						</div>
 						<p className={uikit.text}>radio@russiandino.ru</p>
 					</a>
