@@ -19,3 +19,14 @@
 	justify-self: center;
 	margin-bottom: 200px;
 }
+
+@media screen and (max-width: 1440px) {
+	.container {
+		padding-top: 40px;
+		gap: 160px;
+	}
+
+	.link_subscribe {
+		margin-bottom: 40px;
+	}
+}
