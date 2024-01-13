@@ -14,34 +14,13 @@ const Footer = () => {
 					<p className={uikit.title6}>Овердрайв</p>
 					<div className={styles.nets_wrapper}>
 						<div className={styles.mail_logo_wrapper}>
-							<Image
-								className={`${styles.mail_logo} ${styles.tg_logo}`}
-								src='/tg.svg'
-								alt='telegram logo'
-								width={35.11}
-								height={30.53}
-								priority
-							/>
+							<ReactSVG src='tg.svg' />
 						</div>
 						<div className={styles.mail_logo_wrapper}>
-							<Image
-								className={`${styles.mail_logo} ${styles.vk_logo}`}
-								src='/vk.svg'
-								alt='vk logo'
-								width={35}
-								height={22}
-								priority
-							/>
+							<ReactSVG src='vk.svg' />
 						</div>
 						<div className={styles.mail_logo_wrapper}>
-							<Image
-								className={styles.mail_logo}
-								src='/insta.svg'
-								alt='instagram logo'
-								width={33}
-								height={33}
-								priority
-							/>
+							<ReactSVG src='instagram.svg' />
 						</div>
 					</div>
 				</div>
