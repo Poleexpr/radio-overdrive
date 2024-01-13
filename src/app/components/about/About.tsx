@@ -16,8 +16,17 @@ const About = () => {
 							className={styles.img}
 							src='/about.png'
 							alt='About img'
-							layout='fill'
-							priority
+							layout='responsive'
+							width={1000}
+							height={1000}
+						/>
+						<Image
+							className={styles.img_laptop}
+							src='/about-laptop.png'
+							alt='About img'
+							layout='responsive'
+							width={1000}
+							height={1000}
 						/>
 					</div>
 					<div className={styles.container_text}>
