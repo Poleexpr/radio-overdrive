@@ -44,14 +44,8 @@ const Footer = () => {
 					</div>
 					<div className={styles.rd_wrapper}>
 						<a className={styles.rd}>
-							<Image
-								className={styles.mail_logo}
-								src='/rd-logo.svg'
-								alt='rd logo'
-								width={37}
-								height={70}
-								priority
-							/>
+							<ReactSVG src='rd-logo.svg' />
+
 							<div className={styles.rd_text}>
 								<p>made by</p>
 								<p className={styles.rd_russkiy}>Russkiy</p>
