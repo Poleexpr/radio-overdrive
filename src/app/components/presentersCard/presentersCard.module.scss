@@ -13,11 +13,11 @@
 	.card_info {
 		display: none;
 	}
-
+	/*
 	.img_wrapper {
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 	}
-	/*
+	
 	.card_img {
 		clip-path: polygon(0 0, 65% 0, 65% 100%, 0% 100%);
 	}
@@ -53,5 +53,22 @@
 	.img_wrapper {
 		width: 200px;
 		height: 495px;
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	.container {
+		gap: 20px;
+	}
+
+	.card_info {
+		max-width: 55%;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.img_wrapper {
+		width: 140px;
+		height: 347px;
 	}
 }

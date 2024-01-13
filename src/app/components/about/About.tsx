@@ -15,7 +15,7 @@ const About = () => {
 						<Image
 							className={styles.img}
 							src='/about.png'
-							alt='About img'
+							alt='коллаж из трех картинок с изображением космоса, глаза и концерта'
 							layout='responsive'
 							width={1000}
 							height={1000}
@@ -23,7 +23,7 @@ const About = () => {
 						<Image
 							className={styles.img_laptop}
 							src='/about-laptop.png'
-							alt='About img'
+							alt='коллаж из трех картинок с изображением космоса, глаза и концерта'
 							layout='responsive'
 							width={1000}
 							height={1000}

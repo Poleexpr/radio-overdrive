@@ -17,9 +17,8 @@ const PresentersCard = (props: any) => {
 				<Image
 					className={styles.card_img}
 					src={props.img}
-					alt='Barnashov'
+					alt='фотография ведущего'
 					layout='fill'
-					priority
 				/>
 			</div>
 			<div className={styles.card_info}>

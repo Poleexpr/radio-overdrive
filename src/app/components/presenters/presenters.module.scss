@@ -1,12 +1,22 @@
-.container{
-    width: 90vw;
-    margin: 0 auto;
-    padding-top: 180px;
+.container {
+	width: 90vw;
+	margin: 0 auto;
+	padding-top: 180px;
 }
 
-.cards_container{
-    margin-top: 130px;
-    display: flex;
-    gap: 40px;
+.cards_container {
+	margin-top: 130px;
+	display: flex;
+	gap: 40px;
 }
 
+@media screen and (max-width: 1440px) {
+	.container {
+		padding-top: 120px;
+	}
+
+	.cards_container {
+		margin-top: 80px;
+		gap: 20px;
+	}
+}
