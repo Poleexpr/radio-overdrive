@@ -30,3 +30,13 @@
 		margin-bottom: 40px;
 	}
 }
+
+@media screen and (max-width: 1024px) {
+	.container {
+		gap: 100px;
+	}
+
+	.link_subscribe {
+		margin-bottom: 0px;
+	}
+}
