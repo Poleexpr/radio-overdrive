@@ -31,3 +31,9 @@
 		gap: 10px;
 	}
 }
+
+@media screen and (max-width: 414px) {
+	.cards_container {
+		display: none;
+	}
+}
