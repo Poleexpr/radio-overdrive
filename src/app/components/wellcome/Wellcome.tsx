@@ -9,7 +9,7 @@ const Wellcome = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.title_wrapper}>
-				<p className={uikit.title}>это</p>
+				<p className={`${styles.subtitle} ${uikit.title}`}>это</p>
 				<h1 className={`${styles.title} ${uikit.title2}`}>РАДИО Овердрайв</h1>
 			</div>
 			<div className={styles.description_container}>
