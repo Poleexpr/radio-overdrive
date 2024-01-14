@@ -5,7 +5,6 @@ import Image from 'next/image'
 const PresentersCard = (props: any) => {
 	return (
 		<div
-			style={{ marginTop: props.margin }}
 			className={
 				props.on
 					? `${styles.container}`

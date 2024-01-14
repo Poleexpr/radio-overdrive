@@ -38,6 +38,7 @@
 	}
 
 	.cards_container {
-		display: none;
+		flex-direction: column;
+		gap: 30px;
 	}
 }
