@@ -42,6 +42,13 @@
 }
 
 @media screen and (max-width: 414px) {
+	.planet_wrapper {
+		background: url(../../../../public/texture.png),
+			linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%),
+			url(../../../../public/over-planet-mobile.png) center bottom no-repeat;
+		background-size: contain;
+	}
+
 	.container {
 		padding-top: 30px;
 		gap: 80px;

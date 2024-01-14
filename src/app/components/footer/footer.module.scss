@@ -151,3 +151,38 @@
 		gap: 10px;
 	}
 }
+
+@media screen and (max-width: 414px) {
+	.subcontainer_first {
+		gap: 30px;
+		margin-bottom: 15px;
+	}
+
+	.subcontainer_second {
+		grid-template-columns: 1fr;
+		justify-content: center;
+	}
+
+	.nets_wrapper {
+		gap: 12px;
+	}
+
+	.net_logo svg {
+		width: 40px;
+		height: 40px;
+	}
+
+	.mail_link {
+		margin-bottom: 35px;
+		justify-content: center;
+	}
+
+	.slogan {
+		margin: 15px 0 25px 0;
+	}
+
+	.rd_wrapper {
+		margin-top: 35px;
+		justify-self: center;
+	}
+}
