@@ -55,3 +55,24 @@
 		margin-bottom: 20px;
 	}
 }
+
+@media screen and (max-width: 414px) {
+	.container {
+		width: 85vw;
+		margin: 0 auto;
+		padding-top: 50px;
+		padding-bottom: 75px;
+		align-items: flex-start;
+	}
+
+	.title {
+		margin-bottom: 25px;
+		text-align: left;
+	}
+
+	.text {
+		width: auto;
+		margin-bottom: 12px;
+		text-align: left;
+	}
+}

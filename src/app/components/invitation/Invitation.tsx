@@ -6,7 +6,7 @@ const Invitation = () => {
 		<section className={styles.wrapper}>
 			<div className={styles.container}>
 				<h3 className={`${uikit.title3} ${styles.title}`}>
-					ХОЧЕШЬ СТАТЬ ВЕДУЩИМ РАДИО ОВЕРДРАЙВ?
+					ХОЧЕШЬ СТАТЬ ВЕДУЩИМ РАДИО ОВЕРДРАЙВ?
 				</h3>
 				<p className={`${uikit.text2} ${styles.text}`}>
 					Возможно, мы ищем именно тебя: неважно в какой точке Земли ты живёшь,

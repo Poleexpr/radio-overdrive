@@ -52,6 +52,10 @@
 }
 
 @media screen and (max-width: 414px) {
+	.container {
+		width: 85vw;
+	}
+
 	.wrapper {
 		width: 280px;
 		padding-bottom: 60px;
