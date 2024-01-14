@@ -34,7 +34,7 @@ const Schedule = () => {
 		register()
 
 		const params = {
-			slidesPerView: 3,
+			//slidesPerView: 1,
 			grabCursor: true,
 			centeredSlides: true,
 
@@ -44,8 +44,11 @@ const Schedule = () => {
 			},
 			loop: true,
 			breakpoints: {
-				768: {
+				210: {
 					slidesPerView: 1,
+				},
+				768: {
+					slidesPerView: 3,
 				},
 			},
 		}

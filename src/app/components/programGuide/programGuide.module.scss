@@ -53,3 +53,21 @@
 		width: 400px;
 	}
 }
+
+@media screen and (max-width: 414px) {
+	.container {
+		padding-top: 40px;
+	}
+
+	.title {
+		margin-bottom: 40px;
+	}
+
+	.description_wrapper {
+		margin-top: 40px;
+	}
+
+	.description {
+		width: 280px;
+	}
+}
