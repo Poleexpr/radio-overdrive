@@ -38,3 +38,18 @@
 		gap: 75px;
 	}
 }
+
+@media screen and (max-width: 1024px) {
+	.container {
+		margin-top: 200px;
+		margin-bottom: 55px;
+	}
+
+	.description_container {
+		gap: 67px;
+	}
+
+	.playTgLink svg {
+		width: 160px;
+	}
+}

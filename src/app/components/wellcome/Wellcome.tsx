@@ -15,7 +15,7 @@ const Wellcome = () => {
 			<div className={styles.description_container}>
 				<div>
 					<a href='https://t.me/rocknword' target='_blank'>
-						<ReactSVG src='playTgLink.svg' />
+						<ReactSVG className={styles.playTgLink} src='playTgLink.svg' />
 					</a>
 				</div>
 				<a href='https://t.me/rocknword/11681' target='_blank'>
