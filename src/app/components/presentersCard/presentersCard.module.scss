@@ -98,3 +98,14 @@
 		max-width: 65%;
 	}
 }
+
+@media screen and (max-width: 870px) {
+	.img_wrapper {
+		width: 85px;
+		height: 252px;
+	}
+
+	.card_info {
+		max-width: 65%;
+	}
+}
