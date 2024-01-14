@@ -126,7 +126,7 @@
 
 .link_text {
 	font-family: var(--cocomat), sans-serif;
-	font-size: 20px;
+	font-size: 22px;
 	font-weight: 700;
 	line-height: 140%;
 	text-transform: uppercase;
@@ -206,9 +206,7 @@
 	}
 
 	.text {
-		font-family: var(--cocomat), sans-serif;
 		font-size: 16px;
-		font-weight: 400;
 		line-height: 140%;
 	}
 
@@ -225,11 +223,91 @@
 		font-size: 18px;
 	}
 
+	.link_text {
+		font-size: 20px;
+	}
+
+	.link_text2 {
+		font-size: 20px;
+	}
+
 	.link {
 		width: 300px;
 		height: 70px;
 
 		font-size: 16px;
 		letter-spacing: 0.32px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.title {
+		font-size: 28px;
+		letter-spacing: 1.4px;
+	}
+
+	.title2 {
+		font-size: 46px;
+		letter-spacing: 2.3px;
+	}
+
+	.title3 {
+		font-size: 28px;
+		letter-spacing: 1.4px;
+	}
+
+	.title4 {
+		font-size: 20px;
+	}
+
+	.title5 {
+		font-size: 18px;
+	}
+
+	.title6 {
+		font-size: 30px;
+	}
+
+	.text {
+		font-size: 15px;
+		line-height: 130%;
+	}
+
+	.text2 {
+		font-size: 18px;
+	}
+
+	.text3 {
+		font-size: 16px;
+		letter-spacing: 0.32px;
+	}
+
+	.text4 {
+		font-size: 15px;
+	}
+
+	.text5 {
+		font-size: 15px;
+		letter-spacing: 0.3px;
+	}
+
+	.text8 {
+		font-size: 16px;
+	}
+
+	.link_text {
+		font-size: 18px;
+	}
+
+	.link_text2 {
+		font-size: 18px;
+	}
+
+	.link {
+		width: 235px;
+		height: 60px;
+
+		font-size: 15px;
+		letter-spacing: 0.3px;
 	}
 }
