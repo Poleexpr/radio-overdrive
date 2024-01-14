@@ -26,7 +26,17 @@ swiper-slide {
 	left: calc(50% - 160px);
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 1024px) {
+	.custom-next {
+		right: calc(50% - 130px);
+	}
+
+	.custom-prev {
+		left: calc(50% - 130px);
+	}
+}
+
+@media screen and (max-width: 500px) {
 	.custom-next {
 		right: 0;
 	}

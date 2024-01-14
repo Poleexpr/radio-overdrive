@@ -35,3 +35,13 @@
 		margin-top: 20px;
 	}
 }
+
+@media screen and (max-width: 744px) {
+	.description {
+		width: 90vw;
+		text-align: center;
+	}
+	.button {
+		margin-top: 10px;
+	}
+}

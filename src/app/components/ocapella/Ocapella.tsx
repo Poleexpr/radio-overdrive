@@ -24,7 +24,7 @@ const Ocapella = () => {
 		<>
 			<div className={styles.container}>
 				<h2 className={uikit.title2}>о’капелла</h2>
-				<p className={uikit.text2}>Подкаст о музыке как феномене и чуде.</p>
+				<p className={`${styles.description} ${uikit.text2}`}>Подкаст о музыке как феномене и чуде.</p>
 				<button
 					onClick={togglePodcast}
 					className={`${uikit.link} ${styles.button}`}

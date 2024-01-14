@@ -47,7 +47,7 @@ const Schedule = () => {
 				210: {
 					slidesPerView: 1,
 				},
-				768: {
+				900: {
 					slidesPerView: 3,
 				},
 			},

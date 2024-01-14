@@ -51,13 +51,13 @@
 	}
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 744px) {
 	.container {
 		width: 85vw;
 	}
 
 	.wrapper {
-		width: 280px;
+		width: auto;
 		padding-bottom: 60px;
 	}
 
