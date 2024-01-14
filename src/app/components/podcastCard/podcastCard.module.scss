@@ -69,11 +69,24 @@
 
 @media screen and (max-width: 1440px) {
 	.container {
-		grid-template-columns: 20% 1fr;
 		gap: 20px;
 	}
 
 	.content {
 		width: 90%;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.content {
+		width: 95%;
+	}
+
+	.date {
+		margin-bottom: 17px;
+	}
+
+	.title {
+		margin-bottom: 20px;
 	}
 }

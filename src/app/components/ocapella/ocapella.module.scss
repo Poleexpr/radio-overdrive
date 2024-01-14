@@ -24,3 +24,14 @@
 		margin-top: 20px;
 	}
 }
+
+@media screen and (max-width: 1024px) {
+	.container {
+		margin-bottom: 40px;
+		padding: 60px 0;
+	}
+
+	.button {
+		margin-top: 20px;
+	}
+}
