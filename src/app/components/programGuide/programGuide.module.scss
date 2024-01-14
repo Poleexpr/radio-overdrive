@@ -43,3 +43,13 @@
 		width: 450px;
 	}
 }
+
+@media screen and (max-width: 1024px) {
+	.title {
+		margin-bottom: 60px;
+	}
+
+	.description {
+		width: 400px;
+	}
+}
