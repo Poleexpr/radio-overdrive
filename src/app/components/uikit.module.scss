@@ -311,3 +311,44 @@
 		letter-spacing: 0.3px;
 	}
 }
+
+@media screen and (max-width: 414px) {
+	.title {
+		font-size: 22px;
+		letter-spacing: 1.1px;
+	}
+
+	.title2 {
+		font-size: 32px;
+		letter-spacing: 1.6px;
+	}
+
+	.title3 {
+		font-size: 20px;
+		letter-spacing: 1px;
+	}
+
+	.title4 {
+		font-size: 18px;
+	}
+
+	.title5 {
+		font-size: 16px;
+	}
+
+	.title6 {
+		font-size: 20px;
+	}
+
+	.text2 {
+		font-size: 15px;
+	}
+
+	.link_text {
+		font-size: 15px;
+	}
+
+	.link_text2 {
+		font-size: 15px;
+	}
+}
