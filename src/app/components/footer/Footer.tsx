@@ -13,22 +13,17 @@ const Footer = () => {
 				<div className={styles.subcontainer_first}>
 					<p className={uikit.title6}>Овердрайв</p>
 					<div className={styles.nets_wrapper}>
-						<div className={styles.mail_logo_wrapper}>
-							<ReactSVG src='tg.svg' />
-						</div>
-						<div className={styles.mail_logo_wrapper}>
-							<ReactSVG src='vk.svg' />
-						</div>
-						<div className={styles.mail_logo_wrapper}>
-							<ReactSVG src='instagram.svg' />
-						</div>
+						<ReactSVG className={styles.net_logo} src='tg.svg' />
+
+						<ReactSVG className={styles.net_logo} src='vk.svg' />
+
+						<ReactSVG className={styles.net_logo} src='instagram.svg' />
 					</div>
 				</div>
 				<div className={styles.subcontainer_second}>
 					<a href='#' className={styles.mail_link}>
-						<div className={styles.mail_logo_wrapper}>
-							<ReactSVG src='mail.svg' />
-						</div>
+						<ReactSVG className={styles.net_logo} src='mail.svg' />
+
 						<p className={uikit.text}>radio@russiandino.ru</p>
 					</a>
 
@@ -39,7 +34,7 @@ const Footer = () => {
 							Мы вещаем до последнего
 						</p>
 						<p className={uikit.text}>
-							© 2024 Радио Овердрайв. Санкт-Петербург. Все права защищены.
+							© 2024 Радио Овердрайв. Санкт-Петербург. Все права защищены.
 						</p>
 					</div>
 					<div className={styles.rd_wrapper}>

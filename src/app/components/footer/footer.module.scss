@@ -44,36 +44,15 @@
 	align-self: center;
 }
 
-.mail_logo_wrapper {
-	position: relative;
-	width: 58px;
-	height: 58px;
-}
-
-.mail_logo {
-	position: relative;
-	z-index: 1000;
-}
-
-.tg_logo {
-	left: -3px;
-}
-
-.vk_logo {
-	left: -0.5px;
-}
-
-.mail_text {
-	font-family: var(--cocomat), sans-serif;
-	font-size: 18px;
-	font-weight: 400;
-	line-height: 140%;
-}
-
 .nets_wrapper {
 	display: flex;
 	gap: 30px;
 	justify-content: center;
+}
+
+.net_logo svg {
+	width: 58px;
+	height: 58px;
 }
 
 .rd_wrapper {
@@ -130,5 +109,27 @@
 		filter: blur(20px);
 		transform: translate3d(0, 0, 0);
 		opacity: 1;
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	.subcontainer_first {
+		display: grid;
+		justify-content: center;
+		gap: 30px;
+		margin-bottom: 25px;
+	}
+
+	.heshtag {
+		margin-bottom: 5px;
+	}
+
+	.slogan {
+		margin: 25px 0 30px 0;
+	}
+
+	.net_logo svg {
+		width: 50px;
+		height: 50px;
 	}
 }
