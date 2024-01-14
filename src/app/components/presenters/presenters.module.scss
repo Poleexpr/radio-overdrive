@@ -33,6 +33,10 @@
 }
 
 @media screen and (max-width: 414px) {
+	.container {
+		padding-top: 75px;
+	}
+
 	.cards_container {
 		display: none;
 	}
