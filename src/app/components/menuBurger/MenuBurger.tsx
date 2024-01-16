@@ -54,9 +54,6 @@ const MenuBurger = () => {
 	return (
 		<Menu
 			right
-			isOpen={isOpen}
-			onOpen={handleOnOpen}
-			onClose={handleOnOpen}
 			customBurgerIcon={<img src='./burgerIcon.svg' />}
 			customCrossIcon={<img src='./crossIcon.svg' />}
 			styles={nativeStyles}

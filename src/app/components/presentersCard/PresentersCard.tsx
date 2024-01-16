@@ -28,6 +28,8 @@ const PresentersCard = (props: any) => {
 					<p>{props.descriptionParagraph1}</p>
 					<p>{props.descriptionParagraph2}</p>
 					<p>{props.descriptionParagraph3}</p>
+					<p>{props.descriptionParagraph4}</p>
+					<p>{props.descriptionParagraph5}</p>
 				</div>
 			</div>
 		</div>
