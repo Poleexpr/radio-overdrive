@@ -50,6 +50,7 @@ const About = () => {
 								после презентации его антиромана{' '}
 								<a
 									href='https://chtivo.spb.ru/book-overdrive.html'
+									target='_blank'
 									className={styles.link}
 								>
 									<span>«Овердрайв»</span>

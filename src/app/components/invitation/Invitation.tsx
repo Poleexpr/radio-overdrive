@@ -13,9 +13,12 @@ const Invitation = () => {
 					если тебе есть что сказать, и ты врубаешь в высокий стиль, присылай
 					демо-аудио и ссылку на свой плейлист на
 				</p>
-				<a>
-					<p className={uikit.link_text}>radio@russiandino.ru</p>
-				</a>
+
+				<p className={uikit.link_text}>
+					<a href='mailto:radio@russiandino.ru' target='_blank'>
+						radio@russiandino.ru
+					</a>
+				</p>
 			</div>
 		</section>
 	)

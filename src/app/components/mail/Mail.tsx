@@ -15,7 +15,9 @@ const Mail = () => {
 						обратиться к ведущим и слушателям или просто так:
 					</p>
 					<p className={uikit.link_text2}>
-						<a>radio@russiandino.ru</a>
+						<a href='mailto:radio@russiandino.ru' target='_blank'>
+							radio@russiandino.ru
+						</a>
 					</p>
 				</div>
 			</div>

@@ -13,15 +13,26 @@ const Footer = () => {
 				<div className={styles.subcontainer_first}>
 					<p className={uikit.title6}>Овердрайв</p>
 					<div className={styles.nets_wrapper}>
-						<ReactSVG className={styles.net_logo} src='tg.svg' />
-
-						<ReactSVG className={styles.net_logo} src='vk.svg' />
-
-						<ReactSVG className={styles.net_logo} src='instagram.svg' />
+						<a href='https://t.me/rocknword' target='_blank'>
+							<ReactSVG className={styles.net_logo} src='tg.svg' />
+						</a>
+						<a href='https://vk.com/rocknword' target='_blank'>
+							<ReactSVG className={styles.net_logo} src='vk.svg' />
+						</a>
+						<a
+							href='https://www.instagram.com/radio_overdrive/'
+							target='_blank'
+						>
+							<ReactSVG className={styles.net_logo} src='instagram.svg' />
+						</a>
 					</div>
 				</div>
 				<div className={styles.subcontainer_second}>
-					<a href='#' className={styles.mail_link}>
+					<a
+						href='mailto:radio@russiandino.ru'
+						target='_blank'
+						className={styles.mail_link}
+					>
 						<ReactSVG className={styles.net_logo} src='mail.svg' />
 
 						<p className={uikit.text}>radio@russiandino.ru</p>
@@ -38,7 +49,11 @@ const Footer = () => {
 						</p>
 					</div>
 					<div className={styles.rd_wrapper}>
-						<a className={styles.rd}>
+						<a
+							href='https://www.russiandino.ru'
+							target='_blank'
+							className={styles.rd}
+						>
 							<ReactSVG src='rd-logo.svg' />
 
 							<div className={styles.rd_text}>
