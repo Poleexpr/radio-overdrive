@@ -64,3 +64,13 @@
 		gap: 40px;
 	}
 }
+
+@media screen and (max-width: 900px) {
+	.wrapper {
+		display: none;
+	}
+
+	.container.isOpen {
+		height: 100vh;
+	}
+}
