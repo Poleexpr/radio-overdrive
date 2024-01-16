@@ -78,26 +78,17 @@ const Schedule = () => {
 				</div>
 			</div>
 			<swiper-container init={false} ref={swiperRef}>
-				<swiper-slide className={styles.slide}>
-					<ScheduleCard day='пятница' person='Ланы Дороховой' />
+				<swiper-slide>
+					<ScheduleCard day='понедельник' person='Павела Барнашова' />
 				</swiper-slide>
 				<swiper-slide>
-					<ScheduleCard day='суббота' person='Ланы Дороховой' />
+					<ScheduleCard day='среда' person='Дениса Никитенко' />
 				</swiper-slide>
 				<swiper-slide>
-					<ScheduleCard day='воскресенье' person='Ланы Дороховой' />
+					<ScheduleCard day='четверг' person='Андрея Григорьева' />
 				</swiper-slide>
 				<swiper-slide>
-					<ScheduleCard day='понедельник' person='Ланы Дороховой' />
-				</swiper-slide>
-				<swiper-slide>
-					<ScheduleCard day='вторник' person='Ланы Дороховой' />
-				</swiper-slide>
-				<swiper-slide>
-					<ScheduleCard day='среда' person='Ланы Дороховой' />
-				</swiper-slide>
-				<swiper-slide>
-					<ScheduleCard day='четверг' person='Ланы Дороховой' />
+					<ScheduleCard day='суббота' person='Виталия Савченко' />
 				</swiper-slide>
 			</swiper-container>
 		</>
