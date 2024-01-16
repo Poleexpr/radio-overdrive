@@ -78,7 +78,6 @@ const Header = () => {
 
 	const handleOnOpen = () => {
 		setIsOpen(!isOpen)
-		console.log(isOpen)
 	}
 
 	return (
@@ -145,6 +144,7 @@ const Header = () => {
 						offset={200}
 						duration={500}
 						onSetActive={handleSetActive}
+						onClick={handleOnOpen}
 					>
 						о нас
 					</Link>
@@ -157,6 +157,7 @@ const Header = () => {
 						offset={-10}
 						duration={500}
 						onSetActive={handleSetActive}
+						onClick={handleOnOpen}
 					>
 						ведущие
 					</Link>
