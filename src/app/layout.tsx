@@ -27,7 +27,19 @@ const cocomat = Cocomat({
 
 export const metadata: Metadata = {
 	title: 'радио Овердрайв',
-	description: 'описание радио Овердрайв',
+	description:
+		'Семь ведущих из разных городов Земли ставят музыку высокого стиля прямо с космической станции. И помни — мы вещаем до последнего.',
+	keywords: [
+		'интернет-радио',
+		'новая музыка',
+		'топовые треки',
+		'рок',
+		'инди-музыка',
+		'андеграунд',
+	],
+	openGraph: {
+		images: '/og-image.png',
+	},
 }
 
 export default function RootLayout({
