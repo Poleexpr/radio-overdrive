@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import { Element } from 'react-scroll'
 
 import styles from './ocapella.module.scss'
 import uikit from '../uikit.module.scss'
@@ -22,23 +23,25 @@ const Ocapella = () => {
 
 	return (
 		<>
-			<div className={styles.container}>
-				<h2 className={uikit.title2}>о’капелла</h2>
-				<p className={`${styles.description} ${uikit.text2}`}>
-					Подкаст о музыке как феномене и чуде.
-				</p>
-				<button
-					onClick={togglePodcast}
-					className={`${uikit.link} ${styles.button}`}
-				>
-					{showPodcast ? 'скрыть' : 'слушать онлайн'}
-				</button>
-			</div>
-			<Podcast
-				feedUrl={'./ocappella'}
-				podcastLink={'https://radiooverdrive.mave.digital'}
-				podcastStyle={styleDisplayPodcast}
-			/>
+			<Element name='program' className='element'>
+				<div className={styles.container}>
+					<h2 className={uikit.title2}>о’капелла</h2>
+					<p className={`${styles.description} ${uikit.text2}`}>
+						Подкаст о музыке как феномене и чуде.
+					</p>
+					<button
+						onClick={togglePodcast}
+						className={`${uikit.link} ${styles.button}`}
+					>
+						{showPodcast ? 'скрыть' : 'слушать онлайн'}
+					</button>
+				</div>
+				<Podcast
+					feedUrl={'./ocappella'}
+					podcastLink={'https://radiooverdrive.mave.digital'}
+					podcastStyle={styleDisplayPodcast}
+				/>
+			</Element>
 		</>
 	)
 }

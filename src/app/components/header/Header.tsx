@@ -55,7 +55,7 @@ const Header = () => {
 								to='about'
 								spy={true}
 								smooth={true}
-								offset={200}
+								offset={100}
 								duration={500}
 								onSetActive={handleSetActive}
 							>
@@ -79,10 +79,30 @@ const Header = () => {
 							<ReactSVG src='logo.svg' />
 						</li>
 						<li className={`${styles.menu_item} ${uikit.text8}`}>
-							<a href='#'>программа</a>
+							<Link
+								activeClass='active'
+								to='program'
+								spy={true}
+								smooth={true}
+								offset={-100}
+								duration={500}
+								onSetActive={handleSetActive}
+							>
+								программа
+							</Link>
 						</li>
 						<li className={`${styles.menu_item} ${uikit.text8}`}>
-							<a href='#'>слушать</a>
+							<Link
+								activeClass='active'
+								to='contacts'
+								spy={true}
+								smooth={true}
+								offset={0}
+								duration={500}
+								onSetActive={handleSetActive}
+							>
+								контакты
+							</Link>
 						</li>
 					</ul>
 				</nav>
