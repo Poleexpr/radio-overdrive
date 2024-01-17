@@ -1,61 +1,14 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { elastic as Menu } from 'react-burger-menu'
+import { slide as Menu } from 'react-burger-menu'
 import { Link, Events, animateScroll as scroll, scrollSpy } from 'react-scroll'
+import { ReactSVG } from 'react-svg'
 
 import styles from './header.module.scss'
 import uikit from '../uikit.module.scss'
 
 const Header = () => {
-	var nativeStyles = {
-		bmBurgerButton: {
-			position: 'fixed',
-			width: '36px',
-			height: '30px',
-			right: '36px',
-			top: '36px',
-		},
-		bmBurgerBars: {
-			background: '#373a47',
-		},
-		bmBurgerBarsHover: {
-			background: '#a90000',
-		},
-		bmCrossButton: {
-			height: '24px',
-			width: '24px',
-		},
-		bmCross: {
-			background: '#bdc3c7',
-		},
-		bmMenuWrap: {
-			position: 'fixed',
-			height: '100%',
-			top: '0',
-		},
-		bmMenu: {
-			background: '#373a47',
-			padding: '2.5em 1.5em 0',
-			fontSize: '1.15em',
-		},
-		bmMorphShape: {
-			fill: '#373a47',
-		},
-		bmItemList: {
-			color: '#b8b7ad',
-			padding: '0.8em',
-			display: 'flex',
-			flexDirection: 'column',
-		},
-		bmItem: {
-			display: 'inline-block',
-		},
-		bmOverlay: {
-			background: 'rgba(0, 0, 0, 0.3)',
-		},
-	}
-
 	useEffect(() => {
 		Events.scrollEvent.register('begin', (to, element) => {
 			console.log('begin', to, element)
@@ -78,6 +31,14 @@ const Header = () => {
 
 	const handleOnOpen = () => {
 		setIsOpen(!isOpen)
+		if (!isOpen) {
+			document.body.setAttribute('style', 'overflow: hidden; position: fixed;')
+		} else {
+			document.body.setAttribute(
+				'style',
+				'overflow: visible; position: static;'
+			)
+		}
 	}
 
 	return (
@@ -115,7 +76,7 @@ const Header = () => {
 							</Link>
 						</li>
 						<li>
-							<img src='logo.svg'></img>
+							<ReactSVG src='logo.svg' />
 						</li>
 						<li className={`${styles.menu_item} ${uikit.text8}`}>
 							<a href='#'>программа</a>
@@ -125,14 +86,18 @@ const Header = () => {
 						</li>
 					</ul>
 				</nav>
+				<div className={styles.logoMobile_wrapper}>
+					<ReactSVG className={styles.logoMobile} src='logo.svg' />
+				</div>
 				<Menu
 					right
 					isOpen={isOpen}
 					onOpen={handleOnOpen}
 					onClose={handleOnOpen}
+					pageWrapId={'page-wrap'}
 					customBurgerIcon={<img src='./burgerIcon.svg' />}
 					customCrossIcon={<img src='./crossIcon.svg' />}
-					styles={nativeStyles}
+					width={'100%'}
 					className={styles.menuBurger}
 				>
 					<Link

@@ -4,13 +4,13 @@
 	left: 0;
 	width: 100%;
 	z-index: 100;
+	min-height: 110px;
 
-	background: rgba(56, 55, 82, 0.4);
-	backdrop-filter: blur(7.5px);
+	background: url('../../../../public/texture.png'), #000;
 }
 
 .wrapper {
-	padding: 25px 0;
+	padding: 20px 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -54,6 +54,10 @@
 	display: none;
 }
 
+.logoMobile {
+	display: none;
+}
+
 @media screen and (max-width: 900px) {
 	.menuBurger {
 		display: block;
@@ -80,7 +84,38 @@
 		display: none;
 	}
 
+	.container {
+		min-height: 80px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.isOpen {
+		height: 0px;
+	}
+
 	.container.isOpen {
 		height: 100vh;
+	}
+
+	.logoMobile_wrapper {
+		max-width: 48px;
+		padding-left: 20px;
+		padding-top: 20px;
+	}
+
+	.logoMobile {
+		display: block;
+		position: relative;
+		z-index: 2000;
+	}
+
+	.logoMobile svg {
+		width: 48px;
+		height: 40px;
+	}
+
+	.pageWrap {
+		overflow: hidden;
 	}
 }
