@@ -38,29 +38,11 @@ const PodcastCard = ({ posts = [] }) => {
 							<div className={`${uikit.text} ${styles.content}`}>
 								{post.content}
 							</div>
-							<div className={styles.audioPlayer}>
-								<audio className='audio' controls src={post.enclosure.url}>
-									<source src={post.enclosure.url}></source>
-									Ваш браузер не поддерживает audio тег.
-								</audio>
-								<div className={styles.controls}>
-									<button onClick={playAudio}>
-										{isPlaying ? 'Play' : 'Stop'}
-									</button>
-									<input
-										type='range'
-										min='0'
-										max='1'
-										step='0.01'
-										value='1'
-									></input>
-								</div>
-								<div className={styles.progress}>
-									<div className={styles.progressBar}></div>
-								</div>
-								<div>0:00</div>
-								<div>0:00</div>
-							</div>
+							<AudioPlayer
+								src={post.enclosure.url}
+								onPlay={e => console.log('onPlay')}
+								// other props here
+							/>
 						</div>
 					</li>
 				)
