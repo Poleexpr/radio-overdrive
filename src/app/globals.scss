@@ -112,13 +112,48 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 // audio player
 .rhap_container {
+	min-height: 80px;
 	background-color: inherit;
 	box-shadow: none;
-	padding: 10px 0px;
+	padding: 0px;
+}
+
+.rhap_main {
+	gap: 40px;
 }
 
 .rhap_controls-section {
 	flex: 0;
+}
+
+.rhap_progress-container {
+	margin-right: 0;
+	width: 100%;
+	align-self: flex-end;
+}
+
+.rhap_progress-section {
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 20px;
+}
+
+.rhap_progress-bar {
+	height: 2px;
+	width: 100%;
+	border-radius: 2px;
+	align-self: flex-end;
+	background-color: #fff;
+}
+
+.rhap_horizontal-reverse .rhap_controls-section {
+	margin-right: 0px;
+}
+
+.rhap_play-pause-button {
+	font-size: 72px;
+	width: 72px;
+	height: 72px;
 }
 
 .rhap_time {
@@ -134,7 +169,53 @@ Note: Beware of modifying this element as it can break the animations - you shou
 	display: none;
 }
 
-.rhap_total-time {
+/*.rhap_total-time {
 	position: relative;
 	top: 20px;
+}*/
+
+@media screen and (max-width: 1440px) {
+	.rhap_main {
+		gap: 30px;
+	}
+
+	.rhap_progress-section {
+		gap: 15px;
+	}
+
+	.rhap_play-pause-button {
+		font-size: 60px;
+		width: 60px;
+		height: 60px;
+	}
+
+	.rhap_container svg {
+		width: 60px;
+		height: 60px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.rhap_container {
+		min-height: 70px;
+	}
+
+	.rhap_main {
+		gap: 20px;
+	}
+
+	.rhap_progress-section {
+		gap: 10px;
+	}
+
+	.rhap_play-pause-button {
+		font-size: 45px;
+		width: 45px;
+		height: 45px;
+	}
+
+	.rhap_container svg {
+		width: 45px;
+		height: 45px;
+	}
 }

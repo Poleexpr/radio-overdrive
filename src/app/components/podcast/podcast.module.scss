@@ -9,3 +9,9 @@
 	align-items: center;
 	gap: 10px;
 }
+
+@media screen and (max-width: 1440px) {
+	.link_container {
+		margin-top: 30px;
+	}
+}
