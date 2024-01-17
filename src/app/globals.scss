@@ -109,3 +109,32 @@ Note: Beware of modifying this element as it can break the animations - you shou
 		display: none;
 	}
 }
+
+// audio player
+.rhap_container {
+	background-color: inherit;
+	box-shadow: none;
+	padding: 10px 0px;
+}
+
+.rhap_controls-section {
+	flex: 0;
+}
+
+.rhap_time {
+	font-family: var(--cocomat), sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 140%;
+	color: #fff;
+	opacity: 0.5;
+}
+
+.rhap_current-time {
+	display: none;
+}
+
+.rhap_total-time {
+	position: relative;
+	top: 20px;
+}

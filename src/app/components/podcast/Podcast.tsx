@@ -27,7 +27,7 @@ const Podcast = (props: any) => {
 		}
 
 		const fetchEpisodes = async () => {
-			const feed = await parser.parseURL('http://localhost:3000/ocappella')
+			const feed = await parser.parseURL(props.url)
 			console.log(feed.items) // feed will have a `foo` property, type as a string
 			feed.items.forEach(item => {
 				console.log(

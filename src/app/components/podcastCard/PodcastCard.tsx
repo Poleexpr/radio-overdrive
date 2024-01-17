@@ -4,6 +4,7 @@ import AudioPlayer from 'react-h5-audio-player'
 import styles from './podcastCard.module.scss'
 import uikit from '../uikit.module.scss'
 import Image from 'next/image'
+import { ReactSVG } from 'react-svg'
 
 const PodcastCard = ({ posts = [] }) => {
 	const [isPlaying, setIsPlaying] = useState(false)
@@ -41,7 +42,14 @@ const PodcastCard = ({ posts = [] }) => {
 							<AudioPlayer
 								src={post.enclosure.url}
 								onPlay={e => console.log('onPlay')}
-								// other props here
+								layout='horizontal-reverse'
+								showJumpControls={false}
+								customVolumeControls={[]}
+								customAdditionalControls={[]}
+								showDownloadProgress={false}
+								customIcons={{
+									play: <ReactSVG src='play.svg' />,
+								}}
 							/>
 						</div>
 					</li>
