@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
+import { ReactSVG } from 'react-svg'
 
 import styles from './podcast.module.scss'
 import uikit from '../uikit.module.scss'
@@ -27,7 +28,7 @@ const Podcast = (props: any) => {
 		}
 
 		const fetchEpisodes = async () => {
-			const feed = await parser.parseURL(props.url)
+			const feed = await parser.parseURL(props.feedUrl)
 			console.log(feed.items) // feed will have a `foo` property, type as a string
 			feed.items.forEach(item => {
 				console.log(
@@ -48,6 +49,16 @@ const Podcast = (props: any) => {
 	return (
 		<div style={props.podcastStyle}>
 			<PodcastCard posts={episodes} />
+			<div className={styles.link_container}>
+				<a
+					href={props.podcastLink}
+					target='_blank'
+					className={styles.link_wrapper}
+				>
+					<p className={uikit.text5}>ещё выпуски </p>
+					<ReactSVG src='arrowDown.svg' />
+				</a>
+			</div>
 		</div>
 	)
 }

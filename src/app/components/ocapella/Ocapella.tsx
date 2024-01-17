@@ -34,7 +34,11 @@ const Ocapella = () => {
 					{showPodcast ? 'скрыть' : 'слушать онлайн'}
 				</button>
 			</div>
-			<Podcast url={'./ocappella'} podcastStyle={styleDisplayPodcast} />
+			<Podcast
+				feedUrl={'./ocappella'}
+				podcastLink={'https://radiooverdrive.mave.digital'}
+				podcastStyle={styleDisplayPodcast}
+			/>
 		</>
 	)
 }

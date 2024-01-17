@@ -30,14 +30,14 @@ const PodcastCard = ({ posts = [] }) => {
 							<img className={styles.cover} src={post.itunes.image} />
 						</div>
 						<div className={styles.container_info}>
-							<div className={`${uikit.text4} ${styles.date}`}>
-								{post.pubDate}
+							<div className={`${uikit.text} ${styles.date}`}>
+								{post.isoDate.slice(0, 10).split('-').reverse().join('.')}
 							</div>
 							<h4 className={`${uikit.title5} ${styles.title}`}>
 								{post.title.slice(post.title.indexOf('#'))}
 							</h4>
 							<div className={`${uikit.text} ${styles.content}`}>
-								{post.content}
+								{post.contentSnippet}
 							</div>
 							<AudioPlayer
 								src={post.enclosure.url}
