@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import AudioPlayer from 'react-h5-audio-player'
 import styles from './podcastCard.module.scss'
 import uikit from '../uikit.module.scss'
 import Image from 'next/image'
