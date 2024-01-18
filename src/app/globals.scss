@@ -86,17 +86,15 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Wrapper for item list */
 .bm-item-list {
-	color: #b8b7ad;
+	color: #fff;
 	padding: 0.8em;
-	display: flex;
-	flex-direction: column;
+	display: grid;
 	align-items: center;
+	text-align: center;
+	padding-bottom: 30px;
 }
 
 /* Individual item */
-.bm-item {
-	display: inline-block;
-}
 
 /* Styling of overlay */
 .bm-overlay {
