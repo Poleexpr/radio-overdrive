@@ -118,15 +118,8 @@
 
 @media screen and (max-width: 1440px) {
 	.about {
-		background: url(../../../../public/texture.png),
-			linear-gradient(
-				0deg,
-				#000 0%,
-				rgba(0, 0, 0, 0.5) 42.19%,
-				rgba(0, 0, 0, 0.1) 69.27%,
-				rgba(0, 0, 0, 0) 100%
-			),
-			url(../../../../public/over-graffit-artist-laptop.png) right top no-repeat;
+		background: url(../../../../public/over-graffit-artist-laptop.png) right top
+			no-repeat;
 	}
 
 	.container {
