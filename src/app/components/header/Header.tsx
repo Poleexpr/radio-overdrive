@@ -126,7 +126,7 @@ const Header = () => {
 						to='about'
 						spy={true}
 						smooth={true}
-						offset={200}
+						offset={0}
 						duration={500}
 						onSetActive={handleSetActive}
 						onClick={handleOnOpen}
@@ -146,18 +146,30 @@ const Header = () => {
 					>
 						ведущие
 					</Link>
-					<a className='menu-item' href='/'>
-						Home
-					</a>
-					<a className='menu-item' href='/salads'>
-						Salads
-					</a>
-					<a className='menu-item' href='/pizzas'>
-						Pizzas
-					</a>
-					<a className='menu-item' href='/desserts'>
-						Desserts
-					</a>
+					<Link
+						activeClass='active'
+						to='program'
+						spy={true}
+						smooth={true}
+						offset={-80}
+						duration={500}
+						onSetActive={handleSetActive}
+						onClick={handleOnOpen}
+					>
+						программа
+					</Link>
+					<Link
+						activeClass='active'
+						to='contacts'
+						spy={true}
+						smooth={true}
+						offset={0}
+						duration={500}
+						onSetActive={handleSetActive}
+						onClick={handleOnOpen}
+					>
+						контакты
+					</Link>
 				</Menu>
 			</header>
 		</>
