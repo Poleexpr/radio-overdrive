@@ -1,6 +1,7 @@
 'use client'
 
 import { ReactSVG } from 'react-svg'
+import Marquee from 'react-fast-marquee'
 
 import styles from './wellcome.module.scss'
 import uikit from '../uikit.module.scss'
@@ -41,6 +42,10 @@ const Wellcome = () => {
 					</div>
 				</a>
 			</div>
+			<Marquee>
+				<p className={uikit.marqueeContent}>мы вещаем до последнего</p>
+				<ReactSVG className={styles.ellipse} src='ellipse.svg' />
+			</Marquee>
 		</div>
 	)
 }

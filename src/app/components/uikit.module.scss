@@ -186,6 +186,15 @@
 	}
 }
 
+.marqueeContent {
+	-webkit-text-stroke: 1.5px #fff;
+	text-stroke: 1.5px #fff;
+	font-family: var(--micraDi), sans-serif;
+	font-size: 80px;
+	font-weight: 400;
+	color: rgb(0, 0, 0, 0);
+}
+
 @media screen and (max-width: 1440px) {
 	.title {
 		font-size: 32px;
