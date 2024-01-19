@@ -44,6 +44,7 @@
 	}
 
 	.description_container {
+		margin-bottom: 100px;
 		gap: 75px;
 	}
 }
@@ -55,6 +56,7 @@
 	}
 
 	.description_container {
+		margin-bottom: 90px;
 		gap: 67px;
 	}
 
@@ -84,5 +86,14 @@
 	.subtitle,
 	.title {
 		text-align: center;
+	}
+
+	.title {
+		font-size: 32px;
+	}
+
+	.slogan,
+	.slogan_bold {
+		display: none;
 	}
 }

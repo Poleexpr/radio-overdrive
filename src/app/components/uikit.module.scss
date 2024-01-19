@@ -256,6 +256,10 @@
 		font-size: 16px;
 		letter-spacing: 0.32px;
 	}
+
+	.marqueeContent {
+		font-size: 54px;
+	}
 }
 
 @media screen and (max-width: 1024px) {
@@ -328,6 +332,10 @@
 		font-size: 15px;
 		letter-spacing: 0.3px;
 	}
+
+	.marqueeContent {
+		font-size: 40px;
+	}
 }
 
 @media screen and (max-width: 744px) {
@@ -368,5 +376,9 @@
 
 	.link_text2 {
 		font-size: 15px;
+	}
+
+	.marqueeContent {
+		font-size: 30px;
 	}
 }

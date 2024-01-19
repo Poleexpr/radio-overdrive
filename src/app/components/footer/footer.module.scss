@@ -162,6 +162,10 @@
 	.subcontainer_second {
 		grid-template-columns: 1fr;
 		justify-content: center;
+
+		.net_logo {
+			display: none;
+		}
 	}
 
 	.nets_wrapper {
