@@ -5,12 +5,17 @@
 	justify-content: center;
 }
 
+.title_wrapper {
+	justify-self: center;
+}
+
 .title {
 	margin-top: 10px;
 }
 
 .description_container {
 	margin-top: 70px;
+	margin-bottom: 120px;
 	display: flex;
 	gap: 85px;
 	justify-self: center;

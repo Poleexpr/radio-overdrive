@@ -42,7 +42,7 @@ const Wellcome = () => {
 					</div>
 				</a>
 			</div>
-			<Marquee>
+			<Marquee autoFill>
 				<p className={uikit.marqueeContent}>мы вещаем до последнего</p>
 				<ReactSVG className={styles.ellipse} src='ellipse.svg' />
 			</Marquee>
