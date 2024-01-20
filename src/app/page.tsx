@@ -9,11 +9,9 @@ import Invitation from './components/invitation/Invitation'
 import Ocapella from './components/ocapella/Ocapella'
 import Aliens from './components/aliens/Aliens'
 import ProgramGuide from './components/programGuide/ProgramGuide'
-
 import Footer from './components/footer/Footer'
 import Planet from './components/planet/Planet'
 import Mail from './components/mail/Mail'
-
 import { register } from 'swiper/element/bundle'
 register()
 
