@@ -8,7 +8,7 @@ import { ReactSVG } from 'react-svg'
 
 const PodcastCard = ({ posts = [] }) => {
 	const [isPlaying, setIsPlaying] = useState(false)
-
+	/*
 	const playAudio = () => {
 		const audios = Array.from(document.getElementsByClassName('audio'))
 		audios.map(audio => {
@@ -19,6 +19,7 @@ const PodcastCard = ({ posts = [] }) => {
 			}
 		})
 	}
+*/
 
 	return (
 		<ul className={styles.wrapper}>
