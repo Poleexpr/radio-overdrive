@@ -25,7 +25,6 @@ export default function Home() {
 			<Presenters />
 			<Invitation />
 			<Ocapella />
-			<Aliens />
 			<ProgramGuide />
 			<Planet>
 				<Mail />
