@@ -39,7 +39,6 @@ const PodcastCard = ({ posts = [] }) => {
 	return (
 		<ul className={styles.wrapper}>
 			{posts.map((post: Post, i) => {
-				console.log(post, i)
 				return (
 					<li key={i} className={styles.container}>
 						<div className={styles.wrapper_cover}>

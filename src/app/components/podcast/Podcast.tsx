@@ -29,17 +29,6 @@ const Podcast = (props: any) => {
 
 		const fetchEpisodes = async () => {
 			const feed = await parser.parseURL(props.feedUrl)
-			console.log(feed.items) // feed will have a `foo` property, type as a string
-			feed.items.forEach(item => {
-				console.log(
-					item.title +
-						':' +
-						item.content +
-						'item.enclosure.url' +
-						item.pubDate +
-						'item.itunes.image'
-				) // item will have a `bar` property type as a number
-			})
 			const blogPosts = filterPosts(feed.items, 3)
 			setEpisodes(blogPosts)
 		}
