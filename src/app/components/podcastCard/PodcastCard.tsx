@@ -5,6 +5,7 @@ import styles from './podcastCard.module.scss'
 import uikit from '../uikit.module.scss'
 import Image from 'next/image'
 import { ReactSVG } from 'react-svg'
+import typograf from 'Typograf'
 
 const PodcastCard = ({ posts = [] }) => {
 	const [isPlaying, setIsPlaying] = useState(false)
@@ -33,6 +34,8 @@ const PodcastCard = ({ posts = [] }) => {
 		}
 	}
 
+	const tp = new typograf({ locale: ['ru', 'en-US'] })
+
 	return (
 		<ul className={styles.wrapper}>
 			{posts.map((post: Post, i) => {
@@ -50,7 +53,7 @@ const PodcastCard = ({ posts = [] }) => {
 								{post.title.slice(post.title.indexOf('#'))}
 							</h4>
 							<div className={`${uikit.text} ${styles.content}`}>
-								{post.contentSnippet}
+								{tp.execute(post.contentSnippet)}
 							</div>
 							<AudioPlayer
 								src={post.enclosure.url}
