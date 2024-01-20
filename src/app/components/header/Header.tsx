@@ -23,7 +23,7 @@ const Header = () => {
 		}
 	}, [])
 
-	const handleSetActive = to => {
+	const handleSetActive = (to: any) => {
 		console.log(to)
 	}
 
