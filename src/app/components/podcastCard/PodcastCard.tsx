@@ -21,9 +21,21 @@ const PodcastCard = ({ posts = [] }) => {
 	}
 */
 
+	interface Post {
+		title: string
+		contentSnippet: string
+		isoDate: string
+		itunes: {
+			image: string
+		}
+		enclosure: {
+			url: string
+		}
+	}
+
 	return (
 		<ul className={styles.wrapper}>
-			{posts.map((post, i) => {
+			{posts.map((post: Post, i) => {
 				console.log(post, i)
 				return (
 					<li key={i} className={styles.container}>
