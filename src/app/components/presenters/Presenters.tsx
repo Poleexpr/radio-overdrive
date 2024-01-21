@@ -74,7 +74,6 @@ const Presenters = () => {
 
 	const [cardsBox, setCardsBox] = React.useState(cards)
 
-	//TODO: don't change on if on is true
 	function toggle(id: any) {
 		setCardsBox(prevCardsBox => {
 			return prevCardsBox.map(card => {
