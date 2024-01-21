@@ -100,6 +100,7 @@ const Presenters = () => {
 			id={card.id}
 			on={card.on}
 			toggle={toggle}
+			leave={leave}
 			img={card.img}
 			day={card.day}
 			name={card.name}
