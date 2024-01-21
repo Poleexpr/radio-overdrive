@@ -12,7 +12,7 @@
 		opacity: 1;
 		visibility: visible;
 		transition: all 0.3s ease-in;
-		transform: translate3d(5%, 0, 0);
+		transform: translate3d(10%, 0, 0);
 	}
 }
 
@@ -84,6 +84,12 @@
 		//gap: 20px;
 	}
 
+	.container {
+		.card_info {
+			transform: translate3d(5%, 0, 0);
+		}
+	}
+
 	.card_info {
 		max-width: 60%;
 	}
@@ -106,7 +112,7 @@
 		height: 446px;
 	}
 }
-
+/*
 @media screen and (max-width: 1170px) {
 	.img_wrapper {
 		width: 140px;
@@ -117,8 +123,8 @@
 		max-width: 65%;
 	}
 }
-
-@media screen and (max-width: 900px) {
+*/
+@media screen and (max-width: 1170px) {
 	.container.cardClosed {
 		.card_info {
 			display: block;
@@ -131,6 +137,11 @@
 
 	.container:nth-child(3) {
 		margin-top: 0px;
+	}
+
+	.img_wrapper {
+		width: 140px;
+		height: 347px;
 	}
 
 	.card_info {
