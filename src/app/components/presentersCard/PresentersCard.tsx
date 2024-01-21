@@ -11,6 +11,8 @@ const PresentersCard = (props: any) => {
 					: `${styles.container} ${styles.cardClosed}`
 			}
 			onClick={() => props.toggle(props.id)}
+			onMouseEnter={() => props.toggle(props.id)}
+			onMouseLeave={() => props.leave(props.id)}
 		>
 			<div className={styles.img_wrapper}>
 				<Image

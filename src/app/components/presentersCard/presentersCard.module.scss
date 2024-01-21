@@ -2,9 +2,11 @@
 	/*width: 43vw;*/
 	display: flex;
 	gap: 40px;
+	cursor: pointer;
 
 	.card_info {
 		display: block;
+		opacity: 1;
 	}
 }
 
@@ -12,6 +14,8 @@
 	width: 250px;
 	.card_info {
 		display: none;
+		opacity: 0;
+		transition: all 0.3s ease;
 	}
 	/*
 	.img_wrapper {
@@ -51,7 +55,6 @@
 
 .card_img {
 	object-fit: cover;
-	cursor: pointer;
 }
 
 @media screen and (max-width: 1650px) {

@@ -84,6 +84,16 @@ const Presenters = () => {
 		})
 	}
 
+	function leave(id: any) {
+		setCardsBox(prevCardsBox => {
+			return prevCardsBox.map(card => {
+				return card.id === id
+					? { ...card, on: card.on }
+					: { ...card, on: false }
+			})
+		})
+	}
+
 	const cardElements = cardsBox.map(card => (
 		<PresentersCard
 			key={card.id}
