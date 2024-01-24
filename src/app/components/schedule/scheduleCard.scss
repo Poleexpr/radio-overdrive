@@ -15,16 +15,19 @@ swiper-slide {
 .custom-prev {
 	position: absolute;
 	top: 0px;
+	padding-bottom: 15px;
 	z-index: 10;
 	cursor: pointer;
 }
 
 .custom-next {
 	right: calc(50% - 160px);
+	padding-left: 15px;
 }
 
 .custom-prev {
 	left: calc(50% - 160px);
+	padding-right: 15px;
 }
 
 @media screen and (max-width: 1024px) {
