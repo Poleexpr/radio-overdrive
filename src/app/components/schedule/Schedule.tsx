@@ -90,6 +90,19 @@ const Schedule = () => {
 				<swiper-slide>
 					<ScheduleCard day='суббота' person='Виталия Савченко' />
 				</swiper-slide>
+
+				<swiper-slide>
+					<ScheduleCard day='понедельник' person='Павела Барнашова' />
+				</swiper-slide>
+				<swiper-slide>
+					<ScheduleCard day='среда' person='Дениса Никитенко' />
+				</swiper-slide>
+				<swiper-slide>
+					<ScheduleCard day='четверг' person='Андрея Григорьева' />
+				</swiper-slide>
+				<swiper-slide>
+					<ScheduleCard day='суббота' person='Виталия Савченко' />
+				</swiper-slide>
 			</swiper-container>
 		</>
 	)
