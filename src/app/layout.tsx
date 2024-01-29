@@ -1,7 +1,9 @@
+import './globals.scss'
+
 import type { Metadata } from 'next'
 import Cocomat from 'next/font/local'
 import MicraDi from 'next/font/local'
-import './globals.scss'
+
 import Header from './components/header/Header'
 
 const micraDi = MicraDi({

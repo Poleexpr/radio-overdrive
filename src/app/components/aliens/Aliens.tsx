@@ -1,12 +1,12 @@
 'use client'
 
+import Image from 'next/image'
 import React, { useState } from 'react'
 import Marquee from 'react-fast-marquee'
-import Image from 'next/image'
 
 import Podcast from '../podcast/Podcast'
-import styles from './aliens.module.scss'
 import uikit from '../uikit.module.scss'
+import styles from './aliens.module.scss'
 
 const Aliens = () => {
 	const [showPodcast, setShowPodcast] = useState(false)

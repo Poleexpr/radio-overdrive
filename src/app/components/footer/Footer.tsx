@@ -1,11 +1,11 @@
 'use client'
 
-import { ReactSVG } from 'react-svg'
-import { Element } from 'react-scroll'
-
-import styles from './footer.module.scss'
-import uikit from '../uikit.module.scss'
 import Image from 'next/image'
+import { Element } from 'react-scroll'
+import { ReactSVG } from 'react-svg'
+
+import uikit from '../uikit.module.scss'
+import styles from './footer.module.scss'
 
 const Footer = () => {
 	return (

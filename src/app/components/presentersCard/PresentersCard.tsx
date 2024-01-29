@@ -1,6 +1,7 @@
-import styles from './presentersCard.module.scss'
-import uikit from '../uikit.module.scss'
 import Image from 'next/image'
+
+import uikit from '../uikit.module.scss'
+import styles from './presentersCard.module.scss'
 
 const PresentersCard = (props: any) => {
 	return (

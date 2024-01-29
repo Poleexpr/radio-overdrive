@@ -3,10 +3,9 @@
 import React, { useState } from 'react'
 import { Element } from 'react-scroll'
 
-import styles from './ocapella.module.scss'
-import uikit from '../uikit.module.scss'
-
 import Podcast from '../podcast/Podcast'
+import uikit from '../uikit.module.scss'
+import styles from './ocapella.module.scss'
 
 const Ocapella = () => {
 	// кнопка будет менять состяние с false на true

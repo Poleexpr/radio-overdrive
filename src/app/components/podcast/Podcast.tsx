@@ -2,12 +2,11 @@
 
 import React, { useEffect, useState } from 'react'
 import { ReactSVG } from 'react-svg'
-
-import styles from './podcast.module.scss'
-import uikit from '../uikit.module.scss'
+import Parser from 'rss-parser'
 
 import PodcastCard from '../podcastCard/PodcastCard'
-import Parser from 'rss-parser'
+import uikit from '../uikit.module.scss'
+import styles from './podcast.module.scss'
 
 const Podcast = (props: any) => {
 	const [episodes, setEpisodes] = useState([])

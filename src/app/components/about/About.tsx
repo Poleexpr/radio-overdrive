@@ -1,10 +1,10 @@
 'use client'
 
-import styles from './about.module.scss'
-import uikit from '../uikit.module.scss'
 import Image from 'next/image'
-
 import { Element } from 'react-scroll'
+
+import uikit from '../uikit.module.scss'
+import styles from './about.module.scss'
 
 const About = () => {
 	return (

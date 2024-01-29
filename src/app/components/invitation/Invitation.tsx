@@ -1,5 +1,5 @@
-import styles from './invitation.module.scss'
 import uikit from '../uikit.module.scss'
+import styles from './invitation.module.scss'
 
 const Invitation = () => {
 	return (

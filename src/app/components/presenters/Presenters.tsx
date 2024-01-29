@@ -1,13 +1,12 @@
 'use client'
 
+import Image from 'next/image'
 import React, { useState } from 'react'
 import { Element } from 'react-scroll'
 
-import Image from 'next/image'
-import styles from './presenters.module.scss'
-import uikit from '../uikit.module.scss'
-
 import PresentersCard from '../presentersCard/PresentersCard'
+import uikit from '../uikit.module.scss'
+import styles from './presenters.module.scss'
 
 const Presenters = () => {
 	const cards = [

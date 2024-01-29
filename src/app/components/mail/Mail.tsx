@@ -1,5 +1,5 @@
-import styles from './mail.module.scss'
 import uikit from '../uikit.module.scss'
+import styles from './mail.module.scss'
 
 const Mail = () => {
 	return (

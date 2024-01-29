@@ -1,7 +1,6 @@
-import styles from './programGuide.module.scss'
-import uikit from '../uikit.module.scss'
-
 import Schedule from '../schedule/Schedule'
+import uikit from '../uikit.module.scss'
+import styles from './programGuide.module.scss'
 
 const ProgramGuide = () => {
 	return (

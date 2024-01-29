@@ -1,5 +1,5 @@
-import styles from './planet.module.scss'
 import uikit from '../uikit.module.scss'
+import styles from './planet.module.scss'
 
 type PlanetProps = {
 	children: React.ReactNode

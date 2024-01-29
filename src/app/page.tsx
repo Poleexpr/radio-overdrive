@@ -1,18 +1,18 @@
 import Image from 'next/image'
-import styles from './page.module.scss'
-
-import Wellcome from './components/wellcome/Wellcome'
-import Video from './components/video/Video'
-import About from './components/about/About'
-import Presenters from './components/presenters/Presenters'
-import Invitation from './components/invitation/Invitation'
-import Ocapella from './components/ocapella/Ocapella'
-import Aliens from './components/aliens/Aliens'
-import ProgramGuide from './components/programGuide/ProgramGuide'
-import Footer from './components/footer/Footer'
-import Planet from './components/planet/Planet'
-import Mail from './components/mail/Mail'
 import { register } from 'swiper/element/bundle'
+
+import About from './components/about/About'
+import Aliens from './components/aliens/Aliens'
+import Footer from './components/footer/Footer'
+import Invitation from './components/invitation/Invitation'
+import Mail from './components/mail/Mail'
+import Ocapella from './components/ocapella/Ocapella'
+import Planet from './components/planet/Planet'
+import Presenters from './components/presenters/Presenters'
+import ProgramGuide from './components/programGuide/ProgramGuide'
+import Video from './components/video/Video'
+import Wellcome from './components/wellcome/Wellcome'
+import styles from './page.module.scss'
 register()
 
 export default function Home() {

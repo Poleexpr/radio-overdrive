@@ -1,5 +1,5 @@
-import styles from './scheduleCard.module.scss'
 import uikit from '../uikit.module.scss'
+import styles from './scheduleCard.module.scss'
 
 const ScheduleCard = (props: any) => {
 	return (

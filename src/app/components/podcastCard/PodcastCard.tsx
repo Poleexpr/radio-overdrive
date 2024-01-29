@@ -1,11 +1,12 @@
 'use client'
 import { useState } from 'react'
 import AudioPlayer from 'react-h5-audio-player'
-import styles from './podcastCard.module.scss'
-import uikit from '../uikit.module.scss'
 import { ReactSVG } from 'react-svg'
+
 //import typograf from '/Users/mac/Desktop/radioOverdriveApp/radio-overdrive/node_modules/Typograf/dist/typograf'
 import typograf from '../../../../node_modules/typograf/dist/typograf'
+import uikit from '../uikit.module.scss'
+import styles from './podcastCard.module.scss'
 
 const PodcastCard = ({ posts = [] }) => {
 	const [isPlaying, setIsPlaying] = useState(false)

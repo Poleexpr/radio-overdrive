@@ -1,12 +1,12 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useEffect,useState } from 'react'
 import { slide as Menu } from 'react-burger-menu'
-import { Link, Events, animateScroll as scroll, scrollSpy } from 'react-scroll'
+import { animateScroll as scroll, Events, Link, scrollSpy } from 'react-scroll'
 import { ReactSVG } from 'react-svg'
 
-import styles from './header.module.scss'
 import uikit from '../uikit.module.scss'
+import styles from './header.module.scss'
 
 const Header = () => {
 	useEffect(() => {

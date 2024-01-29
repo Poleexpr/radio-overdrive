@@ -1,10 +1,10 @@
 'use client'
 
-import { ReactSVG } from 'react-svg'
 import Marquee from 'react-fast-marquee'
+import { ReactSVG } from 'react-svg'
 
-import styles from './wellcome.module.scss'
 import uikit from '../uikit.module.scss'
+import styles from './wellcome.module.scss'
 
 const Wellcome = () => {
 	return (

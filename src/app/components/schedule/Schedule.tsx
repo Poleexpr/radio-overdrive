@@ -1,16 +1,15 @@
 'use client'
 
-import { ReactSVG } from 'react-svg'
-
-import styles from './schedule.module.scss'
-import uikit from '../uikit.module.scss'
 import './scheduleCard.scss'
-import ScheduleCard from '../scheduleCard/ScheduleCard'
 
-import type { SwiperSlideProps, SwiperProps } from 'swiper/react'
-
-import { useRef, useEffect } from 'react'
+import { useEffect,useRef } from 'react'
+import { ReactSVG } from 'react-svg'
 import { register } from 'swiper/element/bundle'
+import type { SwiperProps,SwiperSlideProps } from 'swiper/react'
+
+import ScheduleCard from '../scheduleCard/ScheduleCard'
+import uikit from '../uikit.module.scss'
+import styles from './schedule.module.scss'
 
 declare global {
 	namespace JSX {
