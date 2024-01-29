@@ -120,7 +120,7 @@
 		height: 446px;
 	}
 }
-/*
+
 @media screen and (max-width: 1170px) {
 	.img_wrapper {
 		width: 140px;
@@ -131,16 +131,20 @@
 		max-width: 65%;
 	}
 }
-*/
-@media screen and (max-width: 1170px) {
+
+@media screen and (max-width: 800px) {
 	.container.cardClosed {
 		.card_info {
-			display: block;
+			position: static;
+			visibility: visible;
+			opacity: 1;
+			transform: translate3d(5%, 0, 0);
 		}
 	}
 
 	.container {
-		flex-direction: column;
+		//flex-direction: column;
+		min-width: 120vw;
 	}
 
 	.container:nth-child(3) {
@@ -148,12 +152,18 @@
 	}
 
 	.img_wrapper {
-		width: 140px;
+		min-width: 140px;
 		height: 347px;
 	}
 
 	.card_info {
-		max-width: 90%;
+		max-width: 100%;
+	}
+
+	.container.cardClosed {
+		.card_info {
+			visibility: visible;
+		}
 	}
 }
 
