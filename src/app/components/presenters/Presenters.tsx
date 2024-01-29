@@ -27,7 +27,7 @@ const Presenters = () => {
 		{
 			id: 2,
 			on: false,
-			img: '/barnashov.png',
+			img: '/nikitenko.png',
 			day: 'среды',
 			name: 'Денис Никитенко',
 			city: 'Санкт-Петербург',
@@ -40,7 +40,7 @@ const Presenters = () => {
 		{
 			id: 3,
 			on: false,
-			img: '/barnashov.png',
+			img: '/grigoriev.png',
 			day: 'четверга',
 			name: 'Андрей Григорьев',
 			city: 'Санкт-Петербург / Алматы',
@@ -58,7 +58,7 @@ const Presenters = () => {
 		{
 			id: 4,
 			on: false,
-			img: '/barnashov.png',
+			img: '/savchenko.png',
 			day: 'субботы',
 			name: 'Виталий Савченко',
 			city: 'Омск',
