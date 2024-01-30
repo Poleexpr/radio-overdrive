@@ -5,6 +5,7 @@ import Cocomat from 'next/font/local'
 import MicraDi from 'next/font/local'
 
 import Header from './components/header/Header'
+import Radio from './components/radio/Radio'
 
 const micraDi = MicraDi({
 	src: './fonts/micradi.ttf',
@@ -54,6 +55,7 @@ export default function RootLayout({
 			<body className={`${cocomat.variable} ${micraDi.variable}`}>
 				<Header />
 				{children}
+				<Radio />
 			</body>
 		</html>
 	)
