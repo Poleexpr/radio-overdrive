@@ -25,3 +25,17 @@
 .artist {
 	margin-left: 77px;
 }
+
+@media screen and (max-width: 1024px) {
+	.live {
+		margin-left: 15px;
+	}
+
+	.title {
+		margin-left: 20px;
+	}
+
+	.artist {
+		margin-left: 60px;
+	}
+}
