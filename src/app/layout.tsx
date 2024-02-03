@@ -1,32 +1,11 @@
 import './globals.scss'
 
 import type { Metadata } from 'next'
-import Cocomat from 'next/font/local'
-import MicraDi from 'next/font/local'
 
-import Header from './components/header/Header'
-import Radio from './components/radio/Radio'
+import { cocomat, micraDi } from '@/fonts'
 
-const micraDi = MicraDi({
-	src: './fonts/micradi.ttf',
-	variable: '--micraDi',
-})
-
-const cocomat = Cocomat({
-	src: [
-		{
-			path: './fonts/Cocomat.woff2',
-			weight: '400',
-			style: 'normal',
-		},
-		{
-			path: './fonts/Cocomat-Bold.woff2',
-			weight: '700',
-			style: 'normal',
-		},
-	],
-	variable: '--cocomat',
-})
+import Header from '../components/header/Header'
+import Radio from '../components/radio/Radio'
 
 export const metadata: Metadata = {
 	title: 'радио Овердрайв',

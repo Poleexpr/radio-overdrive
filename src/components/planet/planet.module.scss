@@ -1,7 +1,7 @@
 .planet_wrapper {
-	background: url(../../../../public/texture.png),
+	background: url(../../../public/texture.png),
 		linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%),
-		url(../../../../public/over-planet.png) center bottom no-repeat;
+		url(../../../public/over-planet.png) center bottom no-repeat;
 	background-size: cover;
 	width: 100%;
 }
@@ -43,9 +43,9 @@
 
 @media screen and (max-width: 550px) {
 	.planet_wrapper {
-		background: url(../../../../public/texture.png),
+		background: url(../../../public/texture.png),
 			linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%),
-			url(../../../../public/over-planet-mobile.png) center bottom no-repeat;
+			url(../../../public/over-planet-mobile.png) center bottom no-repeat;
 		background-size: contain;
 	}
 
