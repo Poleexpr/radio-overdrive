@@ -1,8 +1,14 @@
 'use client'
 
-import Image from 'next/image'
 import { Element } from 'react-scroll'
-import { ReactSVG } from 'react-svg'
+
+import {
+	InstagramLogo,
+	MailLogo,
+	RDLogo,
+	TelegramLogo,
+	VkLogo,
+} from '@/components/icons'
 
 import uikit from '../uikit.module.scss'
 import styles from './footer.module.scss'
@@ -16,16 +22,16 @@ const Footer = () => {
 						<p className={uikit.title6}>Овердрайв</p>
 						<div className={styles.nets_wrapper}>
 							<a href='https://t.me/rocknword' target='_blank'>
-								<ReactSVG className={styles.net_logo} src='tg.svg' />
+								<TelegramLogo className={styles.net_logo} />
 							</a>
 							<a href='https://vk.com/rocknword' target='_blank'>
-								<ReactSVG className={styles.net_logo} src='vk.svg' />
+								<VkLogo className={styles.net_logo} />
 							</a>
 							<a
 								href='https://www.instagram.com/radio_overdrive/'
 								target='_blank'
 							>
-								<ReactSVG className={styles.net_logo} src='instagram.svg' />
+								<InstagramLogo className={styles.net_logo} />
 							</a>
 						</div>
 					</div>
@@ -35,7 +41,7 @@ const Footer = () => {
 							target='_blank'
 							className={styles.mail_link}
 						>
-							<ReactSVG className={styles.net_logo} src='mail.svg' />
+							<MailLogo className={styles.net_logo} />
 
 							<p className={uikit.text}>radio@russiandino.ru</p>
 						</a>
@@ -58,7 +64,7 @@ const Footer = () => {
 								target='_blank'
 								className={styles.rd}
 							>
-								<ReactSVG src='rd-logo.svg' />
+								<RDLogo />
 
 								<div className={styles.rd_text}>
 									<p>made by</p>

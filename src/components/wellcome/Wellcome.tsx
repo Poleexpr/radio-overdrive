@@ -3,6 +3,8 @@
 import Marquee from 'react-fast-marquee'
 import { ReactSVG } from 'react-svg'
 
+import { PlayTgLink } from '@/components/icons'
+
 import uikit from '../uikit.module.scss'
 import styles from './wellcome.module.scss'
 
@@ -25,7 +27,7 @@ const Wellcome = () => {
 				<div className={styles.description_container}>
 					<div>
 						<a href='https://t.me/rocknword' target='_blank'>
-							<ReactSVG className={styles.playTgLink} src='playTgLink.svg' />
+							<PlayTgLink className={styles.playTgLink} />
 						</a>
 					</div>
 					<a href='https://t.me/rocknword/11681' target='_blank'>

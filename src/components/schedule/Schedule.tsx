@@ -2,10 +2,11 @@
 
 import './scheduleCard.scss'
 
-import { useEffect,useRef } from 'react'
-import { ReactSVG } from 'react-svg'
+import { useEffect, useRef } from 'react'
 import { register } from 'swiper/element/bundle'
-import type { SwiperProps,SwiperSlideProps } from 'swiper/react'
+import type { SwiperProps, SwiperSlideProps } from 'swiper/react'
+
+import { ArrowNext, ArrowPrev } from '@/components/icons'
 
 import ScheduleCard from '../scheduleCard/ScheduleCard'
 import uikit from '../uikit.module.scss'
@@ -70,10 +71,10 @@ const Schedule = () => {
 		<>
 			<div className='custom-navigation'>
 				<div className='custom-prev'>
-					<ReactSVG src='arrowPrev.svg' />
+					<ArrowPrev />
 				</div>
 				<div className='custom-next'>
-					<ReactSVG src='arrowNext.svg' />
+					<ArrowNext />
 				</div>
 			</div>
 			<swiper-container init={false} ref={swiperRef}>
