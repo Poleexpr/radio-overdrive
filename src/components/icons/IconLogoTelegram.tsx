@@ -1,6 +1,6 @@
 import { ComponentPropsWithRef, FC } from 'react'
 
-export const VkLogo: FC<ComponentPropsWithRef<'svg'>> = props => (
+export const IconLogoTelegram: FC<ComponentPropsWithRef<'svg'>> = props => (
 	<svg
 		width='58'
 		height='58'
@@ -9,12 +9,12 @@ export const VkLogo: FC<ComponentPropsWithRef<'svg'>> = props => (
 		xmlns='http://www.w3.org/2000/svg'
 		{...props}
 	>
-		<g filter='url(#filter0_b_1558_7798)'>
+		<g filter='url(#filter0_b_1558_7799)'>
 			<rect
 				width='58'
 				height='58'
 				rx='29'
-				fill='url(#paint0_linear_1558_7798)'
+				fill='url(#paint0_linear_1558_7799)'
 			/>
 			<rect
 				x='0.25'
@@ -22,25 +22,27 @@ export const VkLogo: FC<ComponentPropsWithRef<'svg'>> = props => (
 				width='57.5'
 				height='57.5'
 				rx='28.75'
-				stroke='url(#paint1_linear_1558_7798)'
+				stroke='url(#paint1_linear_1558_7799)'
 				stroke-width='0.5'
 			/>
 			<circle
 				cx='29'
 				cy='29'
 				r='28.75'
-				stroke='url(#paint2_linear_1558_7798)'
+				stroke='url(#paint2_linear_1558_7799)'
 				stroke-width='0.5'
 			/>
 			<path
-				d='M16.647 18.6497H11.0664C11.4957 34.3421 20.272 40.4474 30.8131 40.2089V32.2911C35.7736 32.5296 39.2078 35.7253 41.1157 40.2089H46.8394C44.8188 34.5659 40.8773 31.0033 36.9661 29.477C40.6865 27.7599 44.4546 24.0395 45.5993 18.6497H40.1618C38.4135 23.6179 35.6782 26.949 30.8131 27.7599V18.6497H25.9957V34.3421C19.8427 32.7204 16.9766 27.0661 16.647 18.6497Z'
+				d='M42.6802 13.7368C43.762 13.7368 44.5781 14.7204 44.1416 16.5498L38.8465 42.4174C38.4764 44.2567 37.4041 44.6993 35.9237 43.8436L23.2933 34.1752C23.2443 34.1388 23.2044 34.0908 23.1769 34.0352C23.1493 33.9796 23.135 33.918 23.135 33.8555C23.135 33.7931 23.1493 33.7315 23.1769 33.6759C23.2044 33.6203 23.2443 33.5723 23.2933 33.5359L37.8785 19.8841C38.5428 19.2743 37.7362 18.9792 36.8632 19.53L18.558 31.4999C18.5025 31.5374 18.4395 31.5614 18.3737 31.5699C18.308 31.5784 18.2412 31.5713 18.1785 31.5491L10.4066 29.0017C8.67955 28.4804 8.67955 27.2509 10.7957 26.3756L41.8926 13.9434C42.1392 13.8207 42.407 13.7505 42.6802 13.7368V13.7368Z'
 				stroke='white'
 				stroke-width='0.5'
+				stroke-linecap='round'
+				stroke-linejoin='round'
 			/>
 		</g>
 		<defs>
 			<filter
-				id='filter0_b_1558_7798'
+				id='filter0_b_1558_7799'
 				x='-2'
 				y='-2'
 				width='62'
@@ -53,17 +55,17 @@ export const VkLogo: FC<ComponentPropsWithRef<'svg'>> = props => (
 				<feComposite
 					in2='SourceAlpha'
 					operator='in'
-					result='effect1_backgroundBlur_1558_7798'
+					result='effect1_backgroundBlur_1558_7799'
 				/>
 				<feBlend
 					mode='normal'
 					in='SourceGraphic'
-					in2='effect1_backgroundBlur_1558_7798'
+					in2='effect1_backgroundBlur_1558_7799'
 					result='shape'
 				/>
 			</filter>
 			<linearGradient
-				id='paint0_linear_1558_7798'
+				id='paint0_linear_1558_7799'
 				x1='8.7'
 				y1='-40.9625'
 				x2='67.7013'
@@ -74,7 +76,7 @@ export const VkLogo: FC<ComponentPropsWithRef<'svg'>> = props => (
 				<stop offset='1' stop-color='#5B31C0' />
 			</linearGradient>
 			<linearGradient
-				id='paint1_linear_1558_7798'
+				id='paint1_linear_1558_7799'
 				x1='8.7'
 				y1='-40.9625'
 				x2='67.7013'
@@ -85,7 +87,7 @@ export const VkLogo: FC<ComponentPropsWithRef<'svg'>> = props => (
 				<stop offset='1' stop-color='#5B31C0' />
 			</linearGradient>
 			<linearGradient
-				id='paint2_linear_1558_7798'
+				id='paint2_linear_1558_7799'
 				x1='8.7'
 				y1='-40.9625'
 				x2='67.7013'

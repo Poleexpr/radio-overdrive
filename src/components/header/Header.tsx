@@ -1,9 +1,9 @@
 'use client'
 
-import { useEffect,useState } from 'react'
+import { useEffect, useState } from 'react'
 import { slide as Menu } from 'react-burger-menu'
 import { animateScroll as scroll, Events, Link, scrollSpy } from 'react-scroll'
-import { ReactSVG } from 'react-svg'
+import { ReactSVG } from 'react-svg' 
 
 import uikit from '../uikit.module.scss'
 import styles from './header.module.scss'

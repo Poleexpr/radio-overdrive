@@ -1,9 +1,8 @@
 'use client'
 
 import Marquee from 'react-fast-marquee'
-import { ReactSVG } from 'react-svg'
 
-import { PlayTgLink } from '@/components/icons'
+import { IconArrowNextLong, IconButtonPlayText, IconEllipse } from '@/components/icons'
 
 import uikit from '../uikit.module.scss'
 import styles from './wellcome.module.scss'
@@ -27,7 +26,7 @@ const Wellcome = () => {
 				<div className={styles.description_container}>
 					<div>
 						<a href='https://t.me/rocknword' target='_blank'>
-							<PlayTgLink className={styles.playTgLink} />
+							<IconButtonPlayText className={styles.playTgLink} />
 						</a>
 					</div>
 					<a href='https://t.me/rocknword/11681' target='_blank'>
@@ -36,7 +35,7 @@ const Wellcome = () => {
 								<p className={`${styles.donation} ${uikit.text5}`}>
 									поддержать проект
 								</p>
-								<ReactSVG src='arrow.svg' />
+								<IconArrowNextLong />
 							</div>
 
 							<div className={`${styles.slogan} ${uikit.text6}`}>
@@ -55,7 +54,7 @@ const Wellcome = () => {
 				</div>
 				<Marquee autoFill>
 					<p className={uikit.marqueeContent}>мы вещаем до последнего</p>
-					<ReactSVG className={styles.ellipse} src='ellipse.svg' />
+					<IconEllipse className={styles.ellipse} />
 				</Marquee>
 			</div>
 		</div>

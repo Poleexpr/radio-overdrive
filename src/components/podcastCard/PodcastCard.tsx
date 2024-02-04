@@ -1,10 +1,11 @@
 'use client'
 import { useState } from 'react'
 import AudioPlayer from 'react-h5-audio-player'
-import { ReactSVG } from 'react-svg'
-
 //import typograf from '/Users/mac/Desktop/radioOverdriveApp/radio-overdrive/node_modules/Typograf/dist/typograf'
 import typograf from 'typograf'
+
+import { IconButtonPlay } from '@/components/icons'
+
 import uikit from '../uikit.module.scss'
 import styles from './podcastCard.module.scss'
 
@@ -64,7 +65,7 @@ const PodcastCard = ({ posts = [] }) => {
 								customAdditionalControls={[]}
 								showDownloadProgress={false}
 								customIcons={{
-									play: <ReactSVG src='play.svg' />,
+									play: <IconButtonPlay />,
 								}}
 							/>
 						</div>

@@ -6,7 +6,7 @@ import { useEffect, useRef } from 'react'
 import { register } from 'swiper/element/bundle'
 import type { SwiperProps, SwiperSlideProps } from 'swiper/react'
 
-import { ArrowNext, ArrowPrev } from '@/components/icons'
+import { IconArrowNext, IconArrowPrev } from '@/components/icons'
 
 import ScheduleCard from '../scheduleCard/ScheduleCard'
 import uikit from '../uikit.module.scss'
@@ -71,10 +71,10 @@ const Schedule = () => {
 		<>
 			<div className='custom-navigation'>
 				<div className='custom-prev'>
-					<ArrowPrev />
+					<IconArrowPrev />
 				</div>
 				<div className='custom-next'>
-					<ArrowNext />
+					<IconArrowNext />
 				</div>
 			</div>
 			<swiper-container init={false} ref={swiperRef}>

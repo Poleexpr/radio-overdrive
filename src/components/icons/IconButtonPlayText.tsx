@@ -1,6 +1,6 @@
 import { ComponentPropsWithRef, FC } from 'react'
 
-export const PlayTgLink: FC<ComponentPropsWithRef<'svg'>> = props => (
+export const IconButtonPlayText: FC<ComponentPropsWithRef<'svg'>> = props => (
 	<svg
 		width='193'
 		height='199'

@@ -1,6 +1,6 @@
 import { ComponentPropsWithRef, FC } from 'react'
 
-export const RDLogo: FC<ComponentPropsWithRef<'svg'>> = props => (
+export const IconLogoRD: FC<ComponentPropsWithRef<'svg'>> = props => (
 	<svg
 		width='38'
 		height='70'

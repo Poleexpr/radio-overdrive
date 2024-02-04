@@ -3,11 +3,11 @@
 import { Element } from 'react-scroll'
 
 import {
-	InstagramLogo,
-	MailLogo,
-	RDLogo,
-	TelegramLogo,
-	VkLogo,
+	IconLogoInstagram,
+	IconLogoMail,
+	IconLogoRD,
+	IconLogoTelegram,
+	IconLogoVk,
 } from '@/components/icons'
 
 import uikit from '../uikit.module.scss'
@@ -22,16 +22,16 @@ const Footer = () => {
 						<p className={uikit.title6}>Овердрайв</p>
 						<div className={styles.nets_wrapper}>
 							<a href='https://t.me/rocknword' target='_blank'>
-								<TelegramLogo className={styles.net_logo} />
+								<IconLogoTelegram className={styles.net_logo} />
 							</a>
 							<a href='https://vk.com/rocknword' target='_blank'>
-								<VkLogo className={styles.net_logo} />
+								<IconLogoVk className={styles.net_logo} />
 							</a>
 							<a
 								href='https://www.instagram.com/radio_overdrive/'
 								target='_blank'
 							>
-								<InstagramLogo className={styles.net_logo} />
+								<IconLogoInstagram className={styles.net_logo} />
 							</a>
 						</div>
 					</div>
@@ -41,7 +41,7 @@ const Footer = () => {
 							target='_blank'
 							className={styles.mail_link}
 						>
-							<MailLogo className={styles.net_logo} />
+							<IconLogoMail className={styles.net_logo} />
 
 							<p className={uikit.text}>radio@russiandino.ru</p>
 						</a>
@@ -64,7 +64,7 @@ const Footer = () => {
 								target='_blank'
 								className={styles.rd}
 							>
-								<RDLogo />
+								<IconLogoRD />
 
 								<div className={styles.rd_text}>
 									<p>made by</p>

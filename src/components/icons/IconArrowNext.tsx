@@ -1,6 +1,6 @@
 import { ComponentPropsWithRef, FC } from 'react'
 
-export const ArrowPrev: FC<ComponentPropsWithRef<'svg'>> = props => (
+export const IconArrowNext: FC<ComponentPropsWithRef<'svg'>> = props => (
 	<svg
 		width='19'
 		height='19'
@@ -10,10 +10,10 @@ export const ArrowPrev: FC<ComponentPropsWithRef<'svg'>> = props => (
 		{...props}
 	>
 		<path
-			d='M10.4844 17.9707L1.99909 9.48542L10.4844 1.00014'
+			d='M8.48438 1L16.9697 9.48528L8.48438 17.9706'
 			stroke='white'
 			stroke-width='2'
 		/>
-		<path d='M1.99909 9.48542H18.9697' stroke='white' stroke-width='2' />
+		<path d='M16.9697 9.48528H-0.000906566' stroke='white' stroke-width='2' />
 	</svg>
 )

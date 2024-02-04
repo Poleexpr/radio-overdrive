@@ -1,8 +1,9 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import { ReactSVG } from 'react-svg'
 import Parser from 'rss-parser'
+
+import { IconArrowDown } from '@/components/icons'
 
 import PodcastCard from '../podcastCard/PodcastCard'
 import uikit from '../uikit.module.scss'
@@ -44,7 +45,7 @@ const Podcast = (props: any) => {
 					className={styles.link_wrapper}
 				>
 					<p className={uikit.text5}>ещё выпуски </p>
-					<ReactSVG src='arrowDown.svg' />
+					<IconArrowDown />
 				</a>
 			</div>
 		</div>

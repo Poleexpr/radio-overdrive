@@ -1,6 +1,6 @@
 import { ComponentPropsWithRef, FC } from 'react'
 
-export const InstagramLogo: FC<ComponentPropsWithRef<'svg'>> = props => (
+export const IconLogoInstagram: FC<ComponentPropsWithRef<'svg'>> = props => (
 	<svg
 		width='58'
 		height='58'

@@ -1,6 +1,6 @@
 import { ComponentPropsWithRef, FC } from 'react'
 
-export const MailLogo: FC<ComponentPropsWithRef<'svg'>> = props => (
+export const IconLogoMail: FC<ComponentPropsWithRef<'svg'>> = props => (
 	<svg
 		width='58'
 		height='58'
