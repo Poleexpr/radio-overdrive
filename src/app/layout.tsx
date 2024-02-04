@@ -5,7 +5,6 @@ import type { Metadata } from 'next'
 import { cocomat, micraDi } from '@/fonts'
 
 import Header from '../components/header/Header'
-import Radio from '../components/radio/Radio'
 
 export const metadata: Metadata = {
 	title: 'радио Овердрайв',
@@ -34,7 +33,6 @@ export default function RootLayout({
 			<body className={`${cocomat.variable} ${micraDi.variable}`}>
 				<Header />
 				{children}
-				<Radio />
 			</body>
 		</html>
 	)
