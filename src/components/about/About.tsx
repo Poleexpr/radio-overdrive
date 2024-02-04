@@ -3,6 +3,8 @@
 import Image from 'next/image'
 import { Element } from 'react-scroll'
 
+import { Typography } from '@/components'
+
 import uikit from '../uikit.module.scss'
 import styles from './about.module.scss'
 
@@ -31,9 +33,15 @@ const About = () => {
 					</div>
 					<div className={styles.container_text}>
 						<div className={styles.title_wrapper}>
-							<h3 className={`${uikit.title3} ${styles.title}`}>МУЗЫКА,</h3>
-							<h3 className={`${uikit.title3} ${styles.title}`}>СВОБОДА,</h3>
-							<h3 className={`${uikit.title3} ${styles.title}`}>ЛЮБОВЬ</h3>
+							<Typography tag='h3' variant='title3' className={styles.title}>
+								МУЗЫКА,
+							</Typography>
+							<Typography tag='h3' variant='title3' className={styles.title}>
+								СВОБОДА,
+							</Typography>
+							<Typography tag='h3' variant='title3' className={styles.title}>
+								ЛЮБОВЬ
+							</Typography>
 						</div>
 						<div className={styles.description_wrapper}>
 							<p className={`${uikit.text} ${styles.description}`}>
