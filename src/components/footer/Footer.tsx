@@ -1,7 +1,7 @@
 'use client'
-
 import { Element } from 'react-scroll'
 
+import { Typography } from '@/components'
 import {
 	IconLogoInstagram,
 	IconLogoMail,
@@ -10,7 +10,6 @@ import {
 	IconLogoVk,
 } from '@/components/icons'
 
-import uikit from '../uikit.module.scss'
 import styles from './footer.module.scss'
 
 const Footer = () => {
@@ -19,7 +18,10 @@ const Footer = () => {
 			<footer className={styles.footer}>
 				<div className={styles.container}>
 					<div className={styles.subcontainer_first}>
-						<p className={uikit.title6}>Овердрайв</p>
+						<Typography tag='h4' variant='title6'>
+							Овердрайв
+						</Typography>
+
 						<div className={styles.nets_wrapper}>
 							<a href='https://t.me/rocknword' target='_blank'>
 								<IconLogoTelegram className={styles.net_logo} />
@@ -42,21 +44,24 @@ const Footer = () => {
 							className={styles.mail_link}
 						>
 							<IconLogoMail className={styles.net_logo} />
-
-							<p className={uikit.text}>radio@russiandino.ru</p>
+							<Typography tag='p' variant='text'>
+								radio@russiandino.ru
+							</Typography>
 						</a>
 
 						<div className={styles.wrappe_copiright}>
-							<p className={`${uikit.text} ${styles.heshtag}`}>
+							<Typography tag='p' variant='text' className={styles.heshtag}>
 								#радиоовердрайв
-							</p>
-							<p className={uikit.text}>#хбдщдбдщ</p>
-							<p className={`${uikit.title5} ${styles.slogan}`}>
+							</Typography>
+							<Typography tag='p' variant='text'>
+								#хбдщдбдщ
+							</Typography>
+							<Typography tag='p' variant='title5' className={styles.slogan}>
 								Мы вещаем до последнего
-							</p>
-							<p className={uikit.text}>
+							</Typography>
+							<Typography tag='p' variant='text'>
 								© 2024 Радио Овердрайв. Санкт-Петербург. Все права защищены.
-							</p>
+							</Typography>
 						</div>
 						<div className={styles.rd_wrapper}>
 							<a

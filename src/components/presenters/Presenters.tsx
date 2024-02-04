@@ -4,8 +4,9 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import { Element } from 'react-scroll'
 
+import { Typography } from '@/components'
+
 import PresentersCard from '../presentersCard/PresentersCard'
-import uikit from '../uikit.module.scss'
 import styles from './presenters.module.scss'
 
 const Presenters = () => {
@@ -118,7 +119,9 @@ const Presenters = () => {
 		<Element name='presenters' className='element'>
 			<section>
 				<div className={styles.container}>
-					<h2 className={uikit.title2}>Ведущие</h2>
+					<Typography tag='h2' variant='title2'>
+						Ведущие
+					</Typography>
 					<div className={styles.cards_container}>{cardElements}</div>
 				</div>
 			</section>

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
-import uikit from '../uikit.module.scss'
+import { Typography } from '@/components'
+
 import styles from './presentersCard.module.scss'
 
 const PresentersCard = (props: any) => {
@@ -24,16 +25,26 @@ const PresentersCard = (props: any) => {
 				/>
 			</div>
 			<div className={styles.card_info}>
-				<p className={uikit.text3}>Голос {props.day}</p>
-				<p className={`${uikit.title4} ${styles.card_title}`}>{props.name}</p>
-				<p className={uikit.text4}>г. {props.city}</p>
-				<div className={`${uikit.text} ${styles.card_description}`}>
+				<Typography tag='p' variant='text3'>
+					Голос {props.day}
+				</Typography>
+				<Typography tag='h4' variant='title4' className={styles.card_title}>
+					{props.name}
+				</Typography>
+				<Typography tag='p' variant='text4'>
+					г. {props.city}
+				</Typography>
+				<Typography
+					tag='div'
+					variant='text'
+					className={styles.card_description}
+				>
 					<p>{props.descriptionParagraph1}</p>
 					<p>{props.descriptionParagraph2}</p>
 					<p>{props.descriptionParagraph3}</p>
 					<p>{props.descriptionParagraph4}</p>
 					<p>{props.descriptionParagraph5}</p>
-				</div>
+				</Typography>
 			</div>
 		</div>
 	)

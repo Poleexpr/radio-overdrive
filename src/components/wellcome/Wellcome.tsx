@@ -2,7 +2,12 @@
 
 import Marquee from 'react-fast-marquee'
 
-import { IconArrowNextLong, IconButtonPlayText, IconEllipse } from '@/components/icons'
+import { Typography } from '@/components'
+import {
+	IconArrowNextLong,
+	IconButtonPlayText,
+	IconEllipse,
+} from '@/components/icons'
 
 import uikit from '../uikit.module.scss'
 import styles from './wellcome.module.scss'
@@ -20,8 +25,12 @@ const Wellcome = () => {
 			></video>
 			<div className={styles.container}>
 				<div className={styles.title_wrapper}>
-					<p className={`${styles.subtitle} ${uikit.title}`}>это</p>
-					<h1 className={`${styles.title} ${uikit.title2}`}>РАДИО Овердрайв</h1>
+					<Typography tag='p' variant='title' className={styles.subtitle}>
+						это
+					</Typography>
+					<Typography tag='h1' variant='title2' className={styles.title}>
+						РАДИО Овердрайв
+					</Typography>
 				</div>
 				<div className={styles.description_container}>
 					<div>
@@ -32,16 +41,15 @@ const Wellcome = () => {
 					<a href='https://t.me/rocknword/11681' target='_blank'>
 						<div>
 							<div className={styles.donation_wrapper}>
-								<p className={`${styles.donation} ${uikit.text5}`}>
+								<Typography tag='p' variant='text5' className={styles.donation}>
 									поддержать проект
-								</p>
+								</Typography>
 								<IconArrowNextLong />
 							</div>
-
-							<div className={`${styles.slogan} ${uikit.text6}`}>
+							<Typography tag='div' variant='text6' className={styles.slogan}>
 								<p>Независимое радио без рекламы,</p>
 								<p>ипотеки и средств против импотенции —</p>
-							</div>
+							</Typography>
 
 							<div
 								className={`${styles.slogan_bold} ${uikit.text7} ${uikit.underline}`}

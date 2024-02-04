@@ -5,7 +5,6 @@ import { Element } from 'react-scroll'
 
 import { Typography } from '@/components'
 
-import uikit from '../uikit.module.scss'
 import styles from './about.module.scss'
 
 const About = () => {
@@ -44,14 +43,14 @@ const About = () => {
 							</Typography>
 						</div>
 						<div className={styles.description_wrapper}>
-							<p className={`${uikit.text} ${styles.description}`}>
+							<Typography tag='p' variant='text' className={styles.description}>
 								Мы базируемся на орбите свежей горячей планетёночки Земля
 								и ставим музыку в высоком стиле, покуда смерть не разлучит нас.
 								Долой ротацию и формат скучных околоистеблишментных
 								радиостанций, где всё куплено, — врубайся в доброкачественнейшее
 								музло всех времён и народов, оверслушатель!
-							</p>
-							<p className={`${uikit.text} ${styles.description}`}>
+							</Typography>
+							<Typography tag='p' variant='text' className={styles.description}>
 								Радио Овердрайв основано 15 октября 2020 года редакторами
 								независимого издательства Чтиво на месте бывшей авторской
 								страницы рок-писателя Сергея Иннера, психоделически исчезнувшего
@@ -64,7 +63,7 @@ const About = () => {
 									<span>«Овердрайв»</span>
 								</a>
 								.
-							</p>
+							</Typography>
 						</div>
 					</div>
 				</div>

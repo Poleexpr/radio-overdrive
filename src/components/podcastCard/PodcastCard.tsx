@@ -4,9 +4,9 @@ import AudioPlayer from 'react-h5-audio-player'
 //import typograf from '/Users/mac/Desktop/radioOverdriveApp/radio-overdrive/node_modules/Typograf/dist/typograf'
 import typograf from 'typograf'
 
+import { Typography } from '@/components'
 import { IconButtonPlay } from '@/components/icons'
 
-import uikit from '../uikit.module.scss'
 import styles from './podcastCard.module.scss'
 
 const PodcastCard = ({ posts = [] }) => {
@@ -47,15 +47,15 @@ const PodcastCard = ({ posts = [] }) => {
 							<img className={styles.cover} src={post.itunes.image} />
 						</div>
 						<div className={styles.container_info}>
-							<div className={`${uikit.text} ${styles.date}`}>
+							<Typography tag='p' variant='text' className={styles.date}>
 								{post.isoDate.slice(0, 10).split('-').reverse().join('.')}
-							</div>
-							<h4 className={`${uikit.title5} ${styles.title}`}>
+							</Typography>
+							<Typography tag='h4' variant='title5' className={styles.title}>
 								{post.title.slice(post.title.indexOf('#'))}
-							</h4>
-							<div className={`${uikit.text} ${styles.content}`}>
+							</Typography>
+							<Typography tag='p' variant='text' className={styles.content}>
 								{tp.execute(post.contentSnippet)}
-							</div>
+							</Typography>
 							<AudioPlayer
 								src={post.enclosure.url}
 								onPlay={e => console.log('onPlay')}

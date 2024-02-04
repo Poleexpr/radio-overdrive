@@ -1,3 +1,5 @@
+import { Typography } from '@/components'
+
 import uikit from '../uikit.module.scss'
 import styles from './mail.module.scss'
 
@@ -6,14 +8,14 @@ const Mail = () => {
 		<section>
 			<div className={styles.container}>
 				<div className={styles.wrapper}>
-					<h3 className={`${styles.title} ${uikit.title3}`}>
+					<Typography tag='h3' variant='title3' className={styles.title}>
 						МЫ ЖДЁМ ВАШИ ПИСЬМА
-					</h3>
-					<p className={`${styles.description} ${uikit.text2}`}>
+					</Typography>
+					<Typography tag='p' variant='text2' className={styles.description}>
 						Пишите нам письма — если хотите с нами сотрудничать, быть
 						волонтёром, прислать новый релиз, поделиться идеей программы,
 						обратиться к ведущим и слушателям или просто так:
-					</p>
+					</Typography>
 					<p className={uikit.link_text2}>
 						<a href='mailto:radio@russiandino.ru' target='_blank'>
 							radio@russiandino.ru

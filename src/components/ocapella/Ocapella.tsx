@@ -3,6 +3,8 @@
 import React, { useState } from 'react'
 import { Element } from 'react-scroll'
 
+import { Typography } from '@/components'
+
 import Podcast from '../podcast/Podcast'
 import uikit from '../uikit.module.scss'
 import styles from './ocapella.module.scss'
@@ -24,10 +26,13 @@ const Ocapella = () => {
 		<>
 			<Element name='program' className='element'>
 				<div className={styles.container}>
-					<h2 className={uikit.title2}>о’капелла</h2>
-					<p className={`${styles.description} ${uikit.text2}`}>
+					<Typography tag='h2' variant='title2'>
+						о’капелла
+					</Typography>
+					<Typography tag='p' variant='text2' className={styles.description}>
+						{' '}
 						Подкаст о музыке как феномене и чуде.
-					</p>
+					</Typography>
 					<button
 						onClick={togglePodcast}
 						className={`${uikit.link} ${styles.button}`}

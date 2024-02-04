@@ -1,33 +1,44 @@
-import uikit from '../uikit.module.scss'
+import { Typography } from '@/components'
+
 import styles from './scheduleCard.module.scss'
 
 const ScheduleCard = (props: any) => {
 	return (
 		<div className={styles.container}>
-			<div className={`${styles.title} ${uikit.title4}`}>{props.day}</div>
+			<Typography tag='h4' variant='title4' className={styles.title}>
+				{props.day}
+			</Typography>
 			<div className={styles.card}>
-				<div className={`${styles.time} ${uikit.title5}`}>8:00</div>
-				<div className={`${styles.name} ${uikit.text}`}>
+				<Typography tag='p' variant='title5' className={styles.time}>
+					8:00
+				</Typography>
+				<Typography tag='p' variant='text' className={styles.name}>
 					Утренний эфир {props.person}
-				</div>
+				</Typography>
 			</div>
 			<div className={styles.card}>
-				<div className={`${styles.time} ${uikit.title5}`}>13:00</div>
-				<div className={`${styles.name} ${uikit.text}`}>
+				<Typography tag='p' variant='title5' className={styles.time}>
+					13:00
+				</Typography>
+				<Typography tag='p' variant='text' className={styles.name}>
 					Дневной эфир {props.person}
-				</div>
+				</Typography>
 			</div>
 			<div className={styles.card}>
-				<div className={`${styles.time} ${uikit.title5}`}>17:00</div>
-				<div className={`${styles.name} ${uikit.text}`}>
+				<Typography tag='p' variant='title5' className={styles.time}>
+					17:00
+				</Typography>
+				<Typography tag='p' variant='text' className={styles.name}>
 					Вечерний эфир {props.person}
-				</div>
+				</Typography>
 			</div>
 			<div className={styles.card}>
-				<div className={`${styles.time} ${uikit.title5}`}>22:00</div>
-				<div className={`${styles.name} ${uikit.text}`}>
+				<Typography tag='p' variant='title5' className={styles.time}>
+					22:00
+				</Typography>
+				<Typography tag='p' variant='text' className={styles.name}>
 					Ночной эфир {props.person}
-				</div>
+				</Typography>
 			</div>
 		</div>
 	)
