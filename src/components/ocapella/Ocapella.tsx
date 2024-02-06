@@ -6,6 +6,7 @@ import { Element } from 'react-scroll';
 import { Podcast, Typography } from '@/components';
 
 import uikit from '../uikit.module.scss';
+
 import styles from './ocapella.module.scss';
 
 const Ocapella = () => {
@@ -20,27 +21,25 @@ const Ocapella = () => {
   const styleDisplayPodcast = showPodcast ? { display: 'block' } : { display: 'none' };
 
   return (
-    <>
-      <Element name='program' className='element'>
-        <div className={styles.container}>
-          <Typography tag='h2' variant='title2'>
-            о’капелла
-          </Typography>
-          <Typography tag='p' variant='text2' className={styles.description}>
-            {' '}
-            Подкаст о музыке как феномене и чуде.
-          </Typography>
-          <button onClick={togglePodcast} className={`${uikit.link} ${styles.button}`}>
-            {showPodcast ? 'скрыть' : 'слушать онлайн'}
-          </button>
-        </div>
-        <Podcast.Collection
-          feedUrl={'./ocappella'}
-          podcastLink={'https://radiooverdrive.mave.digital'}
-          podcastStyle={styleDisplayPodcast}
-        />
-      </Element>
-    </>
+    <Element className='element' name='program'>
+      <div className={styles.container}>
+        <Typography tag='h2' variant='title2'>
+          о’капелла
+        </Typography>
+        <Typography className={styles.description} tag='p' variant='text2'>
+          {' '}
+          Подкаст о музыке как феномене и чуде.
+        </Typography>
+        <button className={`${uikit.link} ${styles.button}`} onClick={togglePodcast}>
+          {showPodcast ? 'скрыть' : 'слушать онлайн'}
+        </button>
+      </div>
+      <Podcast.Collection
+        feedUrl='./ocappella'
+        podcastLink='https://radiooverdrive.mave.digital'
+        podcastStyle={styleDisplayPodcast}
+      />
+    </Element>
   );
 };
 

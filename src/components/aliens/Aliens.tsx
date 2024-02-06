@@ -7,6 +7,7 @@ import Marquee from 'react-fast-marquee';
 import { Podcast } from '@/components';
 
 import uikit from '../uikit.module.scss';
+
 import styles from './aliens.module.scss';
 
 const Aliens = () => {
@@ -21,30 +22,30 @@ const Aliens = () => {
   return (
     <section className={styles.container}>
       <Image
-        className={styles.aliensShadowTopImg}
-        src='/aliensShadowTop.png'
         alt=''
-        layout='responsive'
-        width={1000}
+        className={styles.aliensShadowTopImg}
         height={1000}
+        layout='responsive'
+        src='/aliensShadowTop.png'
+        width={1000}
       />
       <Marquee autoFill className={styles.marquee}>
         <Image
-          className={styles.img}
-          src='/aliensBack.png'
           alt=''
-          layout='responsive'
-          width={1000}
+          className={styles.img}
           height={1000}
+          layout='responsive'
+          src='/aliensBack.png'
+          width={1000}
         />
       </Marquee>
       <Image
-        className={styles.aliensShadowBottomImg}
-        src='/aliensShadowBottom.png'
         alt=''
-        layout='responsive'
-        width={1000}
+        className={styles.aliensShadowBottomImg}
         height={1000}
+        layout='responsive'
+        src='/aliensShadowBottom.png'
+        width={1000}
       />
 
       <div className={styles.info_container}>
@@ -52,13 +53,13 @@ const Aliens = () => {
         <p className={`${styles.description} ${uikit.text2}`}>
           Прямые эфиры с музыкантами, писателями, философами и другими гостями не от мира сего.
         </p>
-        <button onClick={togglePodcast} className={`${uikit.link} ${styles.button}`}>
+        <button className={`${uikit.link} ${styles.button}`} onClick={togglePodcast}>
           {showPodcast ? 'скрыть' : 'слушать онлайн'}
         </button>
       </div>
       <Podcast.Collection
-        feedUrl={'./ocappella'}
-        podcastLink={'https://radiooverdrive.mave.digital'}
+        feedUrl='./ocappella'
+        podcastLink='https://radiooverdrive.mave.digital'
         podcastStyle={styleDisplayPodcast}
       />
     </section>

@@ -16,13 +16,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang='en'>
-      <body className={`${cocomat.variable} ${micraDi.variable}`}>
-        <Header />
-        {children}
-      </body>
-    </html>
-  );
-}
+const RootLayout = ({ children }: { children: React.ReactNode }) => (
+  <html lang='en'>
+    <body className={`${cocomat.variable} ${micraDi.variable}`}>
+      <Header />
+      {children}
+    </body>
+  </html>
+);
+
+export default RootLayout;

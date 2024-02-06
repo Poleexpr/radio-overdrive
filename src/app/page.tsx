@@ -14,12 +14,13 @@ import {
 } from '@/components';
 
 import styles from './page.module.scss';
+
 register();
 
-export default function Home() {
+const Home = () => {
   return (
     <main className={styles.main}>
-      <div className={styles.center}></div>
+      <div className={styles.center} />
       <Welcome />
       <Video />
       <About />
@@ -33,4 +34,6 @@ export default function Home() {
       </Planet>
     </main>
   );
-}
+};
+
+export default Home;

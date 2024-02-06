@@ -6,6 +6,7 @@ import { Element } from 'react-scroll';
 import { Typography } from '@/components';
 
 import { Presenters } from '../presenters';
+
 import styles from './team.module.scss';
 
 const Team = () => {
@@ -74,46 +75,46 @@ const Team = () => {
   const [cardsBox, setCardsBox] = React.useState(cards);
 
   function toggle(id: any) {
-    setCardsBox((prevCardsBox) => {
-      return prevCardsBox.map((card) => {
-        return card.id !== id
+    setCardsBox((prevCardsBox) =>
+      prevCardsBox.map((card) =>
+        card.id !== id
           ? { ...card, on: false }
           : card.on === true
             ? { ...card, on: card.on }
-            : { ...card, on: !card.on };
-      });
-    });
+            : { ...card, on: !card.on },
+      ),
+    );
   }
 
   function leave(id: any) {
-    setCardsBox((prevCardsBox) => {
-      return prevCardsBox.map((card) => {
-        return card.id === id ? { ...card, on: card.on } : { ...card, on: false };
-      });
-    });
+    setCardsBox((prevCardsBox) =>
+      prevCardsBox.map((card) =>
+        card.id === id ? { ...card, on: card.on } : { ...card, on: false },
+      ),
+    );
   }
 
   const cardElements = cardsBox.map((card) => (
     <Presenters.Card
       key={card.id}
-      id={card.id}
-      on={card.on}
-      toggle={toggle}
-      leave={leave}
-      img={card.img}
-      day={card.day}
-      name={card.name}
       city={card.city}
+      day={card.day}
       descriptionParagraph1={card.descriptionParagraph1}
       descriptionParagraph2={card.descriptionParagraph2}
       descriptionParagraph3={card.descriptionParagraph3}
       descriptionParagraph4={card.descriptionParagraph4}
       descriptionParagraph5={card.descriptionParagraph5}
+      id={card.id}
+      img={card.img}
+      leave={leave}
+      name={card.name}
+      on={card.on}
+      toggle={toggle}
     />
   ));
 
   return (
-    <Element name='presenters' className='element'>
+    <Element className='element' name='presenters'>
       <section>
         <div className={styles.container}>
           <Typography tag='h2' variant='title2'>

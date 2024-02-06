@@ -1,4 +1,4 @@
-//import { Cocomat, MicraDi } from 'next/font/local'
+// import { Cocomat, MicraDi } from 'next/font/local'
 import Cocomat from 'next/font/local';
 import MicraDi from 'next/font/local';
 

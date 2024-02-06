@@ -7,6 +7,7 @@ import { IconArrowDown } from '@/components/icons';
 
 import uikit from '../../uikit.module.scss';
 import { default as PodcastCard } from '../podcastCard/PodcastCard';
+
 import styles from './podcastCollection.module.scss';
 
 const PodcastCollection = (props: any) => {
@@ -23,9 +24,7 @@ const PodcastCollection = (props: any) => {
       },
     });
 
-    const filterPosts = (items: any, limit: number) => {
-      return items.slice(0, limit);
-    };
+    const filterPosts = (items: any, limit: number) => items.slice(0, limit);
 
     const fetchEpisodes = async () => {
       const feed = await parser.parseURL(props.feedUrl);
@@ -39,7 +38,12 @@ const PodcastCollection = (props: any) => {
     <div style={props.podcastStyle}>
       <PodcastCard posts={episodes} />
       <div className={styles.link_container}>
-        <a href={props.podcastLink} target='_blank' className={styles.link_wrapper}>
+        <a
+          className={styles.link_wrapper}
+          href={props.podcastLink}
+          rel='noreferrer'
+          target='_blank'
+        >
           <p className={uikit.text5}>ещё выпуски </p>
           <IconArrowDown />
         </a>

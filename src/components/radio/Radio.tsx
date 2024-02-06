@@ -1,9 +1,11 @@
 'use client';
+
 import { useEffect, useState } from 'react';
 import AudioPlayer from 'react-h5-audio-player';
 import { ReactSVG } from 'react-svg';
 
 import uikit from '../uikit.module.scss';
+
 import styles from './radio.module.scss';
 
 const Radio = () => {
@@ -26,16 +28,16 @@ const Radio = () => {
       <div className={styles.wrapper}>
         <AudioPlayer
           className='radio'
-          src='https://demo.azuracast.com/listen/azuratest_radio/radio.mp3'
-          onPlay={(e) => console.log('onPlay')}
-          layout='horizontal'
-          showJumpControls={false}
-          customVolumeControls={[]}
           customAdditionalControls={[]}
+          customVolumeControls={[]}
+          layout='horizontal'
           showDownloadProgress={false}
+          showJumpControls={false}
+          src='https://demo.azuracast.com/listen/azuratest_radio/radio.mp3'
           customIcons={{
             play: <ReactSVG src='play.svg' />,
           }}
+          onPlay={(e) => console.log('onPlay')}
         />
         <p className={`${uikit.text5} ${styles.live}`}>в эфире:</p>
         <p className={`${uikit.text3} ${styles.title}`}>текст</p>

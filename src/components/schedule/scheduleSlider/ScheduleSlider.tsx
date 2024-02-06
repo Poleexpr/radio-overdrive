@@ -32,7 +32,7 @@ const Schedule = () => {
     register();
 
     const params = {
-      //slidesPerView: 1,
+      // slidesPerView: 1,
       grabCursor: true,
       centeredSlides: true,
 
@@ -55,14 +55,14 @@ const Schedule = () => {
 
     swiperRef.current?.initialize();
 
-    /*swiperElRef.current?.addEventListener('swiperprogress', (e: any) => {
+    /* swiperElRef.current?.addEventListener('swiperprogress', (e: any) => {
             const [swiper, progress] = e.detail;
             console.log(progress);
         });
 
         swiperElRef.current?.addEventListener('swiperslidechange', (e: any) => {
             console.log('slide changed');
-        });*/
+        }); */
   }, []);
 
   return (
@@ -75,7 +75,7 @@ const Schedule = () => {
           <IconArrowNext />
         </div>
       </div>
-      <swiper-container init={false} ref={swiperRef}>
+      <swiper-container ref={swiperRef} init={false}>
         <swiper-slide>
           <ScheduleCard day='понедельник' person='Павела Барнашова' />
         </swiper-slide>

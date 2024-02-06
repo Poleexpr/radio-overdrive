@@ -1,32 +1,32 @@
-import { ComponentPropsWithRef, FC } from 'react';
+import type { ComponentPropsWithRef, FC } from 'react';
 
 export const IconLogoInstagram: FC<ComponentPropsWithRef<'svg'>> = (props) => (
   <svg
-    width='58'
+    fill='none'
     height='58'
     viewBox='0 0 58 58'
-    fill='none'
+    width='58'
     xmlns='http://www.w3.org/2000/svg'
     {...props}
   >
     <g filter='url(#filter0_b_1558_7797)'>
-      <rect width='58' height='58' rx='29' fill='url(#paint0_linear_1558_7797)' />
+      <rect fill='url(#paint0_linear_1558_7797)' height='58' rx='29' width='58' />
       <rect
-        x='0.25'
-        y='0.25'
-        width='57.5'
         height='57.5'
         rx='28.75'
         stroke='url(#paint1_linear_1558_7797)'
-        stroke-width='0.5'
+        strokeWidth='0.5'
+        width='57.5'
+        x='0.25'
+        y='0.25'
       />
       <circle
-        opacity='0.7'
         cx='29'
         cy='29'
+        opacity='0.7'
         r='28.75'
         stroke='url(#paint2_linear_1558_7797)'
-        stroke-width='0.5'
+        strokeWidth='0.5'
       />
       <path
         d='M35.8763 12.9566C40.931 12.9566 45.0437 17.0693 45.0437 22.1241V35.8758C45.0437 40.9305 40.931 45.0432 35.8763 45.0432H22.1246C17.0698 45.0432 12.9571 40.9305 12.9571 35.8758V22.1241C12.9571 17.0693 17.0698 12.9566 22.1246 12.9566H35.8763ZM35.8763 12.2104H22.1246C16.6493 12.2104 12.2109 16.6488 12.2109 22.1241V35.8758C12.2109 41.351 16.6493 45.7894 22.1246 45.7894H35.8763C41.3515 45.7894 45.7899 41.351 45.7899 35.8758V22.1241C45.7899 16.6488 41.3515 12.2104 35.8763 12.2104Z'
@@ -47,56 +47,56 @@ export const IconLogoInstagram: FC<ComponentPropsWithRef<'svg'>> = (props) => (
     </g>
     <defs>
       <filter
+        colorInterpolationFilters='sRGB'
+        filterUnits='userSpaceOnUse'
+        height='62'
         id='filter0_b_1558_7797'
+        width='62'
         x='-2'
         y='-2'
-        width='62'
-        height='62'
-        filterUnits='userSpaceOnUse'
-        color-interpolation-filters='sRGB'
       >
-        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feFlood floodOpacity='0' result='BackgroundImageFix' />
         <feGaussianBlur in='BackgroundImageFix' stdDeviation='1' />
         <feComposite in2='SourceAlpha' operator='in' result='effect1_backgroundBlur_1558_7797' />
         <feBlend
-          mode='normal'
           in='SourceGraphic'
           in2='effect1_backgroundBlur_1558_7797'
+          mode='normal'
           result='shape'
         />
       </filter>
       <linearGradient
+        gradientUnits='userSpaceOnUse'
         id='paint0_linear_1558_7797'
         x1='8.7'
-        y1='-40.9625'
         x2='67.7013'
+        y1='-40.9625'
         y2='-30.6712'
-        gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='#9337D4' />
-        <stop offset='1' stop-color='#5B31C0' />
+        <stop stopColor='#9337D4' />
+        <stop offset='1' stopColor='#5B31C0' />
       </linearGradient>
       <linearGradient
+        gradientUnits='userSpaceOnUse'
         id='paint1_linear_1558_7797'
         x1='8.7'
-        y1='-40.9625'
         x2='67.7013'
+        y1='-40.9625'
         y2='-30.6712'
-        gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='#9337D4' />
-        <stop offset='1' stop-color='#5B31C0' />
+        <stop stopColor='#9337D4' />
+        <stop offset='1' stopColor='#5B31C0' />
       </linearGradient>
       <linearGradient
+        gradientUnits='userSpaceOnUse'
         id='paint2_linear_1558_7797'
         x1='8.7'
-        y1='-40.9625'
         x2='67.7013'
+        y1='-40.9625'
         y2='-30.6712'
-        gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='#9337D4' />
-        <stop offset='1' stop-color='#5B31C0' />
+        <stop stopColor='#9337D4' />
+        <stop offset='1' stopColor='#5B31C0' />
       </linearGradient>
     </defs>
   </svg>
