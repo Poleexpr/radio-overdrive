@@ -1,15 +1,15 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Parser from 'rss-parser'
 
 import { IconArrowDown } from '@/components/icons'
 
-import PodcastCard from '../podcastCard/PodcastCard'
-import uikit from '../uikit.module.scss'
-import styles from './podcast.module.scss'
+import uikit from '../../uikit.module.scss'
+import { default as PodcastCard } from '../podcastCard/PodcastCard'
+import styles from './podcastCollection.module.scss'
 
-const Podcast = (props: any) => {
+const PodcastCollection = (props: any) => {
 	const [episodes, setEpisodes] = useState([])
 
 	useEffect(() => {
@@ -52,4 +52,4 @@ const Podcast = (props: any) => {
 	)
 }
 
-export default Podcast
+export default PodcastCollection

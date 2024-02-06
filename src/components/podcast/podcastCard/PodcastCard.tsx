@@ -75,4 +75,5 @@ const PodcastCard = ({ posts = [] }) => {
 		</ul>
 	)
 }
+
 export default PodcastCard

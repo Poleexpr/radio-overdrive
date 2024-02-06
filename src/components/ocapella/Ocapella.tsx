@@ -1,11 +1,10 @@
 'use client'
 
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Element } from 'react-scroll'
 
-import { Typography } from '@/components'
+import { Podcast, Typography } from '@/components'
 
-import Podcast from '../podcast/Podcast'
 import uikit from '../uikit.module.scss'
 import styles from './ocapella.module.scss'
 
@@ -40,7 +39,7 @@ const Ocapella = () => {
 						{showPodcast ? 'скрыть' : 'слушать онлайн'}
 					</button>
 				</div>
-				<Podcast
+				<Podcast.Collection
 					feedUrl={'./ocappella'}
 					podcastLink={'https://radiooverdrive.mave.digital'}
 					podcastStyle={styleDisplayPodcast}

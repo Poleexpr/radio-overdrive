@@ -12,7 +12,7 @@ import {
 import uikit from '../uikit.module.scss'
 import styles from './wellcome.module.scss'
 
-const Wellcome = () => {
+const Welcome = () => {
 	return (
 		<div className={styles.wrapper}>
 			<video
@@ -69,4 +69,4 @@ const Wellcome = () => {
 	)
 }
 
-export default Wellcome
+export default Welcome

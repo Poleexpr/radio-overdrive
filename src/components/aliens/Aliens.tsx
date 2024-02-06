@@ -1,10 +1,11 @@
 'use client'
 
 import Image from 'next/image'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Marquee from 'react-fast-marquee'
 
-import Podcast from '../podcast/Podcast'
+import { Podcast } from '@/components'
+
 import uikit from '../uikit.module.scss'
 import styles from './aliens.module.scss'
 
@@ -61,7 +62,7 @@ const Aliens = () => {
 					{showPodcast ? 'скрыть' : 'слушать онлайн'}
 				</button>
 			</div>
-			<Podcast
+			<Podcast.Collection
 				feedUrl={'./ocappella'}
 				podcastLink={'https://radiooverdrive.mave.digital'}
 				podcastStyle={styleDisplayPodcast}

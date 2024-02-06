@@ -9,7 +9,6 @@ import type { SwiperProps, SwiperSlideProps } from 'swiper/react'
 import { IconArrowNext, IconArrowPrev } from '@/components/icons'
 
 import ScheduleCard from '../scheduleCard/ScheduleCard'
-import styles from './schedule.module.scss'
 
 declare global {
 	namespace JSX {

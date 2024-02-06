@@ -1,6 +1,6 @@
 import { Typography } from '@/components'
 
-import Schedule from '../schedule/Schedule'
+import { Schedule } from '../schedule'
 import styles from './programGuide.module.scss'
 
 const ProgramGuide = () => {
@@ -9,7 +9,7 @@ const ProgramGuide = () => {
 			<Typography tag='h2' variant='title2' className={styles.title}>
 				программа передач
 			</Typography>
-			<Schedule />
+			<Schedule.Slider />
 			<div className={styles.description_wrapper}>
 				<Typography tag='p' variant='text' className={styles.description}>
 					И — всю неделю новые релизы топовых музыкантов. Не забудь подписаться

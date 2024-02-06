@@ -1,15 +1,14 @@
 'use client'
 
-import Image from 'next/image'
 import React, { useState } from 'react'
 import { Element } from 'react-scroll'
 
 import { Typography } from '@/components'
 
-import PresentersCard from '../presentersCard/PresentersCard'
-import styles from './presenters.module.scss'
+import { Presenters } from '../presenters'
+import styles from './team.module.scss'
 
-const Presenters = () => {
+const Team = () => {
 	const cards = [
 		{
 			id: 1,
@@ -97,7 +96,7 @@ const Presenters = () => {
 	}
 
 	const cardElements = cardsBox.map(card => (
-		<PresentersCard
+		<Presenters.Card
 			key={card.id}
 			id={card.id}
 			on={card.on}
@@ -129,4 +128,4 @@ const Presenters = () => {
 	)
 }
 
-export default Presenters
+export default Team
