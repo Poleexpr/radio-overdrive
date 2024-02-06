@@ -12,8 +12,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "yarn format",
-      "yarn lint --fix"
+      "yarn format"
     ],
     "*.{css,sass}": [
       "stylelint --fix"

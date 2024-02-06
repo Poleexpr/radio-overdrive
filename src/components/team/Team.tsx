@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Element } from 'react-scroll';
 
 import { Typography } from '@/components';
@@ -72,9 +72,9 @@ const Team = () => {
     },
   ];
 
-  const [cardsBox, setCardsBox] = React.useState(cards);
+  const [cardsBox, setCardsBox] = useState(cards);
 
-  function toggle(id: any) {
+  function toggle(id: number) {
     setCardsBox((prevCardsBox) =>
       prevCardsBox.map((card) =>
         card.id !== id
@@ -86,7 +86,7 @@ const Team = () => {
     );
   }
 
-  function leave(id: any) {
+  function leave(id: number) {
     setCardsBox((prevCardsBox) =>
       prevCardsBox.map((card) =>
         card.id === id ? { ...card, on: card.on } : { ...card, on: false },

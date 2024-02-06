@@ -1,12 +1,14 @@
+import type { FC, ReactNode } from 'react';
+
 import uikit from '../uikit.module.scss';
 
 import styles from './planet.module.scss';
 
-type PlanetProps = {
-  children: React.ReactNode;
-};
+interface PlanetProps {
+  children?: ReactNode;
+}
 
-const Planet = (props: PlanetProps) => (
+const Planet: FC<PlanetProps> = ({ children }) => (
   <div className={styles.planet_wrapper}>
     <div className={styles.container}>
       <a
@@ -17,7 +19,7 @@ const Planet = (props: PlanetProps) => (
       >
         подписаться
       </a>
-      {props.children}
+      {children}
     </div>
   </div>
 );

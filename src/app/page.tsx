@@ -17,23 +17,21 @@ import styles from './page.module.scss';
 
 register();
 
-const Home = () => {
-  return (
-    <main className={styles.main}>
-      <div className={styles.center} />
-      <Welcome />
-      <Video />
-      <About />
-      <Team />
-      <Invitation />
-      <Ocapella />
-      <ProgramGuide />
-      <Planet>
-        <Mail />
-        <Footer />
-      </Planet>
-    </main>
-  );
-};
+const Home = () => (
+  <main className={styles.main}>
+    <div className={styles.center} />
+    <Welcome />
+    <Video />
+    <About />
+    <Team />
+    <Invitation />
+    <Ocapella />
+    <ProgramGuide />
+    <Planet>
+      <Mail />
+      <Footer />
+    </Planet>
+  </main>
+);
 
 export default Home;
