@@ -7,7 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.+(tsx|ts|json)\""
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(tsx|ts|json)\"",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "yarn format"
+    ]
   },
   "dependencies": {
     "@types/react-burger-menu": "^2.8.7",
@@ -35,6 +41,8 @@
     "@types/rss": "^0.0.32",
     "eslint": "^8",
     "eslint-config-next": "13.5.6",
+    "husky": "^9.0.10",
+    "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "rss": "^1.2.2",
     "sass": "^1.69.5",
