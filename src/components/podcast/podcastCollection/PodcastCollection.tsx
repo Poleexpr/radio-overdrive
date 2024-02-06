@@ -1,5 +1,5 @@
 'use client';
-
+import type { FC } from 'react';
 import { useEffect, useState } from 'react';
 import Parser from 'rss-parser';
 
@@ -10,7 +10,13 @@ import { default as PodcastCard } from '../podcastCard/PodcastCard';
 
 import styles from './podcastCollection.module.scss';
 
-const PodcastCollection = (props: any) => {
+interface PodcastCollectionProps {
+  feedUrl: string;
+  podcastStyle: any;
+  podcastLink: string;
+}
+
+const PodcastCollection: FC<PodcastCollectionProps> = (props) => {
   const [episodes, setEpisodes] = useState([]);
 
   useEffect(() => {
