@@ -12,7 +12,11 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "yarn format"
+      "yarn format",
+      "yarn lint --fix"
+    ],
+    "*.{css,sass}": [
+      "stylelint --fix"
     ]
   },
   "dependencies": {
@@ -56,6 +60,10 @@
     "prettier": "^3.2.5",
     "rss": "^1.2.2",
     "sass": "^1.69.5",
+    "stylelint": "^16.2.1",
+    "stylelint-config-sass-guidelines": "^11.0.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-prettier": "^5.0.0",
     "typescript": "^5"
   }
 }
