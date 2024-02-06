@@ -74,7 +74,7 @@ const Team = () => {
 
   const [cardsBox, setCardsBox] = useState(cards);
 
-  function toggle(id: number) {
+  const toggle = (id: number) => {
     setCardsBox((prevCardsBox) =>
       prevCardsBox.map((card) =>
         card.id !== id
@@ -84,34 +84,15 @@ const Team = () => {
             : { ...card, on: !card.on },
       ),
     );
-  }
+  };
 
-  function leave(id: number) {
+  const leave = (id: number) => {
     setCardsBox((prevCardsBox) =>
       prevCardsBox.map((card) =>
         card.id === id ? { ...card, on: card.on } : { ...card, on: false },
       ),
     );
-  }
-
-  const cardElements = cardsBox.map((card) => (
-    <Presenters.Card
-      key={card.id}
-      city={card.city}
-      day={card.day}
-      descriptionParagraph1={card.descriptionParagraph1}
-      descriptionParagraph2={card.descriptionParagraph2}
-      descriptionParagraph3={card.descriptionParagraph3}
-      descriptionParagraph4={card.descriptionParagraph4}
-      descriptionParagraph5={card.descriptionParagraph5}
-      id={card.id}
-      img={card.img}
-      leave={leave}
-      name={card.name}
-      on={card.on}
-      toggle={toggle}
-    />
-  ));
+  };
 
   return (
     <Element className='element' name='presenters'>
@@ -120,7 +101,9 @@ const Team = () => {
           <Typography tag='h2' variant='title2'>
             Ведущие
           </Typography>
-          <div className={styles.cards_container}>{cardElements}</div>
+          <div className={styles.cards_container}>
+            <Presenters.Card cardsElements={cardsBox} leave={leave} toggle={toggle} />
+          </div>
         </div>
       </section>
     </Element>
