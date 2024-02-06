@@ -1,1 +1,1 @@
-export { default as ProgramGuide } from './ProgramGuide'
+export { default as ProgramGuide } from './ProgramGuide';

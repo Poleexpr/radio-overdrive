@@ -1,1 +1,1 @@
-export { default as Aliens } from './Aliens'
+export { default as Aliens } from './Aliens';

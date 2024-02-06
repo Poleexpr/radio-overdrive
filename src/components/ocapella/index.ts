@@ -1,1 +1,1 @@
-export { default as Ocapella } from './Ocapella'
+export { default as Ocapella } from './Ocapella';
