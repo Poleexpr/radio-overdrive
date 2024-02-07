@@ -24,26 +24,26 @@ const Footer = () => (
 
           <div className={styles.nets_wrapper}>
             <a
+              aria-label='Овердрайв в instagram'
               href='https://t.me/rocknword'
               rel='noreferrer'
               target='_blank'
-              title='Овердрайв в instagram'
             >
               <IconLogoTelegram className={styles.net_logo} />
             </a>
             <a
+              aria-label='Овердрайв вконтакте'
               href='https://vk.com/rocknword'
               rel='noreferrer'
               target='_blank'
-              title='Овердрайв вконтакте'
             >
               <IconLogoVk className={styles.net_logo} />
             </a>
             <a
+              aria-label='Овердрайв в telegram'
               href='https://www.instagram.com/radio_overdrive/'
               rel='noreferrer'
               target='_blank'
-              title='Овердрайв в telegram'
             >
               <IconLogoInstagram className={styles.net_logo} />
             </a>

@@ -30,7 +30,12 @@ const Welcome = () => (
       </div>
       <div className={styles.description_container}>
         <div>
-          <a href='https://t.me/rocknword' rel='noreferrer' target='_blank'>
+          <a
+            aria-label='слушать в телеграм'
+            href='https://t.me/rocknword'
+            rel='noreferrer'
+            target='_blank'
+          >
             <IconButtonPlayText className={styles.playTgLink} />
           </a>
         </div>
