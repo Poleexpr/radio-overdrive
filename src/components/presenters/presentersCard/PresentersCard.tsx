@@ -19,6 +19,8 @@ interface PresentersCardProps {
     descriptionParagraph4?: string;
     descriptionParagraph5?: string;
   }[];
+  toggle: (id: number) => void;
+  leave: (id: number) => void;
 }
 
 const PresentersCard: FC<PresentersCardProps> = ({ cardsElements, ...props }) =>
