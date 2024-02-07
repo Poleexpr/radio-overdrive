@@ -5,6 +5,8 @@ import { Typography } from '@/components';
 
 import styles from './presentersCard.module.scss';
 
+// TODO:  cardsElements typeof CONST*
+
 interface PresentersCardProps {
   cardsElements: {
     id: number;
@@ -23,14 +25,14 @@ interface PresentersCardProps {
   leave: (id: number) => void;
 }
 
-const PresentersCard: FC<PresentersCardProps> = ({ cardsElements, ...props }) =>
+const PresentersCard: FC<PresentersCardProps> = ({ cardsElements, toggle, leave }) =>
   cardsElements.map((cardElement) => (
     <div
       className={
         cardElement.on ? `${styles.container}` : `${styles.container} ${styles.cardClosed}`
       }
-      onMouseEnter={() => props.toggle(cardElement.id)}
-      onMouseLeave={() => props.leave(cardElement.id)}
+      onMouseEnter={() => toggle(cardElement.id)}
+      onMouseLeave={() => leave(cardElement.id)}
     >
       <div className={styles.img_wrapper}>
         <Image
