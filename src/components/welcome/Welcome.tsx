@@ -1,9 +1,5 @@
-'use client';
-
-import Marquee from 'react-fast-marquee';
-
-import { Typography } from '@/components';
-import { IconArrowNextLong, IconButtonPlayText, IconEllipse } from '@/components/icons';
+import { MarqueeText, Typography } from '@/components';
+import { IconArrowNextLong, IconButtonPlayText } from '@/components/icons';
 
 import uikit from '../uikit.module.scss';
 
@@ -59,10 +55,7 @@ const Welcome = () => (
           </div>
         </a>
       </div>
-      <Marquee autoFill>
-        <p className={uikit.marqueeContent}>мы вещаем до последнего</p>
-        <IconEllipse className={styles.ellipse} />
-      </Marquee>
+      <MarqueeText>мы вещаем до последнего</MarqueeText>
     </div>
   </div>
 );

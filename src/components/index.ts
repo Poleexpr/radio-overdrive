@@ -13,3 +13,4 @@ export * from './team';
 export * from './typography/Typography';
 export * from './video';
 export * from './welcome';
+export * from './marquee';
