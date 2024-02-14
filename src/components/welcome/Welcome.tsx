@@ -1,7 +1,5 @@
-import { MarqueeText, Typography } from '@/components';
+import { MarqueeText, Typography, UnderlineLink } from '@/components';
 import { IconArrowNextLong, IconButtonPlayText } from '@/components/icons';
-
-import uikit from '../uikit.module.scss';
 
 import styles from './wellcome.module.scss';
 
@@ -47,11 +45,12 @@ const Welcome = () => (
               <p>Независимое радио без рекламы,</p>
               <p>ипотеки и средств против импотенции —</p>
             </Typography>
-
-            <div className={`${styles.slogan_bold} ${uikit.text7} ${uikit.underline}`}>
-              <p>такое возможно?</p>
-              <p>Да, благодаря твоим донатам!</p>
-            </div>
+            <Typography className={styles.slogan_bold} tag='div' variant='text7'>
+              <UnderlineLink>такое возможно?</UnderlineLink>
+            </Typography>
+            <Typography className={styles.slogan_bold} tag='div' variant='text7'>
+              <UnderlineLink>Да, благодаря твоим донатам!</UnderlineLink>
+            </Typography>
           </div>
         </a>
       </div>

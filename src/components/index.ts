@@ -14,3 +14,4 @@ export * from './typography/Typography';
 export * from './video';
 export * from './welcome';
 export * from './marquee';
+export * from './links';

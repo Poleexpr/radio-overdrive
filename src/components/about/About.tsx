@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { Element } from 'react-scroll';
 
-import { Typography } from '@/components';
+import { Typography, UnderlineLink } from '@/components';
 
 import styles from './about.module.scss';
 
@@ -52,13 +52,8 @@ const About = () => (
               Радио Овердрайв основано 15 октября 2020 года редакторами независимого издательства
               Чтиво на месте бывшей авторской страницы рок-писателя Сергея Иннера, психоделически
               исчезнувшего после презентации его антиромана{' '}
-              <a
-                className={styles.link}
-                href='https://chtivo.spb.ru/book-overdrive.html'
-                rel='noreferrer'
-                target='_blank'
-              >
-                <span>«Овердрайв»</span>
+              <a href='https://chtivo.spb.ru/book-overdrive.html' rel='noreferrer' target='_blank'>
+                <UnderlineLink>«Овердрайв»</UnderlineLink>
               </a>
               .
             </Typography>
