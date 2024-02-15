@@ -1,3 +1,122 @@
+.welcome {
+  position: relative;
+  width: 100%;
+  height: fit-content;
 
+  .video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 0;
+  }
 
+  .container {
+    position: relative;
+    padding-top: 265px;
+    padding-bottom: 200px;
+    display: grid;
+    justify-content: center;
+    z-index: 1;
+  }
 
+  .title_wrapper {
+    justify-self: center;
+  }
+
+  .title {
+    margin-top: 10px;
+  }
+
+  .description_container {
+    margin-top: 70px;
+    margin-bottom: 120px;
+    display: flex;
+    gap: 85px;
+    justify-self: center;
+    align-items: center;
+  }
+
+  .donation_wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .slogan {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .ellipse {
+    margin: 0 44px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .welcome {
+    .container {
+      //padding-top: 310px;
+      padding-top: 200px;
+      padding-bottom: 230px;
+    }
+
+    .description_container {
+      margin-bottom: 100px;
+      gap: 75px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .welcome {
+    .container {
+      padding-top: 200px;
+      padding-bottom: 55px;
+    }
+
+    .description_container {
+      margin-bottom: 90px;
+      gap: 67px;
+    }
+
+    .title {
+      text-align: left;
+    }
+
+    .playTgLink {
+      width: 160px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .welcome {
+    .container {
+      //width: 85vw;
+      //margin: 0 auto;
+      padding-top: 160px;
+      padding-bottom: 30px;
+    }
+
+    .description_container {
+      margin-top: 25px;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .subtitle,
+    .title {
+      text-align: center;
+    }
+
+    .title {
+      font-size: 32px;
+    }
+
+    .slogan,
+    .slogan_bold {
+      display: none;
+    }
+  }
+}

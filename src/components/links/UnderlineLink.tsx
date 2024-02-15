@@ -9,7 +9,7 @@ interface UnderlineLinkProps {
 }
 
 export const UnderlineLink: FC<UnderlineLinkProps> = ({ className, children }) => (
-  <p className={classnames(className, styles.link)}>
+  <span className={classnames(className, styles.link)}>
     <span>{children}</span>
-  </p>
+  </span>
 );
