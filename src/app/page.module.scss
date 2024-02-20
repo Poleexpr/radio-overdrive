@@ -425,3 +425,82 @@
     }
   }
 }
+
+.mail {
+  .container {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .wrapper {
+    width: 560px;
+  }
+
+  .title {
+    margin-bottom: 50px;
+  }
+
+  .description {
+    margin-bottom: 30px;
+  }
+
+  .link {
+    font-family: var(--cocomat), sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 140%;
+    text-transform: uppercase;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .mail {
+    .wrapper {
+      width: 520px;
+    }
+
+    .title {
+      margin-bottom: 40px;
+    }
+
+    .description {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .mail {
+    .wrapper {
+      width: 400px;
+    }
+
+    .title {
+      margin-bottom: 30px;
+    }
+
+    .description {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 744px) {
+  .mail {
+    .container {
+      width: 85vw;
+    }
+
+    .wrapper {
+      width: auto;
+      padding-bottom: 60px;
+    }
+
+    .title {
+      margin-bottom: 25px;
+    }
+
+    .description {
+      margin-bottom: 12px;
+    }
+  }
+}

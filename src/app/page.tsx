@@ -4,7 +4,6 @@ import { register } from 'swiper/element/bundle';
 import {
   Anchor,
   Footer,
-  Mail,
   Ocapella,
   ProgramGuide,
   Team,
@@ -155,8 +154,22 @@ const Home = () => (
         <LinkRectangle className={styles.link_subscribe} href='https://t.me/rocknword'>
           подписаться
         </LinkRectangle>
-
-        <Mail />
+        <section className={styles.mail}>
+          <div className={styles.container}>
+            <div className={styles.wrapper}>
+              <Typography className={styles.title} tag='h3' variant='title3'>
+                МЫ ЖДЁМ ВАШИ ПИСЬМА
+              </Typography>
+              <Typography className={styles.description} tag='p' variant='text2'>
+                Пишите нам письма — если хотите с нами сотрудничать, быть волонтёром, прислать новый
+                релиз, поделиться идеей программы, обратиться к ведущим и слушателям или просто так:
+              </Typography>
+              <p>
+                <MailLink isColorize={false} />
+              </p>
+            </div>
+          </div>
+        </section>
         <Footer />
       </div>
     </div>
