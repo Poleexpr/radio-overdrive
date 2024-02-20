@@ -18,7 +18,7 @@ const Ocapella = () => {
     setShowPodcast(!showPodcast);
   };
 
-  const styleDisplayPodcast = showPodcast ? { display: 'block' } : { display: 'none' };
+  const className = showPodcast ? styles.showPodcast : styles.hidePodcast;
 
   return (
     <Element className='element' name='program'>
@@ -35,9 +35,9 @@ const Ocapella = () => {
         </button>
       </div>
       <Podcast.Collection
+        className={className}
         feedUrl='./ocappella'
         podcastLink='https://radiooverdrive.mave.digital'
-        podcastStyle={styleDisplayPodcast}
       />
     </Element>
   );

@@ -1,4 +1,5 @@
 'use client';
+
 import type { FC } from 'react';
 import { useEffect, useState } from 'react';
 import Parser from 'rss-parser';
@@ -6,50 +7,46 @@ import Parser from 'rss-parser';
 import { IconArrowDown } from '@/components/icons';
 
 import uikit from '../../uikit.module.scss';
-import { default as PodcastCard } from '../podcastCard/PodcastCard';
+import PodcastCard from '../podcastCard/PodcastCard';
 
 import styles from './podcastCollection.module.scss';
 
 interface PodcastCollectionProps {
   feedUrl: string;
-  podcastStyle: any;
+  className: string;
   podcastLink: string;
 }
 
-const PodcastCollection: FC<PodcastCollectionProps> = (props) => {
-  const [episodes, setEpisodes] = useState([]);
+interface Items {
+  title: string;
+  contentSnippet: string;
+  isoDate: string;
+  itunes: { image: string };
+  enclosure: { url: string };
+}
+
+const PodcastCollection: FC<PodcastCollectionProps> = ({ feedUrl, className, podcastLink }) => {
+  const [episodes, setEpisodes] = useState<Items[]>([]);
 
   useEffect(() => {
-    type CustomFeed = { foo: string };
-    type CustomItem = { bar: any };
+    const parser: Parser = new Parser();
 
-    const parser: Parser<CustomFeed, CustomItem> = new Parser({
-      customFields: {
-        feed: ['foo'],
-        item: ['bar'],
-      },
-    });
-
-    const filterPosts = (items: any, limit: number) => items.slice(0, limit);
+    const filterPosts = (items: Items[], limit: number) => items.slice(0, limit);
 
     const fetchEpisodes = async () => {
-      const feed = await parser.parseURL(props.feedUrl);
+      const feed = await parser.parseURL(feedUrl);
       const blogPosts = filterPosts(feed.items, 3);
+      console.log(feed.items);
       setEpisodes(blogPosts);
     };
     fetchEpisodes();
   }, []);
 
   return (
-    <div style={props.podcastStyle}>
+    <div className={className}>
       <PodcastCard posts={episodes} />
       <div className={styles.link_container}>
-        <a
-          className={styles.link_wrapper}
-          href={props.podcastLink}
-          rel='noreferrer'
-          target='_blank'
-        >
+        <a className={styles.link_wrapper} href={podcastLink} rel='noreferrer' target='_blank'>
           <p className={uikit.text5}>ещё выпуски </p>
           <IconArrowDown />
         </a>
