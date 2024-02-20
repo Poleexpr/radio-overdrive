@@ -1,8 +1,7 @@
-export * from './about';
 export * from './aliens';
 export * from './footer';
 export * from './header';
-export * from './invitation';
+
 export * from './mail';
 export * from './ocapella';
 export * from './planet';
