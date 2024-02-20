@@ -25,18 +25,17 @@ interface Items {
   enclosure: { url: string };
 }
 
+const parser: Parser = new Parser();
+
+const filterPosts = (items: Items[], limit: number) => items.slice(0, limit);
+
 const PodcastCollection: FC<PodcastCollectionProps> = ({ feedUrl, className, podcastLink }) => {
   const [episodes, setEpisodes] = useState<Items[]>([]);
 
   useEffect(() => {
-    const parser: Parser = new Parser();
-
-    const filterPosts = (items: Items[], limit: number) => items.slice(0, limit);
-
     const fetchEpisodes = async () => {
       const feed = await parser.parseURL(feedUrl);
       const blogPosts = filterPosts(feed.items, 3);
-      console.log(feed.items);
       setEpisodes(blogPosts);
     };
     fetchEpisodes();
