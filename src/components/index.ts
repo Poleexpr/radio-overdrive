@@ -1,7 +1,6 @@
 export * from './aliens';
 export * from './footer';
 export * from './header';
-export * from './mail';
 export * from './ocapella';
 export * from './podcast';
 export * from './programGuide';

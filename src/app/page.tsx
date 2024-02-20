@@ -8,9 +8,9 @@ import {
   ProgramGuide,
   Team,
   MarqueeText,
-  MailLink,
+  LinkMail,
   Typography,
-  UnderlineLink,
+  LinkUnderline,
   LinkRectangle,
 } from '@/components';
 import { IconArrowNextLong, IconButtonPlayText } from '@/components/icons';
@@ -63,10 +63,10 @@ const Home = () => (
                 <p>ипотеки и средств против импотенции —</p>
               </Typography>
               <Typography className={styles.slogan_bold} tag='div' variant='text7'>
-                <UnderlineLink>такое возможно?</UnderlineLink>
+                <LinkUnderline>такое возможно?</LinkUnderline>
               </Typography>
               <Typography className={styles.slogan_bold} tag='div' variant='text7'>
-                <UnderlineLink>Да, благодаря твоим донатам!</UnderlineLink>
+                <LinkUnderline>Да, благодаря твоим донатам!</LinkUnderline>
               </Typography>
             </div>
           </a>
@@ -123,7 +123,7 @@ const Home = () => (
                   rel='noreferrer'
                   target='_blank'
                 >
-                  <UnderlineLink>«Овердрайв»</UnderlineLink>
+                  <LinkUnderline>«Овердрайв»</LinkUnderline>
                 </a>
                 .
               </Typography>
@@ -143,7 +143,7 @@ const Home = () => (
           сказать, и ты врубаешь в высокий стиль, присылай демо-аудио и ссылку на свой плейлист на
         </Typography>
         <p>
-          <MailLink isColorize />
+          <LinkMail isColorize />
         </p>
       </div>
     </section>
@@ -165,7 +165,7 @@ const Home = () => (
                 релиз, поделиться идеей программы, обратиться к ведущим и слушателям или просто так:
               </Typography>
               <p>
-                <MailLink isColorize={false} />
+                <LinkMail isColorize={false} />
               </p>
             </div>
           </div>

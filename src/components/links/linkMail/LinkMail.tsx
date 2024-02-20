@@ -1,14 +1,14 @@
 import classnames from 'classnames';
 import type { FC } from 'react';
 
-import styles from './mailLink.module.scss';
+import styles from './linkMail.module.scss';
 
-interface MailLinkProps {
+interface LinkMailProps {
   isColorize: boolean;
   className?: string;
 }
 
-export const MailLink: FC<MailLinkProps> = ({ className, isColorize }) => (
+export const LinkMail: FC<LinkMailProps> = ({ className, isColorize }) => (
   <a
     className={classnames(isColorize ? styles.textColor : styles.textWhite, className)}
     href='mailto:radio@russiandino.ru'

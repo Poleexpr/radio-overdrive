@@ -1,3 +1,3 @@
-export * from './underlineLink/UnderlineLink';
-export * from './mailLink/MailLink';
+export * from './linkUnderline/LinkUnderline';
+export * from './linkMail/LinkMail';
 export * from './linkRectangle/LinkRectangle';
