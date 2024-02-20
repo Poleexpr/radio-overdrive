@@ -6,13 +6,13 @@ import {
   Footer,
   Mail,
   Ocapella,
-  Planet,
   ProgramGuide,
   Team,
   MarqueeText,
   MailLink,
   Typography,
   UnderlineLink,
+  LinkRectangle,
 } from '@/components';
 import { IconArrowNextLong, IconButtonPlayText } from '@/components/icons';
 
@@ -150,10 +150,16 @@ const Home = () => (
     </section>
     <Ocapella />
     <ProgramGuide />
-    <Planet>
-      <Mail />
-      <Footer />
-    </Planet>
+    <div className={styles.planet}>
+      <div className={styles.container}>
+        <LinkRectangle className={styles.link_subscribe} href='https://t.me/rocknword'>
+          подписаться
+        </LinkRectangle>
+
+        <Mail />
+        <Footer />
+      </div>
+    </div>
   </main>
 );
 
