@@ -3,7 +3,6 @@ export * from './footer';
 export * from './header';
 export * from './mail';
 export * from './ocapella';
-export * from './planet';
 export * from './podcast';
 export * from './programGuide';
 export * from './radio';
