@@ -1,1 +1,2 @@
-export * from './UnderlineLink';
+export * from './underlineLink/UnderlineLink';
+export * from './mailLink/MailLink';

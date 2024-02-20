@@ -4,13 +4,13 @@ import { register } from 'swiper/element/bundle';
 import {
   Anchor,
   Footer,
-  Invitation,
   Mail,
   Ocapella,
   Planet,
   ProgramGuide,
   Team,
   MarqueeText,
+  MailLink,
   Typography,
   UnderlineLink,
 } from '@/components';
@@ -134,7 +134,20 @@ const Home = () => (
       </section>
     </Anchor>
     <Team />
-    <Invitation />
+    <section className={styles.invitation}>
+      <div className={styles.container}>
+        <Typography className={styles.title} tag='h3' variant='title3'>
+          ХОЧЕШЬ СТАТЬ ВЕДУЩИМ РАДИО ОВЕРДРАЙВ?
+        </Typography>
+        <Typography className={styles.text} tag='p' variant='text2'>
+          Возможно, мы ищем именно тебя: неважно в какой точке Земли ты живёшь, если тебе есть что
+          сказать, и ты врубаешь в высокий стиль, присылай демо-аудио и ссылку на свой плейлист на
+        </Typography>
+        <p>
+          <MailLink isColorize />
+        </p>
+      </div>
+    </section>
     <Ocapella />
     <ProgramGuide />
     <Planet>

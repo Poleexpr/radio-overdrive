@@ -1,0 +1,40 @@
+.textColor {
+  font-family: var(--cocomat), sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 140%;
+  text-transform: uppercase;
+  background: linear-gradient(100deg, #9337d4 2.28%, #5b31c0 91.54%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.textWhite {
+  font-family: var(--cocomat), sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 140%;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1440px) {
+  .textColor,
+  .textWhite {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .textColor,
+  .textWhite {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 744px) {
+  .textColor,
+  .textWhite {
+    font-size: 15px;
+  }
+}
