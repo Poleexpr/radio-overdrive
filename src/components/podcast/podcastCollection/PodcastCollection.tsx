@@ -25,7 +25,7 @@ interface Items {
   enclosure: { url: string };
 }
 
-const parser: Parser = new Parser();
+const parser: Parser<Items[]> = new Parser();
 
 const filterPosts = (items: Items[], limit: number) => items.slice(0, limit);
 
@@ -34,7 +34,7 @@ const PodcastCollection: FC<PodcastCollectionProps> = ({ feedUrl, className, pod
 
   useEffect(() => {
     const fetchEpisodes = async () => {
-      const feed = await parser.parseURL(feedUrl);
+      const feed: Items[] = await parser.parseURL(feedUrl);
       const blogPosts = filterPosts(feed.items, 3);
       setEpisodes(blogPosts);
     };
@@ -46,7 +46,7 @@ const PodcastCollection: FC<PodcastCollectionProps> = ({ feedUrl, className, pod
       <PodcastCard posts={episodes} />
       <div className={styles.link_container}>
         <a className={styles.link_wrapper} href={podcastLink} rel='noreferrer' target='_blank'>
-          <p className={uikit.text5}>ещё выпуски </p>
+          <p className={uikit.text5}>ещё выпуски</p>
           <IconArrowDown />
         </a>
       </div>
