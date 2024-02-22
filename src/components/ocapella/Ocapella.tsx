@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 import { Element } from 'react-scroll';
 
 import { Podcast, Typography } from '@/components';
@@ -34,11 +34,13 @@ const Ocapella = () => {
           {showPodcast ? 'скрыть' : 'слушать онлайн'}
         </button>
       </div>
-      <Podcast.Collection
-        className={className}
-        feedUrl='./ocappella'
-        podcastLink='https://radiooverdrive.mave.digital'
-      />
+      <Suspense fallback={<p> Loading...</p>}>
+        <Podcast.Collection
+          className={className}
+          feedUrl='./ocappella'
+          podcastLink='https://radiooverdrive.mave.digital'
+        />
+      </Suspense>
     </Element>
   );
 };

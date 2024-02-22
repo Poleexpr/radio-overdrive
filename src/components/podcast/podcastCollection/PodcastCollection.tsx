@@ -1,12 +1,9 @@
-'use client';
-
 import type { FC } from 'react';
-import { useEffect, useState } from 'react';
 import Parser from 'rss-parser';
 
+import { Typography } from '@/components';
 import { IconArrowDown } from '@/components/icons';
 
-import uikit from '../../uikit.module.scss';
 import PodcastCard from '../podcastCard/PodcastCard';
 
 import styles from './podcastCollection.module.scss';
@@ -25,28 +22,35 @@ interface Items {
   enclosure: { url: string };
 }
 
-const parser: Parser<Items[]> = new Parser();
+interface Feed {
+  items: Items[];
+}
+
+const parser: Parser<Feed> = new Parser();
 
 const filterPosts = (items: Items[], limit: number) => items.slice(0, limit);
 
-const PodcastCollection: FC<PodcastCollectionProps> = ({ feedUrl, className, podcastLink }) => {
-  const [episodes, setEpisodes] = useState<Items[]>([]);
+const fetchEpisodes = async (feedUrl: string) => {
+  const feed = await parser.parseURL(feedUrl);
+  return feed.items;
+};
 
-  useEffect(() => {
-    const fetchEpisodes = async () => {
-      const feed: Items[] = await parser.parseURL(feedUrl);
-      const blogPosts = filterPosts(feed.items, 3);
-      setEpisodes(blogPosts);
-    };
-    fetchEpisodes();
-  }, []);
+const PodcastCollection: FC<PodcastCollectionProps> = async ({
+  feedUrl,
+  className,
+  podcastLink,
+}) => {
+  const episodesAll = await fetchEpisodes(feedUrl);
+  const episodes = filterPosts(episodesAll, 3);
 
   return (
     <div className={className}>
       <PodcastCard posts={episodes} />
       <div className={styles.link_container}>
         <a className={styles.link_wrapper} href={podcastLink} rel='noreferrer' target='_blank'>
-          <p className={uikit.text5}>ещё выпуски</p>
+          <Typography tag='p' variant='text5'>
+            ещё выпуски
+          </Typography>
           <IconArrowDown />
         </a>
       </div>
