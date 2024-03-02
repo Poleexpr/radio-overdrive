@@ -10,3 +10,4 @@ export * from './IconLogoMail';
 export * from './IconLogoRD';
 export * from './IconLogoTelegram';
 export * from './IconLogoVk';
+export * from './IconLogoOverdrive';
