@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { register } from 'swiper/element/bundle';
 
 import {
   Anchor,
@@ -16,8 +15,6 @@ import {
 import { IconArrowNextLong, IconButtonPlayText } from '@/components/icons';
 
 import styles from './page.module.scss';
-
-register();
 
 const Home = () => (
   <main className={styles.main}>

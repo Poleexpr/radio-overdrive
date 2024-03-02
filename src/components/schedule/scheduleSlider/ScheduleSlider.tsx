@@ -4,26 +4,10 @@ import './scheduleCard.scss';
 
 import { useEffect, useRef } from 'react';
 import { register } from 'swiper/element/bundle';
-import type { SwiperProps, SwiperSlideProps } from 'swiper/react';
 
 import { IconArrowNext, IconArrowPrev } from '@/components/icons';
 
 import ScheduleCard from '../scheduleCard/ScheduleCard';
-
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'swiper-container': React.DetailedHTMLProps<
-        React.HTMLAttributes<HTMLElement> & SwiperProps,
-        HTMLElement
-      >;
-      'swiper-slide': React.DetailedHTMLProps<
-        React.HTMLAttributes<HTMLElement> & SwiperSlideProps,
-        HTMLElement
-      >;
-    }
-  }
-}
 
 const Schedule = () => {
   const swiperRef = useRef<any>(null!);
