@@ -24,7 +24,7 @@ const Footer = () => (
 
           <div className={styles.nets_wrapper}>
             <a
-              aria-label='Овердрайв в instagram'
+              aria-label='Овердрайв в telegram'
               href='https://t.me/rocknword'
               rel='noreferrer'
               target='_blank'
@@ -40,7 +40,7 @@ const Footer = () => (
               <IconLogoVk className={styles.net_logo} />
             </a>
             <a
-              aria-label='Овердрайв в telegram'
+              aria-label='Овердрайв в instagram'
               href='https://www.instagram.com/radio_overdrive/'
               rel='noreferrer'
               target='_blank'

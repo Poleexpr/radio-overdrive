@@ -3,7 +3,13 @@
 import { useEffect, useState } from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import { animateScroll as scroll, Events, Link, scrollSpy } from 'react-scroll';
-import { ReactSVG } from 'react-svg';
+
+import {
+  IconLogoOverdrive,
+  IconLogoTelegram,
+  IconLogoVk,
+  IconLogoInstagram,
+} from '@/components/icons';
 
 import uikit from '../uikit.module.scss';
 
@@ -40,17 +46,17 @@ const Header = () => {
   };
 
   return (
-    <header id='outer-container' className={isOpen ? styles.isOpen : styles.container}>
+    <header className={isOpen ? styles.isOpen : styles.container} id='outer-container'>
       <nav className={styles.wrapper}>
         <ul className={styles.menu}>
           <li className={`${styles.menu_item} ${uikit.text8}`}>
             <Link
+              smooth
+              spy
               activeClass='active'
-              to='about'
-              spy={true}
-              smooth={true}
-              offset={100}
               duration={500}
+              offset={100}
+              to='about'
               onSetActive={handleSetActive}
             >
               о нас
@@ -58,28 +64,28 @@ const Header = () => {
           </li>
           <li className={`${styles.menu_item} ${uikit.text8}`}>
             <Link
+              smooth
+              spy
               activeClass='active'
-              to='presenters'
-              spy={true}
-              smooth={true}
-              offset={-10}
               duration={500}
+              offset={-10}
+              to='presenters'
               onSetActive={handleSetActive}
             >
               ведущие
             </Link>
           </li>
           <li>
-            <ReactSVG src='logo.svg' />
+            <IconLogoOverdrive />
           </li>
           <li className={`${styles.menu_item} ${uikit.text8}`}>
             <Link
+              smooth
+              spy
               activeClass='active'
-              to='program'
-              spy={true}
-              smooth={true}
-              offset={-100}
               duration={500}
+              offset={-100}
+              to='program'
               onSetActive={handleSetActive}
             >
               программа
@@ -87,12 +93,12 @@ const Header = () => {
           </li>
           <li className={`${styles.menu_item} ${uikit.text8}`}>
             <Link
+              smooth
+              spy
               activeClass='active'
-              to='contacts'
-              spy={true}
-              smooth={true}
-              offset={0}
               duration={500}
+              offset={0}
+              to='contacts'
               onSetActive={handleSetActive}
             >
               контакты
@@ -101,28 +107,28 @@ const Header = () => {
         </ul>
       </nav>
       <div className={styles.logoMobile_wrapper}>
-        <ReactSVG className={styles.logoMobile} src='logo.svg' />
+        <IconLogoOverdrive className={styles.logoMobile} />
       </div>
       <Menu
         right
-        isOpen={isOpen}
-        onOpen={handleOnOpen}
-        onClose={handleOnOpen}
-        pageWrapId='page-wrap'
-        customBurgerIcon={<img src='./burgerIcon.svg' />}
-        customCrossIcon={<img src='./crossIcon.svg' />}
-        width='100%'
         className={styles.menuBurger}
+        customBurgerIcon={<img alt='открыть' src='./burgerIcon.svg' />}
+        customCrossIcon={<img alt='закрыть' src='./crossIcon.svg' />}
+        isOpen={isOpen}
+        pageWrapId='page-wrap'
+        width='100%'
+        onClose={handleOnOpen}
+        onOpen={handleOnOpen}
       >
         <ul className={styles.menu_wrapper}>
           <li className={`${styles.menu_item} ${uikit.title7}`}>
             <Link
+              smooth
+              spy
               activeClass='active'
               className='menu-item'
               duration={500}
               offset={0}
-              smooth={true}
-              spy={true}
               to='about'
               onClick={handleOnOpen}
               onSetActive={handleSetActive}
@@ -132,12 +138,12 @@ const Header = () => {
           </li>
           <li className={`${styles.menu_item} ${uikit.title7}`}>
             <Link
+              smooth
+              spy
               activeClass='active'
               className='menu-item'
               duration={500}
               offset={-10}
-              smooth={true}
-              spy={true}
               to='presenters'
               onClick={handleOnOpen}
               onSetActive={handleSetActive}
@@ -147,11 +153,11 @@ const Header = () => {
           </li>
           <li className={`${styles.menu_item} ${uikit.title7}`}>
             <Link
+              smooth
+              spy
               activeClass='active'
               duration={500}
               offset={-80}
-              smooth={true}
-              spy={true}
               to='program'
               onClick={handleOnOpen}
               onSetActive={handleSetActive}
@@ -161,11 +167,11 @@ const Header = () => {
           </li>
           <li className={`${styles.menu_item} ${uikit.title7}`}>
             <Link
+              smooth
+              spy
               activeClass='active'
               duration={500}
               offset={0}
-              smooth={true}
-              spy={true}
               to='contacts'
               onClick={handleOnOpen}
               onSetActive={handleSetActive}
@@ -176,14 +182,29 @@ const Header = () => {
         </ul>
         <div className={styles.contacts_wrapper}>
           <div className={styles.nets_wrapper}>
-            <a href='https://t.me/rocknword' rel='noreferrer' target='_blank'>
-              <ReactSVG className={styles.net_logo} src='tg.svg' />
+            <a
+              aria-label='Овердрайв в telegram'
+              href='https://t.me/rocknword'
+              rel='noreferrer'
+              target='_blank'
+            >
+              <IconLogoTelegram className={styles.net_logo} />
             </a>
-            <a href='https://vk.com/rocknword' rel='noreferrer' target='_blank'>
-              <ReactSVG className={styles.net_logo} src='vk.svg' />
+            <a
+              aria-label='Овердрайв вконтакте'
+              href='https://vk.com/rocknword'
+              rel='noreferrer'
+              target='_blank'
+            >
+              <IconLogoVk className={styles.net_logo} />
             </a>
-            <a href='https://www.instagram.com/radio_overdrive/' rel='noreferrer' target='_blank'>
-              <ReactSVG className={styles.net_logo} src='instagram.svg' />
+            <a
+              aria-label='Овердрайв в instagram'
+              href='https://www.instagram.com/radio_overdrive/'
+              rel='noreferrer'
+              target='_blank'
+            >
+              <IconLogoInstagram className={styles.net_logo} />
             </a>
           </div>
           <p className={uikit.text}>

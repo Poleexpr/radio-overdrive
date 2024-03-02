@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import AudioPlayer from 'react-h5-audio-player';
-import { ReactSVG } from 'react-svg';
+
+import { IconButtonPlay } from '@/components/icons';
 
 import uikit from '../uikit.module.scss';
 
@@ -35,7 +36,7 @@ const Radio = () => {
           showJumpControls={false}
           src='https://demo.azuracast.com/listen/azuratest_radio/radio.mp3'
           customIcons={{
-            play: <ReactSVG src='play.svg' />,
+            play: <IconButtonPlay />,
           }}
           onPlay={(e) => console.log('onPlay')}
         />
