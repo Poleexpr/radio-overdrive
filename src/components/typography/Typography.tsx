@@ -1,6 +1,6 @@
 import classnames from 'classnames';
 
-type Tag = 'div' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'p';
+type Tag = 'div' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'p' | 'li';
 type Variant =
   | 'title'
   | 'title2'

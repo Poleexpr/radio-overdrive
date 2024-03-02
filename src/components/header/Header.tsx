@@ -4,14 +4,13 @@ import { useEffect, useState } from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import { animateScroll as scroll, Events, Link, scrollSpy } from 'react-scroll';
 
+import { Typography } from '@/components';
 import {
   IconLogoOverdrive,
   IconLogoTelegram,
   IconLogoVk,
   IconLogoInstagram,
 } from '@/components/icons';
-
-import uikit from '../uikit.module.scss';
 
 import styles from './header.module.scss';
 
@@ -49,7 +48,7 @@ const Header = () => {
     <header className={isOpen ? styles.isOpen : styles.container} id='outer-container'>
       <nav className={styles.wrapper}>
         <ul className={styles.menu}>
-          <li className={`${styles.menu_item} ${uikit.text8}`}>
+          <Typography className={styles.menu_item} tag='li' variant='text8'>
             <Link
               smooth
               spy
@@ -61,8 +60,9 @@ const Header = () => {
             >
               о нас
             </Link>
-          </li>
-          <li className={`${styles.menu_item} ${uikit.text8}`}>
+          </Typography>
+
+          <Typography className={styles.menu_item} tag='li' variant='text8'>
             <Link
               smooth
               spy
@@ -74,11 +74,11 @@ const Header = () => {
             >
               ведущие
             </Link>
+          </Typography>
+          <li className={styles.logo}>
+            <IconLogoOverdrive className={styles.logo} />
           </li>
-          <li>
-            <IconLogoOverdrive />
-          </li>
-          <li className={`${styles.menu_item} ${uikit.text8}`}>
+          <Typography className={styles.menu_item} tag='li' variant='text8'>
             <Link
               smooth
               spy
@@ -90,8 +90,8 @@ const Header = () => {
             >
               программа
             </Link>
-          </li>
-          <li className={`${styles.menu_item} ${uikit.text8}`}>
+          </Typography>
+          <Typography className={styles.menu_item} tag='li' variant='text8'>
             <Link
               smooth
               spy
@@ -103,7 +103,7 @@ const Header = () => {
             >
               контакты
             </Link>
-          </li>
+          </Typography>
         </ul>
       </nav>
       <div className={styles.logoMobile_wrapper}>
@@ -121,7 +121,7 @@ const Header = () => {
         onOpen={handleOnOpen}
       >
         <ul className={styles.menu_wrapper}>
-          <li className={`${styles.menu_item} ${uikit.title7}`}>
+          <Typography className={styles.menu_item} tag='li' variant='title7'>
             <Link
               smooth
               spy
@@ -135,8 +135,8 @@ const Header = () => {
             >
               о нас
             </Link>
-          </li>
-          <li className={`${styles.menu_item} ${uikit.title7}`}>
+          </Typography>
+          <Typography className={styles.menu_item} tag='li' variant='title7'>
             <Link
               smooth
               spy
@@ -150,8 +150,8 @@ const Header = () => {
             >
               ведущие
             </Link>
-          </li>
-          <li className={`${styles.menu_item} ${uikit.title7}`}>
+          </Typography>
+          <Typography className={styles.menu_item} tag='li' variant='title7'>
             <Link
               smooth
               spy
@@ -164,8 +164,8 @@ const Header = () => {
             >
               программа
             </Link>
-          </li>
-          <li className={`${styles.menu_item} ${uikit.title7}`}>
+          </Typography>
+          <Typography className={styles.menu_item} tag='li' variant='title7'>
             <Link
               smooth
               spy
@@ -178,7 +178,7 @@ const Header = () => {
             >
               контакты
             </Link>
-          </li>
+          </Typography>
         </ul>
         <div className={styles.contacts_wrapper}>
           <div className={styles.nets_wrapper}>
@@ -207,7 +207,7 @@ const Header = () => {
               <IconLogoInstagram className={styles.net_logo} />
             </a>
           </div>
-          <p className={uikit.text}>
+          <Typography tag='p' variant='text'>
             <a
               className={styles.mail_link}
               href='mailto:radio@russiandino.ru'
@@ -216,7 +216,7 @@ const Header = () => {
             >
               radio@russiandino.ru
             </a>
-          </p>
+          </Typography>
         </div>
       </Menu>
     </header>

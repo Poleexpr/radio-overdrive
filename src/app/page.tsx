@@ -167,7 +167,9 @@ const Home = () => (
             </div>
           </div>
         </section>
-        <Footer />
+        <Anchor name='contacts'>
+          <Footer />
+        </Anchor>
       </div>
     </div>
   </main>

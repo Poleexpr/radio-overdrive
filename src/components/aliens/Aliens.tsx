@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import Marquee from 'react-fast-marquee';
 
-import { Podcast } from '@/components';
+import { Podcast, Typography } from '@/components';
 
 import uikit from '../uikit.module.scss';
 
@@ -49,10 +49,12 @@ const Aliens = () => {
       />
 
       <div className={styles.info_container}>
-        <h2 className={uikit.title2}>пришельцы</h2>
-        <p className={`${styles.description} ${uikit.text2}`}>
+        <Typography tag='h2' variant='title2'>
+          пришельцы
+        </Typography>
+        <Typography className={styles.description} tag='p' variant='text2'>
           Прямые эфиры с музыкантами, писателями, философами и другими гостями не от мира сего.
-        </p>
+        </Typography>
         <button className={`${uikit.link} ${styles.button}`} onClick={togglePodcast}>
           {showPodcast ? 'скрыть' : 'слушать онлайн'}
         </button>

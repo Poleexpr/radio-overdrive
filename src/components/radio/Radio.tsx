@@ -3,9 +3,8 @@
 import { useEffect, useState } from 'react';
 import AudioPlayer from 'react-h5-audio-player';
 
+import { Typography } from '@/components';
 import { IconButtonPlay } from '@/components/icons';
-
-import uikit from '../uikit.module.scss';
 
 import styles from './radio.module.scss';
 
@@ -40,9 +39,15 @@ const Radio = () => {
           }}
           onPlay={(e) => console.log('onPlay')}
         />
-        <p className={`${uikit.text5} ${styles.live}`}>в эфире:</p>
-        <p className={`${uikit.text3} ${styles.title}`}>текст</p>
-        <p className={`${uikit.text} ${styles.artist}`}>текст</p>
+        <Typography className={styles.live} tag='p' variant='text5'>
+          в эфире:
+        </Typography>
+        <Typography className={styles.title} tag='p' variant='text3'>
+          текст
+        </Typography>
+        <Typography className={styles.artist} tag='p' variant='text'>
+          текст
+        </Typography>
       </div>
     </section>
   );
