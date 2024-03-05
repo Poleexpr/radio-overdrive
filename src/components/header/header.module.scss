@@ -55,6 +55,11 @@
   display: none;
 }
 
+.logo {
+  width: 86px;
+  height: 72px;
+}
+
 .logoMobile {
   display: none;
 }
@@ -97,11 +102,6 @@
 
   .container.isOpen {
     height: 100vh;
-  }
-
-  .logo {
-    width: 86px;
-    height: 72px;
   }
 
   .logoMobile_wrapper {
