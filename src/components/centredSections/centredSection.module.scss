@@ -1,0 +1,39 @@
+.container {
+  width: 90vw;
+  margin: 0 auto;
+  padding-top: 180px;
+}
+
+.title {
+  margin-bottom: 120px;
+}
+
+@media screen and (max-width: 1440px) {
+  .container {
+    padding-top: 120px;
+  }
+
+  .title {
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding-top: 100px;
+  }
+
+  .title {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 744px) {
+  .container {
+    padding-top: 75px;
+  }
+
+  .title {
+    margin-bottom: 40px;
+  }
+}

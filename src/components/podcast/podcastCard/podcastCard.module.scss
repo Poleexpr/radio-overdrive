@@ -1,112 +1,122 @@
 .wrapper {
-	width: 90vw;
-	margin: 0 auto;
-	border-top: 2px solid rgba(146, 55, 212, 0.5);
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  border-top: 2px solid rgba(146, 55, 212, 0.5);
 }
 .container {
-	width: 90vw;
-	margin: 0 auto;
-	padding: 30px 0;
-	border-bottom: 2px solid rgba(146, 55, 212, 0.5);
-	display: grid;
-	grid-template-columns: 20% 1fr;
-	gap: 100px;
+  width: 90vw;
+  margin: 0 auto;
+  padding: 30px 0;
+  border-bottom: 2px solid rgba(146, 55, 212, 0.5);
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  gap: 100px;
 }
 
 .wrapper_cover {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .cover {
-	width: 100%;
-	height: 100%;
-	object-fit: contain;
-	object-position: right top;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: right top;
 }
 
 .container_info {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .date {
-	margin-bottom: 20px;
-	color: #383752;
+  margin-bottom: 20px;
+  color: #383752;
 }
 
 .title {
-	margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .content {
-	width: 60%;
-	margin-bottom: 24px;
+  width: 60%;
+  margin-bottom: 24px;
 }
 
 .audioPlayer {
-	width: 400px;
-	margin: 20px;
+  width: 400px;
+  margin: 20px;
 }
 
 .controls {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .progress {
-	height: 10px;
-	background-color: #ccc;
-	margin-top: 10px;
+  height: 10px;
+  background-color: #ccc;
+  margin-top: 10px;
 }
 
 .progressBar {
-	width: 0;
-	height: 100%;
-	background-color: #4caf50;
+  width: 0;
+  height: 100%;
+  background-color: #4caf50;
 }
 
 @media screen and (max-width: 1440px) {
-	.container {
-		gap: 20px;
-	}
+  .wrapper {
+    margin-top: 50px;
+  }
 
-	.content {
-		width: 90%;
-	}
+  .container {
+    gap: 20px;
+  }
+
+  .content {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 1024px) {
-	.content {
-		width: 95%;
-		margin-bottom: 12px;
-	}
+  .wrapper {
+    margin-top: 40px;
+  }
 
-	.date {
-		margin-bottom: 17px;
-	}
+  .content {
+    width: 95%;
+    margin-bottom: 12px;
+  }
 
-	.title {
-		margin-bottom: 20px;
-	}
+  .date {
+    margin-bottom: 17px;
+  }
 
-	.audioPlayer {
-		width: 100%;
-		margin: 0px;
-	}
+  .title {
+    margin-bottom: 20px;
+  }
+
+  .audioPlayer {
+    width: 100%;
+    margin: 0px;
+  }
 }
 
 @media screen and (max-width: 600px) {
-	.container {
-		width: 85vw;
-		grid-template-columns: 1fr;
-		gap: 22px;
-	}
+  .container {
+    width: 85vw;
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
 
-	.cover {
-		width: 60%;
-	}
+  .cover {
+    width: 60%;
+  }
 }

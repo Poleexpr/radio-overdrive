@@ -7,7 +7,7 @@ import { IconArrowNext, IconArrowPrev } from '@/components/icons';
 
 import ScheduleCard from '../scheduleCard/ScheduleCard';
 
-const Schedule = () => {
+const ScheduleSlider = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const swiperRef = useRef<any>(null!);
 
@@ -90,4 +90,4 @@ const Schedule = () => {
   );
 };
 
-export default Schedule;
+export default ScheduleSlider;

@@ -4,13 +4,14 @@ import {
   Anchor,
   Footer,
   Ocapella,
-  ProgramGuide,
+  CentredSections,
   Team,
   MarqueeText,
   LinkMail,
   Typography,
   LinkUnderline,
   LinkRectangle,
+  Schedule,
 } from '@/components';
 import { IconArrowNextLong, IconButtonPlayText } from '@/components/icons';
 
@@ -145,7 +146,15 @@ const Home = () => (
       </div>
     </section>
     <Ocapella />
-    <ProgramGuide />
+    <CentredSections.ProgramCentredSection className={styles.program}>
+      <Schedule.Slider />
+      <div className={styles.description_wrapper}>
+        <Typography className={styles.description} tag='p' variant='text'>
+          И — всю неделю новые релизы топовых музыкантов. Не забудь подписаться на нас в Телеграм,
+          чтобы больше ничего не пропустить.
+        </Typography>
+      </div>
+    </CentredSections.ProgramCentredSection>
     <div className={styles.planet}>
       <div className={styles.container}>
         <LinkRectangle className={styles.link_subscribe} href='https://t.me/rocknword'>
