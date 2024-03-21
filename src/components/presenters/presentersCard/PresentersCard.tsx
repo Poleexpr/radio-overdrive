@@ -25,9 +25,10 @@ interface PresentersCardProps {
   leave: (id: number) => void;
 }
 
-const PresentersCard: FC<PresentersCardProps> = ({ cardsElements, toggle, leave }) =>
+export const PresentersCard: FC<PresentersCardProps> = ({ cardsElements, toggle, leave }) =>
   cardsElements.map((cardElement) => (
     <div
+      key={cardElement.id}
       className={
         cardElement.on ? `${styles.container}` : `${styles.container} ${styles.cardClosed}`
       }
@@ -62,5 +63,3 @@ const PresentersCard: FC<PresentersCardProps> = ({ cardsElements, toggle, leave 
       </div>
     </div>
   ));
-
-export default PresentersCard;

@@ -4,12 +4,14 @@ import { useState } from 'react';
 import { Element } from 'react-scroll';
 
 import { Typography } from '@/components';
+import { presentersInfo } from '@/utils';
 
 import { Presenters } from '../presenters';
 
 import styles from './team.module.scss';
 
 const Team = () => {
+  /*
   const cards = [
     {
       id: 1,
@@ -71,8 +73,8 @@ const Team = () => {
         'Любимая еда — грибы (что бы это ни значило). Нелюбимая — печень. Любимая книга — «Человеческий Панк» Джона Кинга. Любимая игра — «Чёрное Зеркало». Фильм — «Асса». Аниме — «Евангелион». Сериал — «Секретные материалы». Любимый музыкант — Ник Кейв.',
     },
   ];
-
-  const [cardsBox, setCardsBox] = useState(cards);
+*/
+  const [cardsBox, setCardsBox] = useState(presentersInfo);
 
   const toggle = (id: number) => {
     setCardsBox((prevCardsBox) =>

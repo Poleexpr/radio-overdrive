@@ -5,7 +5,7 @@ import {
   Footer,
   Ocapella,
   CentredSections,
-  Team,
+  Presenters,
   MarqueeText,
   LinkMail,
   Typography,
@@ -130,7 +130,11 @@ const Home = () => (
         </div>
       </section>
     </Anchor>
-    <Team />
+    <Anchor name='presenters'>
+      <CentredSections.Team>
+        <Presenters.Container />
+      </CentredSections.Team>
+    </Anchor>
     <section className={styles.invitation}>
       <div className={styles.container}>
         <Typography className={styles.title} tag='h3' variant='title3'>
@@ -146,7 +150,7 @@ const Home = () => (
       </div>
     </section>
     <Ocapella />
-    <CentredSections.ProgramCentredSection className={styles.program}>
+    <CentredSections.Program className={styles.program}>
       <Schedule.Slider />
       <div className={styles.description_wrapper}>
         <Typography className={styles.description} tag='p' variant='text'>
@@ -154,7 +158,7 @@ const Home = () => (
           чтобы больше ничего не пропустить.
         </Typography>
       </div>
-    </CentredSections.ProgramCentredSection>
+    </CentredSections.Program>
     <div className={styles.planet}>
       <div className={styles.container}>
         <LinkRectangle className={styles.link_subscribe} href='https://t.me/rocknword'>

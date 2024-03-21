@@ -13,3 +13,4 @@ export * from './links';
 export * from './anchor';
 export * from './centredSections';
 export * from './schedule';
+export * from './presenters';
