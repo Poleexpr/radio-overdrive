@@ -5,9 +5,9 @@ import {
   Footer,
   Ocapella,
   CentredSections,
+  InvitationSection,
   Presenters,
   MarqueeText,
-  LinkMail,
   Typography,
   LinkUnderline,
   LinkRectangle,
@@ -135,20 +135,8 @@ const Home = () => (
         <Presenters.Container />
       </CentredSections.Team>
     </Anchor>
-    <section className={styles.invitation}>
-      <div className={styles.container}>
-        <Typography className={styles.title} tag='h3' variant='title3'>
-          ХОЧЕШЬ СТАТЬ ВЕДУЩИМ РАДИО ОВЕРДРАЙВ?
-        </Typography>
-        <Typography className={styles.text} tag='p' variant='text2'>
-          Возможно, мы ищем именно тебя: неважно в какой точке Земли ты живёшь, если тебе есть что
-          сказать, и ты врубаешь в высокий стиль, присылай демо-аудио и ссылку на свой плейлист на
-        </Typography>
-        <p>
-          <LinkMail isColorize />
-        </p>
-      </div>
-    </section>
+    <InvitationSection.Centred />
+
     <Ocapella />
     <CentredSections.Program className={styles.program}>
       <Schedule.Slider />
@@ -164,22 +152,8 @@ const Home = () => (
         <LinkRectangle className={styles.link_subscribe} href='https://t.me/rocknword'>
           подписаться
         </LinkRectangle>
-        <section className={styles.mail}>
-          <div className={styles.container}>
-            <div className={styles.wrapper}>
-              <Typography className={styles.title} tag='h3' variant='title3'>
-                МЫ ЖДЁМ ВАШИ ПИСЬМА
-              </Typography>
-              <Typography className={styles.description} tag='p' variant='text2'>
-                Пишите нам письма — если хотите с нами сотрудничать, быть волонтёром, прислать новый
-                релиз, поделиться идеей программы, обратиться к ведущим и слушателям или просто так:
-              </Typography>
-              <p>
-                <LinkMail isColorize={false} />
-              </p>
-            </div>
-          </div>
-        </section>
+        <InvitationSection.Left />
+
         <Anchor name='contacts'>
           <Footer />
         </Anchor>

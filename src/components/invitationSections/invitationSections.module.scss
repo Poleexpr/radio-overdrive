@@ -1,0 +1,136 @@
+.title {
+  margin-bottom: 40px;
+}
+
+.description {
+  margin-bottom: 25px;
+}
+
+.vacancy {
+  background: url(../../../public/stars.png);
+
+  .container {
+    width: 50vw;
+    margin: 0 auto;
+    padding-top: 120px;
+    padding-bottom: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .description {
+    width: 550px;
+    text-align: center;
+  }
+}
+
+.mail {
+  .container {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .wrapper {
+    width: 560px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .vacancy {
+    .container {
+      padding-top: 100px;
+      padding-bottom: 120px;
+    }
+
+    .description {
+      width: 500px;
+    }
+  }
+
+  .mail {
+    .wrapper {
+      width: 520px;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .vacancy {
+    .container {
+      width: 70vw;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .title {
+    margin-bottom: 30px;
+  }
+
+  .description {
+    margin-bottom: 20px;
+  }
+
+  .vacancy {
+    .container {
+      padding-top: 80px;
+      padding-bottom: 100px;
+    }
+    .description {
+      width: 460px;
+    }
+  }
+
+  .mail {
+    .wrapper {
+      width: 400px;
+    }
+  }
+}
+
+@media screen and (max-width: 744px) {
+  .title {
+    margin-bottom: 25px;
+  }
+
+  .description {
+    margin-bottom: 12px;
+  }
+
+  .mail {
+    .container {
+      width: 85vw;
+    }
+
+    .wrapper {
+      width: auto;
+      padding-bottom: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .vacancy {
+    .container {
+      width: 85vw;
+      margin: 0 auto;
+      padding-top: 50px;
+      padding-bottom: 75px;
+      align-items: flex-start;
+    }
+
+    .title {
+      text-align: left;
+    }
+
+    .description {
+      width: auto;
+      text-align: left;
+    }
+  }
+}
