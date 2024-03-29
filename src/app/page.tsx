@@ -136,8 +136,9 @@ const Home = () => (
       </CentredSections.Team>
     </Anchor>
     <InvitationSection.Centred />
-
-    <Ocapella />
+    <Anchor name='program'>
+      <Ocapella />
+    </Anchor>
     <CentredSections.Program className={styles.program}>
       <Schedule.Slider />
       <div className={styles.description_wrapper}>

@@ -9,6 +9,7 @@ export * from './typography/Typography';
 export * from './video';
 export * from './marquee';
 export * from './links';
+export * from './buttons';
 export * from './anchor';
 export * from './centredSections';
 export * from './schedule';
