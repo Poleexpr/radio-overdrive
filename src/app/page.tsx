@@ -3,9 +3,9 @@ import Image from 'next/image';
 import {
   Anchor,
   Footer,
-  Ocapella,
   CentredSections,
   InvitationSection,
+  BannerSection,
   Presenters,
   MarqueeText,
   Typography,
@@ -137,7 +137,7 @@ const Home = () => (
     </Anchor>
     <InvitationSection.Centred />
     <Anchor name='program'>
-      <Ocapella />
+      <BannerSection.Ocapella />
     </Anchor>
     <CentredSections.Program className={styles.program}>
       <Schedule.Slider />

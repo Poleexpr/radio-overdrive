@@ -1,0 +1,113 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.button {
+  margin-top: 30px;
+}
+
+.showPodcast {
+  display: block;
+}
+
+.hidePodcast {
+  display: none;
+}
+
+.ocapella {
+  .container {
+    padding: 100px 0;
+    background: url(../../../public/ocapella_back.png) center no-repeat;
+  }
+}
+
+.aliens {
+  .wrapper {
+    position: relative;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    overflow: hidden;
+  }
+
+  .marquee {
+    transform: translate(-50%, 0px) rotate(-10deg) !important;
+    transform-origin: center center;
+    top: 0px;
+    left: 50%;
+    width: 200% !important;
+  }
+
+  .img {
+    width: 1500px !important;
+  }
+
+  .aliensShadowTopImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+  }
+
+  .aliensShadowBottomImg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+  }
+
+  .container {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+
+  .description {
+    width: 40%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .button {
+    margin-top: 20px;
+  }
+
+  .container {
+    padding: 65px 0;
+  }
+
+  .aliens {
+    .container {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 60px 0;
+  }
+
+  .aliens {
+    .container {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 744px) {
+  .button {
+    margin-top: 10px;
+  }
+
+  .description {
+    width: 90vw;
+    text-align: center;
+  }
+}

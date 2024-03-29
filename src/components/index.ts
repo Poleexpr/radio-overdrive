@@ -15,3 +15,4 @@ export * from './centredSections';
 export * from './schedule';
 export * from './presenters';
 export * from './invitationSections';
+export * from './bannerSections';

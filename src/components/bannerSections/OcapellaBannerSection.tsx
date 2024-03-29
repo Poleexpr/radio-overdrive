@@ -5,23 +5,15 @@ import { Suspense } from 'react';
 import { Podcast, Typography, ButtonRectangle } from '@/components';
 import { useTogglePodcast } from '@/utils';
 
-import styles from './ocapella.module.scss';
+import styles from './bannerSections.module.scss';
 
-const Ocapella = () => {
-  // кнопка будет менять состяние с false на true
-  // а класс в подкаст будет передаваться в зависимости от состояния
-  /* const [showPodcast, setShowPodcast] = useState(false);
-
-  const togglePodcast = () => {
-    setShowPodcast(!showPodcast);
-  }; */
-
+export const OcapellaBannerSection = () => {
   const [showPodcast, togglePodcast] = useTogglePodcast(false);
 
   const className = showPodcast ? styles.showPodcast : styles.hidePodcast;
 
   return (
-    <>
+    <section className={styles.ocapella}>
       <div className={styles.container}>
         <Typography tag='h2' variant='title2'>
           о’капелла
@@ -41,8 +33,6 @@ const Ocapella = () => {
           podcastLink='https://radiooverdrive.mave.digital'
         />
       </Suspense>
-    </>
+    </section>
   );
 };
-
-export default Ocapella;
