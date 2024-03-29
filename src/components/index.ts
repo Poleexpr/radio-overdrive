@@ -1,7 +1,6 @@
 export * from './footer';
 export * from './header';
 export * from './podcast';
-export * from './programGuide';
 export * from './radio';
 export * from './typography/Typography';
 export * from './video';
