@@ -136,18 +136,19 @@ const Home = () => (
       </CentredSections.Team>
     </Anchor>
     <InvitationSection.Centred />
+
+    <BannerSection.Ocapella />
     <Anchor name='program'>
-      <BannerSection.Ocapella />
+      <CentredSections.Program className={styles.program}>
+        <Schedule.Slider />
+        <div className={styles.description_wrapper}>
+          <Typography className={styles.description} tag='p' variant='text'>
+            И — всю неделю новые релизы топовых музыкантов. Не забудь подписаться на нас в Телеграм,
+            чтобы больше ничего не пропустить.
+          </Typography>
+        </div>
+      </CentredSections.Program>
     </Anchor>
-    <CentredSections.Program className={styles.program}>
-      <Schedule.Slider />
-      <div className={styles.description_wrapper}>
-        <Typography className={styles.description} tag='p' variant='text'>
-          И — всю неделю новые релизы топовых музыкантов. Не забудь подписаться на нас в Телеграм,
-          чтобы больше ничего не пропустить.
-        </Typography>
-      </div>
-    </CentredSections.Program>
     <div className={styles.planet}>
       <div className={styles.container}>
         <LinkRectangle className={styles.link_subscribe} href='https://t.me/rocknword'>
