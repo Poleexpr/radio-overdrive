@@ -11,3 +11,4 @@ export * from './IconLogoRD';
 export * from './IconLogoTelegram';
 export * from './IconLogoVk';
 export * from './IconLogoOverdrive';
+export * from './IconBurger';
