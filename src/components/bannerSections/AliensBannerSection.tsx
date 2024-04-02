@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { Suspense } from 'react';
 import Marquee from 'react-fast-marquee';
 
 import { Podcast, Typography, ButtonRectangle } from '@/components';
@@ -10,8 +11,6 @@ import styles from './bannerSections.module.scss';
 
 export const ALiensBannerSection = () => {
   const [showPodcast, togglePodcast] = useTogglePodcast(false);
-
-  const className = showPodcast ? styles.showPodcast : styles.hidePodcast;
 
   return (
     <section className={styles.aliens}>
@@ -54,11 +53,14 @@ export const ALiensBannerSection = () => {
             {showPodcast ? 'скрыть' : 'слушать онлайн'}
           </ButtonRectangle>
         </div>
-        <Podcast.Collection
-          className={className}
-          feedUrl='./ocappella'
-          podcastLink='https://radiooverdrive.mave.digital'
-        />
+        {showPodcast && (
+          <Suspense fallback={<p> Loading...</p>}>
+            <Podcast.Collection
+              feedUrl='./ocappella'
+              podcastLink='https://radiooverdrive.mave.digital'
+            />
+          </Suspense>
+        )}
       </div>
     </section>
   );

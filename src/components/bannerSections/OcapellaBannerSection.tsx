@@ -10,8 +10,6 @@ import styles from './bannerSections.module.scss';
 export const OcapellaBannerSection = () => {
   const [showPodcast, togglePodcast] = useTogglePodcast(false);
 
-  const className = showPodcast ? styles.showPodcast : styles.hidePodcast;
-
   return (
     <section className={styles.ocapella}>
       <div className={styles.container}>
@@ -26,13 +24,14 @@ export const OcapellaBannerSection = () => {
           {showPodcast ? 'скрыть' : 'слушать онлайн'}
         </ButtonRectangle>
       </div>
-      <Suspense fallback={<p> Loading...</p>}>
-        <Podcast.Collection
-          className={className}
-          feedUrl='./ocappella'
-          podcastLink='https://radiooverdrive.mave.digital'
-        />
-      </Suspense>
+      {showPodcast && (
+        <Suspense fallback={<p> Loading...</p>}>
+          <Podcast.Collection
+            feedUrl='./ocappella'
+            podcastLink='https://radiooverdrive.mave.digital'
+          />
+        </Suspense>
+      )}
     </section>
   );
 };

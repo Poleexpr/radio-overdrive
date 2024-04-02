@@ -1,4 +1,7 @@
+'use client';
+
 import type { FC } from 'react';
+import { use } from 'react';
 import Parser from 'rss-parser';
 
 import { Typography } from '@/components';
@@ -10,7 +13,7 @@ import styles from './podcastCollection.module.scss';
 
 interface PodcastCollectionProps {
   feedUrl: string;
-  className: string;
+  className?: string;
   podcastLink: string;
 }
 
@@ -35,12 +38,8 @@ const fetchEpisodes = async (feedUrl: string) => {
   return feed.items;
 };
 
-const PodcastCollection: FC<PodcastCollectionProps> = async ({
-  feedUrl,
-  className,
-  podcastLink,
-}) => {
-  const episodesAll = await fetchEpisodes(feedUrl);
+const PodcastCollection: FC<PodcastCollectionProps> = ({ feedUrl, className, podcastLink }) => {
+  const episodesAll = use(fetchEpisodes(feedUrl));
   const episodes = filterPosts(episodesAll, 3);
 
   return (
