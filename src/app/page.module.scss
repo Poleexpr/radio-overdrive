@@ -123,7 +123,7 @@
 
 .about {
   background:
-    url(../../public/texture.png),
+    url(../../public/images/texture.png),
     linear-gradient(
       0deg,
       #000 0%,
@@ -131,7 +131,7 @@
       rgba(0, 0, 0, 0.1) 69.27%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url(../../public/over-graffit-artist.png) right bottom no-repeat;
+    url(../../public/images/over-graffit-artist.png) right bottom no-repeat;
 
   .container {
     box-sizing: content-box;
@@ -207,7 +207,7 @@
 @media screen and (max-width: 1440px) {
   .about {
     background:
-      url(../../public/texture.png),
+      url(../../public/images/texture.png),
       linear-gradient(
         0deg,
         #000 0%,
@@ -215,7 +215,7 @@
         rgba(0, 0, 0, 0.1) 69.27%,
         rgba(0, 0, 0, 0) 100%
       ),
-      url(../../public/over-graffit-artist.png) center no-repeat;
+      url(../../public/images/over-graffit-artist.png) center no-repeat;
 
     .container {
       padding: 130px 0 0 0;
@@ -233,7 +233,7 @@
 
 @media screen and (max-width: 1366px) {
   .about {
-    background: url(../../public/over-graffit-artist-laptop.png) right top no-repeat;
+    background: url(../../public/images/over-graffit-artist-laptop.png) right top no-repeat;
   }
 }
 
@@ -278,9 +278,9 @@
 
 .planet {
   background:
-    url(../../public/texture.png),
+    url(../../public/images/texture.png),
     linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%),
-    url(../../public/over-planet.png) center bottom no-repeat;
+    url(../../public/images/over-planet.png) center bottom no-repeat;
   background-size: cover;
   width: 100%;
 
@@ -327,9 +327,9 @@
 @media screen and (max-width: 550px) {
   .planet {
     background:
-      url(../../public/texture.png),
+      url(../../public/images/texture.png),
       linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%),
-      url(../../public/over-planet-mobile.png) center bottom no-repeat;
+      url(../../public/images/over-planet-mobile.png) center bottom no-repeat;
     background-size: contain;
 
     .container {

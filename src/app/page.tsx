@@ -25,7 +25,7 @@ const Home = () => (
         loop
         muted
         className={styles.video}
-        poster='./wellcomeBackPoster.jpg'
+        poster='./videos/wellcomeBackPoster.jpg'
         src='#'
       />
       <div className={styles.container}>

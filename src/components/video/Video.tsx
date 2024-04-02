@@ -7,8 +7,8 @@ export const Video = () => (
       loop
       muted
       className={styles.video}
-      poster='./video-overdrive-poster.png'
-      src='./video-overdrive.mp4'
+      poster='./videos/video-overdrive-poster.png'
+      src='./videos/video-overdrive.mp4'
     />
   </div>
 );
