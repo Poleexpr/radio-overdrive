@@ -6,6 +6,10 @@ import { cocomat, micraDi } from '@/fonts';
 
 import Header from '../components/header/Header';
 
+interface RootLayoutProps {
+  children: React.ReactNode;
+}
+
 export const metadata: Metadata = {
   title: 'радио Овердрайв',
   description:
@@ -16,7 +20,7 @@ export const metadata: Metadata = {
   },
 };
 
-const RootLayout = ({ children }: { children: React.ReactNode }) => (
+const RootLayout = ({ children }: RootLayoutProps) => (
   <html lang='en'>
     <body className={`${cocomat.variable} ${micraDi.variable}`}>
       <Header />
