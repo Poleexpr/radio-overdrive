@@ -17,7 +17,7 @@ const fetchStream = async (urlStream: string) => {
   return data
 };
 */
-const Radio = () => (
+export const Radio = () => (
   // const stream = use(fetchStream(urlStream))
 
   <section className={styles.container}>
@@ -46,4 +46,3 @@ const Radio = () => (
     </div>
   </section>
 );
-export default Radio;
