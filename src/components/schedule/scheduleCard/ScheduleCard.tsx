@@ -9,7 +9,7 @@ interface ScheduleCardProps {
   person: string;
 }
 
-const ScheduleCard: FC<ScheduleCardProps> = ({ day, person }) => (
+export const ScheduleCard: FC<ScheduleCardProps> = ({ day, person }) => (
   <div className={styles.container}>
     <Typography className={styles.title} tag='h4' variant='title4'>
       {day}
@@ -48,5 +48,3 @@ const ScheduleCard: FC<ScheduleCardProps> = ({ day, person }) => (
     </div>
   </div>
 );
-
-export default ScheduleCard;

@@ -56,6 +56,11 @@ const PodcastCard: FC<PodcastCardProps> = ({ posts }) => (
             customIcons={{
               play: <IconButtonPlay />,
             }}
+            onClickNext={() => console.log(`next ${i}`)}
+            onPause={() => console.log(`pause ${i}`)}
+            onPlay={() => {
+              console.log(`play ${i}`);
+            }}
           />
         </div>
       </li>
