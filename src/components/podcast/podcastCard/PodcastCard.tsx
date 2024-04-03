@@ -25,7 +25,7 @@ interface PodcastCardProps {
   }[];
 }
 
-const PodcastCard: FC<PodcastCardProps> = ({ posts }) => (
+export const PodcastCard: FC<PodcastCardProps> = ({ posts }) => (
   <ul className={styles.wrapper}>
     {posts.map((post, i) => (
       <li key={i} className={styles.container}>
@@ -67,5 +67,3 @@ const PodcastCard: FC<PodcastCardProps> = ({ posts }) => (
     ))}
   </ul>
 );
-
-export default PodcastCard;

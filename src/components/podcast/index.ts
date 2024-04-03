@@ -1,5 +1,5 @@
-import { default as PodcastCard } from './podcastCard/PodcastCard';
-import { default as PodcastCollection } from './podcastCollection/PodcastCollection';
+import { PodcastCard } from './podcastCard/PodcastCard';
+import { PodcastCollection } from './podcastCollection/PodcastCollection';
 
 export const Podcast = {
   Card: PodcastCard,

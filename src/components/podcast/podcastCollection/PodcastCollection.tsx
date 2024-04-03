@@ -7,7 +7,7 @@ import Parser from 'rss-parser';
 import { Typography } from '@/components';
 import { IconArrowDown } from '@/components/icons';
 
-import PodcastCard from '../podcastCard/PodcastCard';
+import { PodcastCard } from '../podcastCard/PodcastCard';
 
 import styles from './podcastCollection.module.scss';
 
@@ -38,7 +38,11 @@ const fetchEpisodes = async (feedUrl: string) => {
   return feed.items;
 };
 
-const PodcastCollection: FC<PodcastCollectionProps> = ({ feedUrl, className, podcastLink }) => {
+export const PodcastCollection: FC<PodcastCollectionProps> = ({
+  feedUrl,
+  className,
+  podcastLink,
+}) => {
   const episodesAll = use(fetchEpisodes(feedUrl));
   const episodes = filterPosts(episodesAll, 3);
 
@@ -56,5 +60,3 @@ const PodcastCollection: FC<PodcastCollectionProps> = ({ feedUrl, className, pod
     </div>
   );
 };
-
-export default PodcastCollection;
