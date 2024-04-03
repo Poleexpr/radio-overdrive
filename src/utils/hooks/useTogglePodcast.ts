@@ -9,5 +9,5 @@ export const useTogglePodcast = (initialValue: boolean = false) => {
     setShowPodcast((prevShowPodcast) => !prevShowPodcast);
   };
 
-  return [showPodcast, togglePodcast];
+  return [showPodcast, togglePodcast] as const;
 };

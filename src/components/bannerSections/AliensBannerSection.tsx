@@ -9,7 +9,7 @@ import { useTogglePodcast } from '@/utils';
 
 import styles from './bannerSections.module.scss';
 
-export const ALiensBannerSection = () => {
+const ALiensBannerSection = () => {
   const [showPodcast, togglePodcast] = useTogglePodcast(false);
 
   return (
@@ -65,3 +65,5 @@ export const ALiensBannerSection = () => {
     </section>
   );
 };
+
+export default ALiensBannerSection;

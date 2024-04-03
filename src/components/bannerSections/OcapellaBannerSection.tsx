@@ -7,7 +7,7 @@ import { useTogglePodcast } from '@/utils';
 
 import styles from './bannerSections.module.scss';
 
-export const OcapellaBannerSection = () => {
+const OcapellaBannerSection = () => {
   const [showPodcast, togglePodcast] = useTogglePodcast(false);
 
   return (
@@ -35,3 +35,5 @@ export const OcapellaBannerSection = () => {
     </section>
   );
 };
+
+export default OcapellaBannerSection;
