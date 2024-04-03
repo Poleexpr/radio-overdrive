@@ -36,13 +36,7 @@ export const PresentersCard: FC<PresentersCardProps> = ({ cardsElements, toggle,
       onMouseLeave={() => leave(cardElement.id)}
     >
       <div className={styles.img_wrapper}>
-        <Image
-          fill
-          alt='фотография ведущего'
-          className={styles.card_img}
-          sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-          src={cardElement.img}
-        />
+        <Image fill alt='фотография ведущего' className={styles.card_img} src={cardElement.img} />
       </div>
       <div className={styles.card_info}>
         <Typography tag='p' variant='text3'>

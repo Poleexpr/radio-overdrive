@@ -13,13 +13,12 @@ export const PresentersContainer = () => {
 
   const toggle = (id: number) => {
     setCardsBox((prevCardsBox) =>
-      prevCardsBox.map((card) =>
-        card.id !== id
-          ? { ...card, on: false }
-          : card.on === true
-            ? { ...card, on: card.on }
-            : { ...card, on: !card.on },
-      ),
+      prevCardsBox.map((card) => {
+        if (card.id !== id) {
+          return { ...card, on: false };
+        }
+        return card.on === true ? { ...card, on: card.on } : { ...card, on: !card.on };
+      }),
     );
   };
 
