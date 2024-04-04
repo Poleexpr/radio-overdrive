@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { slide as Menu } from 'react-burger-menu';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { animateScroll as scroll, Events, Link } from 'react-scroll';
 
 import { Typography } from '@/components';
