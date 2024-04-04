@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { slide as Menu } from 'react-burger-menu';
-import { animateScroll as scroll, Events, Link, scrollSpy } from 'react-scroll';
+import { animateScroll as scroll, Events, Link } from 'react-scroll';
 
 import { Typography } from '@/components';
 import {
@@ -15,19 +15,13 @@ import {
 import styles from './header.module.scss';
 
 const Header = () => {
-  useEffect(() => {
-    Events.scrollEvent.register('begin', (to, element) => {
-      console.log('begin', to, element);
-    });
-    Events.scrollEvent.register('end', (to, element) => {
-      console.log('end', to, element);
-    });
-    scrollSpy.update();
-    return () => {
+  useEffect(
+    () => () => {
       Events.scrollEvent.remove('begin');
       Events.scrollEvent.remove('end');
-    };
-  }, []);
+    },
+    [],
+  );
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -45,13 +39,13 @@ const Header = () => {
       <nav className={styles.wrapper}>
         <ul className={styles.menu}>
           <Typography className={styles.menu_item} tag='li' variant='text8'>
-            <Link smooth spy activeClass='active' duration={500} offset={100} to='about'>
+            <Link smooth activeClass='active' duration={500} offset={100} to='about'>
               о нас
             </Link>
           </Typography>
 
           <Typography className={styles.menu_item} tag='li' variant='text8'>
-            <Link smooth spy activeClass='active' duration={500} offset={-10} to='presenters'>
+            <Link smooth activeClass='active' duration={500} offset={-10} to='presenters'>
               ведущие
             </Link>
           </Typography>
@@ -59,12 +53,12 @@ const Header = () => {
             <IconLogoOverdrive className={styles.logo} />
           </li>
           <Typography className={styles.menu_item} tag='li' variant='text8'>
-            <Link smooth spy activeClass='active' duration={500} offset={-100} to='program'>
+            <Link smooth activeClass='active' duration={500} offset={-100} to='program'>
               программа
             </Link>
           </Typography>
           <Typography className={styles.menu_item} tag='li' variant='text8'>
-            <Link smooth spy activeClass='active' duration={500} offset={0} to='contacts'>
+            <Link smooth activeClass='active' duration={500} offset={0} to='contacts'>
               контакты
             </Link>
           </Typography>
@@ -88,7 +82,6 @@ const Header = () => {
           <Typography className={styles.menu_item} tag='li' variant='title7'>
             <Link
               smooth
-              spy
               activeClass='active'
               className='menu-item'
               duration={500}
@@ -102,7 +95,6 @@ const Header = () => {
           <Typography className={styles.menu_item} tag='li' variant='title7'>
             <Link
               smooth
-              spy
               activeClass='active'
               className='menu-item'
               duration={500}
@@ -116,7 +108,6 @@ const Header = () => {
           <Typography className={styles.menu_item} tag='li' variant='title7'>
             <Link
               smooth
-              spy
               activeClass='active'
               duration={500}
               offset={-80}
@@ -129,7 +120,6 @@ const Header = () => {
           <Typography className={styles.menu_item} tag='li' variant='title7'>
             <Link
               smooth
-              spy
               activeClass='active'
               duration={500}
               offset={0}
