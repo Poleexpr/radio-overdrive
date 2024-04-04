@@ -16,13 +16,10 @@ import {
 import styles from './header.module.scss';
 
 const Header = () => {
-  useEffect(
-    () => () => {
-      Events.scrollEvent.remove('begin');
-      Events.scrollEvent.remove('end');
-    },
-    [],
-  );
+  useEffect(() => {
+    Events.scrollEvent.remove('begin');
+    Events.scrollEvent.remove('end');
+  }, []);
 
   const [isOpen, setIsOpen] = useState(false);
 
