@@ -1,4 +1,5 @@
 import classnames from 'classnames';
+import type { FC, ReactNode } from 'react';
 
 type Tag = 'div' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'p' | 'li';
 type Variant =
@@ -21,16 +22,11 @@ type Variant =
 interface TypographyProps {
   tag?: Tag;
   variant: Variant;
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
 }
 
-export const Typography: React.FC<TypographyProps> = ({
-  tag = 'div',
-  variant,
-  children,
-  className,
-}) => {
+export const Typography: FC<TypographyProps> = ({ tag = 'div', variant, children, className }) => {
   const Component = tag;
   return <Component className={classnames(variant, className)}>{children}</Component>;
 };
