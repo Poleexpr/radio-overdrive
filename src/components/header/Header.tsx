@@ -29,10 +29,6 @@ const Header = () => {
     };
   }, []);
 
-  const handleSetActive = (to: string) => {
-    console.log(to);
-  };
-
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOnOpen = () => {
@@ -49,29 +45,13 @@ const Header = () => {
       <nav className={styles.wrapper}>
         <ul className={styles.menu}>
           <Typography className={styles.menu_item} tag='li' variant='text8'>
-            <Link
-              smooth
-              spy
-              activeClass='active'
-              duration={500}
-              offset={100}
-              to='about'
-              onSetActive={handleSetActive}
-            >
+            <Link smooth spy activeClass='active' duration={500} offset={100} to='about'>
               о нас
             </Link>
           </Typography>
 
           <Typography className={styles.menu_item} tag='li' variant='text8'>
-            <Link
-              smooth
-              spy
-              activeClass='active'
-              duration={500}
-              offset={-10}
-              to='presenters'
-              onSetActive={handleSetActive}
-            >
+            <Link smooth spy activeClass='active' duration={500} offset={-10} to='presenters'>
               ведущие
             </Link>
           </Typography>
@@ -79,28 +59,12 @@ const Header = () => {
             <IconLogoOverdrive className={styles.logo} />
           </li>
           <Typography className={styles.menu_item} tag='li' variant='text8'>
-            <Link
-              smooth
-              spy
-              activeClass='active'
-              duration={500}
-              offset={-100}
-              to='program'
-              onSetActive={handleSetActive}
-            >
+            <Link smooth spy activeClass='active' duration={500} offset={-100} to='program'>
               программа
             </Link>
           </Typography>
           <Typography className={styles.menu_item} tag='li' variant='text8'>
-            <Link
-              smooth
-              spy
-              activeClass='active'
-              duration={500}
-              offset={0}
-              to='contacts'
-              onSetActive={handleSetActive}
-            >
+            <Link smooth spy activeClass='active' duration={500} offset={0} to='contacts'>
               контакты
             </Link>
           </Typography>
@@ -131,7 +95,6 @@ const Header = () => {
               offset={0}
               to='about'
               onClick={handleOnOpen}
-              onSetActive={handleSetActive}
             >
               о нас
             </Link>
@@ -146,7 +109,6 @@ const Header = () => {
               offset={-10}
               to='presenters'
               onClick={handleOnOpen}
-              onSetActive={handleSetActive}
             >
               ведущие
             </Link>
@@ -160,7 +122,6 @@ const Header = () => {
               offset={-80}
               to='program'
               onClick={handleOnOpen}
-              onSetActive={handleSetActive}
             >
               программа
             </Link>
@@ -174,7 +135,6 @@ const Header = () => {
               offset={0}
               to='contacts'
               onClick={handleOnOpen}
-              onSetActive={handleSetActive}
             >
               контакты
             </Link>
