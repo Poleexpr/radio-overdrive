@@ -1,5 +1,5 @@
 @import 'react-h5-audio-player/src/styles.scss';
-@import './typography.scss';
+@import 'reset', 'variables', 'typography';
 
 * {
   box-sizing: border-box;
@@ -8,14 +8,13 @@
 }
 
 body {
-  color: #fff;
-  background: #000;
+  color: $base-color;
   font-family: var(--micraDi);
-  background-color: black;
+  background-color: $base-background-color;
   background-image: url(../../public/images/texture.png);
 
   scrollbar-width: thin;
-  scrollbar-color: #5b31c0 #0a0a0a;
+  scrollbar-color: $accent-color #0a0a0a;
 }
 
 body::-webkit-scrollbar {
@@ -34,7 +33,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-button {
-  background-color: #5b31c0;
+  background-color: $accent-color;
   border-radius: 5px;
 }
 

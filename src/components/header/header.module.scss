@@ -1,3 +1,5 @@
+@import '/src/styles/variables';
+
 .container {
   position: fixed;
   top: 0;
@@ -6,7 +8,7 @@
   z-index: 100;
   min-height: 110px;
 
-  background: url('../../../public/images/texture.png'), #000;
+  background: url('../../../public/images/texture.png'), $base-background-color;
 }
 
 .wrapper {
@@ -24,7 +26,7 @@
     height: 2px;
     display: inline-block;
     vertical-align: middle;
-    background-color: #fff;
+    background-color: $base-color;
   }
 
   &::before {

@@ -1,30 +1,32 @@
+@import '/src/styles/variables';
+
 .container {
-	display: grid;
+  display: grid;
 }
 
 .card {
-	display: grid;
-	justify-content: center;
-	gap: 12px;
-	padding: 25px 0;
-	border-bottom: 2px solid rgba(146, 55, 212, 0.5);
-	text-align: center;
+  display: grid;
+  justify-content: center;
+  gap: 12px;
+  padding: 25px 0;
+  border-bottom: 2px solid #9237d480;
+  text-align: center;
 }
 
 .title {
-	padding-bottom: 50px;
-	border-bottom: 2px solid rgba(146, 55, 212, 0.5);
-	text-align: center;
+  padding-bottom: 50px;
+  border-bottom: 2px solid #9237d480;
+  text-align: center;
 }
 
-@media screen and (max-width: 1440px) {
-	.card {
-		padding: 20px 0;
-	}
+@media screen and (max-width: $laptop-query) {
+  .card {
+    padding: 20px 0;
+  }
 }
 
-@media screen and (max-width: 1024px) {
-	.title {
-		padding-bottom: 35px;
-	}
+@media screen and (max-width: $tablet-query) {
+  .title {
+    padding-bottom: 35px;
+  }
 }

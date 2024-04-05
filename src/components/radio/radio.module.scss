@@ -1,41 +1,43 @@
+@import '/src/styles/variables';
+
 .container {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	background: rgba(56, 55, 82, 0.4);
-	backdrop-filter: blur(7.5px);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(56, 55, 82, 0.4);
+  backdrop-filter: blur(7.5px);
 }
 
 .wrapper {
-	width: 90vw;
-	margin: 0 auto;
-	display: flex;
-	align-items: center;
+  width: $base-width;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
 }
 
 .live {
-	margin-left: 20px;
+  margin-left: 20px;
 }
 
 .title {
-	margin-left: 90px;
+  margin-left: 90px;
 }
 
 .artist {
-	margin-left: 77px;
+  margin-left: 77px;
 }
 
-@media screen and (max-width: 1024px) {
-	.live {
-		margin-left: 15px;
-	}
+@media screen and (max-width: $tablet-query) {
+  .live {
+    margin-left: 15px;
+  }
 
-	.title {
-		margin-left: 20px;
-	}
+  .title {
+    margin-left: 20px;
+  }
 
-	.artist {
-		margin-left: 60px;
-	}
+  .artist {
+    margin-left: 60px;
+  }
 }

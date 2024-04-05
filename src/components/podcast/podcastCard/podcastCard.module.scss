@@ -1,12 +1,14 @@
+@import '/src/styles/variables';
+
 .wrapper {
-  width: 90vw;
+  width: $base-width;
   margin-left: auto;
   margin-right: auto;
   margin-top: 60px;
   border-top: 2px solid rgba(146, 55, 212, 0.5);
 }
 .container {
-  width: 90vw;
+  width: $base-width;
   margin: 0 auto;
   padding: 30px 0;
   border-bottom: 2px solid rgba(146, 55, 212, 0.5);
@@ -71,7 +73,7 @@
   background-color: #4caf50;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: $laptop-query) {
   .wrapper {
     margin-top: 50px;
   }
@@ -85,7 +87,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: $tablet-query) {
   .wrapper {
     margin-top: 40px;
   }

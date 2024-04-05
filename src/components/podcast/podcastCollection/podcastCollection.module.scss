@@ -1,17 +1,19 @@
+@import '/src/styles/variables';
+
 .link_container {
-	margin-top: 47px;
-	display: flex;
-	justify-content: center;
+  margin-top: 47px;
+  display: flex;
+  justify-content: center;
 }
 
 .link_wrapper {
-	display: flex;
-	align-items: center;
-	gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-@media screen and (max-width: 1440px) {
-	.link_container {
-		margin-top: 30px;
-	}
+@media screen and (max-width: $laptop-query) {
+  .link_container {
+    margin-top: 30px;
+  }
 }

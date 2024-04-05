@@ -1,16 +1,18 @@
+@import '/src/styles/variables';
+
 .container {
-  width: 90vw;
+  width: $base-width;
   margin: 0 auto;
-  padding-top: 180px;
+  padding-top: $base-padding;
 }
 
 .title {
   margin-bottom: 120px;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: $laptop-query) {
   .container {
-    padding-top: 120px;
+    padding-top: $base-padding-laptop;
   }
 
   .title {
@@ -18,9 +20,9 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: $tablet-query) {
   .container {
-    padding-top: 100px;
+    padding-top: $base-padding-tablet;
   }
 
   .title {
@@ -28,9 +30,9 @@
   }
 }
 
-@media screen and (max-width: 744px) {
+@media screen and (max-width: $mobile-query) {
   .container {
-    padding-top: 75px;
+    padding-top: $base-padding-mobile;
   }
 
   .title {

@@ -1,3 +1,5 @@
+@import '/src/styles/variables';
+
 .container {
   width: 100%;
   display: flex;
@@ -65,7 +67,7 @@
   }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: $laptop-query) {
   .button {
     margin-top: 20px;
   }
@@ -81,7 +83,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: $tablet-query) {
   .container {
     padding: 60px 0;
   }
@@ -93,13 +95,13 @@
   }
 }
 
-@media screen and (max-width: 744px) {
+@media screen and (max-width: $mobile-query) {
   .button {
     margin-top: 10px;
   }
 
   .description {
-    width: 90vw;
+    width: $base-width;
     text-align: center;
   }
 }
