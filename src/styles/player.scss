@@ -1,0 +1,132 @@
+@import 'variables';
+
+.rhap_container {
+  min-height: 80px;
+  background-color: inherit;
+  box-shadow: none;
+  padding: 0px;
+}
+
+.rhap_main {
+  gap: 40px;
+}
+
+.rhap_controls-section {
+  flex: 0;
+}
+
+.rhap_progress-container {
+  margin-right: 0;
+  width: 100%;
+  align-self: flex-end;
+}
+
+.rhap_progress-section {
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.rhap_progress-bar {
+  height: 2px;
+  width: 100%;
+  border-radius: 2px;
+  align-self: flex-end;
+  background-color: $base-color;
+}
+
+.rhap_horizontal-reverse .rhap_controls-section {
+  margin-right: 0px;
+}
+
+.rhap_play-pause-button {
+  font-size: 72px;
+  width: 72px;
+  height: 72px;
+}
+
+.rhap_time {
+  font-family: var(--cocomat), sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 140%;
+  color: $base-color;
+  opacity: 0.5;
+}
+
+.rhap_current-time {
+  display: none;
+}
+
+@media screen and (max-width: $laptop-query) {
+  .rhap_main {
+    gap: 30px;
+  }
+
+  .rhap_progress-section {
+    gap: 15px;
+  }
+
+  .rhap_play-pause-button {
+    font-size: 60px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .rhap_container svg {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: $tablet-query) {
+  .rhap_container {
+    min-height: 70px;
+  }
+
+  .rhap_main {
+    gap: 20px;
+  }
+
+  .rhap_progress-section {
+    gap: 10px;
+  }
+
+  .rhap_play-pause-button {
+    font-size: 45px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .rhap_container svg {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.radio {
+  width: auto;
+
+  .rhap_progress-section {
+    display: none;
+  }
+
+  .rhap_horizontal .rhap_controls-section {
+    margin-left: 0px;
+  }
+
+  .rhap_main-controls-button {
+    margin-left: 0px;
+  }
+
+  .rhap_play-pause-button {
+    font-size: 46px;
+    width: 46px;
+    height: 46px;
+  }
+
+  .rhap_play-pause-button svg {
+    width: 46px;
+    height: 46px;
+  }
+}

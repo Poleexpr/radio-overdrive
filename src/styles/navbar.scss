@@ -1,0 +1,68 @@
+@import 'variables';
+
+.bm-burger-button {
+  position: fixed;
+  width: 24px;
+  height: 20px;
+  top: 30px;
+  right: 20px;
+}
+
+.bm-burger-button button {
+  top: -15px !important;
+  right: -10px !important;
+  padding: 30px !important;
+}
+
+.bm-burger-bars {
+  background: #373a47;
+}
+
+.bm-cross-button {
+  width: 20px !important;
+  height: 20px !important;
+  top: 30px !important;
+  right: 20px !important;
+}
+
+.bm-cross-button button {
+  top: -15px !important;
+  right: -10px !important;
+  padding: 30px !important;
+}
+
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  top: 0px;
+}
+
+.bm-menu {
+  background: url('../../public/images/texture.png'), $base-background-color;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+.bm-item-list {
+  color: $base-color;
+  padding: 0.8em;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (min-width: 900px) {
+  .bm-burger-button,
+  .bm-overlay {
+    display: none;
+  }
+}
