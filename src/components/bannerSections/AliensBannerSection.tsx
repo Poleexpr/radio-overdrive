@@ -2,9 +2,10 @@
 
 import Image from 'next/image';
 import { Suspense } from 'react';
+import { ErrorBoundary } from 'react-error-boundary';
 import Marquee from 'react-fast-marquee';
 
-import { Podcast, Typography, ButtonRectangle } from '@/components';
+import { Podcast, Typography, ButtonRectangle, ErrorText } from '@/components';
 import { useTogglePodcast } from '@/utils';
 
 import styles from './bannerSections.module.scss';
@@ -54,12 +55,14 @@ const ALiensBannerSection = () => {
           </ButtonRectangle>
         </div>
         {showPodcast && (
-          <Suspense fallback={<p> Loading...</p>}>
-            <Podcast.Collection
-              feedUrl='./ocappella'
-              podcastLink='https://radiooverdrive.mave.digital'
-            />
-          </Suspense>
+          <ErrorBoundary fallback={<ErrorText podcastLink='https://radiooverdrive.mave.digital' />}>
+            <Suspense fallback={<p> Loading...</p>}>
+              <Podcast.Collection
+                feedUrl='./ocappella'
+                podcastLink='https://radiooverdrive.mave.digital'
+              />
+            </Suspense>
+          </ErrorBoundary>
         )}
       </div>
     </section>

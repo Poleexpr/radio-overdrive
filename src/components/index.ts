@@ -13,3 +13,4 @@ export * from './schedule';
 export * from './presenters';
 export * from './invitationSections';
 export * from './bannerSections';
+export * from './errorText';
