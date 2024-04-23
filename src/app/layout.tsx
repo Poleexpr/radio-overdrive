@@ -2,9 +2,8 @@ import '../styles/globals.scss';
 
 import type { Metadata } from 'next';
 
+import { Header, Radio } from '@/components';
 import { cocomat, micraDi } from '@/fonts';
-
-import Header from '../components/header/Header';
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -25,6 +24,7 @@ const RootLayout = ({ children }: RootLayoutProps) => (
     <body className={`${cocomat.variable} ${micraDi.variable}`}>
       <Header />
       {children}
+      <Radio />
     </body>
   </html>
 );

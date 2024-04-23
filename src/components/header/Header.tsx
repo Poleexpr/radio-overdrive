@@ -15,7 +15,7 @@ import {
 
 import styles from './header.module.scss';
 
-const Header = () => {
+export const Header = () => {
   useEffect(() => {
     Events.scrollEvent.remove('begin');
     Events.scrollEvent.remove('end');
@@ -170,5 +170,3 @@ const Header = () => {
     </header>
   );
 };
-
-export default Header;
