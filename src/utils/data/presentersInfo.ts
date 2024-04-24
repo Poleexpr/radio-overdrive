@@ -2,7 +2,7 @@ export const presentersInfo = [
   {
     id: 1,
     on: true,
-    img: '/barnashov.png',
+    img: '/barnashov',
     day: 'понедельника',
     name: 'Павел Барнашов',
     city: 'Саранск',
@@ -16,7 +16,7 @@ export const presentersInfo = [
   {
     id: 2,
     on: false,
-    img: '/nikitenko.png',
+    img: '/nikitenko.webp',
     day: 'среды',
     name: 'Денис Никитенко',
     city: 'Санкт-Петербург',
@@ -29,7 +29,7 @@ export const presentersInfo = [
   {
     id: 3,
     on: false,
-    img: '/grigoriev.png',
+    img: '/grigoriev.webp',
     day: 'четверга',
     name: 'Андрей Григорьев',
     city: 'Санкт-Петербург / Алматы',
@@ -47,7 +47,7 @@ export const presentersInfo = [
   {
     id: 4,
     on: false,
-    img: '/savchenko.png',
+    img: '/savchenko.webp',
     day: 'субботы',
     name: 'Виталий Савченко',
     city: 'Омск',
