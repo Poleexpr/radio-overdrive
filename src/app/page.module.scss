@@ -131,7 +131,7 @@
       rgba(0, 0, 0, 0.1) 69.27%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url(../../public/images/about-back.png) right bottom no-repeat;
+    url(../../public/images/about-back.png) no-repeat;
 
   .container {
     box-sizing: content-box;
@@ -230,13 +230,13 @@
     }
   }
 }
-
+/*
 @media screen and (max-width: 1366px) {
   .about {
-    background: url(../../public/images/about-back.png) right top no-repeat;
+    background: url(../../public/images/about-back.png) no-repeat;
   }
 }
-
+*/
 @media screen and (max-width: 1024px) {
   .about {
     .container {
@@ -256,6 +256,9 @@
 
 @media screen and (max-width: 650px) {
   .about {
+    background: url(../../public/images/about-back.png) top right no-repeat;
+    background-size: contain;
+
     .container {
       width: 85vw;
       padding: 75px 0 0 0;
