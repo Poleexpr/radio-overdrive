@@ -81,7 +81,7 @@ const Home = () => (
               className={styles.img}
               height={1000}
               layout='responsive'
-              src='/about-pic.png'
+              src='/images/about-pic.png'
               width={1000}
             />
             <Image
@@ -89,7 +89,7 @@ const Home = () => (
               className={styles.img_laptop}
               height={1000}
               layout='responsive'
-              src='/about-pic-laptop.png'
+              src='/images/about-pic-laptop.png'
               width={1000}
             />
           </div>
