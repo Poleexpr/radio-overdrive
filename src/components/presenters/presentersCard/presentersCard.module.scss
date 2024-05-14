@@ -147,7 +147,7 @@
 
   .container {
     //flex-direction: column;
-    min-width: 120vw;
+    min-width: 55vw;
   }
 
   .container:nth-child(3) {
@@ -167,6 +167,16 @@
     .card_info {
       visibility: visible;
     }
+
+    .img_wrapper {
+      filter: grayscale(0%);
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    min-width: 120vw;
   }
 }
 
