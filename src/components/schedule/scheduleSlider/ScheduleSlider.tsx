@@ -1,91 +1,43 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import { register } from 'swiper/element/bundle';
+import { Splide, SplideTrack, SplideSlide } from '@splidejs/react-splide';
 
 import { IconArrowNext, IconArrowPrev } from '@/components/icons';
+import { scheduleInfo } from '@/utils/data/scheduleInfo';
 
 import { ScheduleCard } from '../scheduleCard/ScheduleCard';
 
-export const ScheduleSlider = () => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const swiperRef = useRef<any>(null!);
-
-  useEffect(() => {
-    register();
-
-    const params = {
-      // slidesPerView: 1,
-      centeredSlides: true,
-      grabCursor: true,
-      loop: true,
-      navigation: {
-        nextEl: '.custom-next',
-        prevEl: '.custom-prev',
-      },
-
+export const ScheduleSlider = () => (
+  <Splide
+    aria-label='schedule'
+    hasTrack={false}
+    options={{
+      rewind: true,
+      gap: '1rem',
+      type: 'loop',
+      focus: 'center',
+      perPage: 3,
       breakpoints: {
-        210: {
-          slidesPerView: 1,
-        },
         900: {
-          slidesPerView: 3,
+          perPage: 1,
         },
       },
-    };
-
-    Object.assign(swiperRef.current, params);
-
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
-    swiperRef.current?.initialize();
-
-    /* swiperElRef.current?.addEventListener('swiperprogress', (e: any) => {
-            const [swiper, progress] = e.detail;
-            console.log(progress);
-        });
-
-        swiperElRef.current?.addEventListener('swiperslidechange', (e: any) => {
-            console.log('slide changed');
-        }); */
-  }, []);
-
-  return (
-    <>
-      <div className='custom-navigation'>
-        <div className='custom-prev'>
-          <IconArrowPrev />
-        </div>
-        <div className='custom-next'>
-          <IconArrowNext />
-        </div>
-      </div>
-      <swiper-container ref={swiperRef} init={false}>
-        <swiper-slide>
-          <ScheduleCard day='понедельник' person='Павела Барнашова' />
-        </swiper-slide>
-        <swiper-slide>
-          <ScheduleCard day='среда' person='Дениса Никитенко' />
-        </swiper-slide>
-        <swiper-slide>
-          <ScheduleCard day='четверг' person='Андрея Григорьева' />
-        </swiper-slide>
-        <swiper-slide>
-          <ScheduleCard day='суббота' person='Виталия Савченко' />
-        </swiper-slide>
-
-        <swiper-slide>
-          <ScheduleCard day='понедельник' person='Павела Барнашова' />
-        </swiper-slide>
-        <swiper-slide>
-          <ScheduleCard day='среда' person='Дениса Никитенко' />
-        </swiper-slide>
-        <swiper-slide>
-          <ScheduleCard day='четверг' person='Андрея Григорьева' />
-        </swiper-slide>
-        <swiper-slide>
-          <ScheduleCard day='суббота' person='Виталия Савченко' />
-        </swiper-slide>
-      </swiper-container>
-    </>
-  );
-};
+    }}
+  >
+    <div className='splide__arrows'>
+      <button aria-label='назад' className='splide__arrow splide__arrow--prev'>
+        <IconArrowPrev />
+      </button>
+      <button aria-label='вперёд' className='splide__arrow splide__arrow--next'>
+        <IconArrowNext />
+      </button>
+    </div>
+    <SplideTrack>
+      {scheduleInfo.map((info) => (
+        <SplideSlide>
+          <ScheduleCard info={info} />
+        </SplideSlide>
+      ))}
+    </SplideTrack>
+  </Splide>
+);
