@@ -131,7 +131,7 @@
       rgba(0, 0, 0, 0.1) 69.27%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url(../../public/images/about-back.png) no-repeat;
+    url(../../public/images/about-back.png) center / cover no-repeat;
 
   .container {
     box-sizing: content-box;
@@ -206,17 +206,6 @@
 
 @media screen and (max-width: 1440px) {
   .about {
-    background:
-      url(../../public/images/texture.png),
-      linear-gradient(
-        0deg,
-        #000 0%,
-        rgba(0, 0, 0, 0.5) 42.19%,
-        rgba(0, 0, 0, 0.1) 69.27%,
-        rgba(0, 0, 0, 0) 100%
-      ),
-      url(../../public/images/about-back.png) center no-repeat;
-
     .container {
       padding: 130px 0 0 0;
     }
