@@ -1,4 +1,6 @@
 @import 'variables';
+//new slider
+@import '@splidejs/react-splide/css/core';
 
 .swiper-slide-active {
   opacity: 1 !important;
@@ -48,6 +50,70 @@ swiper-slide {
   }
 
   .custom-prev {
+    left: 0;
+  }
+}
+
+// new slider
+
+.splide__list {
+  cursor: grab;
+}
+
+.splide__pagination {
+  display: none;
+}
+
+.splide__slide.is-active {
+  opacity: 1 !important;
+}
+
+.splide__slide {
+  opacity: 0.2;
+}
+
+.splide__arrows {
+  display: flex;
+  justify-content: center;
+  //gap: 400px;
+  position: relative;
+  top: 0px;
+  z-index: 10;
+}
+
+.splide__arrow {
+  position: absolute;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.splide__arrow--next {
+  right: calc(50% - 175px);
+  //padding-left: 25px;
+}
+
+.splide__arrow--prev {
+  left: calc(50% - 175px);
+  //padding-right: 25px;
+}
+
+@media screen and (max-width: $tablet-query) {
+  .splide__arrow--next {
+    right: calc(50% - 130px);
+  }
+
+  .splide__arrow--prev {
+    left: calc(50% - 130px);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .splide__arrow--next {
+    right: 0;
+  }
+
+  .splide__arrow--prev {
     left: 0;
   }
 }

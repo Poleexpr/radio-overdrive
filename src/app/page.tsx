@@ -11,7 +11,7 @@ import {
   Typography,
   LinkUnderline,
   LinkRectangle,
-  Schedule,
+  ScheduleTest,
 } from '@/components';
 import { IconArrowNextLong, IconButtonPlayText } from '@/components/icons';
 
@@ -140,7 +140,7 @@ const Home = () => (
     <BannerSection.Ocapella />
     <Anchor name='program'>
       <CentredSections.Program className={styles.program}>
-        <Schedule.Slider />
+        <ScheduleTest.Slider />
         <div className={styles.description_wrapper}>
           <Typography className={styles.description} tag='p' variant='text'>
             И — всю неделю новые релизы топовых музыкантов. Не забудь подписаться на нас в Телеграм,
