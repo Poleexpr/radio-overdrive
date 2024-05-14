@@ -283,8 +283,7 @@
   background:
     url(../../public/images/texture.png),
     linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%),
-    url(../../public/images/over-planet.png) center bottom no-repeat;
-  background-size: cover;
+    url(../../public/images/over-planet.png) center bottom / cover no-repeat;
   width: 100%;
 
   .container {
@@ -332,8 +331,7 @@
     background:
       url(../../public/images/texture.png),
       linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%),
-      url(../../public/images/over-planet-mobile.png) center bottom no-repeat;
-    background-size: contain;
+      url(../../public/images/over-planet-mobile.png) center bottom / contain no-repeat;
 
     .container {
       padding-top: 30px;
