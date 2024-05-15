@@ -9,14 +9,30 @@
   gap: 20px;
 }
 
+.description {
+  text-align: center;
+}
+
 .button {
   margin-top: 30px;
 }
 
 .ocapella {
+  padding-bottom: 130px;
   .container {
     padding: 100px 0;
-    background: url(../../../public/images/ocapella_back.png) center / cover no-repeat;
+    background:
+      url(../../../public/images/texture.png),
+      url(../../../public/images/ocapella_back.png) center / cover no-repeat;
+  }
+}
+
+.aliens2 {
+  .container {
+    padding: 100px 0;
+    background:
+      url(../../../public/images/texture.png),
+      url(../../../public/images/aliens_back.png) center / cover no-repeat;
   }
 }
 
@@ -68,6 +84,10 @@
 }
 
 @media screen and (max-width: $laptop-query) {
+  .ocapella {
+    padding-bottom: 110px;
+  }
+
   .button {
     margin-top: 20px;
   }
@@ -84,6 +104,10 @@
 }
 
 @media screen and (max-width: $tablet-query) {
+  .ocapella {
+    padding-bottom: 80px;
+  }
+
   .container {
     padding: 60px 0;
   }
@@ -96,12 +120,15 @@
 }
 
 @media screen and (max-width: $mobile-query) {
+  .ocapella {
+    padding-bottom: 60px;
+  }
+
   .button {
     margin-top: 10px;
   }
 
   .description {
     width: $base-width;
-    text-align: center;
   }
 }

@@ -17,8 +17,8 @@ module.exports = () => {
                 destination: "https://cloud.mave.digital/42223",
             },
             {
-                source: "/ducks",
-                destination: "https://random-d.uk/api/random",
+                source: "/prishelcy",
+                destination: "https://cloud.mave.digital/53379",
             },
         ];
     };
