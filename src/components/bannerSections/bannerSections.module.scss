@@ -36,6 +36,7 @@
   }
 }
 
+/*
 .aliens {
   .wrapper {
     position: relative;
@@ -82,6 +83,7 @@
     text-align: center;
   }
 }
+*/
 
 @media screen and (max-width: $laptop-query) {
   .ocapella {
@@ -96,11 +98,13 @@
     padding: 65px 0;
   }
 
+  /*
   .aliens {
     .container {
       margin-bottom: 50px;
     }
   }
+*/
 }
 
 @media screen and (max-width: $tablet-query) {
@@ -112,11 +116,13 @@
     padding: 60px 0;
   }
 
+  /*
   .aliens {
     .container {
       margin-bottom: 40px;
     }
   }
+*/
 }
 
 @media screen and (max-width: $mobile-query) {

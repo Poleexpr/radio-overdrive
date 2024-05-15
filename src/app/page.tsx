@@ -138,7 +138,7 @@ const Home = () => (
     <InvitationSection.Centred />
 
     <BannerSection.Ocapella />
-    <BannerSection.Aliens2 />
+    <BannerSection.Aliens />
     <Anchor name='program'>
       <CentredSections.Program className={styles.program}>
         <Schedule.Slider />
