@@ -20,6 +20,18 @@
   }
 }
 
+@media screen and (max-width: 1280px) {
+  .container {
+    width: 85vw;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .container {
+    width: 82vw;
+  }
+}
+
 @media screen and (max-width: $tablet-query) {
   .container {
     padding-top: $base-padding-tablet;
@@ -32,6 +44,7 @@
 
 @media screen and (max-width: $mobile-query) {
   .container {
+    width: $base-width;
     padding-top: $base-padding-mobile;
   }
 
