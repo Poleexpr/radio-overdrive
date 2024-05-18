@@ -1,5 +1,6 @@
 import '../styles/globals.scss';
 
+import classnames from 'classnames';
 import type { Metadata } from 'next';
 
 import { Header } from '@/components';
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: RootLayoutProps) => (
   <html lang='en'>
-    <body className={`${cocomat.variable} ${micraDi.variable}`}>
+    <body className={classnames(cocomat.variable, micraDi.variable)}>
       <Header />
       {children}
     </body>
