@@ -1,0 +1,62 @@
+@import 'src/styles/variables.scss';
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.menu_item {
+  min-width: 110px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.logo {
+  width: 86px;
+  height: 72px;
+}
+
+@media screen and (max-width: 1280px) {
+  .menu {
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .menu {
+    opacity: 0;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 0px;
+    height: 50px;
+    transition: height 0.3s ease-out;
+    &.menuOpen {
+      margin-bottom: 100%;
+      opacity: 1;
+      height: 100dvh;
+      height: 100vh;
+    }
+  }
+
+  .menu_item {
+    padding-bottom: 40px;
+
+    font-family: var(--micraDi), sans-serif;
+    font-weight: 400;
+    letter-spacing: 1.6px;
+    font-size: 28px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+  }
+
+  .menu_item:nth-child(3) {
+    padding-bottom: 0px;
+  }
+
+  .logo {
+    display: none;
+  }
+}

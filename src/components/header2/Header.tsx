@@ -1,0 +1,62 @@
+'use client';
+
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useState, useRef } from 'react';
+
+import { IconLogoOverdrive } from '@/components/icons';
+import { navItemsInfo } from '@/utils/data/navItemsInfo';
+
+import styles from './header.module.scss';
+import { Burger } from './navbar/burger/Burger';
+import { Nav } from './navbar/nav/Nav';
+
+// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+export const Header2 = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navRef = useRef<HTMLUListElement>(null);
+  const main = useRef<HTMLDivElement>(null);
+
+  const toggleNav = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+  useGSAP(
+    () => {
+      const showAnim = gsap
+        .from(main.current, {
+          yPercent: -100,
+          paused: true,
+          duration: 0.2,
+        })
+        .progress(1);
+
+      ScrollTrigger.create({
+        start: '50px top',
+        end: 99999,
+        onUpdate: (self) => {
+          // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+          self.direction === -1 ? showAnim.play() : showAnim.reverse();
+        },
+      });
+    },
+    { scope: main },
+  );
+
+  return (
+    <header className={styles.header} id='header'>
+      <div ref={main} className={styles.wrapper}>
+        <div className={styles.container}>
+          <IconLogoOverdrive className={styles.logoMobile} />
+          <Nav ref={navRef} isMenuOpen={isMenuOpen} items={navItemsInfo} toggleNav={toggleNav} />
+          <Burger isMenuOpen={isMenuOpen} toggleNav={toggleNav} />
+        </div>
+      </div>
+    </header>
+  );
+};
