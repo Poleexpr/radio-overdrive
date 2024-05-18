@@ -34,7 +34,7 @@ export const Nav: FC<NavProps> = forwardRef(({ items, isMenuOpen, toggleNav }, r
               smooth
               activeClass='active'
               duration={500}
-              offset={100}
+              offset={item.offset}
               to={item.slug}
               onClick={() => toggleNav()}
             >
