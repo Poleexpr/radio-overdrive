@@ -14,4 +14,3 @@ export * from './presenters';
 export * from './invitationSections';
 export * from './bannerSections';
 export * from './errorText';
-export * from './header2';

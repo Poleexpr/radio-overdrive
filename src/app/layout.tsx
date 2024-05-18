@@ -2,7 +2,7 @@ import '../styles/globals.scss';
 
 import type { Metadata } from 'next';
 
-import { Header2 } from '@/components';
+import { Header } from '@/components';
 import { cocomat, micraDi } from '@/fonts';
 
 interface RootLayoutProps {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: RootLayoutProps) => (
   <html lang='en'>
     <body className={`${cocomat.variable} ${micraDi.variable}`}>
-      <Header2 />
+      <Header />
       {children}
     </body>
   </html>

@@ -1,172 +1,62 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { slide as Menu } from 'react-burger-menu';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { animateScroll as scroll, Events, Link } from 'react-scroll';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useState, useRef } from 'react';
 
-import { Typography } from '@/components';
-import {
-  IconLogoOverdrive,
-  IconLogoTelegram,
-  IconLogoVk,
-  IconLogoInstagram,
-} from '@/components/icons';
+import { IconLogoOverdrive } from '@/components/icons';
+import { navItemsInfo } from '@/utils/data/navItemsInfo';
 
 import styles from './header.module.scss';
+import { Burger } from './navbar/burger/Burger';
+import { Nav } from './navbar/nav/Nav';
+
+// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export const Header = () => {
-  useEffect(() => {
-    Events.scrollEvent.remove('begin');
-    Events.scrollEvent.remove('end');
-  }, []);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const [isOpen, setIsOpen] = useState(false);
+  const navRef = useRef<HTMLUListElement>(null);
+  const main = useRef<HTMLDivElement>(null);
 
-  const handleOnOpen = () => {
-    setIsOpen(!isOpen);
-    if (!isOpen) {
-      document.body.setAttribute('style', 'overflow: hidden;');
-    } else {
-      document.body.setAttribute('style', 'overflow: visible;');
-    }
+  const toggleNav = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
-  return (
-    <header className={isOpen ? styles.isOpen : styles.container} id='outer-container'>
-      <nav className={styles.wrapper}>
-        <ul className={styles.menu}>
-          <Typography className={styles.menu_item} tag='li' variant='text8'>
-            <Link smooth activeClass='active' duration={500} offset={100} to='about'>
-              о нас
-            </Link>
-          </Typography>
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+  useGSAP(
+    () => {
+      const showAnim = gsap
+        .from(main.current, {
+          yPercent: -100,
+          paused: true,
+          duration: 0.2,
+        })
+        .progress(1);
 
-          <Typography className={styles.menu_item} tag='li' variant='text8'>
-            <Link smooth activeClass='active' duration={500} offset={-10} to='presenters'>
-              ведущие
-            </Link>
-          </Typography>
-          <li className={styles.logo}>
-            <IconLogoOverdrive className={styles.logo} />
-          </li>
-          <Typography className={styles.menu_item} tag='li' variant='text8'>
-            <Link smooth activeClass='active' duration={500} offset={-100} to='program'>
-              программа
-            </Link>
-          </Typography>
-          <Typography className={styles.menu_item} tag='li' variant='text8'>
-            <Link smooth activeClass='active' duration={500} offset={0} to='contacts'>
-              контакты
-            </Link>
-          </Typography>
-        </ul>
-      </nav>
-      <div className={styles.logoMobile_wrapper}>
-        <IconLogoOverdrive className={styles.logoMobile} />
-      </div>
-      <Menu
-        right
-        className={styles.menuBurger}
-        customBurgerIcon={<img alt='открыть' src='./burgerIcon.svg' />}
-        customCrossIcon={<img alt='закрыть' src='./crossIcon.svg' />}
-        isOpen={isOpen}
-        pageWrapId='page-wrap'
-        width='100%'
-        onClose={handleOnOpen}
-        onOpen={handleOnOpen}
-      >
-        <ul className={styles.menu_wrapper}>
-          <Typography className={styles.menu_item} tag='li' variant='title7'>
-            <Link
-              smooth
-              activeClass='active'
-              className='menu-item'
-              duration={500}
-              offset={0}
-              to='about'
-              onClick={handleOnOpen}
-            >
-              о нас
-            </Link>
-          </Typography>
-          <Typography className={styles.menu_item} tag='li' variant='title7'>
-            <Link
-              smooth
-              activeClass='active'
-              className='menu-item'
-              duration={500}
-              offset={-10}
-              to='presenters'
-              onClick={handleOnOpen}
-            >
-              ведущие
-            </Link>
-          </Typography>
-          <Typography className={styles.menu_item} tag='li' variant='title7'>
-            <Link
-              smooth
-              activeClass='active'
-              duration={500}
-              offset={-80}
-              to='program'
-              onClick={handleOnOpen}
-            >
-              программа
-            </Link>
-          </Typography>
-          <Typography className={styles.menu_item} tag='li' variant='title7'>
-            <Link
-              smooth
-              activeClass='active'
-              duration={500}
-              offset={0}
-              to='contacts'
-              onClick={handleOnOpen}
-            >
-              контакты
-            </Link>
-          </Typography>
-        </ul>
-        <div className={styles.contacts_wrapper}>
-          <div className={styles.nets_wrapper}>
-            <a
-              aria-label='Овердрайв в telegram'
-              href='https://t.me/rocknword'
-              rel='noreferrer'
-              target='_blank'
-            >
-              <IconLogoTelegram className={styles.net_logo} />
-            </a>
-            <a
-              aria-label='Овердрайв вконтакте'
-              href='https://vk.com/rocknword'
-              rel='noreferrer'
-              target='_blank'
-            >
-              <IconLogoVk className={styles.net_logo} />
-            </a>
-            <a
-              aria-label='Овердрайв в instagram'
-              href='https://www.instagram.com/radio_overdrive/'
-              rel='noreferrer'
-              target='_blank'
-            >
-              <IconLogoInstagram className={styles.net_logo} />
-            </a>
-          </div>
-          <Typography tag='p' variant='text'>
-            <a
-              className={styles.mail_link}
-              href='mailto:radio@russiandino.ru'
-              rel='noreferrer'
-              target='_blank'
-            >
-              radio@russiandino.ru
-            </a>
-          </Typography>
+      ScrollTrigger.create({
+        start: '50px top',
+        end: 99999,
+        onUpdate: (self) => {
+          // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+          self.direction === -1 ? showAnim.play() : showAnim.reverse();
+        },
+      });
+    },
+    { scope: main },
+  );
+
+  return (
+    <header className={styles.header} id='header'>
+      <div ref={main} className={styles.wrapper}>
+        <div className={styles.container}>
+          <IconLogoOverdrive className={styles.logoMobile} />
+          <Nav ref={navRef} isMenuOpen={isMenuOpen} items={navItemsInfo} toggleNav={toggleNav} />
+          <Burger isMenuOpen={isMenuOpen} toggleNav={toggleNav} />
         </div>
-      </Menu>
+      </div>
     </header>
   );
 };
