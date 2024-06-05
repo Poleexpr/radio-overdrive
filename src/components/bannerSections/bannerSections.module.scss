@@ -18,7 +18,7 @@
 }
 
 .ocapella {
-  padding-bottom: 130px;
+  padding-bottom: 60px;
   .container {
     padding: 100px 0;
     background:
@@ -86,9 +86,9 @@
 */
 
 @media screen and (max-width: $laptop-query) {
-  .ocapella {
+  /*.ocapella {
     padding-bottom: 110px;
-  }
+  }*/
 
   .button {
     margin-top: 20px;
@@ -108,9 +108,9 @@
 }
 
 @media screen and (max-width: $tablet-query) {
-  .ocapella {
+  /*.ocapella {
     padding-bottom: 80px;
-  }
+  }*/
 
   .container {
     padding: 60px 0;
@@ -127,7 +127,7 @@
 
 @media screen and (max-width: $mobile-query) {
   .ocapella {
-    padding-bottom: 60px;
+    padding-bottom: 0px;
   }
 
   .button {

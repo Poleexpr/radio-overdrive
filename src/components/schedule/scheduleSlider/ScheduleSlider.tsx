@@ -18,7 +18,7 @@ export const ScheduleSlider = () => (
       focus: 'center',
       perPage: 3,
       breakpoints: {
-        900: {
+        1024: {
           perPage: 1,
         },
       },
