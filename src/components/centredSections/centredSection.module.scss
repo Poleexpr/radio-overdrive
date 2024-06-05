@@ -44,7 +44,7 @@
 
 @media screen and (max-width: $mobile-query) {
   .container {
-    width: $base-width;
+    width: $base-width-mobile;
     padding-top: $base-padding-mobile;
   }
 
