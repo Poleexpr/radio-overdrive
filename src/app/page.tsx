@@ -136,7 +136,6 @@ const Home = () => (
       </CentredSections.Team>
     </Anchor>
     <InvitationSection.Centred />
-
     <BannerSection.Ocapella />
     <BannerSection.Aliens />
     <Anchor name='program'>

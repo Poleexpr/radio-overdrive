@@ -3,6 +3,7 @@ export * from './IconArrowNext';
 export * from './IconArrowNextLong';
 export * from './IconArrowPrev';
 export * from './IconButtonPlay';
+export * from './IconButtonStop';
 export * from './IconButtonPlayText';
 export * from './IconEllipse';
 export * from './IconLogoInstagram';

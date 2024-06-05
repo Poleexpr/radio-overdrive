@@ -13,7 +13,7 @@ module.exports = () => {
     const rewrites = () => {
         return [
             {
-                source: "/ocappella",
+                source: "/ocappellaRSS",
                 destination: "https://cloud.mave.digital/42223",
             },
             {

@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 
 import { Header } from '@/components';
 import { cocomat, micraDi } from '@/fonts';
+import { ReactQueryProvider } from '@/providers';
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -24,7 +25,7 @@ const RootLayout = ({ children }: RootLayoutProps) => (
   <html lang='en'>
     <body className={classnames(cocomat.variable, micraDi.variable)}>
       <Header />
-      {children}
+      <ReactQueryProvider>{children}</ReactQueryProvider>
     </body>
   </html>
 );

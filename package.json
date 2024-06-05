@@ -22,8 +22,11 @@
   "dependencies": {
     "@gsap/react": "^2.1.1",
     "@splidejs/react-splide": "^0.7.12",
+    "@tanstack/query-core": "^5.36.1",
+    "@tanstack/react-query": "^5.37.1",
     "classnames": "^2.5.1",
     "gsap": "^3.12.5",
+    "nanoid": "^5.0.7",
     "next": "^14.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -35,6 +38,8 @@
     "typograf": "^7.3.0"
   },
   "devDependencies": {
+    "@tanstack/eslint-plugin-query": "^5.35.6",
+    "@tanstack/react-query-devtools": "^5.37.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
