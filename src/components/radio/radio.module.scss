@@ -65,12 +65,13 @@
   right: $base-margin;
   padding: 30px 90px 30px 40px;
   //backdrop-filter: blur(7.5px);
-  background: rgba(56, 55, 82, 0.4);
+  background-color: rgba(56, 55, 82, 0.1);
   opacity: 0;
   margin-bottom: -20px;
   transition:
-    margin-bottom 0.001s ease-in,
-    opacity 0.001s;
+    margin-bottom 0.3s ease-in,
+    //opacity 0.001s,
+    background-color 0.3s ease-in;
   z-index: -2;
 }
 
@@ -89,9 +90,11 @@
 .trackWrapper.open {
   opacity: 1;
   margin-bottom: 0px;
+  background-color: rgba(56, 55, 82, 0.4);
   transition:
     margin-bottom 0.3s ease-out,
-    opacity 1s;
+    //opacity 0.4s ease-in,
+    background-color 1s;
 }
 
 .trackWrapper.open::before {
