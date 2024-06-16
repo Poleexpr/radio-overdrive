@@ -1,10 +1,17 @@
 'use client';
 
 // import { use } from 'react';
+import classnames from 'classnames';
+import { useState } from 'react';
 import AudioPlayer from 'react-h5-audio-player';
 
 import { Typography } from '@/components';
-import { IconButtonPlay } from '@/components/icons';
+import {
+  IconButtonPlay,
+  IconArrowUpShort,
+  IconButtonStop,
+  IconLogoOverdrive,
+} from '@/components/icons';
 
 import styles from './radio.module.scss';
 
@@ -17,32 +24,88 @@ const fetchStream = async (urlStream: string) => {
   return data
 };
 */
-export const Radio = () => (
+export const Radio = () => {
   // const stream = use(fetchStream(urlStream))
+  const [tracklist, settracklist] = useState(false);
 
-  <section className={styles.container}>
-    <div className={styles.wrapper}>
-      <AudioPlayer
-        className='radio'
-        customAdditionalControls={[]}
-        customVolumeControls={[]}
-        layout='horizontal'
-        showDownloadProgress={false}
-        showJumpControls={false}
-        src='https://demo.azuracast.com/listen/azuratest_radio/radio.mp3'
-        customIcons={{
-          play: <IconButtonPlay />,
-        }}
-      />
-      <Typography className={styles.live} tag='p' variant='text5'>
-        в эфире:
-      </Typography>
-      <Typography className={styles.title} tag='p' variant='text3'>
-        текст
-      </Typography>
-      <Typography className={styles.artist} tag='p' variant='text'>
-        текст
-      </Typography>
-    </div>
-  </section>
-);
+  const tracklistHandler = () => {
+    settracklist((prevTracklist) => !prevTracklist);
+  };
+
+  return (
+    <section className={styles.container}>
+      <div className={styles.wrapper}>
+        <div className={styles.broadcastWrapper}>
+          <AudioPlayer
+            className='radio'
+            customAdditionalControls={[]}
+            customVolumeControls={[]}
+            layout='horizontal'
+            showDownloadProgress={false}
+            showJumpControls={false}
+            src='./audios/oxbow-over.mp3'
+            customIcons={{
+              play: <IconButtonPlay />,
+              pause: <IconButtonStop />,
+            }}
+          />
+
+          <Typography className={styles.live} tag='p' variant='text5'>
+            в эфире:
+          </Typography>
+          <div className={styles.currentTrackWrapper}>
+            <Typography className={styles.title} tag='p' variant='text3'>
+              OVER
+            </Typography>
+            <div className={styles.artist}>
+              <IconLogoOverdrive className={styles.overSign} />
+              <Typography className={styles.artistText} tag='p' variant='text'>
+                Oxbow 8 мая 1996 ночь
+              </Typography>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            className={
+              tracklist ? classnames(styles.trackWrapper, styles.open) : styles.trackWrapper
+            }
+          >
+            <Typography className={styles.track} tag='p' variant='text4'>
+              Oxbow — Over
+            </Typography>
+            <Typography className={styles.track} tag='p' variant='text4'>
+              Oxbow — Over
+            </Typography>
+            <Typography className={styles.track} tag='p' variant='text4'>
+              Oxbow — Over
+            </Typography>
+            <Typography className={styles.track} tag='p' variant='text4'>
+              Oxbow — Over
+            </Typography>
+            <Typography className={styles.track} tag='p' variant='text4'>
+              Oxbow — Over
+            </Typography>
+            <Typography className={styles.track} tag='p' variant='text4'>
+              Oxbow — Over
+            </Typography>
+            <Typography className={styles.track} tag='p' variant='text4'>
+              Oxbow — Over
+            </Typography>
+          </div>
+          <button
+            aria-label='открыть / закрыть'
+            className={
+              tracklist
+                ? classnames(styles.button, styles.close)
+                : classnames(styles.button, styles.open)
+            }
+            onClick={tracklistHandler}
+          >
+            <IconArrowUpShort />
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+};

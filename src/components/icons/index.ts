@@ -14,3 +14,4 @@ export * from './IconLogoVk';
 export * from './IconLogoOverdrive';
 export * from './IconBurger';
 export * from './IconCross';
+export * from './IconArrowUpShort';

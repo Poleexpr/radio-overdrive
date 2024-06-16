@@ -12,6 +12,7 @@ import {
   LinkUnderline,
   LinkRectangle,
   Schedule,
+  Radio,
 } from '@/components';
 import { IconArrowNextLong, IconButtonPlayText } from '@/components/icons';
 
@@ -161,6 +162,7 @@ const Home = () => (
         </Anchor>
       </div>
     </div>
+    <Radio />
   </main>
 );
 

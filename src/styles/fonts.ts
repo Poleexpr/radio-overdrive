@@ -1,5 +1,6 @@
 // import {Cocomat, MicraDi}  from 'next/font/local';
 // eslint-disable-next-line import/no-duplicates
+// eslint-disable-next-line import/no-duplicates
 import Cocomat from 'next/font/local';
 // eslint-disable-next-line import/no-duplicates
 import MicraDi from 'next/font/local';
