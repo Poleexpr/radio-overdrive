@@ -71,7 +71,7 @@ export const Ocapella: FC = () => {
       animationPercentage: animation,
     });
   };
-
+  /*
   const activeLibraryHandler = (nextPrev: ISong) => {
     const newSongs = songs.map((song) => {
       if (song.id === nextPrev.id) {
@@ -99,7 +99,15 @@ export const Ocapella: FC = () => {
       await audioRef.current.play();
     }
   };
+*/
 
+  const songEndHandler = async () => {
+    if (audioRef.current?.play() !== undefined) {
+      // eslint-disable-next-line @typescript-eslint/await-thenable
+      await audioRef.current.pause();
+      setIsPlaying(!isPlaying);
+    }
+  };
   return (
     <>
       <div className={styles.title}>
@@ -138,10 +146,12 @@ export const Ocapella: FC = () => {
           src={currentSong.audio}
           onLoadedMetadata={timeUpdateHandler}
           onTimeUpdate={timeUpdateHandler}
-          onEnded={() => {
-            // eslint-disable-next-line no-void
-            void songEndHandler();
-          }}
+          // eslint-disable-next-line @typescript-eslint/no-misused-promises, react/jsx-sort-props
+          onEnded={songEndHandler}
+          // onEnded={() => {
+          // eslint-disable-next-line no-void
+          // void songEndHandler();
+          // }}
         >
           <track kind='captions' />
           <source src={currentSong.audio} />
