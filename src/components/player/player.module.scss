@@ -171,6 +171,18 @@
 
   .title {
     margin-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .titlePath {
+    align-self: flex-end;
+  }
+
+  .overSign {
+    width: 30px;
+    align-self: flex-end;
   }
 }
 
@@ -214,6 +226,14 @@
   }
 }
 
+@media screen and (max-width: $laptop-query) {
+  .songContainer {
+    .overSign {
+      width: 25px;
+    }
+  }
+}
+
 @media screen and (max-width: $mobile-query) {
   .songContainer {
     grid-template-columns: 1fr;
@@ -230,6 +250,10 @@
 
     .title {
       margin-bottom: 20px;
+    }
+
+    .overSign {
+      width: 20px;
     }
   }
 

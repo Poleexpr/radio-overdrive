@@ -80,7 +80,7 @@ export const LibrarySong: FC<LibrarySongProps> = ({
           {song.date.slice(0, 10).split('-').reverse().join('.')}
         </Typography>
         <Typography className={styles.title} tag='h4' variant='text'>
-          {song.name.slice(song.name.indexOf('#'))}
+          {song.name.slice(song.name.indexOf('#')).replace('Ø', 'О')}
         </Typography>
       </div>
     </div>
