@@ -17,7 +17,7 @@ module.exports = () => {
                 destination: "https://cloud.mave.digital/42223",
             },
             {
-                source: "/prishelcy",
+                source: "/aliensRSS",
                 destination: "https://cloud.mave.digital/53379",
             },
         ];

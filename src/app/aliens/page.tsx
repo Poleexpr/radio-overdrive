@@ -4,7 +4,7 @@ import { HydrationBoundary, QueryClient } from '@tanstack/react-query';
 import { Footer } from '@/components';
 import { fetchEpisodes } from '@/utils';
 
-import { Ocapella } from './Ocapella';
+import { Aliens } from './Aliens';
 import styles from './page.module.scss';
 
 const InitialData = async () => {
@@ -12,13 +12,13 @@ const InitialData = async () => {
 
   await queryClient.prefetchQuery({
     queryKey: ['episodes'],
-    queryFn: () => fetchEpisodes('./ocappellaRSS'),
+    queryFn: () => fetchEpisodes('./aliensRSS'),
   });
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
       <main className={styles.container}>
-        <Ocapella />
+        <Aliens />
       </main>
       <Footer />
     </HydrationBoundary>

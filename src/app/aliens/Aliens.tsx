@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import { Typography, Player } from '@/components';
 import { fetchEpisodes } from '@/utils';
-import dataNative from '@/utils/data/ocapellaInfo';
+import dataNative from '@/utils/data/aliensInfo';
 
 import styles from './page.module.scss';
 
@@ -26,7 +26,7 @@ export interface ISongInfo {
   animationPercentage: number;
 }
 
-export const Ocapella: FC = () => {
+export const Aliens: FC = () => {
   const [songs, setSongs] = useState<ISong[]>(dataNative);
   const [currentSong, setCurrentSong] = useState<ISong>(songs[0]);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
@@ -39,7 +39,7 @@ export const Ocapella: FC = () => {
 
   const { status, data, isLoading, error } = useQuery({
     queryKey: ['episodes'],
-    queryFn: () => fetchEpisodes('./ocappellaRSS'),
+    queryFn: () => fetchEpisodes('./aliensRSS'),
     staleTime: 10 * 1000,
   });
 
@@ -47,6 +47,7 @@ export const Ocapella: FC = () => {
     if (status === 'success') {
       setSongs(data);
       setCurrentSong(data[0]);
+      console.log(data);
     }
   }, [status, data]);
 
@@ -112,15 +113,15 @@ export const Ocapella: FC = () => {
     <>
       <div className={styles.title}>
         <Typography tag='h2' variant='title2'>
-          о’капелла
+          пришельцы
         </Typography>
         <Typography className={styles.description} tag='p' variant='text2'>
-          Подкаст о музыке как феномене и чуде.
+          Прямые эфиры с музыкантами, писателями, философами и другими гостями не от мира сего.
         </Typography>
       </div>
       <div className={styles.wrapper}>
         <div className={styles.subContainer}>
-          <Player.Song overSign currentSong={currentSong} />
+          <Player.Song currentSong={currentSong} overSign={false} />
           <Player.PlayerSong
             audioRef={audioRef}
             // currentSong={currentSong}
