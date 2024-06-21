@@ -95,6 +95,14 @@
   letter-spacing: 1px;
 }
 
+.text9 {
+  @extend .text;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 140%;
+  text-transform: uppercase;
+}
+
 @media screen and (max-width: $laptop-query) {
   .title {
     font-size: 32px;
@@ -151,6 +159,10 @@
 
   .text8 {
     font-size: 18px;
+  }
+
+  .text9 {
+    font-size: 20px;
   }
 }
 
@@ -220,6 +232,10 @@
   .text8 {
     font-size: 16px;
   }
+
+  .text9 {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: $mobile-query) {
@@ -255,6 +271,10 @@
   }
 
   .text2 {
+    font-size: 15px;
+  }
+
+  .text9 {
     font-size: 15px;
   }
 }

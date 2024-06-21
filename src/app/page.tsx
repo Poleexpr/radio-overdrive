@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import Image from 'next/image';
 
 import {
@@ -10,9 +11,9 @@ import {
   MarqueeText,
   Typography,
   LinkUnderline,
-  LinkRectangle,
   Schedule,
   Radio,
+  LinkSubscribeWrapper,
 } from '@/components';
 import { IconArrowNextLong, IconButtonPlayText } from '@/components/icons';
 
@@ -39,14 +40,14 @@ const Home = () => (
           </Typography>
         </div>
         <div className={styles.description_container}>
-          <div>
+          <div className={styles.playTgLink_wrapper}>
             <a
               aria-label='слушать в телеграм'
               href='https://t.me/rocknword'
               rel='noreferrer'
               target='_blank'
             >
-              <IconButtonPlayText className={styles.playTgLink} />
+              <IconButtonPlayText className={classnames(styles.playTgLink, 'playTgLink')} />
             </a>
           </div>
           <a href='https://t.me/rocknword/11681' rel='noreferrer' target='_blank'>
@@ -152,9 +153,7 @@ const Home = () => (
     </Anchor>
     <div className={styles.planet}>
       <div className={styles.container}>
-        <LinkRectangle className={styles.link_subscribe} href='https://t.me/rocknword'>
-          подписаться
-        </LinkRectangle>
+        <LinkSubscribeWrapper className={styles.link_subscribe} />
         <InvitationSection.Left />
 
         <Anchor name='contacts'>

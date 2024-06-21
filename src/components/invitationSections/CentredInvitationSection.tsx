@@ -1,4 +1,4 @@
-import { Typography, LinkMail } from '@/components';
+import { Typography } from '@/components';
 
 import styles from './invitationSections.module.scss';
 
@@ -13,7 +13,11 @@ export const CentredInvitationSection = () => (
         сказать, и ты врубаешь в высокий стиль, присылай демо-аудио и ссылку на свой плейлист на
       </Typography>
       <p>
-        <LinkMail isColorize />
+        <a href='mailto:radio@russiandino.ru' rel='noreferrer' target='_blank'>
+          <Typography className={styles.mailLink} tag='span' variant='text9'>
+            radio@russiandino.ru
+          </Typography>
+        </a>
       </p>
     </div>
   </section>

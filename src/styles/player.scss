@@ -58,6 +58,10 @@
   display: none;
 }
 
+.rhap_button-clear:hover {
+  transition-duration: 0.3s;
+}
+
 @media screen and (max-width: $laptop-query) {
   .rhap_main {
     gap: 30px;

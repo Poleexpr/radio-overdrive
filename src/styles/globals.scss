@@ -1,5 +1,5 @@
 @import 'react-h5-audio-player/src/styles.scss';
-@import 'reset', 'variables', 'typography', 'slider', 'player', 'navbar';
+@import 'reset', 'variables', 'typography', 'slider', 'player', 'navbar', 'mixins';
 
 * {
   box-sizing: border-box;
@@ -44,4 +44,10 @@ a {
 
 li {
   list-style: none;
+}
+
+_::-webkit-full-page-media,
+_:future,
+:root .scribbles {
+  display: none;
 }

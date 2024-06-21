@@ -17,7 +17,8 @@ type Variant =
   | 'text5'
   | 'text6'
   | 'text7'
-  | 'text8';
+  | 'text8'
+  | 'text9';
 
 interface TypographyProps {
   tag?: Tag;

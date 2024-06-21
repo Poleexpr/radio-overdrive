@@ -20,6 +20,7 @@
   padding: 20px 25px 20px 25px;
   margin: 0 25px 0 25px;
   border-bottom: 2px solid rgba(146, 55, 212, 0.5);
+  transition: $base-transition;
   cursor: pointer;
   .image {
     width: 30%;
@@ -86,6 +87,13 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+  }
+
+  &:hover {
+    .play,
+    .pause {
+      opacity: 0.9;
+    }
   }
 }
 

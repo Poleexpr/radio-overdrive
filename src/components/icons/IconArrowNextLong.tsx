@@ -9,7 +9,7 @@ export const IconArrowNextLong: FC<ComponentPropsWithRef<'svg'>> = (props) => (
     xmlns='http://www.w3.org/2000/svg'
     {...props}
   >
-    <path d='M49.2539 19.9512L57.7392 28.4365L49.2539 36.9217' stroke='white' strokeWidth='2' />
-    <path d='M57.7421 28.4374H29.3047H0.867309' stroke='white' strokeWidth='2' />
+    <path d='M49.2539 19.9512L57.7392 28.4365L49.2539 36.9217' strokeWidth='2' />
+    <path d='M57.7421 28.4374H29.3047H0.867309' strokeWidth='2' />
   </svg>
 );

@@ -1,3 +1,6 @@
+@import '/src/styles/variables';
+@import '/src/styles/mixins';
+
 .welcome {
   position: relative;
   width: 100%;
@@ -41,6 +44,21 @@
     display: flex;
     gap: 10px;
     align-items: center;
+    p {
+      @include text-link();
+    }
+    svg {
+      //@include svg-link(stroke, $base-color);
+      stroke: $base-color;
+    }
+    &:hover {
+      p {
+        @include text-link-hover();
+      }
+      /*svg {
+        @include svg-link-hover(stroke, $accent-color-two);
+      }*/
+    }
   }
 
   .slogan {
@@ -51,6 +69,80 @@
   .ellipse {
     margin: 0 44px;
   }
+
+  .playTgLink_wrapper {
+    position: relative;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-image: $accent-gradient-color;
+      z-index: -2;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 49%;
+      left: calc(54%);
+      transform: translateX(calc(-54%)) translateY(-49%);
+      width: 0;
+      height: 0;
+      border-top: 23px solid transparent;
+      border-left: 40px solid $base-color;
+      border-bottom: 23px solid transparent;
+      z-index: -1;
+    }
+  }
+
+  .playTgLink {
+    &:hover {
+      animation: rotate 1s infinite linear;
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /*
+  .playTgLink:hover {
+    animation: rotate 60s infinite linear;
+    .pathPlay {
+      animation: rotate-two 60s infinite linear;
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes rotate-two {
+    0% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+    */
 }
 
 @media screen and (max-width: 1440px) {
@@ -84,9 +176,21 @@
       text-align: left;
     }
 
-    .playTgLink {
+    /*.playTgLink_wrapper {
       width: 160px;
+
+      &::before {
+        width: 100px;
+        height: 100px;
+      }
+
+      &::after {
+        border-top-width: 20px;
+        border-left-width: 34px;
+        border-bottom-width: 20px;
+      }
     }
+      */
   }
 }
 

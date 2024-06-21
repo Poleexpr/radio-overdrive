@@ -13,7 +13,6 @@ export const IconLogoOverdrive: FC<ComponentPropsWithRef<'svg'>> = (props) => (
   >
     <g>
       <rect
-        fill='white'
         height='2571.04'
         transform='matrix(0.6419 0.7668 -0.7668 0.6419 1124.8885 -408.6884)'
         width='42.63'
@@ -21,7 +20,6 @@ export const IconLogoOverdrive: FC<ComponentPropsWithRef<'svg'>> = (props) => (
         y='-285.52'
       />
       <path
-        fill='white'
         d='M986.98,181.34c-479.59,0-868.37,366.55-868.37,818.72s388.78,818.72,868.37,818.72s868.37-366.55,868.37-818.72
 S1466.57,181.34,986.98,181.34z M986.55,1765.52c-358.32,0-648.79-344.1-648.79-768.58s290.47-768.58,648.79-768.58
 s648.79,344.1,648.79,768.58S1344.87,1765.52,986.55,1765.52z'
