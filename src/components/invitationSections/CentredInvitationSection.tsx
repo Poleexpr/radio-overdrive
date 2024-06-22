@@ -10,7 +10,8 @@ export const CentredInvitationSection = () => (
       </Typography>
       <Typography className={styles.description} tag='p' variant='text2'>
         Возможно, мы ищем именно тебя: неважно в какой точке Земли ты живёшь, если тебе есть что
-        сказать, и ты врубаешь в высокий стиль, присылай демо-аудио и ссылку на свой плейлист на
+        сказать,<span className='text-highlight'> и ты врубаешь</span> в высокий стиль, присылай
+        демо-аудио и ссылку на свой плейлист на
       </Typography>
       <p>
         <a href='mailto:radio@russiandino.ru' rel='noreferrer' target='_blank'>

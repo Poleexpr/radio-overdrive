@@ -1,0 +1,25 @@
+@import 'variables', 'mixins';
+
+.text-highlight {
+  @include text-link();
+  &.active {
+    animation: textColorScroll 2s linear;
+  }
+}
+
+@keyframes textColorScroll {
+  0% {
+    background-position: 0% center;
+    background-image: linear-gradient(
+      -225deg,
+      white 0%,
+      #9337d4 29%,
+      #5b31c0 39%,
+      white 45%,
+      white 100%
+    );
+  }
+  100% {
+    background-position: -110% center;
+  }
+}

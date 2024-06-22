@@ -27,7 +27,7 @@ const OcapellaBannerSection = () => {
   return (
     <section className={styles.ocapella}>
       <div className={styles.container}>
-        <Typography tag='h2' variant='title2'>
+        <Typography className='title-appear' tag='h2' variant='title2'>
           о’капелла
         </Typography>
         <Typography className={styles.description} tag='p' variant='text2'>

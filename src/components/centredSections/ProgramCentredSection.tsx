@@ -12,8 +12,10 @@ interface ProgramCentredSectionProps {
 
 export const ProgramCentredSection: FC<ProgramCentredSectionProps> = ({ children, className }) => (
   <section className={classnames(styles.container, className)}>
-    <Typography className={styles.title} tag='h2' variant='title2'>
-      программа передач
+    <Typography className={classnames(styles.title, 'title-appear')} tag='h2' variant='title2'>
+      <span className='title-appear'>программа</span>
+      <br />
+      <span className='title-appear'>передач</span>
     </Typography>
     {children}
   </section>

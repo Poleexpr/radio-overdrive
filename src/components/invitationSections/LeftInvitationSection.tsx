@@ -11,7 +11,8 @@ export const LeftInvitationSection = () => (
         </Typography>
         <Typography className={styles.description} tag='p' variant='text2'>
           Пишите нам письма — если хотите с нами сотрудничать, быть волонтёром, прислать новый
-          релиз, поделиться идеей программы, обратиться к ведущим и слушателям или просто так:
+          релиз, поделиться идеей программы, обратиться к ведущим и слушателям{' '}
+          <span className='text-highlight'>или просто так</span>:
         </Typography>
         <p>
           <a href='mailto:radio@russiandino.ru' rel='noreferrer' target='_blank'>
