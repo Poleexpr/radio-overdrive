@@ -3,6 +3,7 @@
 import { useGSAP } from '@gsap/react';
 import classnames from 'classnames';
 import gsap from 'gsap';
+import Link from 'next/link';
 import { useRef, type FC, type ReactNode } from 'react';
 
 import styles from './linkRectangle.module.scss';
@@ -11,6 +12,7 @@ interface LinkRectangleProps {
   children: ReactNode;
   href: string;
   className?: string;
+  isNewWindow?: boolean;
   tl: gsap.core.Timeline | undefined;
   mouseEnterHandler: (q: HTMLElement[]) => void;
   id: number;
@@ -23,6 +25,7 @@ export const LinkRectangle: FC<LinkRectangleProps> = ({
   className,
   children,
   href,
+  isNewWindow = false,
   tl,
   mouseEnterHandler,
   id,
@@ -44,12 +47,12 @@ export const LinkRectangle: FC<LinkRectangleProps> = ({
   }, [tl]);
 
   return (
-    <a
+    <Link
       ref={el}
       className={classnames(styles.link, className)}
       href={href}
       rel='noreferrer'
-      target='_blank'
+      target={isNewWindow ? '_blank' : '_self'}
       onMouseEnter={() => mouseEnterHandler(q('.scribbles'))}
     >
       {children}
@@ -252,6 +255,6 @@ export const LinkRectangle: FC<LinkRectangleProps> = ({
           />
         </g>
       </svg>
-    </a>
+    </Link>
   );
 };
