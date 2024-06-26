@@ -3,7 +3,7 @@
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 import { IconLogoOverdrive } from '@/components/icons';
 import { navItemsInfo } from '@/utils/data/navItemsInfo';
@@ -24,6 +24,14 @@ export const Header = () => {
   const toggleNav = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add('menuOpen');
+    } else {
+      document.body.classList.remove('menuOpen');
+    }
+  });
 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-call
   useGSAP(
