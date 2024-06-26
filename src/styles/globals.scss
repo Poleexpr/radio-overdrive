@@ -52,6 +52,8 @@ _:future,
   display: none;
 }
 
-.menuOpen {
-  overflow: hidden;
+@media screen and (max-width: 1024px) {
+  .menuOpen {
+    overflow: hidden;
+  }
 }

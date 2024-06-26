@@ -26,7 +26,7 @@ export const Header = () => {
   };
 
   useEffect(() => {
-    if (isMenuOpen) {
+    if (isMenuOpen && window.matchMedia('(max-width: 1024px)').matches) {
       document.body.classList.add('menuOpen');
     } else {
       document.body.classList.remove('menuOpen');
