@@ -21,7 +21,7 @@
   z-index: -3;
 }
 
-.wrapper {
+.frame {
   width: $base-width;
   margin: 0 auto;
   display: flex;
@@ -61,7 +61,7 @@
 }
 
 .trackWrapper {
-  position: absolute;
+  position: fixed;
   bottom: 80px;
   right: $base-margin;
   padding: 30px 90px 30px 40px;
@@ -96,6 +96,7 @@
     margin-bottom 0.3s ease-out,
     //opacity 0.4s ease-in,
     background-color 1s;
+  z-index: 3;
 }
 
 .trackWrapper.open::before {
@@ -128,7 +129,7 @@
 }
 
 @media screen and (max-width: $mobile-query) {
-  .wrapper {
+  .frame {
     width: $base-width-mobile;
   }
 
