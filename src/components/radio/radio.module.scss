@@ -126,6 +126,10 @@
   .artist {
     margin-left: 60px;
   }
+
+  .trackWrapper {
+    bottom: 70px;
+  }
 }
 
 @media screen and (max-width: $mobile-query) {
@@ -148,8 +152,6 @@
   }
 
   .trackWrapper {
-    position: absolute;
-    bottom: 70px;
     right: 0;
     padding: 30px 40px 30px 40px;
   }
