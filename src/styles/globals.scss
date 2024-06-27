@@ -7,6 +7,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: $base-color;
   font-family: var(--micraDi);

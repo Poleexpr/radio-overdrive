@@ -2,7 +2,6 @@ import classnames from 'classnames';
 import Image from 'next/image';
 
 import {
-  Anchor,
   Footer,
   CentredSections,
   InvitationSection,
@@ -76,7 +75,7 @@ const Home = () => (
           <MarqueeText>мы вещаем до последнего</MarqueeText>
         </div>
       </section>
-      <Anchor name='about'>
+      <div id='about'>
         <section className={styles.about}>
           <div className={styles.container}>
             <div className={styles.img_wrapper}>
@@ -134,16 +133,16 @@ const Home = () => (
             </div>
           </div>
         </section>
-      </Anchor>
-      <Anchor name='presenters'>
+      </div>
+      <div id='presenters'>
         <CentredSections.Team>
           <Presenters.Container />
         </CentredSections.Team>
-      </Anchor>
+      </div>
       <InvitationSection.Centred />
       <BannerSection.Ocapella />
       <BannerSection.Aliens />
-      <Anchor name='program'>
+      <div id='program'>
         <CentredSections.Program className={styles.program}>
           <Schedule.Slider />
           <div className={styles.description_wrapper}>
@@ -156,15 +155,15 @@ const Home = () => (
             </Typography>
           </div>
         </CentredSections.Program>
-      </Anchor>
+      </div>
       <div className={styles.planet}>
         <div className={styles.container}>
           <LinkSubscribeWrapper className={styles.link_subscribe} />
           <InvitationSection.Left />
 
-          <Anchor name='contacts'>
+          <div id='contacts'>
             <Footer />
-          </Anchor>
+          </div>
         </div>
       </div>
       <Radio />
