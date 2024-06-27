@@ -3,7 +3,6 @@
 import { useGSAP } from '@gsap/react';
 import classnames from 'classnames';
 import gsap from 'gsap';
-import Link from 'next/link';
 import { useRef, type FC, type ReactNode } from 'react';
 
 import styles from './linkRectangle.module.scss';
@@ -47,7 +46,7 @@ export const LinkRectangle: FC<LinkRectangleProps> = ({
   }, [tl]);
 
   return (
-    <Link
+    <a
       ref={el}
       className={classnames(styles.link, className)}
       href={href}
@@ -255,6 +254,6 @@ export const LinkRectangle: FC<LinkRectangleProps> = ({
           />
         </g>
       </svg>
-    </Link>
+    </a>
   );
 };

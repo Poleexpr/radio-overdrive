@@ -1,5 +1,4 @@
 import classnames from 'classnames';
-import Link from 'next/link';
 import { forwardRef } from 'react';
 import type { FC, LegacyRef } from 'react';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -31,9 +30,9 @@ export const Nav: FC<NavProps> = forwardRef(({ items, isMenuOpen, toggleNav }, r
       <ul ref={ref} className={classnames(styles.menu, menuOpen)}>
         {items.map((item, i) => (
           <Typography key={i} className={styles.menu_item} tag='li' variant='text8'>
-            <Link href={item.slug} onClick={() => toggleNav()}>
+            <a href={item.slug} onClick={() => toggleNav()}>
               {item.isLogo ? <IconLogoOverdrive className={styles.logo} /> : item.name}
-            </Link>
+            </a>
           </Typography>
         ))}
       </ul>
