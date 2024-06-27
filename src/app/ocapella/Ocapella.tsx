@@ -134,6 +134,7 @@ export const Ocapella: FC = () => {
           />
         </div>
         <Player.Library
+          overSign
           audioRef={audioRef}
           isPlaying={isPlaying}
           setCurrentSong={setCurrentSong}

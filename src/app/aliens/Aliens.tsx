@@ -137,6 +137,7 @@ export const Aliens: FC = () => {
         <Player.Library
           audioRef={audioRef}
           isPlaying={isPlaying}
+          overSign={false}
           setCurrentSong={setCurrentSong}
           setIsPlaying={setIsPlaying}
           setSongs={setSongs}

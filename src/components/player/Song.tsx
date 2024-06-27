@@ -1,10 +1,10 @@
 'use client';
 
+import classnames from 'classnames';
 import type { FC } from 'react';
 import Typograf from 'typograf';
 
 import { Typography } from '@/components';
-import { IconLogoOverdrive } from '@/components/icons';
 
 import type { ISong } from '../../app/ocapella/Ocapella';
 
@@ -30,16 +30,21 @@ export const Song: FC<SongProps> = ({ currentSong, overSign }) => (
       </Typography>
       {overSign ? (
         <div className={styles.title}>
-          <Typography className={styles.titlePath} tag='h4' variant='title5'>
-            {currentSong.name.slice(
-              currentSong.name.indexOf('#'),
-              currentSong.name.indexOf('|') + 1,
-            )}
-          </Typography>
-          <IconLogoOverdrive className={styles.overSign} />
-          <Typography className={styles.titlePath} tag='h4' variant='title5'>
-            {currentSong.name.slice(currentSong.name.indexOf('|') + 3)}
-          </Typography>
+          <span>
+            <Typography className={styles.titlePath} tag='span' variant='title5'>
+              {currentSong.name.slice(
+                currentSong.name.indexOf('#'),
+                currentSong.name.indexOf('|') + 1,
+              )}
+            </Typography>
+            <Typography
+              className={classnames(styles.titlePath, styles.titlePath2)}
+              tag='span'
+              variant='title5'
+            >
+              {currentSong.name.slice(currentSong.name.indexOf('|') + 2)}
+            </Typography>
+          </span>
         </div>
       ) : (
         <Typography className={styles.title} tag='h4' variant='title5'>

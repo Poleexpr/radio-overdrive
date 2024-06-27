@@ -14,6 +14,7 @@ interface LibraryProps {
   isPlaying: boolean;
   setIsPlaying: (value: boolean) => void;
   setSongs: (value: ISong[]) => void;
+  overSign: boolean;
 }
 
 export const Library: FC<LibraryProps> = ({
@@ -23,6 +24,7 @@ export const Library: FC<LibraryProps> = ({
   isPlaying,
   setIsPlaying,
   setSongs,
+  overSign,
 }) => (
   <div className={styles.library}>
     <div className={styles.librarySongs}>
@@ -32,6 +34,7 @@ export const Library: FC<LibraryProps> = ({
           audioRef={audioRef}
           id={song.id}
           isPlaying={isPlaying}
+          overSign={overSign}
           setCurrentSong={setCurrentSong}
           setIsPlaying={setIsPlaying}
           setSongs={setSongs}

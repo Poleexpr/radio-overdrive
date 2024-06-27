@@ -1,5 +1,6 @@
 'use client';
 
+import classnames from 'classnames';
 import type { FC, RefObject } from 'react';
 
 import { Typography } from '@/components';
@@ -17,6 +18,7 @@ interface LibrarySongProps {
   setIsPlaying: (value: boolean) => void;
   setSongs: (value: ISong[]) => void;
   id: string;
+  overSign: boolean;
 }
 
 export const LibrarySong: FC<LibrarySongProps> = ({
@@ -29,6 +31,7 @@ export const LibrarySong: FC<LibrarySongProps> = ({
   setIsPlaying,
   setSongs,
   id,
+  overSign,
 }) => {
   const songSelectHandler = async () => {
     // eslint-disable-next-line @typescript-eslint/await-thenable
@@ -79,9 +82,26 @@ export const LibrarySong: FC<LibrarySongProps> = ({
         <Typography className={styles.date} tag='p' variant='text6'>
           {song.date.slice(0, 10).split('-').reverse().join('.')}
         </Typography>
-        <Typography className={styles.title} tag='h4' variant='text'>
-          {song.name.slice(song.name.indexOf('#')).replace('Ø', 'О')}
-        </Typography>
+        {overSign ? (
+          <div className={styles.title}>
+            <span>
+              <Typography className={styles.titlePath} tag='span' variant='text'>
+                {song.name.slice(song.name.indexOf('#'), song.name.indexOf('|') + 1)}
+              </Typography>
+              <Typography
+                className={classnames(styles.titlePath, styles.titlePath2)}
+                tag='span'
+                variant='text'
+              >
+                {song.name.slice(song.name.indexOf('|') + 2)}
+              </Typography>
+            </span>
+          </div>
+        ) : (
+          <Typography className={styles.title} tag='h4' variant='text'>
+            {song.name.slice(song.name.indexOf('#'))}
+          </Typography>
+        )}
       </div>
     </div>
   );
