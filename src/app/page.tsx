@@ -13,6 +13,7 @@ import {
   Schedule,
   Radio,
   LinkSubscribeWrapper,
+  Video,
 } from '@/components';
 import { IconArrowNextLong, IconButtonPlayText } from '@/components/icons';
 import { AnimationTextWrapper } from '@/wrappers';
@@ -75,6 +76,7 @@ const Home = () => (
           <MarqueeText>мы вещаем до последнего</MarqueeText>
         </div>
       </section>
+      <Video />
       <div id='about'>
         <section className={styles.about}>
           <div className={styles.container}>
