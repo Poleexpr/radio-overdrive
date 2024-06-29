@@ -1,12 +1,14 @@
 @import '/src/styles/variables';
 
 .link_container {
-  margin-top: 47px;
+  height: 60vh;
   display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.link_wrapper {
+/*.link_wrapper {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -17,3 +19,4 @@
     margin-top: 30px;
   }
 }
+*/

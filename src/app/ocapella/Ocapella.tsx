@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import type { FC } from 'react';
 import { useEffect, useRef, useState } from 'react';
 
-import { Typography, Player, Loader } from '@/components';
+import { Typography, Player, Loader, ErrorText } from '@/components';
 import { fetchEpisodes } from '@/utils';
 import dataNative from '@/utils/data/ocapellaInfo';
 
@@ -52,7 +52,7 @@ export const Ocapella: FC = () => {
 
   if (isLoading) return <Loader />;
 
-  if (error) return <div>Error!</div>;
+  if (error) return <ErrorText link='https://radiooverdrive.mave.digital' />;
 
   const timeUpdateHandler = (e: React.ChangeEvent<HTMLMediaElement>) => {
     const current = e.target.currentTime;

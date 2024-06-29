@@ -1,19 +1,21 @@
 import type { FC } from 'react';
 
-import { Typography } from '@/components';
+import { Typography, LinkUnderline } from '@/components';
 
 import styles from './errorText.module.scss';
 
 interface ErrorTextProps {
-  podcastLink: string;
+  link: string;
 }
 
-export const ErrorText: FC<ErrorTextProps> = ({ podcastLink }) => (
+export const ErrorText: FC<ErrorTextProps> = ({ link }) => (
   <div className={styles.link_container}>
-    <a className={styles.link_wrapper} href={podcastLink} rel='noreferrer' target='_blank'>
-      <Typography tag='p' variant='text5'>
-        перейти на страницу подкаста
-      </Typography>
-    </a>
+    <Typography className={styles.link_wrapper} tag='p' variant='text5'>
+      Что-то пошло не так. Попробуй перейти на главную страницу или врубайся{' '}
+      <a href={link} rel='noreferrer' target='_blank'>
+        <LinkUnderline> на другом ресурсе</LinkUnderline>
+      </a>
+      .
+    </Typography>
   </div>
 );
