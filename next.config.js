@@ -9,6 +9,31 @@ const nextConfig = {
 
 module.exports = nextConfig*/
 
+module.exports = {
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'ru-msk-dr3-1.store.cloud.mts.ru',
+                port: '',
+                pathname: '/mave/storage/podcasts/**',
+            },
+        ],
+    },
+    async rewrites() {
+        return [
+            {
+                source: "/ocappellaRSS",
+                destination: "https://cloud.mave.digital/42223",
+            },
+            {
+                source: "/aliensRSS",
+                destination: "https://cloud.mave.digital/53379",
+            },
+        ]
+    },
+}
+/*
 module.exports = () => {
     const rewrites = () => {
         return [
@@ -25,4 +50,4 @@ module.exports = () => {
     return {
         rewrites,
     };
-};
+};*/

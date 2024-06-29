@@ -2,6 +2,7 @@ import Image from 'next/image';
 import type { FC } from 'react';
 
 import { Typography } from '@/components';
+import { presentersBlurData } from '@/utils/helpers';
 
 import styles from './presentersCard.module.scss';
 
@@ -36,7 +37,14 @@ export const PresentersCard: FC<PresentersCardProps> = ({ cardsElements, toggle,
       onMouseLeave={() => leave(cardElement.id)}
     >
       <div className={styles.img_wrapper}>
-        <Image fill alt='фотография ведущего' className={styles.card_img} src={cardElement.img} />
+        <Image
+          fill
+          alt='фотография ведущего'
+          blurDataURL={presentersBlurData}
+          className={styles.card_img}
+          placeholder='blur'
+          src={cardElement.img}
+        />
       </div>
       <div className={styles.card_info}>
         <Typography tag='p' variant='text3'>

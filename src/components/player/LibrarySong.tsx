@@ -1,9 +1,11 @@
 'use client';
 
 import classnames from 'classnames';
+import Image from 'next/image';
 import type { FC, RefObject } from 'react';
 
 import { Typography } from '@/components';
+import { podcastBlurData } from '@/utils/helpers';
 
 import type { ISong } from '../../app/ocapella/Ocapella';
 
@@ -73,10 +75,14 @@ export const LibrarySong: FC<LibrarySongProps> = ({
       // eslint-disable-next-line @typescript-eslint/no-misused-promises
       onKeyDown={songSelectHandler}
     >
-      <img
+      <Image
         alt={song.name.slice(song.name.indexOf('#'))}
+        blurDataURL={podcastBlurData}
         className={styles.image}
+        height={120}
+        placeholder='blur'
         src={song.cover}
+        width={120}
       />
       <div className={styles.songDescription}>
         <Typography className={styles.date} tag='p' variant='text6'>

@@ -10,7 +10,7 @@ function aliensInfo() {
       audio:
         'https://api.mave.digital/storage/podcasts/63d61853-0f66-4629-9b65-812835461320/episodes/0c3c0ef4-5357-4d75-be68-9840c4a18e4f.mp3',
       id: '1',
-      active: true,
+      active: false,
     },
     {
       name: 'Пришельцы #2 | Александр Гумбарг',

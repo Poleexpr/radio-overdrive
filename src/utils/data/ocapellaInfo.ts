@@ -10,7 +10,7 @@ function ocapellaInfo() {
       audio:
         'https://api.mave.digital/storage/podcasts/2cb32a9b-ad7b-479c-bc96-cb16230f55ce/episodes/2b1727ce-46ac-4ed5-8d57-da495e281272.mp3',
       id: '1',
-      active: true,
+      active: false,
     },
     {
       name: "Ø'капелла #2 | Ø Долорес О'Риордан",
