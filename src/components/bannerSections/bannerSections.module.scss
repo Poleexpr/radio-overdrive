@@ -21,14 +21,14 @@
 .ocapella {
   padding-bottom: 60px;
   .container {
-    padding: 100px 0 50px 0;
+    padding: 120px 0 100px 0;
     background:
       url(../../../public/images/texture.png),
       url(../../../public/images/ocapella_back.png) center / cover no-repeat;
   }
 }
 
-.aliens2 {
+.aliens {
   .container {
     padding: 100px 0;
     background:
@@ -91,6 +91,10 @@
     padding-bottom: 110px;
   }*/
 
+  .ocapella {
+    padding-bottom: 0px;
+  }
+
   .link {
     margin-top: 20px;
   }
@@ -99,13 +103,12 @@
     padding: 65px 0;
   }
 
-  /*
   .aliens {
     .container {
-      margin-bottom: 50px;
+      padding-bottom: 50px;
+      padding-top: 50px;
     }
   }
-*/
 }
 
 @media screen and (max-width: $tablet-query) {
@@ -117,13 +120,17 @@
     padding: 60px 0;
   }
 
-  /*
-  .aliens {
+  .ocapella {
     .container {
-      margin-bottom: 40px;
+      padding: 50px 0 50px 0;
     }
   }
-*/
+
+  .aliens {
+    .container {
+      padding-bottom: 0px;
+    }
+  }
 }
 
 @media screen and (max-width: $mobile-query) {
@@ -138,5 +145,11 @@
   .description {
     width: $base-width-mobile;
     max-width: $base-width-mobile;
+  }
+
+  .aliens {
+    .container {
+      padding-top: 25px;
+    }
   }
 }

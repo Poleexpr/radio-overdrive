@@ -411,6 +411,7 @@
 @media screen and (max-width: 1024px) {
   .planet {
     .container {
+      padding-top: 30px;
       gap: 100px;
     }
 
@@ -428,7 +429,7 @@
       url(../../public/images/over-planet-mobile.png) center bottom / contain no-repeat;
 
     .container {
-      padding-top: 30px;
+      // padding-top: 30px;
       gap: 80px;
     }
   }
@@ -468,6 +469,10 @@
 
 @media screen and (max-width: 1024px) {
   .program {
+    .description_wrapper {
+      margin-top: 40px;
+    }
+
     .description {
       width: 400px;
     }
@@ -476,10 +481,6 @@
 
 @media screen and (max-width: 744px) {
   .program {
-    .description_wrapper {
-      margin-top: 40px;
-    }
-
     .description {
       width: 280px;
     }

@@ -25,7 +25,7 @@ const AliensBannerSection = () => {
   });
 
   return (
-    <section className={styles.aliens2}>
+    <section className={styles.aliens}>
       <div className={styles.container}>
         <Typography className='title-appear' tag='h2' variant='title2'>
           пришельцы
