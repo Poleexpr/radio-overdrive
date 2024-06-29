@@ -22,7 +22,7 @@ import styles from './page.module.scss';
 const Home = () => (
   <AnimationTextWrapper>
     <main className={styles.main}>
-      <section className={styles.welcome}>
+      <section className={styles.welcome} id='welcome'>
         <video
           autoPlay
           loop

@@ -23,7 +23,7 @@ export const navItemsInfo = [
   {
     id: 4,
     name: '',
-    slug: '/',
+    slug: '/#welcome',
     offset: 0,
     isLogo: true,
   },

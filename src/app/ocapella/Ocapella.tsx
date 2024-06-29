@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import type { FC } from 'react';
 import { useEffect, useRef, useState } from 'react';
 
-import { Typography, Player } from '@/components';
+import { Typography, Player, Loader } from '@/components';
 import { fetchEpisodes } from '@/utils';
 import dataNative from '@/utils/data/ocapellaInfo';
 
@@ -50,12 +50,7 @@ export const Ocapella: FC = () => {
     }
   }, [status, data]);
 
-  if (isLoading)
-    return (
-      <div className={styles.loaderWrapper}>
-        <div className={styles.loader} />
-      </div>
-    );
+  if (isLoading) return <Loader />;
 
   if (error) return <div>Error!</div>;
 

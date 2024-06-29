@@ -3,6 +3,7 @@
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 
 import { IconLogoOverdrive } from '@/components/icons';
@@ -60,7 +61,9 @@ export const Header = () => {
     <header className={styles.header} id='header'>
       <div ref={main} className={styles.wrapper}>
         <div className={styles.container}>
-          <IconLogoOverdrive className={styles.logoMobile} />
+          <Link href='/#welcome'>
+            <IconLogoOverdrive className={styles.logoMobile} />
+          </Link>
           <Nav ref={navRef} isMenuOpen={isMenuOpen} items={navItemsInfo} toggleNav={toggleNav} />
           <Burger isMenuOpen={isMenuOpen} toggleNav={toggleNav} />
         </div>

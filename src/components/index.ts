@@ -16,3 +16,4 @@ export * from './bannerSections';
 export * from './errorText';
 export * from './player';
 export * from './linkWrappers';
+export * from './loader';
