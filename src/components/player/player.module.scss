@@ -29,11 +29,13 @@
 .songDescription {
   padding-left: 1rem;
   .date {
-    color: #383752;
+    //color: #383752;
+    color: rgb(255, 255, 255, 0.6);
     padding-bottom: 10px;
   }
   .title {
-    color: gray;
+    //color: gray;
+    color: rgb(255, 255, 255, 0.8);
   }
 
   .titlePath2 {
@@ -48,19 +50,19 @@
     left: 6.5px;
     width: 2px;
     height: 11.5px;
-    background: gray;
+    background: rgb(255, 255, 255, 0.8);
     transform: rotate(23deg);
   }
 }
 .selected {
-  background: #fff;
+  background: rgba(146, 55, 212, 0.5);
   .title {
-    color: rgba(146, 55, 212, 0.5);
+    // color: rgb(255, 255, 255, 0.5);
   }
 
   .songDescription {
     .titlePath2::before {
-      background: rgba(146, 55, 212, 0.5);
+      background: rgb(255, 255, 255, 0.5);
     }
   }
 }
@@ -204,7 +206,8 @@
 
   .date {
     margin-bottom: 20px;
-    color: #383752;
+    //color: #383752;
+    color: rgb(255, 255, 255, 0.8);
   }
 
   .title {

@@ -17,8 +17,10 @@ const InitialData = async () => {
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
-      <main className={styles.container}>
-        <Aliens />
+      <main className={styles.back}>
+        <div className={styles.container}>
+          <Aliens />
+        </div>
       </main>
       <Footer />
     </HydrationBoundary>
