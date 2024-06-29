@@ -1,7 +1,8 @@
 @import '/src/styles/variables';
 
 .wrapper {
-  background-image: url('../../../public/images/podcast_back3.png');
+  background-image: url('../../../public/images/podcast_back3.png'),
+    url(../../../public/images/texture.png);
   background-repeat: no-repeat;
 }
 
@@ -29,8 +30,8 @@
 }
 
 .title {
-  margin-top: 170px;
-  margin-bottom: 120px;
+  margin-top: 120px;
+  margin-bottom: 90px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
