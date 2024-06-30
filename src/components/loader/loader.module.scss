@@ -18,8 +18,8 @@
 .loader {
   display: inline-block;
   position: relative;
-  width: 48px;
-  height: 48px;
+  width: 68px;
+  height: 68px;
   border-radius: 50%;
   background: linear-gradient(0deg, rgb(91, 49, 192, 0.2) 33%, #5b31c0 100%);
   animation: rotation 1s linear infinite;
@@ -30,8 +30,8 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 44px;
-  height: 44px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
   background-color: $base-background-color;
   background-image: url(../../../public/images/texture.png);
