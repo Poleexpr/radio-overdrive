@@ -10,6 +10,7 @@ type Variant =
   | 'title5'
   | 'title6'
   | 'title7'
+  | 'title8'
   | 'text'
   | 'text2'
   | 'text3'

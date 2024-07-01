@@ -58,10 +58,10 @@ export const Footer = () => (
         </a>
 
         <div className={styles.wrappe_copiright}>
-          <Typography className={styles.heshtag} tag='p' variant='text'>
+          <Typography className={styles.heshtag} tag='p' variant='title8'>
             #радиоовердрайв
           </Typography>
-          <Typography tag='p' variant='text'>
+          <Typography tag='p' variant='title8'>
             #хбдщдбдщ
           </Typography>
           <Typography className={styles.slogan} tag='p' variant='title5'>
