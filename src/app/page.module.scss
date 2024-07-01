@@ -375,7 +375,7 @@
 .planet {
   background:
     url(../../public/images/texture.png),
-    linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%),
+    linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 20%),
     url(../../public/images/over-planet.png) center bottom / cover no-repeat;
   width: 100%;
   padding-bottom: 40px;
@@ -425,7 +425,7 @@
   .planet {
     background:
       url(../../public/images/texture.png),
-      linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%),
+      linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 20%),
       url(../../public/images/over-planet-mobile.png) center bottom / contain no-repeat;
 
     .container {
