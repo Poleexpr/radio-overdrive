@@ -2,12 +2,13 @@
 @import '/src/styles/mixins';
 
 .back {
-  background-image: url(../../../public/images/texture.png),
+  background:
+    url(../../../public/images/texture.png),
     linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 80%),
-    url('../../../public/images/ocapella_page_back.png');
-  background-position-y: 60px;
-  background-position-x: right;
-  background-repeat: no-repeat;
+    url('../../../public/images/ocapella_page_back.png') right / cover no-repeat;
+  //background-position-y: 60px;
+  //background-position-x: right;
+  //background-repeat: no-repeat;
 }
 
 .container {
@@ -154,9 +155,10 @@
 
 @media screen and (max-width: $mobile-query) {
   .back {
-    background-image: url(../../../public/images/texture.png),
+    background-image:
+      url(../../../public/images/texture.png),
       linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 80%),
-      url('../../../public/images/ocapella_page_back_mobile.png');
+      url('../../../public/images/ocapella_page_back_mobile.png') right / cover no-repeat;
   }
 
   .wrapper {

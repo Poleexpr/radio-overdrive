@@ -31,10 +31,8 @@ const Home = () => (
           playsInline
           className={styles.video}
           poster='./videos/wellcomeBackPoster.jpg'
-        >
-          <source src='./videos/wellcomeBack.mp4' type='video/mp4' />
-          <source src='./videos/wellcomeBack.webm' type='video/webm' />
-        </video>
+          src='./videos/wellcomeBack.mp4'
+        />
         <div className={styles.container}>
           <div className={styles.title_wrapper}>
             <Typography className={styles.subtitle} tag='p' variant='title'>
