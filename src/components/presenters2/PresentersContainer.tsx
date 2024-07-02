@@ -1,0 +1,37 @@
+'use client';
+
+import { useState } from 'react';
+
+import { presentersInfo } from '@/utils';
+
+import { PresentersCard } from './PresentersCard';
+import styles from './presenters.module.scss';
+
+export const PresentersContainer = () => {
+  const [cardsBox, setCardsBox] = useState(presentersInfo);
+
+  const toggle = (id: number) => {
+    setCardsBox((prevCardsBox) =>
+      prevCardsBox.map((card) => {
+        if (card.id !== id) {
+          return { ...card, on: false };
+        }
+        return card.on === true ? { ...card, on: card.on } : { ...card, on: !card.on };
+      }),
+    );
+  };
+
+  const leave = (id: number) => {
+    setCardsBox((prevCardsBox) =>
+      prevCardsBox.map((card) =>
+        card.id === id ? { ...card, on: card.on } : { ...card, on: false },
+      ),
+    );
+  };
+
+  return (
+    <div className={styles.cards_container}>
+      <PresentersCard cardsElements={cardsBox} leave={leave} toggle={toggle} />
+    </div>
+  );
+};

@@ -1,0 +1,43 @@
+// TODO: выпилить марджины в .cards_container
+@import '/src/styles/variables';
+
+.cards_container {
+  margin-top: 130px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1em;
+  width: 800px;
+  height: 500px;
+  transition: all 400ms;
+}
+
+@media screen and (max-width: $laptop-query) {
+  .cards_container {
+    margin-top: 80px;
+    //gap: 20px;
+  }
+}
+
+@media screen and (max-width: $tablet-query) {
+  .cards_container {
+    margin-top: 60px;
+    //gap: 10px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .cards_container {
+    //flex-direction: column;
+    gap: 50px;
+    
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+  }
+
+  .cards_container::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}

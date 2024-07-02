@@ -6,7 +6,7 @@ import {
   CentredSections,
   InvitationSection,
   BannerSection,
-  Presenters,
+  Presenters2,
   MarqueeText,
   Typography,
   LinkUnderline,
@@ -141,7 +141,7 @@ const Home = () => (
       </div>
       <div id='presenters'>
         <CentredSections.Team>
-          <Presenters.Container />
+          <Presenters2.Container />
         </CentredSections.Team>
       </div>
       <InvitationSection.Centred />
