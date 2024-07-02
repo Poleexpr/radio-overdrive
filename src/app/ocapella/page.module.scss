@@ -1,4 +1,5 @@
 @import '/src/styles/variables';
+@import '/src/styles/mixins';
 
 .back {
   background-image: url(../../../public/images/texture.png),
@@ -41,10 +42,79 @@
   gap: 20px;
 }
 
+.nets_wrapper {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  margin-top: 90px;
+}
+
+.net_link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  &:hover {
+    .net_tooltip {
+      //@include svg-link-hover(box-shadow, 0px 0px 10px 5px rgba(188, 113, 241, 0.5));
+      top: 110%;
+      opacity: 1;
+      visibility: visible;
+      animation: tooltipUp 0.2s linear;
+    }
+  }
+}
+
+.net_logo {
+  @include svg-link(box-shadow, 0px 0px 0px 0px rgba(188, 113, 241, 0.5));
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-image: $accent-gradient-color;
+
+  &:hover {
+    @include svg-link-hover(box-shadow, 0px 0px 10px 5px rgba(188, 113, 241, 0.5));
+  }
+}
+
+.net_tooltip {
+  //@include svg-link(box-shadow, 0px 0px 0px 0px rgba(188, 113, 241, 0.5));
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(10%);
+  max-width: 220px;
+  padding: 10px 12px;
+  background-image: $accent-gradient-color;
+  border-radius: 10px;
+  pointer-events: all !important;
+  visibility: hidden;
+  white-space: nowrap;
+  z-index: 100;
+}
+
+@keyframes tooltipUp {
+  0% {
+    top: 70%;
+    opacity: 0;
+  }
+  100% {
+    top: 100%;
+    opacity: 1;
+  }
+}
+
 @media screen and (max-width: $laptop-query) {
   .title {
     margin-top: 90px;
     margin-bottom: 60px;
+  }
+
+  .nets_wrapper {
+    margin-top: 60px;
+  }
+
+  .net_logo {
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -58,12 +128,33 @@
     margin-bottom: 30px;
     gap: 15px;
   }
+
+  .nets_wrapper {
+    margin-top: 30px;
+  }
+
+  .net_logo {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nets_wrapper {
+    gap: 12px;
+  }
+
+  .net_logo {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media screen and (max-width: $mobile-query) {
   .back {
     background-image: url(../../../public/images/texture.png),
-    linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 80%), url('../../../public/images/ocapella_page_back_mobile.png');
+      linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 80%),
+      url('../../../public/images/ocapella_page_back_mobile.png');
   }
 
   .wrapper {

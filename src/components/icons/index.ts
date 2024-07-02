@@ -15,3 +15,7 @@ export * from './IconLogoOverdrive';
 export * from './IconBurger';
 export * from './IconCross';
 export * from './IconArrowUpShort';
+export * from './IconLogoApplePodcast';
+export * from './IconLogoGooglePodcast';
+export * from './IconLogoCastbox';
+export * from './IconLogoOvercast';

@@ -5,6 +5,12 @@ import type { FC } from 'react';
 import { useEffect, useRef, useState } from 'react';
 
 import { Typography, Player, Loader, ErrorText } from '@/components';
+import {
+  IconLogoApplePodcast,
+  IconLogoGooglePodcast,
+  IconLogoCastbox,
+  IconLogoOvercast,
+} from '@/components/icons';
 import { fetchEpisodes } from '@/utils';
 import dataNative from '@/utils/data/ocapellaInfo';
 
@@ -127,6 +133,57 @@ export const Ocapella: FC = () => {
             songInfo={songInfo}
             // songs={songs}
           />
+          <div className={styles.nets_wrapper}>
+            {' '}
+            <a
+              aria-label='Перейти на Apple Podcast'
+              className={styles.net_link}
+              href='https://podcasts.apple.com/podcast/id1551530393'
+              rel='noreferrer'
+              target='_blank'
+            >
+              <IconLogoApplePodcast className={styles.net_logo} />
+              <Typography className={styles.net_tooltip} tag='span' variant='text6'>
+                Apple Podcast
+              </Typography>
+            </a>
+            <a
+              aria-label='Перейти на Google Podcast'
+              className={styles.net_link}
+              href='https://podcasts.google.com/feed/aHR0cDovL3Jzcy5jYXN0Ym94LmZtL2V2ZXJlc3QvNmVlZWNlNWNkZDU5NGVkNDk1YjIxNzEyODFiMzg5ZWMueG1s?sa=X&ved=0CAcQrrcFahcKEwiA9NnL-ND7AhUAAAAAHQAAAAAQSQ&hl=ru'
+              rel='noreferrer'
+              target='_blank'
+            >
+              <IconLogoGooglePodcast className={styles.net_logo} />{' '}
+              <Typography className={styles.net_tooltip} tag='span' variant='text6'>
+                Google Podcast
+              </Typography>
+            </a>
+            <a
+              aria-label='Перейти на Castbox'
+              className={styles.net_link}
+              href='https://castbox.fm/channel/id3666927?utm_campaign=ex_share_ch&utm_medium=exlink&country=ru'
+              rel='noreferrer'
+              target='_blank'
+            >
+              <IconLogoCastbox className={styles.net_logo} />{' '}
+              <Typography className={styles.net_tooltip} tag='span' variant='text6'>
+                Castbox
+              </Typography>
+            </a>
+            <a
+              aria-label='Перейти на Overcast'
+              className={styles.net_link}
+              href='https://overcast.fm/itunes1551530393'
+              rel='noreferrer'
+              target='_blank'
+            >
+              <IconLogoOvercast className={styles.net_logo} />
+              <Typography className={styles.net_tooltip} tag='span' variant='text6'>
+                Overcast
+              </Typography>
+            </a>
+          </div>
         </div>
         <Player.Library
           overSign
