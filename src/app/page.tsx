@@ -28,7 +28,6 @@ const Home = () => (
           autoPlay
           loop
           muted
-          playsInline
           className={styles.video}
           poster='./videos/wellcomeBackPoster.jpg'
         >
