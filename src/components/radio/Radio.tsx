@@ -6,12 +6,7 @@ import { useState } from 'react';
 import AudioPlayer from 'react-h5-audio-player';
 
 import { Typography } from '@/components';
-import {
-  IconButtonPlay,
-  IconArrowUpShort,
-  IconButtonStop,
-  IconLogoOverdrive,
-} from '@/components/icons';
+import { IconButtonPlay, IconArrowUpShort, IconButtonStop } from '@/components/icons';
 
 import styles from './radio.module.scss';
 
@@ -59,9 +54,8 @@ export const Radio = () => {
                 OVER
               </Typography>
               <div className={styles.artist}>
-                <IconLogoOverdrive className={styles.overSign} />
                 <Typography className={styles.artistText} tag='p' variant='text'>
-                  Oxbow 8 мая 1996 ночь
+                  Ø Oxbow 8 мая 1996 ночь
                 </Typography>
               </div>
             </div>
