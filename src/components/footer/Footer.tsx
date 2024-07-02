@@ -20,6 +20,7 @@ export const Footer = () => (
         <div className={styles.nets_wrapper}>
           <a
             aria-label='Овердрайв в telegram'
+            className={styles.net_link}
             href='https://t.me/rocknword'
             rel='noreferrer'
             target='_blank'
@@ -28,6 +29,7 @@ export const Footer = () => (
           </a>
           <a
             aria-label='Овердрайв вконтакте'
+            className={styles.net_link}
             href='https://vk.com/rocknword'
             rel='noreferrer'
             target='_blank'
@@ -36,6 +38,7 @@ export const Footer = () => (
           </a>
           <a
             aria-label='Овердрайв в instagram'
+            className={styles.net_link}
             href='https://www.instagram.com/radio_overdrive/'
             rel='noreferrer'
             target='_blank'
