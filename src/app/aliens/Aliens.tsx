@@ -111,7 +111,7 @@ export const Aliens: FC = () => {
           пришельцы
         </Typography>
         <Typography className={styles.description} tag='p' variant='text2'>
-          Прямые эфиры с музыкантами, писателями, философами и другими гостями не от мира сего.
+          Прямые эфиры с музыкантами, писателями, философами и другими гостями не от мира сего
         </Typography>
       </div>
       <div className={styles.wrapper}>

@@ -110,7 +110,7 @@ export const Ocapella: FC = () => {
           о’капелла
         </Typography>
         <Typography className={styles.description} tag='p' variant='text2'>
-          Подкаст о музыке как феномене и чуде.
+          Подкаст о музыке как феномене и чуде
         </Typography>
       </div>
       <div className={styles.wrapper}>

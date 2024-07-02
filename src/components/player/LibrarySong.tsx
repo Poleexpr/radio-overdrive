@@ -85,9 +85,6 @@ export const LibrarySong: FC<LibrarySongProps> = ({
         width={120}
       />
       <div className={styles.songDescription}>
-        <Typography className={styles.date} tag='p' variant='text6'>
-          {song.date.slice(0, 10).split('-').reverse().join('.')}
-        </Typography>
         {overSign ? (
           <div className={styles.title}>
             <span>
@@ -108,6 +105,9 @@ export const LibrarySong: FC<LibrarySongProps> = ({
             {song.name.slice(song.name.indexOf('#'))}
           </Typography>
         )}
+        <Typography className={styles.date} tag='p' variant='text6'>
+          {song.date.slice(0, 10).split('-').reverse().join('.')}
+        </Typography>
       </div>
     </div>
   );

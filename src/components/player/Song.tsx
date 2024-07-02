@@ -31,9 +31,6 @@ export const Song: FC<SongProps> = ({ currentSong, overSign }) => (
       width={120}
     />
     <div>
-      <Typography className={styles.date} tag='p' variant='text'>
-        {currentSong.date.slice(0, 10).split('-').reverse().join('.')}
-      </Typography>
       {overSign ? (
         <div className={styles.title}>
           <span>
@@ -60,6 +57,9 @@ export const Song: FC<SongProps> = ({ currentSong, overSign }) => (
 
       <Typography className={styles.content} tag='p' variant='text'>
         {tp.execute(currentSong.description)}
+      </Typography>
+      <Typography className={styles.date} tag='p' variant='text'>
+        {currentSong.date.slice(0, 10).split('-').reverse().join('.')}
       </Typography>
     </div>
   </div>
