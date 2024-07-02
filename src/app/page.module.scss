@@ -349,7 +349,9 @@
 
 @media screen and (max-width: 650px) {
   .about {
-    background: url(../../public/images/about-back.png) top right no-repeat;
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 40%),
+      url(../../public/images/about-back.png) top right no-repeat;
     background-size: contain;
 
     .container {
