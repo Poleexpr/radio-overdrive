@@ -120,14 +120,157 @@
 }
 
 .button {
+  width: 17px;
+  height: 17px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  //margin: 50px auto;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
   border: none;
   background-color: transparent;
-  transition: transform 0.3s ease-out;
+  cursor: pointer;
+  //transition: transform 0.3s ease-out;
 }
 
+.button span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 4px;
+  background: #fff;
+  opacity: 1;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.button span:nth-child(even) {
+  left: 50%;
+  border-radius: 50%;
+}
+
+.button span:nth-child(odd) {
+  left: 0px;
+  border-radius: 50%;
+}
+
+.button span:nth-child(2),
+.button span:nth-child(4),
+.button span:nth-child(8) {
+  width: 20px;
+  border-radius: 0%;
+}
+
+.button span:nth-child(1),
+.button span:nth-child(2),
+.button span:nth-child(3) {
+  top: 0px;
+}
+.button span:nth-child(4),
+.button span:nth-child(5),
+.button span:nth-child(6) {
+  top: 10px;
+}
+.button span:nth-child(7),
+.button span:nth-child(8),
+.button span:nth-child(9) {
+  top: 20px;
+}
+.button span:nth-child(3) {
+  left: 100%;
+}
+
+.button span:nth-child(6) {
+  left: 100%;
+}
+
+.button span:nth-child(9) {
+  left: 100%;
+}
+
+.button.close span:nth-child(2),
+.button.close span:nth-child(4),
+.button.close span:nth-child(8) {
+  width: 1px;
+  border-radius: 50%;
+}
+
+.button.close span:nth-child(6),
+.button.close span:nth-child(5),
+.button.close span:nth-child(8) {
+  width: 1px;
+}
+
+.button.close span:nth-child(1),
+.button.close span:nth-child(3),
+.button.close span:nth-child(7),
+.button.close span:nth-child(9) {
+  width: 12px;
+}
+
+.button.close span:nth-child(1),
+.button.close span:nth-child(7) {
+  left: 0px;
+}
+
+.button.close span:nth-child(7),
+.button.close span:nth-child(9) {
+  top: 13px;
+}
+
+.button.close span:nth-child(1),
+.button.close span:nth-child(3) {
+  top: 7px;
+}
+
+.button.close span:nth-child(1) {
+  //width: 20px;
+  transform: rotate(45deg);
+  //left: -5px;
+  border-radius: 50px;
+  //top: 5px;
+}
+.button.close span:nth-child(3) {
+  //width: 20px;
+  transform: rotate(-45deg);
+  border-radius: 50px;
+  left: 45%;
+  //top: 5px;
+}
+.button.close span:nth-child(7) {
+  //width: 20px;
+  transform: rotate(-45deg);
+  //left: -5px;
+  border-radius: 50px;
+  //top: 18px;
+}
+.button.close span:nth-child(9) {
+  //width: 20px;
+  transform: rotate(45deg);
+  border-radius: 50px;
+  left: 45%;
+  //top: 18px;
+}
+.button.close span:nth-child(2) {
+  top: 10px;
+}
+
+.button.close span:nth-child(5) {
+  left: 50%;
+}
+.button.close span:nth-child(6) {
+  left: 50%;
+}
+
+.button.close span:nth-child(8) {
+  top: 10px;
+}
+/*
 .button.close {
   transform: rotate(180deg);
 }
+*/
 
 @media screen and (max-width: $laptop-query) {
   .artistText::before {
@@ -189,5 +332,37 @@
     left: 6px;
     width: 1.5px;
     height: 11px;
+  }
+
+  .button {
+    width: 17px;
+    height: 17px;
+  }
+
+  .button span {
+    height: 3px;
+    width: 4px;
+  }
+
+  .button.close span:nth-child(1),
+  .button.close span:nth-child(3),
+  .button.close span:nth-child(7),
+  .button.close span:nth-child(9) {
+    width: 12px;
+  }
+
+  .button.close span:nth-child(1),
+  .button.close span:nth-child(7) {
+    left: 0px;
+  }
+
+  .button.close span:nth-child(7),
+  .button.close span:nth-child(9) {
+    top: 13px;
+  }
+
+  .button.close span:nth-child(1),
+  .button.close span:nth-child(3) {
+    top: 7px;
   }
 }

@@ -6,7 +6,7 @@ import { useState } from 'react';
 import AudioPlayer from 'react-h5-audio-player';
 
 import { Typography } from '@/components';
-import { IconButtonPlay, IconArrowUpShort, IconButtonStop } from '@/components/icons';
+import { IconButtonPlay, IconButtonStop } from '@/components/icons';
 
 import styles from './radio.module.scss';
 
@@ -70,7 +70,15 @@ export const Radio = () => {
               }
               onClick={tracklistHandler}
             >
-              <IconArrowUpShort />
+              <span />
+              <span />
+              <span />
+              <span />
+              <span />
+              <span />
+              <span />
+              <span />
+              <span />
             </button>
           </div>
         </div>
