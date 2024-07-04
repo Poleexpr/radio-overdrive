@@ -120,10 +120,10 @@
 }
 
 .button {
-  width: 17px;
-  height: 17px;
-  margin-right: 10px;
-  margin-bottom: 10px;
+  width: 28px;
+  height: 20px;
+  //margin-right: 3px;
+  //margin-bottom: 10px;
   position: relative;
   //margin: 50px auto;
   transform: rotate(0deg);
@@ -137,8 +137,8 @@
 .button span {
   display: block;
   position: absolute;
-  height: 3px;
-  width: 4px;
+  height: 2px;
+  width: 2px;
   background: #fff;
   opacity: 1;
   transform: rotate(0deg);
@@ -155,27 +155,44 @@
   border-radius: 50%;
 }
 
+.button span:nth-child(1),
+.button span:nth-child(5),
+.button span:nth-child(7) {
+  width: 3px;
+  height: 3px;
+}
+
 .button span:nth-child(2),
 .button span:nth-child(4),
 .button span:nth-child(8) {
-  width: 20px;
-  border-radius: 0%;
+  width: 24px;
+  border-radius: 20px;
+  left: 20%;
 }
 
-.button span:nth-child(1),
+.button span:nth-child(1) {
+  top: -0.5px;
+}
+
 .button span:nth-child(2),
 .button span:nth-child(3) {
   top: 0px;
 }
-.button span:nth-child(4),
-.button span:nth-child(5),
-.button span:nth-child(6) {
-  top: 10px;
+.button span:nth-child(5) {
+  top: 7.5px;
 }
-.button span:nth-child(7),
+
+.button span:nth-child(4),
+.button span:nth-child(6) {
+  top: 8px;
+}
+.button span:nth-child(7) {
+  top: 15.5px;
+}
+
 .button span:nth-child(8),
 .button span:nth-child(9) {
-  top: 20px;
+  top: 16px;
 }
 .button span:nth-child(3) {
   left: 100%;
@@ -187,6 +204,11 @@
 
 .button span:nth-child(9) {
   left: 100%;
+}
+
+.button.close span:nth-child(1),
+.button.close span:nth-child(7) {
+  height: 2px;
 }
 
 .button.close span:nth-child(2),
@@ -214,6 +236,14 @@
   left: 0px;
 }
 
+.button.close span:nth-child(4),
+.button.close span:nth-child(5),
+.button.close span:nth-child(6) {
+  width: 1px;
+  height: 1px;
+  top: 10px;
+}
+
 .button.close span:nth-child(7),
 .button.close span:nth-child(9) {
   top: 13px;
@@ -235,7 +265,7 @@
   //width: 20px;
   transform: rotate(-45deg);
   border-radius: 50px;
-  left: 45%;
+  left: 25%;
   //top: 5px;
 }
 .button.close span:nth-child(7) {
@@ -249,22 +279,23 @@
   //width: 20px;
   transform: rotate(45deg);
   border-radius: 50px;
-  left: 45%;
+  left: 25%;
   //top: 18px;
 }
 .button.close span:nth-child(2) {
   top: 10px;
+  left: 30%;
 }
 
-.button.close span:nth-child(5) {
-  left: 50%;
-}
+.button.close span:nth-child(4),
+.button.close span:nth-child(5),
 .button.close span:nth-child(6) {
-  left: 50%;
+  left: 30%;
 }
 
 .button.close span:nth-child(8) {
   top: 10px;
+  left: 30%;
 }
 /*
 .button.close {
@@ -333,7 +364,7 @@
     width: 1.5px;
     height: 11px;
   }
-
+  /*
   .button {
     width: 17px;
     height: 17px;
@@ -365,4 +396,5 @@
   .button.close span:nth-child(3) {
     top: 7px;
   }
+    */
 }
