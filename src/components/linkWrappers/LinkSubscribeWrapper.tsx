@@ -26,12 +26,19 @@ export const LinkSubscribeWrapper: FC<LinkRectangleProps> = ({ className }) => {
     gsap.to(q, { opacity: 1, duration: 0.3, ease: 'sine.out' });
     tl?.play(0);
   });
+
+  const mouseLeaveHandler = contextSafe((q: HTMLElement[]) => {
+    gsap.to(q, { opacity: 0, duration: 0.3, ease: 'sine.out' });
+    tl?.play(5);
+  });
+
   return (
     <div className={className}>
       <LinkRectangle
         href='https://t.me/rocknword'
         id={3}
         mouseEnterHandler={mouseEnterHandler}
+        mouseLeaveHandler={mouseLeaveHandler}
         tl={tl}
       >
         подписаться

@@ -24,6 +24,11 @@ const OcapellaBannerSection = () => {
     tl?.play(0);
   });
 
+  const mouseLeaveHandler = contextSafe((q: HTMLElement[]) => {
+    gsap.to(q, { opacity: 0, duration: 0.3, ease: 'sine.out' });
+    tl?.play(5);
+  });
+
   return (
     <section className={styles.ocapella}>
       <div className={styles.container}>
@@ -39,6 +44,7 @@ const OcapellaBannerSection = () => {
           href='./ocapella'
           id={1}
           mouseEnterHandler={mouseEnterHandler}
+          mouseLeaveHandler={mouseLeaveHandler}
           tl={tl}
         >
           слушать

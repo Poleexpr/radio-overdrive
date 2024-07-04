@@ -24,6 +24,11 @@ const AliensBannerSection = () => {
     tl?.play(0);
   });
 
+  const mouseLeaveHandler = contextSafe((q: HTMLElement[]) => {
+    gsap.to(q, { opacity: 0, duration: 0.3, ease: 'sine.out' });
+    tl?.play(5);
+  });
+
   return (
     <section className={styles.aliens}>
       <div className={styles.container}>
@@ -39,6 +44,7 @@ const AliensBannerSection = () => {
           href='./aliens'
           id={2}
           mouseEnterHandler={mouseEnterHandler}
+          mouseLeaveHandler={mouseLeaveHandler}
           tl={tl}
         >
           слушать

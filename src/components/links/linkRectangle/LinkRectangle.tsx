@@ -14,6 +14,7 @@ interface LinkRectangleProps {
   isNewWindow?: boolean;
   tl: gsap.core.Timeline | undefined;
   mouseEnterHandler: (q: HTMLElement[]) => void;
+  mouseLeaveHandler: (q: HTMLElement[]) => void;
   id: number;
 }
 
@@ -27,6 +28,7 @@ export const LinkRectangle: FC<LinkRectangleProps> = ({
   isNewWindow = false,
   tl,
   mouseEnterHandler,
+  mouseLeaveHandler,
   id,
 }) => {
   const el = useRef<HTMLAnchorElement>(null);
@@ -41,7 +43,7 @@ export const LinkRectangle: FC<LinkRectangleProps> = ({
         .to(feDisplacementMaps[0], { attr: { scale: '10' }, ease: 'rough' }, 0)
         .to(feDisplacementMaps[1], { attr: { scale: '30' }, ease: 'rough' }, 0)
         .to(feDisplacementMaps[3], { attr: { scale: '40' }, ease: 'rough' }, 0)
-        .to(q(`#lightning${id}`), { opacity: 0, duration: 0.3 }, '-=0.4');
+        .to(q(`#lightning${id}`), { opacity: 0.9, duration: 0.3 }, '-=0.4');
     }
   }, [tl]);
 
@@ -53,6 +55,7 @@ export const LinkRectangle: FC<LinkRectangleProps> = ({
       rel='noreferrer'
       target={isNewWindow ? '_blank' : '_self'}
       onMouseEnter={() => mouseEnterHandler(q('.scribbles'))}
+      onMouseLeave={() => mouseLeaveHandler(q('.scribbles'))}
     >
       {children}
       <svg
