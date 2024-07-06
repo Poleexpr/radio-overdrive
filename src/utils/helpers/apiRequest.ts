@@ -20,14 +20,14 @@ const parser: Parser<Feed> = new Parser();
 export const fetchEpisodes = async (rss: string) => {
   const feed = await parser.parseURL(rss);
   console.log(feed.items);
-  const episodes = feed.items.map((item) => ({
+  const episodes = feed.items.map((item, i) => ({
     name: item.title,
     date: item.isoDate,
     cover: item.itunes.image,
     description: item.contentSnippet,
     audio: item.enclosure.url,
     id: nanoid(),
-    active: false,
+    active: i === 0,
   }));
 
   return episodes;
