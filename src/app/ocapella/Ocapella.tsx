@@ -72,7 +72,7 @@ export const Ocapella: FC = () => {
       animationPercentage: animation,
     });
   };
-  /*
+
   const activeLibraryHandler = (nextPrev: ISong) => {
     const newSongs = songs.map((song) => {
       if (song.id === nextPrev.id) {
@@ -89,26 +89,55 @@ export const Ocapella: FC = () => {
     setSongs(newSongs);
   };
 
-  const songEndHandler = async () => {
+  const songEndHandler = () => {
     const currentIndex = songs.findIndex((song) => song.id === currentSong.id);
-
-    if (audioRef.current?.play() !== undefined) {
-      setCurrentSong(songs[(currentIndex + 1) % songs.length]);
-      activeLibraryHandler(songs[(currentIndex + 1) % songs.length]);
-      audioRef.current.load();
-      console.log(audioRef.current.play());
-      await audioRef.current.play();
+    setCurrentSong(songs[(currentIndex + 1) % songs.length]);
+    activeLibraryHandler(songs[(currentIndex + 1) % songs.length]);
+    // audioRef.current.load();
+    // let playPromise = audioRef.current?.play();
+    try {
+      if (isPlaying && audioRef.current) {
+        /*
+        setTimeout(() => {
+          
+            audioRef.current?.play().catch((error) => {
+              console.log(error);
+            });
+          
+        }, 1000);
+        */
+        audioRef.current.onloadedmetadata = () => {
+          audioRef.current?.play().catch((error) => {
+            console.log(error);
+          });
+        };
+      }
+    } catch (error) {
+      console.log(error);
     }
+    /* if (playPromise) {
+      audioRef.current.play().then(() => {
+        console.log('playing').catch((error) => {
+          console.log('error');
+          setIsPlaying(!isPlaying);
+        });
+      });
+    } */
   };
-*/
 
-  const songEndHandler = async () => {
+  /* audioRef.current?.addEventListener('loadeddata', () => {
+    songEndHandler();
+  });*
+
+  // works
+  /* const songEndHandler = async () => {
     if (audioRef.current?.play() !== undefined) {
       // eslint-disable-next-line @typescript-eslint/await-thenable
       await audioRef.current.pause();
       setIsPlaying(!isPlaying);
     }
-  };
+  }; */
+
   return (
     <>
       <div className={styles.title}>

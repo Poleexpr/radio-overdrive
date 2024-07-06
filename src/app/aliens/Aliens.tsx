@@ -67,7 +67,7 @@ export const Aliens: FC = () => {
       animationPercentage: animation,
     });
   };
-  /*
+
   const activeLibraryHandler = (nextPrev: ISong) => {
     const newSongs = songs.map((song) => {
       if (song.id === nextPrev.id) {
@@ -83,7 +83,7 @@ export const Aliens: FC = () => {
     });
     setSongs(newSongs);
   };
-
+  /*
   const songEndHandler = async () => {
     const currentIndex = songs.findIndex((song) => song.id === currentSong.id);
 
@@ -96,14 +96,49 @@ export const Aliens: FC = () => {
     }
   };
 */
+  const songEndHandler = () => {
+    const currentIndex = songs.findIndex((song) => song.id === currentSong.id);
+    setCurrentSong(songs[(currentIndex + 1) % songs.length]);
+    activeLibraryHandler(songs[(currentIndex + 1) % songs.length]);
+    // audioRef.current.load();
+    // let playPromise = audioRef.current?.play();
+    try {
+      if (isPlaying && audioRef.current) {
+        /*
+      setTimeout(() => {
+        
+          audioRef.current?.play().catch((error) => {
+            console.log(error);
+          });
+        
+      }, 1000);
+      */
+        audioRef.current.onloadedmetadata = () => {
+          audioRef.current?.play().catch((error) => {
+            console.log(error);
+          });
+        };
+      }
+    } catch (error) {
+      console.log(error);
+    }
+    /* if (playPromise) {
+    audioRef.current.play().then(() => {
+      console.log('playing').catch((error) => {
+        console.log('error');
+        setIsPlaying(!isPlaying);
+      });
+    });
+  } */
+  };
 
-  const songEndHandler = async () => {
+  /* const songEndHandler = async () => {
     if (audioRef.current?.play() !== undefined) {
       // eslint-disable-next-line @typescript-eslint/await-thenable
       await audioRef.current.pause();
       setIsPlaying(!isPlaying);
     }
-  };
+  }; */
   return (
     <>
       <div className={styles.title}>
