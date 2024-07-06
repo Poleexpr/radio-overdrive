@@ -63,8 +63,12 @@
     text-transform: uppercase;
   }
 
-  .menu_item:nth-child(3) {
+  /*.menu_item:nth-child(3) {
     padding-bottom: 0px;
+  }*/
+
+  .menu_item:has(.logo) {
+    display: none;
   }
 
   .logo {

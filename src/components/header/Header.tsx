@@ -61,8 +61,8 @@ export const Header = () => {
     <header className={styles.header} id='header'>
       <div ref={main} className={styles.wrapper}>
         <div className={styles.container}>
-          <Link href='/#welcome'>
-            <IconLogoOverdrive className={styles.logoMobile} />
+          <Link className={styles.logoMobile} href='/#welcome'>
+            <IconLogoOverdrive />
           </Link>
           <Nav ref={navRef} isMenuOpen={isMenuOpen} items={navItemsInfo} toggleNav={toggleNav} />
           <Burger isMenuOpen={isMenuOpen} toggleNav={toggleNav} />
