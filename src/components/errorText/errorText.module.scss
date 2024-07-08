@@ -1,7 +1,9 @@
 @import '/src/styles/variables';
 
 .link_container {
-  height: 60vh;
+  height: 100vh;
+  width: 85vw;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
