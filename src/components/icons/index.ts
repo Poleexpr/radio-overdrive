@@ -19,3 +19,4 @@ export * from './IconLogoApplePodcast';
 export * from './IconLogoGooglePodcast';
 export * from './IconLogoCastbox';
 export * from './IconLogoOvercast';
+export * from './IconLoader';
