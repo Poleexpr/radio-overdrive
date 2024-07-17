@@ -23,3 +23,13 @@
     background-position: -110% center;
   }
 }
+
+.backgroundAnimation {
+  animation: background-shift 4s linear 1 forwards;
+}
+
+@keyframes background-shift {
+  to {
+    transform: translateX(-20vw);
+  }
+}

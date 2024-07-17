@@ -16,7 +16,7 @@ import {
   Video,
 } from '@/components';
 import { IconArrowNextLong, IconButtonPlayText } from '@/components/icons';
-import { AnimationTextWrapper } from '@/wrappers';
+import { AnimationTextWrapper, SceletonAbout } from '@/wrappers';
 
 import styles from './page.module.scss';
 
@@ -78,8 +78,8 @@ const Home = () => (
         </div>
       </section>
       <Video />
-      <div id='about'>
-        <section className={styles.about}>
+      <SceletonAbout>
+        <section className={styles.about} id='about'>
           <div className={styles.container}>
             <div className={styles.img_wrapper}>
               <Image
@@ -136,7 +136,8 @@ const Home = () => (
             </div>
           </div>
         </section>
-      </div>
+      </SceletonAbout>
+
       <div id='presenters'>
         <CentredSections.Team>
           <Presenters2.Container />
