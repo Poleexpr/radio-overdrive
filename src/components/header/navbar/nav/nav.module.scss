@@ -63,15 +63,21 @@
     text-transform: uppercase;
   }
 
-  /*.menu_item:nth-child(3) {
-    padding-bottom: 0px;
-  }*/
-
-  .menu_item:has(.logo) {
+  .logo {
     display: none;
   }
 
-  .logo {
-    display: none;
+  .menu_item:nth-child(3) {
+    padding-bottom: 0px;
+  }
+
+  @supports selector(:has(*)) {
+    .menu_item:has(.logo) {
+      display: none;
+    }
+
+    .menu_item:nth-child(3) {
+      padding-bottom: 40px;
+    }
   }
 }
