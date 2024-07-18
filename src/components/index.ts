@@ -6,7 +6,6 @@ export * from './video';
 export * from './marquee';
 export * from './links';
 export * from './buttons';
-export * from './anchor';
 export * from './centredSections';
 export * from './schedule';
 export * from './presenters';
