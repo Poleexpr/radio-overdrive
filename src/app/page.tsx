@@ -116,7 +116,7 @@ const Home = () => (
                   Мы базируемся на орбите свежей горячей планетёночки Земля и ставим музыку
                   в высоком стиле, покуда смерть не разлучит нас. Долой ротацию и формат скучных
                   околоистеблишментных радиостанций, где всё куплено
-                  <span className='text-highlight'>,  — врубайся</span> в доброкачественнейшее музло
+                  <span className='text-highlight'>, — врубайся</span> в доброкачественнейшее музло
                   всех времён и народов<span className='text-highlight'>, оверслушатель!</span>
                 </Typography>
                 <Typography className={styles.description} tag='p' variant='text'>
