@@ -5,8 +5,6 @@ import Image from 'next/image';
 import type { FC, ReactNode } from 'react';
 import { useRef } from 'react';
 
-import { UseParalaxAnimation } from '@/utils';
-
 import styles from './sceletonAbout.module.scss';
 
 interface SceletonAboutProps {
@@ -15,7 +13,6 @@ interface SceletonAboutProps {
 
 export const SceletonAbout: FC<SceletonAboutProps> = ({ children }) => {
   const ref = useRef<HTMLDivElement>(null);
-  UseParalaxAnimation(ref);
 
   return (
     <section ref={ref} className={styles.content}>
