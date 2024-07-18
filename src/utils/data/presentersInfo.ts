@@ -47,7 +47,7 @@ export const presentersInfo = [
   {
     id: 4,
     on: true,
-    img: '/images/savchenko4.png',
+    img: '/images/savchenko.png',
     day: 'субботы',
     name: 'Виталий Савченко',
     city: 'Омск',
