@@ -10,7 +10,6 @@ export * from './anchor';
 export * from './centredSections';
 export * from './schedule';
 export * from './presenters';
-export * from './presenters2';
 export * from './invitationSections';
 export * from './bannerSections';
 export * from './errorText';
