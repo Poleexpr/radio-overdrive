@@ -227,7 +227,10 @@
 
 .about {
   background:
-    url(../../public/images/texture.png),
+  image-set(
+    url(../../public/images/texture.webp) type('image/webp'),
+    url(../../public/images/texture.png) type('image/png')
+  ),
     linear-gradient(
       0deg,
       #000 0%,
@@ -355,7 +358,11 @@
   .about {
     background:
       linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 40%),
-      url(../../public/images/about-back.png) top right no-repeat;
+      image-set(
+          url(../../public/images/about-back.webp) type('image/webp'),
+          url(../../public/images/about-back.png) type('image/png')
+        )
+        top right no-repeat;
     background-size: contain;
 
     .container {
@@ -380,9 +387,12 @@
 
 .planet {
   background:
-    url(../../public/images/texture.png),
+  image-set(
+    url(../../public/images/texture.webp) type('image/webp'),
+    url(../../public/images/texture.png) type('image/png')
+  ),
     linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 20%),
-    url(../../public/images/over-planet.png) center bottom / cover no-repeat;
+    image-set(url(../../public/images/over-planet.webp) type('image/webp'), url(../../public/images/over-planet.png) type('image/png')) center bottom / cover no-repeat;
   width: 100%;
   padding-bottom: 40px;
 
@@ -430,9 +440,12 @@
 @media screen and (max-width: 550px) {
   .planet {
     background:
-      url(../../public/images/texture.png),
+    image-set(
+      url(../../public/images/texture.webp) type('image/webp'),
+      url(../../public/images/texture.png) type('image/png')
+    ),
       linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 20%),
-      url(../../public/images/over-planet-mobile.png) center bottom / contain no-repeat;
+      image-set(url(../../public/images/over-planet-mobile.webp) type('image/webp'), url(../../public/images/over-planet-mobile.png) type('image/png')) center bottom / contain no-repeat;
 
     .container {
       // padding-top: 30px;

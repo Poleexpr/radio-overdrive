@@ -3,9 +3,12 @@
 
 .back {
   background:
-    url(../../../public/images/texture.png),
+  image-set(
+    url(../../../public/images/texture.webp) type('image/webp'),
+    url(../../../public/images/texture.png) type('image/png')
+  ),
     linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 80%),
-    url('../../../public/images/ocapella_page_back.png') right / cover no-repeat;
+    image-set(url('../../../public/images/ocapella_page_back.webp') type('image/webp'), url('../../../public/images/ocapella_page_back.png') type('image/png')) right / cover no-repeat;
   //background-position-y: 60px;
   //background-position-x: right;
   //background-repeat: no-repeat;
@@ -156,9 +159,12 @@
 @media screen and (max-width: $mobile-query) {
   .back {
     background-image:
-      url(../../../public/images/texture.png),
+    image-set(
+      url(../../../public/images/texture.webp) type('image/webp'),
+      url(../../../public/images/texture.png) type('image/png')
+    ),
       linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 80%),
-      url('../../../public/images/ocapella_page_back_mobile.png') right / cover no-repeat;
+      image-set(url('../../../public/images/ocapella_page_back_mobile.webp') type('image/webp'), url('../../../public/images/ocapella_page_back_mobile.png') type('image/png')) right / cover no-repeat;
   }
 
   .wrapper {

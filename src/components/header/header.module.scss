@@ -23,7 +23,11 @@
   z-index: 105;
   min-height: 110px;
 
-  background: url('../../../public/images/texture.png'), $base-background-color;
+  background: image-set(
+      url(../../../public/images/texture.webp) type('image/webp'),
+      url(../../../public/images/texture.png) type('image/png')
+    ),
+    $base-background-color;
   transition: ease 0.4s;
   &--scrolled {
     height: 40px;

@@ -11,7 +11,10 @@
   align-items: center;
   justify-content: center;
   background-color: $base-background-color;
-  background-image: url(../../../public/images/texture.png);
+  background-image: image-set(
+    url(../../../public/images/texture.webp) type('image/webp'),
+    url(../../../public/images/texture.png) type('image/png')
+  );
   z-index: 110;
 }
 

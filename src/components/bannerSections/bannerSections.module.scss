@@ -23,8 +23,15 @@
   .container {
     padding: 120px 0 100px 0;
     background:
-      url(../../../public/images/texture.png),
-      url(../../../public/images/ocapella_back.png) center / cover no-repeat;
+      image-set(
+        url(../../../public/images/texture.webp) type('image/webp'),
+        url(../../../public/images/texture.png) type('image/png')
+      ),
+      image-set(
+          url(../../../public/images/ocapella_back.webp) type('image/webp'),
+          url(../../../public/images/ocapella_back.png) type('image/png')
+        )
+        center / cover no-repeat;
   }
 }
 
@@ -32,8 +39,15 @@
   .container {
     padding: 100px 0;
     background:
-      url(../../../public/images/texture.png),
-      url(../../../public/images/aliens_back.png) center / cover no-repeat;
+      image-set(
+        url(../../../public/images/texture.webp) type('image/webp'),
+        url(../../../public/images/texture.png) type('image/png')
+      ),
+      image-set(
+          url(../../../public/images/aliens_back.webp) type('image/webp'),
+          url(../../../public/images/aliens_back.png) type('image/png')
+        )
+        center / cover no-repeat;
   }
 }
 
