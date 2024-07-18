@@ -30,7 +30,7 @@ const Home = () => (
           muted
           playsInline
           className={styles.video}
-          poster='./videos/wellcomeBackPoster.jpg'
+          poster='./videos/wellcomeBackPoster.webp'
           src='./videos/wellcomeBack.mp4'
         />
         <div className={styles.container}>
