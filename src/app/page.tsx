@@ -16,7 +16,7 @@ import {
   Video,
 } from '@/components';
 import { IconArrowNextLong, IconButtonPlayText } from '@/components/icons';
-import { AnimationTextWrapper, SceletonAbout } from '@/wrappers';
+import { AnimationTextWrapper } from '@/wrappers';
 
 import styles from './page.module.scss';
 
@@ -78,65 +78,63 @@ const Home = () => (
         </div>
       </section>
       <Video />
-      <SceletonAbout>
-        <section className={styles.about} id='about'>
-          <div className={styles.container}>
-            <div className={styles.img_wrapper}>
-              <Image
-                alt='коллаж из трех картинок с изображением космоса, глаза и концерта'
-                className={styles.img}
-                height={1000}
-                layout='responsive'
-                src='/images/about-pic.png'
-                width={1000}
-              />
-              <Image
-                alt='коллаж из трех картинок с изображением космоса, глаза и концерта'
-                className={styles.img_laptop}
-                height={1000}
-                layout='responsive'
-                src='/images/about-pic-laptop.png'
-                width={1000}
-              />
+      <section className={styles.about} id='about'>
+        <div className={styles.container}>
+          <div className={styles.img_wrapper}>
+            <Image
+              alt='коллаж из трех картинок с изображением космоса, глаза и концерта'
+              className={styles.img}
+              height={1000}
+              layout='responsive'
+              src='/images/about-pic.png'
+              width={1000}
+            />
+            <Image
+              alt='коллаж из трех картинок с изображением космоса, глаза и концерта'
+              className={styles.img_laptop}
+              height={1000}
+              layout='responsive'
+              src='/images/about-pic-laptop.png'
+              width={1000}
+            />
+          </div>
+          <div className={styles.container_text}>
+            <div className={styles.title_wrapper}>
+              <Typography className={styles.title} tag='h3' variant='title3'>
+                МУЗЫКА,
+              </Typography>
+              <Typography className={styles.title} tag='h3' variant='title3'>
+                СВОБОДА,
+              </Typography>
+              <Typography className={styles.title} tag='h3' variant='title3'>
+                ЛЮБОВЬ
+              </Typography>
             </div>
-            <div className={styles.container_text}>
-              <div className={styles.title_wrapper}>
-                <Typography className={styles.title} tag='h3' variant='title3'>
-                  МУЗЫКА,
-                </Typography>
-                <Typography className={styles.title} tag='h3' variant='title3'>
-                  СВОБОДА,
-                </Typography>
-                <Typography className={styles.title} tag='h3' variant='title3'>
-                  ЛЮБОВЬ
-                </Typography>
-              </div>
-              <div className={styles.description_wrapper}>
-                <Typography className={styles.description} tag='p' variant='text'>
-                  Мы базируемся на орбите свежей горячей планетёночки Земля и ставим музыку
-                  в высоком стиле, покуда смерть не разлучит нас. Долой ротацию и формат скучных
-                  околоистеблишментных радиостанций, где всё куплено
-                  <span className='text-highlight'>, — врубайся</span> в доброкачественнейшее музло
-                  всех времён и народов<span className='text-highlight'>, оверслушатель!</span>
-                </Typography>
-                <Typography className={styles.description} tag='p' variant='text'>
-                  Радио Овердрайв основано 15 октября 2020 года редакторами независимого
-                  издательства Чтиво на месте бывшей авторской страницы рок-писателя Сергея Иннера,
-                  психоделически исчезнувшего после презентации его антиромана{' '}
-                  <a
-                    href='https://chtivo.spb.ru/book-overdrive.html'
-                    rel='noreferrer'
-                    target='_blank'
-                  >
-                    <LinkUnderline>«Овердрайв»</LinkUnderline>
-                  </a>
-                  .
-                </Typography>
-              </div>
+            <div className={styles.description_wrapper}>
+              <Typography className={styles.description} tag='p' variant='text'>
+                Мы базируемся на орбите свежей горячей планетёночки Земля и ставим музыку в высоком
+                стиле, покуда смерть не разлучит нас. Долой ротацию и формат скучных
+                околоистеблишментных радиостанций, где всё куплено
+                <span className='text-highlight'>, — врубайся</span> в доброкачественнейшее музло
+                всех времён и народов<span className='text-highlight'>, оверслушатель!</span>
+              </Typography>
+              <Typography className={styles.description} tag='p' variant='text'>
+                Радио Овердрайв основано 15 октября 2020 года редакторами независимого издательства
+                Чтиво на месте бывшей авторской страницы рок-писателя Сергея Иннера, психоделически
+                исчезнувшего после презентации его антиромана{' '}
+                <a
+                  href='https://chtivo.spb.ru/book-overdrive.html'
+                  rel='noreferrer'
+                  target='_blank'
+                >
+                  <LinkUnderline>«Овердрайв»</LinkUnderline>
+                </a>
+                .
+              </Typography>
             </div>
           </div>
-        </section>
-      </SceletonAbout>
+        </div>
+      </section>
 
       <div id='presenters'>
         <CentredSections.Team>
