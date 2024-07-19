@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Typography, Player, Loader, ErrorText } from '@/components';
 import {
   IconLogoApplePodcast,
-  IconLogoGooglePodcast,
+  IconLogoZvuk,
   IconLogoCastbox,
   IconLogoOvercast,
 } from '@/components/icons';
@@ -177,15 +177,15 @@ export const Ocapella: FC = () => {
               </Typography>
             </a>
             <a
-              aria-label='Перейти на Google Podcast'
+              aria-label='Перейти на Звук'
               className={styles.net_link}
-              href='https://podcasts.google.com/feed/aHR0cDovL3Jzcy5jYXN0Ym94LmZtL2V2ZXJlc3QvNmVlZWNlNWNkZDU5NGVkNDk1YjIxNzEyODFiMzg5ZWMueG1s?sa=X&ved=0CAcQrrcFahcKEwiA9NnL-ND7AhUAAAAAHQAAAAAQSQ&hl=ru'
+              href='https://st.zvuk.com/okapella'
               rel='noreferrer'
               target='_blank'
             >
-              <IconLogoGooglePodcast className={styles.net_logo} />{' '}
+              <IconLogoZvuk className={styles.net_logo} />{' '}
               <Typography className={styles.net_tooltip} tag='span' variant='text6'>
-                Google Podcast
+                Звук
               </Typography>
             </a>
             <a
