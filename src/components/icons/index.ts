@@ -1,4 +1,3 @@
-export * from './IconArrowDown';
 export * from './IconArrowNext';
 export * from './IconArrowNextLong';
 export * from './IconArrowPrev';
@@ -12,11 +11,7 @@ export * from './IconLogoRD';
 export * from './IconLogoTelegram';
 export * from './IconLogoVk';
 export * from './IconLogoOverdrive';
-export * from './IconBurger';
-export * from './IconCross';
-export * from './IconArrowUpShort';
 export * from './IconLogoApplePodcast';
 export * from './IconLogoZvuk';
 export * from './IconLogoCastbox';
 export * from './IconLogoOvercast';
-export * from './IconLoader';
