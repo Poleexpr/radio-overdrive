@@ -136,36 +136,30 @@ const Home = () => (
         </div>
       </section>
 
-      <div id='presenters'>
-        <CentredSections.Team>
-          <Presenters.Container />
-        </CentredSections.Team>
-      </div>
+      <CentredSections.Team id='presenters'>
+        <Presenters.Container />
+      </CentredSections.Team>
       <InvitationSection.Centred />
       <BannerSection.Ocapella />
       <BannerSection.Aliens />
-      <div id='program'>
-        <CentredSections.Program className={styles.program}>
-          <Schedule.Slider />
-          <div className={styles.description_wrapper}>
-            <Typography className={styles.description} tag='p' variant='text'>
-              <span>
-                И — всю неделю <span className='text-highlight'>новые релизы</span> топовых
-                музыкантов. Не забудь подписаться на нас в Телеграм, чтобы больше ничего
-                не пропустить.
-              </span>
-            </Typography>
-          </div>
-        </CentredSections.Program>
-      </div>
+      <CentredSections.Program className={styles.program} id='program'>
+        <Schedule.Slider />
+        <div className={styles.description_wrapper}>
+          <Typography className={styles.description} tag='p' variant='text'>
+            <span>
+              И — всю неделю <span className='text-highlight'>новые релизы</span> топовых
+              музыкантов. Не забудь подписаться на нас в Телеграм, чтобы больше ничего
+              не пропустить.
+            </span>
+          </Typography>
+        </div>
+      </CentredSections.Program>
       <div className={styles.planet}>
         <div className={styles.container}>
           <LinkSubscribeWrapper className={styles.link_subscribe} />
           <InvitationSection.Left />
 
-          <div id='contacts'>
-            <Footer />
-          </div>
+          <Footer id='contacts' />
         </div>
       </div>
       <Radio />

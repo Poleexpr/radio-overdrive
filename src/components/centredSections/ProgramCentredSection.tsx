@@ -8,10 +8,15 @@ import styles from './centredSection.module.scss';
 interface ProgramCentredSectionProps {
   children: ReactNode;
   className?: string;
+  id?: string;
 }
 
-export const ProgramCentredSection: FC<ProgramCentredSectionProps> = ({ children, className }) => (
-  <section className={classnames(styles.container, className)}>
+export const ProgramCentredSection: FC<ProgramCentredSectionProps> = ({
+  children,
+  className,
+  id,
+}) => (
+  <section className={classnames(styles.container, className)} id={id}>
     <Typography className={classnames(styles.title, 'title-appear')} tag='h2' variant='title2'>
       <span className='title-appear'>программа</span>
       <br />

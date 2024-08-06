@@ -1,3 +1,5 @@
+import type { FC } from 'react';
+
 import { Typography } from '@/components';
 import {
   IconLogoInstagram,
@@ -11,8 +13,12 @@ import styles from './footer.module.scss';
 
 const currentYear = new Date().getFullYear();
 
-export const Footer = () => (
-  <footer className={styles.footer}>
+interface FooterProps {
+  id?: string;
+}
+
+export const Footer: FC<FooterProps> = ({ id }) => (
+  <footer className={styles.footer} id={id}>
     <div className={styles.container}>
       <div className={styles.subcontainer_first}>
         <Typography tag='h4' variant='title6'>
