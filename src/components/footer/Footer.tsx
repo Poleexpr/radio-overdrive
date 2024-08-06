@@ -9,6 +9,8 @@ import {
 
 import styles from './footer.module.scss';
 
+const currentYear = new Date().getFullYear();
+
 export const Footer = () => (
   <footer className={styles.footer}>
     <div className={styles.container}>
@@ -71,7 +73,7 @@ export const Footer = () => (
             Мы вещаем до последнего
           </Typography>
           <Typography tag='p' variant='text'>
-            © 2024 Радио Овердрайв. Санкт-Петербург. Все права защищены.
+            © {currentYear} Радио Овердрайв. Санкт-Петербург. Все права защищены.
           </Typography>
         </div>
         <div className={styles.rd_wrapper}>
