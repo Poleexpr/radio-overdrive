@@ -30,7 +30,7 @@
     js-tokens "^4.0.0"
     picocolors "^1.0.0"
 
-"@babel/runtime@^7.10.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.23.2":
+"@babel/runtime@^7.12.5", "@babel/runtime@^7.23.2":
   version "7.24.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.24.4.tgz#de795accd698007a66ba44add6cc86542aff1edd"
   integrity sha512-dkxf7+hn8mFBwKjs9bvBlArzLVxVbS8usaPUDd5p2a9JCL9tB8OaOVN1isD4+Xyk4ns89/xeOmbQvgdK7IIVdA==
@@ -120,18 +120,6 @@
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-2.0.3.tgz#4a2868d75d6d6963e423bcf90b7fd1be343409d3"
   integrity sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==
-
-"@iconify/react@^4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@iconify/react/-/react-4.1.1.tgz#da1bf03cdca9427f07cf22cf5b63fa8f02db4722"
-  integrity sha512-jed14EjvKjee8mc0eoscGxlg7mSQRkwQG3iX3cPBCO7UlOjz0DtlvTqxqEcHUJGh+z1VJ31Yhu5B9PxfO0zbdg==
-  dependencies:
-    "@iconify/types" "^2.0.0"
-
-"@iconify/types@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@iconify/types/-/types-2.0.0.tgz#ab0e9ea681d6c8a1214f30cd741fe3a20cc57f57"
-  integrity sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==
 
 "@isaacs/cliui@^8.0.2":
   version "8.0.2"
@@ -2893,14 +2881,6 @@ react-fast-marquee@^1.6.2:
   version "1.6.4"
   resolved "https://registry.yarnpkg.com/react-fast-marquee/-/react-fast-marquee-1.6.4.tgz#ac0bed0faee63e4d97e9b8cd03f3bea9f242fab3"
   integrity sha512-LAgvhRmHdqaUQ8R5jCUwzEGFUIjnCCt3T3W8X7j7wF6DWe0SATlpP0JX1V0pp2qX3DYUezmn1Iz5AtRFdL2EWQ==
-
-react-h5-audio-player@^3.9.1:
-  version "3.9.1"
-  resolved "https://registry.yarnpkg.com/react-h5-audio-player/-/react-h5-audio-player-3.9.1.tgz#8a9721fd7a5ff6a9185ce626435207bee1774e83"
-  integrity sha512-ILJdTXZgHEfv7WsvYPoN7afJncroYyg5Cxvs2qqrsnTzhtBdEuzlM0ETkhUhjqXOsAkbwAdHF9YgnEwgBJ8dCQ==
-  dependencies:
-    "@babel/runtime" "^7.10.2"
-    "@iconify/react" "^4.1.1"
 
 react-is@^16.13.1:
   version "16.13.1"

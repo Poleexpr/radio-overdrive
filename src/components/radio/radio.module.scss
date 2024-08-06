@@ -23,6 +23,7 @@
 
 .frame {
   width: $base-width;
+  min-height: 100px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -51,7 +52,7 @@
   display: flex;
   align-items: flex-start;
 }
-
+/*
 .artistText {
   position: relative;
 }
@@ -66,7 +67,7 @@
   background: rgb(255, 255, 255);
   transform: rotate(23deg);
 }
-
+*/
 .overSign {
   width: 18px;
   height: 18px;
@@ -77,7 +78,7 @@
 
 .trackWrapper {
   position: fixed;
-  bottom: 80px;
+  bottom: 100px;
   right: $base-margin;
   padding: 30px 90px 30px 40px;
   //backdrop-filter: blur(7.5px);
@@ -304,6 +305,14 @@
 */
 
 @media screen and (max-width: $laptop-query) {
+  .frame {
+    min-height: 80px;
+  }
+
+  .trackWrapper {
+    bottom: 80px;
+  }
+
   .artistText::before {
     left: 6px;
     width: 1.5px;
@@ -312,6 +321,10 @@
 }
 
 @media screen and (max-width: $tablet-query) {
+  .frame {
+    min-height: 70px;
+  }
+
   .live {
     margin-left: 15px;
   }

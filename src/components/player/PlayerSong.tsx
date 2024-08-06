@@ -14,8 +14,8 @@ interface PlayerSongProps {
   isPlaying: boolean;
   setIsPlaying: (value: boolean) => void;
   audioRef: RefObject<HTMLMediaElement>;
-  setSongInfo: (value: ISongInfo) => void;
-  songInfo: ISongInfo;
+  setSongInfo?: (value: ISongInfo) => void;
+  songInfo?: ISongInfo;
   // songs: ISong[];
   // setCurrentSong: (value: ISong) => void;
   // setSongs: (value: ISong[]) => void;
@@ -52,7 +52,8 @@ export const PlayerSong: FC<PlayerSongProps> = ({
 
   const dragHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (audioRef.current) audioRef.current.currentTime = parseInt(e.target.value, 10);
-    setSongInfo({ ...songInfo, currentTime: parseInt(e.target.value, 10) });
+    if (setSongInfo && songInfo)
+      setSongInfo({ ...songInfo, currentTime: parseInt(e.target.value, 10) });
   };
   const playSongHandler = async () => {
     if (isPlaying) {
@@ -89,7 +90,7 @@ export const PlayerSong: FC<PlayerSongProps> = ({
   */
 
   const trackAnim = {
-    transform: `translateX(${songInfo.animationPercentage}%)`,
+    transform: `translateX(${songInfo?.animationPercentage}%)`,
   };
   return (
     <div className={styles.player}>
@@ -106,24 +107,25 @@ export const PlayerSong: FC<PlayerSongProps> = ({
           </button>
         )}
       </div>
-
-      <div className={styles.timeControl}>
-        <div className={styles.track}>
-          <input
-            className={styles.trackInput}
-            max={songInfo.duration || 0}
-            min={0}
-            type='range'
-            value={songInfo.currentTime}
-            onChange={dragHandler}
-          />
-          <div className={styles.animateTrack} style={trackAnim} />
+      {songInfo && (
+        <div className={styles.timeControl}>
+          <div className={styles.track}>
+            <input
+              className={styles.trackInput}
+              max={songInfo.duration || 0}
+              min={0}
+              type='range'
+              value={songInfo.currentTime}
+              onChange={dragHandler}
+            />
+            <div className={styles.animateTrack} style={trackAnim} />
+          </div>
+          <Typography className={styles.time} tag='p' variant='text4'>
+            {getTime(songInfo.currentTime)} /{' '}
+            {songInfo.duration ? getTime(songInfo.duration) : ' 00:00'}
+          </Typography>
         </div>
-        <Typography className={styles.time} tag='p' variant='text4'>
-          {getTime(songInfo.currentTime)} /{' '}
-          {songInfo.duration ? getTime(songInfo.duration) : ' 00:00'}
-        </Typography>
-      </div>
+      )}
     </div>
   );
 };
