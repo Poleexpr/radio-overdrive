@@ -9,7 +9,7 @@ import styles from './scheduleCard.module.scss';
 interface ScheduleCardProps {
   info: {
     day: string;
-    card: {
+    schedule: {
       time: string;
       event: string;
     }[];
@@ -21,6 +21,6 @@ export const ScheduleCard: FC<ScheduleCardProps> = ({ info }) => (
     <Typography className={styles.title} tag='h4' variant='title4'>
       {info.day}
     </Typography>
-    <ScheduleCardItem items={info.card} />
+    <ScheduleCardItem items={info.schedule} />
   </div>
 );
