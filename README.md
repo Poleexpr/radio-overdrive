@@ -1,12 +1,12 @@
 <h1 align="center">
   <br>
-  <a href="https://radio-overdrive.vercel.app/"><img src="/public/favicon.ico" alt="Demo" width="200"></a>
+  <a href="https://radio-overdrive.vercel.app/"><img src="/public/images/logo.svg" alt="Demo" width="200"></a>
   <br>
   Overdrive radio
   <br>
 </h1>
 
-<h4 align="center">Next.js app for the Overdrive radio, with multiple audio players and animations.</h4>
+<h4 align="center">Next.js application for the Overdrive radio, with a variety of audio players and animations.</h4>
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
@@ -17,7 +17,7 @@
   <a href="#license">License</a>
 </p>
 
-![screenshot](/demo.gif)
+![screenshot](/public/images/demo.png)
 
 ## Key Features
 
