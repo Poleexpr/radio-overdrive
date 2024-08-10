@@ -5,6 +5,7 @@
   position: relative;
   width: 100%;
   height: fit-content;
+  background-color: $base-background-color;
 
   .video {
     width: 100%;
@@ -227,10 +228,10 @@
 
 .about {
   background:
-  image-set(
-    url(../../public/images/texture.webp) type('image/webp'),
-    url(../../public/images/texture.png) type('image/png')
-  ),
+    image-set(
+      url(../../public/images/texture.webp) type('image/webp'),
+      url(../../public/images/texture.png) type('image/png')
+    ),
     linear-gradient(
       0deg,
       #000 0%,
@@ -387,12 +388,16 @@
 
 .planet {
   background:
-  image-set(
-    url(../../public/images/texture.webp) type('image/webp'),
-    url(../../public/images/texture.png) type('image/png')
-  ),
+    image-set(
+      url(../../public/images/texture.webp) type('image/webp'),
+      url(../../public/images/texture.png) type('image/png')
+    ),
     linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 20%),
-    image-set(url(../../public/images/over-planet.webp) type('image/webp'), url(../../public/images/over-planet.png) type('image/png')) center bottom / cover no-repeat;
+    image-set(
+        url(../../public/images/over-planet.webp) type('image/webp'),
+        url(../../public/images/over-planet.png) type('image/png')
+      )
+      center bottom / cover no-repeat;
   width: 100%;
   padding-bottom: 40px;
 
@@ -440,12 +445,16 @@
 @media screen and (max-width: 550px) {
   .planet {
     background:
-    image-set(
-      url(../../public/images/texture.webp) type('image/webp'),
-      url(../../public/images/texture.png) type('image/png')
-    ),
+      image-set(
+        url(../../public/images/texture.webp) type('image/webp'),
+        url(../../public/images/texture.png) type('image/png')
+      ),
       linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 20%),
-      image-set(url(../../public/images/over-planet-mobile.webp) type('image/webp'), url(../../public/images/over-planet-mobile.png) type('image/png')) center bottom / contain no-repeat;
+      image-set(
+          url(../../public/images/over-planet-mobile.webp) type('image/webp'),
+          url(../../public/images/over-planet-mobile.png) type('image/png')
+        )
+        center bottom / contain no-repeat;
 
     .container {
       // padding-top: 30px;

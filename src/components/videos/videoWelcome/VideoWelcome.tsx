@@ -17,7 +17,7 @@ export const VideoWelcome = () => {
   if (!isCanPlay) {
     setTimeout(() => {
       setIsCanPlay((isCanPlay = true));
-    }, 1000);
+    }, 3000);
   }
 
   return (
@@ -31,7 +31,7 @@ export const VideoWelcome = () => {
         className={styles.video}
         poster='./videos/wellcomeBackPoster.webp'
         src='./videos/wellcomeBack.mp4'
-        onPlay={handleIsCanPlay}
+        onCanPlay={handleIsCanPlay}
       />
     </>
   );
