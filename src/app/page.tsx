@@ -77,7 +77,7 @@ const Home = () => (
       <VideoAbout />
       <section className={styles.about} id='about'>
         <div className={styles.container}>
-          <div className={styles.img_wrapper}>
+          <div className={classnames(styles.img_wrapper, 'dynamic-img')}>
             <Image alt='' className={styles.img} layout='responsive' src={aboutPicPath1} />
             <Image alt='' className={styles.img} layout='responsive' src={aboutPicPath2} />
             <Image alt='' className={styles.img} layout='responsive' src={aboutPicPath3} />
