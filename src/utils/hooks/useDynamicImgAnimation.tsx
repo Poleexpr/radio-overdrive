@@ -11,8 +11,8 @@ gsap.registerPlugin(ScrollTrigger);
 export const UseDynamicImgAnimation = (ref: ReactRef) =>
   useGSAP(
     () => {
-      const spanArray: HTMLElement[] = gsap.utils.toArray('.dynamic-img');
-      spanArray.forEach((dynamic: HTMLElement) => {
+      const imgArray: HTMLElement[] = gsap.utils.toArray('.dynamic-img');
+      imgArray.forEach((dynamic: HTMLElement) => {
         ScrollTrigger.create({
           trigger: dynamic,
           start: '0px center',
