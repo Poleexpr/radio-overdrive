@@ -2,7 +2,7 @@ export * from './footer';
 export * from './header';
 export * from './radio';
 export * from './typography/Typography';
-export * from './video';
+export * from './videos';
 export * from './marquee';
 export * from './links';
 export * from './buttons';

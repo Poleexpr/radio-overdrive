@@ -13,7 +13,8 @@ import {
   Schedule,
   Radio,
   LinkSubscribeWrapper,
-  Video,
+  VideoAbout,
+  VideoWelcome,
 } from '@/components';
 import { IconArrowNextLong, IconButtonPlayText } from '@/components/icons';
 import { AnimationTextWrapper } from '@/wrappers';
@@ -24,15 +25,7 @@ const Home = () => (
   <AnimationTextWrapper>
     <main className={styles.main}>
       <section className={styles.welcome} id='welcome'>
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className={styles.video}
-          poster='./videos/wellcomeBackPoster.webp'
-          src='./videos/wellcomeBack.mp4'
-        />
+        <VideoWelcome />
         <div className={styles.container}>
           <div className={styles.title_wrapper}>
             <Typography className={styles.subtitle} tag='p' variant='title'>
@@ -77,7 +70,7 @@ const Home = () => (
           <MarqueeText>мы вещаем до последнего</MarqueeText>
         </div>
       </section>
-      <Video />
+      <VideoAbout />
       <section className={styles.about} id='about'>
         <div className={styles.container}>
           <div className={styles.img_wrapper}>

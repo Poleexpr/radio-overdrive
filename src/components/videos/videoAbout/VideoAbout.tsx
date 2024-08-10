@@ -1,6 +1,6 @@
-import styles from './video.module.scss';
+import styles from './videoAbout.module.scss';
 
-export const Video = () => (
+export const VideoAbout = () => (
   <div className={styles.container}>
     <video
       controls
