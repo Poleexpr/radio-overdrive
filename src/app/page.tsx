@@ -19,6 +19,10 @@ import {
 import { IconArrowNextLong, IconButtonPlayText } from '@/components/icons';
 import { AnimationTextWrapper } from '@/wrappers';
 
+import aboutPicPath1 from '../../public/images/about-pic-path1.png';
+import aboutPicPath2 from '../../public/images/about-pic-path2.png';
+import aboutPicPath3 from '../../public/images/about-pic-path3.png';
+
 import styles from './page.module.scss';
 
 const Home = () => (
@@ -74,22 +78,9 @@ const Home = () => (
       <section className={styles.about} id='about'>
         <div className={styles.container}>
           <div className={styles.img_wrapper}>
-            <Image
-              alt='коллаж из трех картинок с изображением космоса, глаза и концерта'
-              className={styles.img}
-              height={1000}
-              layout='responsive'
-              src='/images/about-pic.png'
-              width={1000}
-            />
-            <Image
-              alt='коллаж из трех картинок с изображением космоса, глаза и концерта'
-              className={styles.img_laptop}
-              height={1000}
-              layout='responsive'
-              src='/images/about-pic-laptop.png'
-              width={1000}
-            />
+            <Image alt='' className={styles.img} layout='responsive' src={aboutPicPath1} />
+            <Image alt='' className={styles.img} layout='responsive' src={aboutPicPath2} />
+            <Image alt='' className={styles.img} layout='responsive' src={aboutPicPath3} />
           </div>
           <div className={styles.container_text}>
             <div className={styles.title_wrapper}>
