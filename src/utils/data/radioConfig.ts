@@ -19,10 +19,12 @@ export const radioConfig = async () => {
         name: string;
         presenter: string;
         audio: string;
+        date: string;
         tracklist: string[];
       } => ({
         name: row.get('radio_name'),
-        presenter: row.get('radio_presenter_and_date'),
+        presenter: row.get('radio_presenter'),
+        date: row.get('radio_date'),
         audio: row.get('radio_audio'),
         tracklist: row.get('radio_tracklist').split(';'),
       }),
@@ -32,7 +34,8 @@ export const radioConfig = async () => {
     console.error(error);
     return {
       name: 'Over',
-      presenter: 'Oxbow 8 мая 1996 ночь',
+      presenter: 'Oxbow',
+      date: '8 мая 1996 ночь',
       audio: './audios/oxbow-over.mp3',
       tracklist: [
         'Oxbow — Over',

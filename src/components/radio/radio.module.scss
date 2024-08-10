@@ -51,6 +51,7 @@
   margin-left: 77px;
   display: flex;
   align-items: flex-start;
+  gap: 7px;
 }
 /*
 .artistText {
@@ -363,8 +364,13 @@
     gap: 8px;
   }
 
+  .title {
+    display: none;
+  }
+
   .artist {
     margin-left: 20px;
+    flex-direction: column;
   }
 
   .trackWrapper {

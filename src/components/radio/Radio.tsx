@@ -2,6 +2,7 @@
 
 import classnames from 'classnames';
 import { useEffect, useRef, useState } from 'react';
+import Typograf from 'typograf';
 
 import { Typography, Player } from '@/components';
 import { radioConfig } from '@/utils';
@@ -11,9 +12,12 @@ import styles from './radio.module.scss';
 interface RadioData {
   name: string;
   presenter: string;
+  date: string;
   audio: string;
   tracklist: string[];
 }
+
+const tp = new Typograf({ locale: ['ru', 'en-US'] });
 
 export const Radio = () => {
   const [tracklist, settracklist] = useState(false);
@@ -59,7 +63,10 @@ export const Radio = () => {
               </Typography>
               <div className={styles.artist}>
                 <Typography className={styles.artistText} tag='p' variant='text'>
-                  {radioData && radioData.presenter}
+                  {radioData && tp.execute(radioData.presenter)}
+                </Typography>
+                <Typography className={styles.artistText} tag='p' variant='text'>
+                  {radioData && tp.execute(radioData.date)}
                 </Typography>
               </div>
             </div>
