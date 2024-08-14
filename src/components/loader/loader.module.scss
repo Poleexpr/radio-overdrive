@@ -70,41 +70,10 @@
   }
 }
 
-/*.loader {
-  display: inline-block;
-  position: relative;
-  width: 68px;
-  height: 68px;
-  border-radius: 50%;
-  background: linear-gradient(0deg, rgb(91, 49, 192, 0.2) 33%, #5b31c0 100%);
-  animation: rotation 1s linear infinite;
-}
-.loader::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  background-color: $base-background-color;
-  background-image: url(../../../public/images/texture.png);
-}
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-*/
 .loader {
   width: 260px;
   height: 260px;
   fill: white;
-  // animation: scale 3s linear infinite;
   animation-delay: 1s;
 
   svg {
@@ -117,37 +86,6 @@
     animation-delay: 1s;
   }
 }
-/*
-@keyframes strikethrough {
-  0% {
-    y: 71.375px;
-  }
-  25% {
-    y: 31.375px;
-  }
-  50% {
-    y: 111.375px;
-  }
-  75% {
-    y: 71.375px;
-  }
-}
-
-@keyframes scale {
-  0% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(0.7);
-  }
-  50% {
-    transform: scale(0.7);
-  }
-  75% {
-    transform: scale(1);
-  }
-}
-*/
 
 @media screen and (max-width: $tablet-query) {
   .circleOuter,

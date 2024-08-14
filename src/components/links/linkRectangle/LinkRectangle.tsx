@@ -9,7 +9,6 @@ import styles from './linkRectangle.module.scss';
 import type { LinkRectangleProps } from './types';
 
 gsap.registerPlugin(useGSAP);
-// gsap.registerPlugin(EasePack);
 
 export const LinkRectangle: FC<LinkRectangleProps> = ({
   className,

@@ -15,8 +15,6 @@ interface Feed {
 
 const parser: Parser<Feed> = new Parser();
 
-// const filterPosts = (items: Items[], limit: number) => items.slice(0, limit);
-
 export const fetchEpisodes = async (rss: string) => {
   const feed = await parser.parseURL(rss);
   console.log(feed.items);

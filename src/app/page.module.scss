@@ -7,14 +7,6 @@
   height: fit-content;
   background-color: $base-background-color;
 
-  /*.video {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    object-fit: cover;
-    z-index: 0;
-  }*/
-
   .container {
     position: relative;
     padding-top: 265px;
@@ -49,16 +41,12 @@
       @include text-link();
     }
     svg {
-      //@include svg-link(stroke, $base-color);
       stroke: $base-color;
     }
     &:hover {
       p {
         @include text-link-hover();
       }
-      /*svg {
-        @include svg-link-hover(stroke, $accent-color-two);
-      }*/
     }
   }
 
@@ -117,39 +105,11 @@
       transform: rotate(360deg);
     }
   }
-
-  /*
-  .playTgLink:hover {
-    animation: rotate 60s infinite linear;
-    .pathPlay {
-      animation: rotate-two 60s infinite linear;
-    }
-  }
-
-  @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes rotate-two {
-    0% {
-      transform: rotate(360deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
-  }
-    */
 }
 
 @media screen and (max-width: 1440px) {
   .welcome {
     .container {
-      //padding-top: 310px;
       padding-top: 200px;
       padding-bottom: 230px;
     }
@@ -176,30 +136,12 @@
     .title {
       text-align: left;
     }
-
-    /*.playTgLink_wrapper {
-      width: 160px;
-
-      &::before {
-        width: 100px;
-        height: 100px;
-      }
-
-      &::after {
-        border-top-width: 20px;
-        border-left-width: 34px;
-        border-bottom-width: 20px;
-      }
-    }
-      */
   }
 }
 
 @media screen and (max-width: 550px) {
   .welcome {
     .container {
-      //width: 85vw;
-      //margin: 0 auto;
       padding-top: 160px;
       padding-bottom: 30px;
     }
@@ -348,23 +290,9 @@
         margin-bottom: 0px;
       }
     }
-
-    /*.img {
-      display: none;
-    }
-
-    .img_laptop {
-      display: block;
-    }*/
   }
 }
-/*
-@media screen and (max-width: 1366px) {
-  .about {
-    background: url(../../public/images/about-back.png) no-repeat;
-  }
-}
-*/
+
 @media screen and (max-width: 1024px) {
   .about {
     .container {
@@ -407,7 +335,6 @@
 
     .container {
       width: 85vw;
-      // padding: 75px 0 0 0;
       grid-template-columns: 1fr;
     }
 
@@ -496,7 +423,6 @@
         center bottom / contain no-repeat;
 
     .container {
-      // padding-top: 30px;
       gap: 80px;
     }
   }
@@ -504,7 +430,6 @@
 
 .program {
   .description_wrapper {
-    //width: 90vw;
     margin: 0 auto;
     margin-top: 130px;
     display: flex;

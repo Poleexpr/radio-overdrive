@@ -17,13 +17,6 @@
   border: none;
   cursor: pointer;
 
-  /*@include media-query(900px) {
-    [data-nav-position='right'] &,
-    [data-nav-position='center'] & {
-      display: none;
-    }
-  }*/
-
   &__line {
     width: 28px;
     height: 2px;
@@ -39,8 +32,6 @@
     }
 
     &:nth-of-type(2) {
-      //width: 17px;
-
       .menuOpen & {
         opacity: 0;
       }

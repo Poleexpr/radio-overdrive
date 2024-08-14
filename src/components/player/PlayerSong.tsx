@@ -9,34 +9,12 @@ import styles from './player.module.scss';
 import type { PlayerSongProps } from './types';
 
 export const PlayerSong: FC<PlayerSongProps> = ({
-  // currentSong,
   isPlaying,
   setIsPlaying,
   audioRef,
   setSongInfo,
   songInfo,
-  // songs,
-  // setCurrentSong,
-  // setSongs,
 }) => {
-  /*
-  const activeLibraryHandler = (nextPrev: ISong) => {
-    const newSongs = songs.map((song) => {
-      if (song.id === nextPrev.id) {
-        return {
-          ...song,
-          active: true,
-        };
-      }
-      return {
-        ...song,
-        active: false,
-      };
-    });
-    setSongs(newSongs);
-  };
-  */
-
   const dragHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (audioRef.current) audioRef.current.currentTime = parseInt(e.target.value, 10);
     if (setSongInfo && songInfo)
@@ -54,27 +32,6 @@ export const PlayerSong: FC<PlayerSongProps> = ({
 
   const getTime = (time: number) =>
     `${Math.floor(time / 60)}:${`0${Math.floor(time % 60)}`.slice(-2)}`;
-
-  /* const skipTrackHandler = async (direction: string) => {
-    const currentIndex = songs.findIndex((song) => song.id === currentSong.id);
-    if (direction === 'skip-forward') {
-      await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
-      activeLibraryHandler(songs[(currentIndex + 1) % songs.length]);
-    }
-    if (direction === 'skip-back') {
-      if ((currentIndex - 1) % songs.length === -1) {
-        await setCurrentSong(songs[songs.length - 1]);
-        // playAudio(isPlaying, audioRef);
-        activeLibraryHandler(songs[songs.length - 1]);
-
-        return;
-      }
-      await setCurrentSong(songs[(currentIndex - 1) % songs.length]);
-      activeLibraryHandler(songs[(currentIndex - 1) % songs.length]);
-    }
-    if (isPlaying) audioRef.current.play();
-  };
-  */
 
   const trackAnim = {
     transform: `translateX(${songInfo?.animationPercentage}%)`,

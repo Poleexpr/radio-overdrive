@@ -13,14 +13,10 @@
         url('/images/ocapella_page_back.png') type('image/png')
       )
       right / cover no-repeat;
-  //background-position-y: 60px;
-  //background-position-x: right;
-  //background-repeat: no-repeat;
 }
 
 .container {
   width: 90vw;
-  //height: calc(100vh - 110px);
   margin-left: auto;
   margin-right: auto;
   padding-top: 110px;
@@ -66,7 +62,6 @@
   &:hover {
     @include svg-link-hover(box-shadow, 0px 0px 10px 5px rgba(188, 113, 241, 0.5));
     .net_tooltip {
-      //@include svg-link-hover(box-shadow, 0px 0px 10px 5px rgba(188, 113, 241, 0.5));
       top: 110%;
       opacity: 1;
       visibility: visible;
@@ -86,7 +81,6 @@
 }
 
 .net_tooltip {
-  //@include svg-link(box-shadow, 0px 0px 0px 0px rgba(188, 113, 241, 0.5));
   position: absolute;
   left: 50%;
   transform: translateX(-50%) translateY(10%);
@@ -96,7 +90,6 @@
   border-radius: 10px;
   pointer-events: all !important;
   visibility: hidden;
-  // white-space: nowrap;
   text-align: center;
   z-index: 100;
 }

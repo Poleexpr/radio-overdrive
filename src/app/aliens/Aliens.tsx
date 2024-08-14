@@ -83,36 +83,13 @@ export const Aliens: FC = () => {
     });
     setSongs(newSongs);
   };
-  /*
-  const songEndHandler = async () => {
-    const currentIndex = songs.findIndex((song) => song.id === currentSong.id);
 
-    if (audioRef.current?.play() !== undefined) {
-      setCurrentSong(songs[(currentIndex + 1) % songs.length]);
-      activeLibraryHandler(songs[(currentIndex + 1) % songs.length]);
-      audioRef.current.load();
-      console.log(audioRef.current.play());
-      await audioRef.current.play();
-    }
-  };
-*/
   const songEndHandler = () => {
     const currentIndex = songs.findIndex((song) => song.id === currentSong.id);
     setCurrentSong(songs[(currentIndex + 1) % songs.length]);
     activeLibraryHandler(songs[(currentIndex + 1) % songs.length]);
-    // audioRef.current.load();
-    // let playPromise = audioRef.current?.play();
     try {
       if (isPlaying && audioRef.current) {
-        /*
-      setTimeout(() => {
-        
-          audioRef.current?.play().catch((error) => {
-            console.log(error);
-          });
-        
-      }, 1000);
-      */
         audioRef.current.onloadedmetadata = () => {
           audioRef.current?.play().catch((error) => {
             console.log(error);
@@ -122,23 +99,8 @@ export const Aliens: FC = () => {
     } catch (error) {
       console.log(error);
     }
-    /* if (playPromise) {
-    audioRef.current.play().then(() => {
-      console.log('playing').catch((error) => {
-        console.log('error');
-        setIsPlaying(!isPlaying);
-      });
-    });
-  } */
   };
 
-  /* const songEndHandler = async () => {
-    if (audioRef.current?.play() !== undefined) {
-      // eslint-disable-next-line @typescript-eslint/await-thenable
-      await audioRef.current.pause();
-      setIsPlaying(!isPlaying);
-    }
-  }; */
   return (
     <>
       <div className={styles.title}>
@@ -154,14 +116,10 @@ export const Aliens: FC = () => {
           <Player.Song currentSong={currentSong} overSign={false} />
           <Player.PlayerSong
             audioRef={audioRef}
-            // currentSong={currentSong}
             isPlaying={isPlaying}
-            // setCurrentSong={setCurrentSong}
             setIsPlaying={setIsPlaying}
             setSongInfo={setSongInfo}
-            // setSongs={setSongs}
             songInfo={songInfo}
-            // songs={songs}
           />
         </div>
         <Player.Library
@@ -180,10 +138,6 @@ export const Aliens: FC = () => {
           onTimeUpdate={timeUpdateHandler}
           // eslint-disable-next-line @typescript-eslint/no-misused-promises, react/jsx-sort-props
           onEnded={songEndHandler}
-          // onEnded={() => {
-          // eslint-disable-next-line no-void
-          // void songEndHandler();
-          // }}
         >
           <track kind='captions' />
           <source src={currentSong.audio} />

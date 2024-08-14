@@ -1,8 +1,6 @@
 import classnames from 'classnames';
 import { forwardRef } from 'react';
 import type { FC } from 'react';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-// import { animateScroll as scroll, Events, Link } from 'react-scroll';
 
 import { Typography } from '@/components';
 import { IconLogoOverdrive } from '@/components/icons';
@@ -12,11 +10,6 @@ import type { NavProps } from './types';
 
 export const Nav: FC<NavProps> = forwardRef(({ items, isMenuOpen, toggleNav }, ref) => {
   const menuOpen = isMenuOpen ? styles.menuOpen : '';
-
-  /* useEffect(() => {
-    Events.scrollEvent.remove('begin');
-    Events.scrollEvent.remove('end');
-  }, []); */
 
   return (
     <nav className={styles.wrapper}>

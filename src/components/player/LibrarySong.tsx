@@ -43,12 +43,10 @@ export const LibrarySong: FC<LibrarySongProps> = ({
 
     if (song.active) {
       audioRef.current?.pause();
-      // setIsPlaying((prevIsPlaying: boolean) => (prevIsPlaying = false));
       setIsPlaying((isPlaying = false));
     } else {
       // eslint-disable-next-line @typescript-eslint/no-floating-promises
       audioRef.current?.play();
-      // setIsPlaying((prevIsPlaying: boolean) => (prevIsPlaying = true));
       setIsPlaying((isPlaying = true));
     }
   };

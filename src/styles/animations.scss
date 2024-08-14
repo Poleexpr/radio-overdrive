@@ -42,44 +42,6 @@
   }
 }
 
-/*
-.dynamic-img {
-  &.active {
-    img:nth-child(1) {
-      animation: move-variant-1 2s linear;
-    }
-    img:nth-child(3) {
-      animation: move-variant-2 2s linear;
-    }
-  }
-}
-
-@media screen and (max-width: $laptop-query) {
-  .dynamic-img {
-    &.active {
-      img:nth-child(1) {
-        animation: move-variant-3 2s linear;
-      }
-      img:nth-child(2) {
-        animation: move-variant-4 2s linear;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: $tablet-query) {
-  .dynamic-img {
-    &.active {
-      img:nth-child(1) {
-        animation: move-variant-5 2s linear;
-      }
-      img:nth-child(2) {
-        animation: move-variant-6 2s linear;
-      }
-    }
-  }
-}*/
-
 @keyframes move-variant-1 {
   0% {
     margin-bottom: 0px;

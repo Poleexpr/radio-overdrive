@@ -14,9 +14,7 @@
 }
 
 @mixin text-link-hover() {
-  // background-image: linear-gradient(-225deg, white 0%, #9337d4 29%, #5b31c0 67%, white 100%);
   background-image: linear-gradient(-225deg, #9337d4 0%, #5b31c0 29%, white 67%, #9337d4 100%);
-  //background-image: linear-gradient(-225deg, #5b31c0 0%, #9337d4 29%, white 67%, #5b31c0 100%);
   animation: textclip 2s linear infinite;
 }
 

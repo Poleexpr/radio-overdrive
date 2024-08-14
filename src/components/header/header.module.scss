@@ -1,20 +1,5 @@
 @import '/src/styles/variables';
 
-/*.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  min-height: 110px;
-
-  background: url('../../../public/images/texture.png'), $base-background-color;
-  transition: ease 0.4s;
-  &--scrolled {
-    height: 40px;
-  }
-}*/
-
 .wrapper {
   position: fixed;
   top: 0;
