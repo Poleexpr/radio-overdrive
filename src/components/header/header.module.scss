@@ -13,6 +13,7 @@
       url('/images/texture.png') type('image/png')
     ),
     $base-background-color;
+  background-color: $base-background-color;
   transition: ease 0.4s;
   &--scrolled {
     height: 40px;
