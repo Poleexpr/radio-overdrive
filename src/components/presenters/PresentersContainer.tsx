@@ -7,7 +7,13 @@ export const PresentersContainer = async () => {
   const cardsBox = await presentersConfig();
 
   return (
-    <div className={styles.cards_container}>
+    <div
+      className={
+        Array.isArray(cardsBox) && cardsBox.length <= 4
+          ? styles.cards_container
+          : styles.cards_containerBig
+      }
+    >
       <PresentersCard cardsElements={cardsBox} />
     </div>
   );

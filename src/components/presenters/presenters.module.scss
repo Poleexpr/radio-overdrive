@@ -14,6 +14,34 @@
   transition: all 400ms;
 }
 
+.cards_containerBig {
+  width: 90vw;
+  display: flex;
+  justify-content: left;
+  gap: 1em;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  cursor: move;
+
+  .box {
+    width: 350px;
+    min-width: 350px;
+    height: 500px;
+    min-height: 500px;
+  }
+
+  .card_info {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.cards_containerBig::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 @media (hover: hover) {
   .cards_container:hover .box {
     filter: grayscale(100%) opacity(24%);
@@ -154,6 +182,13 @@
     height: 0;
   }
 
+  .cards_containerBig {
+    .box {
+      width: 250px;
+      min-width: 250px;
+    }
+  }
+
   .box {
     width: 250px;
     min-width: 250px;
@@ -191,4 +226,8 @@
     width: 0;
     height: 0;
   }*/
+
+  .cards_containerBig {
+    width: 85vw;
+  }
 }
