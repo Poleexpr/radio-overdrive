@@ -8,7 +8,7 @@ export const VideoAbout = () => (
       muted
       className={styles.video}
       poster='./videos/video-overdrive-poster.webp'
-      src='./videos/video-overdrive.mp4'
+      src='/'
     />
   </div>
 );

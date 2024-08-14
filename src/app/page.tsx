@@ -12,7 +12,6 @@ import {
   LinkUnderline,
   Schedule,
   Radio,
-  VideoAbout,
   VideoWelcome,
 } from '@/components';
 import { IconArrowNextLong, IconButtonPlayText } from '@/components/icons';
@@ -73,7 +72,6 @@ const Home = () => (
           <MarqueeText>мы вещаем до последнего</MarqueeText>
         </div>
       </section>
-      <VideoAbout />
       <section className={styles.about} id='about'>
         <div className={styles.container}>
           <div className={classnames(styles.img_wrapper, 'dynamic-img')}>

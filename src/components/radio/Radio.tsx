@@ -92,8 +92,8 @@ export const Radio = () => {
       >
         {radioData &&
           radioData.tracklist &&
-          radioData.tracklist.map((track: string) => (
-            <Typography className={styles.track} tag='p' variant='text4'>
+          radioData.tracklist.map((track: string, i) => (
+            <Typography key={i} className={styles.track} tag='p' variant='text4'>
               {track}
             </Typography>
           ))}
