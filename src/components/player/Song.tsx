@@ -44,7 +44,7 @@ export const Song: FC<SongProps> = ({ currentSong, overSign }) => (
           </span>
         </div>
       ) : (
-        <Typography className={styles.title} tag='h4' variant='title5'>
+        <Typography className={styles.title} tag='h3' variant='title5'>
           {currentSong.name.slice(currentSong.name.indexOf('#'))}
         </Typography>
       )}

@@ -9,7 +9,7 @@ import styles from './scheduleCard.module.scss';
 
 export const ScheduleCard: FC<ScheduleCardProps> = ({ info }) => (
   <div className={styles.container}>
-    <Typography className={styles.title} tag='h4' variant='title4'>
+    <Typography className={styles.title} tag='h3' variant='title4'>
       {info.day}
     </Typography>
     <ScheduleCardItem items={info.schedule} />

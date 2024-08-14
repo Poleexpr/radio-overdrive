@@ -86,7 +86,7 @@ export const LibrarySong: FC<LibrarySongProps> = ({
             </span>
           </div>
         ) : (
-          <Typography className={styles.title} tag='h4' variant='text'>
+          <Typography className={styles.title} tag='h3' variant='text'>
             {song.name.slice(song.name.indexOf('#'))}
           </Typography>
         )}

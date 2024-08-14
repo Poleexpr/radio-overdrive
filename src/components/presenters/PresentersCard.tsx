@@ -49,7 +49,7 @@ export const PresentersCard: FC<PresentersCardProps> = ({ cardsElements }) =>
         <Typography tag='p' variant='text3'>
           Голос {cardsElements.day}
         </Typography>
-        <Typography className={styles.card_title} tag='h4' variant='title4'>
+        <Typography className={styles.card_title} tag='h3' variant='title4'>
           {cardsElements.name}
         </Typography>
         <Typography tag='p' variant='text4'>

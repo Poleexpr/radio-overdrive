@@ -18,7 +18,7 @@ export const Footer: FC<FooterProps> = ({ id }) => (
   <footer className={styles.footer} id={id}>
     <div className={styles.container}>
       <div className={styles.subcontainer_first}>
-        <Typography tag='h4' variant='title6'>
+        <Typography tag='h3' variant='title6'>
           Овердрайв
         </Typography>
 
