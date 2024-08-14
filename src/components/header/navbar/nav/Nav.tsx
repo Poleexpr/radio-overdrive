@@ -30,12 +30,8 @@ export const Nav: FC<NavProps> = forwardRef(({ items, isMenuOpen, toggleNav }, r
       <ul ref={ref} className={classnames(styles.menu, menuOpen)}>
         {items.map((item, i) => (
           <Typography key={i} className={styles.menu_item} tag='li' variant='text8'>
-            <a href={item.slug} onClick={() => toggleNav()}>
-              {item.isLogo ? (
-                <IconLogoOverdrive aria-label='На главную' className={styles.logo} />
-              ) : (
-                item.name
-              )}
+            <a aria-label='Навигация' href={item.slug} onClick={() => toggleNav()}>
+              {item.isLogo ? <IconLogoOverdrive className={styles.logo} /> : item.name}
             </a>
           </Typography>
         ))}
