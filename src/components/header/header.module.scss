@@ -24,8 +24,8 @@
   min-height: 110px;
 
   background: image-set(
-      url(../../../public/images/texture.webp) type('image/webp'),
-      url(../../../public/images/texture.png) type('image/png')
+      url('/images/texture.webp') type('image/webp'),
+      url('/images/texture.png') type('image/png')
     ),
     $base-background-color;
   transition: ease 0.4s;

@@ -229,8 +229,8 @@
 .about {
   background:
     image-set(
-      url(../../public/images/texture.webp) type('image/webp'),
-      url(../../public/images/texture.png) type('image/png')
+      url('/images/texture.webp') type('image/webp'),
+      url('/images/texture.png') type('image/png')
     ),
     linear-gradient(
       0deg,
@@ -240,8 +240,8 @@
       rgba(0, 0, 0, 0) 100%
     ),
     image-set(
-        url(../../public/images/about-back.webp) type('image/webp'),
-        url(../../public/images/about-back.png) type('image/png')
+        url('/images/about-back.webp') type('image/webp'),
+        url('/images/about-back.png') type('image/png')
       )
       center / cover no-repeat;
 
@@ -399,8 +399,8 @@
     background:
       linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 40%),
       image-set(
-          url(../../public/images/about-back.webp) type('image/webp'),
-          url(../../public/images/about-back.png) type('image/png')
+          url('/images/about-back.webp') type('image/webp'),
+          url('/images/about-back.png') type('image/png')
         )
         top right no-repeat;
     background-size: contain;
@@ -428,13 +428,13 @@
 .planet {
   background:
     image-set(
-      url(../../public/images/texture.webp) type('image/webp'),
-      url(../../public/images/texture.png) type('image/png')
+      url('/images/texture.webp') type('image/webp'),
+      url('/images/texture.png') type('image/png')
     ),
     linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 20%),
     image-set(
-        url(../../public/images/over-planet.webp) type('image/webp'),
-        url(../../public/images/over-planet.png) type('image/png')
+        url('/images/over-planet.webp') type('image/webp'),
+        url('/images/over-planet.png') type('image/png')
       )
       center bottom / cover no-repeat;
   width: 100%;
@@ -485,13 +485,13 @@
   .planet {
     background:
       image-set(
-        url(../../public/images/texture.webp) type('image/webp'),
-        url(../../public/images/texture.png) type('image/png')
+        url('/images/texture.webp') type('image/webp'),
+        url('/images/texture.png') type('image/png')
       ),
       linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 20%),
       image-set(
-          url(../../public/images/over-planet-mobile.webp) type('image/webp'),
-          url(../../public/images/over-planet-mobile.png) type('image/png')
+          url('/images/over-planet-mobile.webp') type('image/webp'),
+          url('/images/over-planet-mobile.png') type('image/png')
         )
         center bottom / contain no-repeat;
 

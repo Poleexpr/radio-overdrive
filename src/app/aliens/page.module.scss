@@ -3,13 +3,13 @@
 .back {
   background:
     image-set(
-      url(../../../public/images/texture.webp) type('image/webp'),
-      url(../../../public/images/texture.png) type('image/png')
+      url('/images/texture.webp') type('image/webp'),
+      url('/images/texture.png') type('image/png')
     ),
     linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 80%),
     image-set(
-        url('../../../public/images/aliens_page_back.webp') type('image/webp'),
-        url('../../../public/images/aliens_page_back.png') type('image/png')
+        url('/images/aliens_page_back.webp') type('image/webp'),
+        url('/images/aliens_page_back.png') type('image/png')
       )
       right / cover no-repeat;
   //background-position-y: 60px;
@@ -72,13 +72,13 @@
   .back {
     background:
       image-set(
-        url(../../../public/images/texture.webp) type('image/webp'),
-        url(../../../public/images/texture.png) type('image/png')
+        url('/images/texture.webp') type('image/webp'),
+        url('/images/texture.png') type('image/png')
       ),
       linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 80%),
       image-set(
-          url('../../../public/images/aliens_page_back_mobile.webp') type('image/webp'),
-          url('../../../public/images/aliens_page_back_mobile.png') type('image/png')
+          url('/images/aliens_page_back_mobile.webp') type('image/webp'),
+          url('/images/aliens_page_back_mobile.png') type('image/png')
         )
         top right no-repeat;
   }

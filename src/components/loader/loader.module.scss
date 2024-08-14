@@ -12,8 +12,8 @@
   justify-content: center;
   background-color: $base-background-color;
   background-image: image-set(
-    url(../../../public/images/texture.webp) type('image/webp'),
-    url(../../../public/images/texture.png) type('image/png')
+    url('/images/texture.webp') type('image/webp'),
+    url('/images/texture.png') type('image/png')
   );
   z-index: 110;
 }

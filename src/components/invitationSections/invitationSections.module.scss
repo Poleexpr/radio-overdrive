@@ -19,8 +19,8 @@
 
 .vacancy {
   background: image-set(
-      url(../../../public/images/texture.webp) type('image/webp'),
-      url(../../../public/images/texture.png) type('image/png')
+      url('/images/texture.webp') type('image/webp'),
+      url('/images/texture.png') type('image/png')
     ),
     linear-gradient(
       0deg,
@@ -30,8 +30,8 @@
       rgba(0, 0, 0, 0) 100%
     ),
     image-set(
-      url(../../../public/images/stars.webp) type('image/webp'),
-      url(../../../public/images/stars.png) type('image/png')
+      url('/images/stars.webp') type('image/webp'),
+      url('/images/stars.png') type('image/png')
     );
 
   .container {
