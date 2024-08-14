@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 import {
   Footer,
@@ -75,9 +75,15 @@ const Home = () => (
       <section className={styles.about} id='about'>
         <div className={styles.container}>
           <div className={classnames(styles.img_wrapper, 'dynamic-img')}>
-            <Image alt='' className={styles.img} layout='responsive' src={aboutPicPath1} />
-            <Image alt='' className={styles.img} layout='responsive' src={aboutPicPath2} />
-            <Image alt='' className={styles.img} layout='responsive' src={aboutPicPath3} />
+            <div className={styles.image_wrapper_one}>
+              <Image alt='' className={styles.img} layout='responsive' src={aboutPicPath1} />
+            </div>
+            <div className={styles.image_wrapper_two}>
+              <Image alt='' className={styles.img} layout='responsive' src={aboutPicPath2} />
+            </div>
+            <div className={styles.image_wrapper_three}>
+              <Image alt='' className={styles.img} layout='responsive' src={aboutPicPath3} />
+            </div>
           </div>
           <div className={styles.container_text}>
             <div className={styles.title_wrapper}>

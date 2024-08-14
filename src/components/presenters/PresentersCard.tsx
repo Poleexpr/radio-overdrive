@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import type { FC } from 'react';
 
 import { Typography } from '@/components';
@@ -12,10 +12,10 @@ export const PresentersCard: FC<PresentersCardProps> = ({ cardsElements }) =>
     cardsElements.map((cardElement, id) => (
       <div key={id} className={styles.box}>
         <Image
-          fill
           alt='фотография ведущего'
           blurDataURL={presentersBlurData}
           className={styles.card_img}
+          layout='fill'
           placeholder='blur'
           src={cardElement.img}
         />
@@ -38,10 +38,10 @@ export const PresentersCard: FC<PresentersCardProps> = ({ cardsElements }) =>
   ) : (
     <div className={styles.box}>
       <Image
-        fill
         alt='фотография ведущего'
         blurDataURL={presentersBlurData}
         className={styles.card_img}
+        layout='fill'
         placeholder='blur'
         src={cardsElements.img}
       />
