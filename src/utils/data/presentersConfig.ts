@@ -36,7 +36,7 @@ export const presentersConfig = async () => {
       day: 'субботы',
       biography:
         'Участник трёх музыкальных проектов и звукорежиссёр, а на радио пришёл, чтобы безнаказанно шалить и реализовывать свои безумные идеи.',
-      img: '/images/savchenko',
+      img: '/images/savchenko.png',
     };
   }
 };

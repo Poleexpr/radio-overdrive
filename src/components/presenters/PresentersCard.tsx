@@ -30,7 +30,7 @@ export const PresentersCard: FC<PresentersCardProps> = ({ cardsElements }) =>
           <Typography tag='p' variant='text3'>
             Голос {cardElement.day}
           </Typography>
-          <Typography className={styles.card_title} tag='h4' variant='title4'>
+          <Typography className={styles.card_title} tag='h3' variant='title4'>
             {cardElement.name}
           </Typography>
           <Typography tag='p' variant='text4'>
