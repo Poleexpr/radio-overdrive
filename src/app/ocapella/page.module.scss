@@ -23,11 +23,6 @@
   padding-bottom: 160px;
 }
 
-.wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
 .subContainer {
   display: flex;
   flex-direction: column;
@@ -35,15 +30,6 @@
   justify-content: flex-start;
   width: 50vw;
   height: 100%;
-}
-
-.title {
-  margin-top: 120px;
-  margin-bottom: 90px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
 }
 
 .nets_wrapper {
@@ -106,11 +92,6 @@
 }
 
 @media screen and (max-width: $laptop-query) {
-  .title {
-    margin-top: 90px;
-    margin-bottom: 60px;
-  }
-
   .nets_wrapper {
     margin-top: 60px;
   }
@@ -124,12 +105,6 @@
 @media screen and (max-width: $tablet-query) {
   .back {
     background-position-y: 40px;
-  }
-
-  .title {
-    margin-top: 40px;
-    margin-bottom: 30px;
-    gap: 15px;
   }
 
   .nets_wrapper {
@@ -168,11 +143,6 @@
         right / cover no-repeat;
   }
 
-  .wrapper {
-    flex-direction: column;
-    gap: 60px;
-  }
-
   .container {
     width: 85vw;
     padding-top: 90px;
@@ -181,9 +151,5 @@
 
   .subContainer {
     width: 85vw;
-  }
-
-  .title {
-    margin-bottom: 40px;
   }
 }

@@ -13,24 +13,10 @@ import {
 } from '@/components/icons';
 import { fetchEpisodes } from '@/utils';
 import dataNative from '@/utils/data/ocapellaInfo';
+import { PodcastPageWrapper } from '@/wrappers';
+import type { ISong } from '@/wrappers/podcastPageWrapper/types';
 
 import styles from './page.module.scss';
-
-export interface ISong {
-  name: string;
-  date: string;
-  cover: string;
-  description: string;
-  audio: string;
-  id: string;
-  active: boolean;
-}
-
-export interface ISongInfo {
-  currentTime: number;
-  duration: number;
-  animationPercentage: number;
-}
 
 export const Ocapella: FC = () => {
   const [songs, setSongs] = useState<ISong[]>(dataNative);
@@ -107,98 +93,88 @@ export const Ocapella: FC = () => {
   };
 
   return (
-    <>
-      <div className={styles.title}>
-        <Typography tag='h2' variant='title2'>
-          о’капелла
-        </Typography>
-        <Typography className={styles.description} tag='p' variant='text2'>
-          Подкаст о музыке как феномене и чуде
-        </Typography>
-      </div>
-      <div className={styles.wrapper}>
-        <div className={styles.subContainer}>
-          <Player.Song overSign currentSong={currentSong} />
-          <Player.PlayerSong
-            audioRef={audioRef}
-            isPlaying={isPlaying}
-            setIsPlaying={setIsPlaying}
-            setSongInfo={setSongInfo}
-            songInfo={songInfo}
-          />
-          <div className={styles.nets_wrapper}>
-            {' '}
-            <a
-              aria-label='Перейти на Apple Podcast'
-              className={styles.net_link}
-              href='https://podcasts.apple.com/podcast/id1551530393'
-              rel='noreferrer'
-              target='_blank'
-            >
-              <IconLogoApplePodcast className={styles.net_logo} />
-              <Typography className={styles.net_tooltip} tag='span' variant='text6'>
-                Apple Podcast
-              </Typography>
-            </a>
-            <a
-              aria-label='Перейти на Звук'
-              className={styles.net_link}
-              href='https://st.zvuk.com/okapella'
-              rel='noreferrer'
-              target='_blank'
-            >
-              <IconLogoZvuk className={styles.net_logo} />{' '}
-              <Typography className={styles.net_tooltip} tag='span' variant='text6'>
-                Звук
-              </Typography>
-            </a>
-            <a
-              aria-label='Перейти на Castbox'
-              className={styles.net_link}
-              href='https://castbox.fm/channel/id3666927?utm_campaign=ex_share_ch&utm_medium=exlink&country=ru'
-              rel='noreferrer'
-              target='_blank'
-            >
-              <IconLogoCastbox className={styles.net_logo} />{' '}
-              <Typography className={styles.net_tooltip} tag='span' variant='text6'>
-                Castbox
-              </Typography>
-            </a>
-            <a
-              aria-label='Перейти на Overcast'
-              className={styles.net_link}
-              href='https://overcast.fm/itunes1551530393'
-              rel='noreferrer'
-              target='_blank'
-            >
-              <IconLogoOvercast className={styles.net_logo} />
-              <Typography className={styles.net_tooltip} tag='span' variant='text6'>
-                Overcast
-              </Typography>
-            </a>
-          </div>
-        </div>
-        <Player.Library
-          overSign
+    <PodcastPageWrapper description='Подкаст о музыке как феномене и чуде' title='о’капелла'>
+      <div className={styles.subContainer}>
+        <Player.Song overSign currentSong={currentSong} />
+        <Player.PlayerSong
           audioRef={audioRef}
           isPlaying={isPlaying}
-          setCurrentSong={setCurrentSong}
           setIsPlaying={setIsPlaying}
-          setSongs={setSongs}
-          songs={songs}
+          setSongInfo={setSongInfo}
+          songInfo={songInfo}
         />
-        <audio
-          ref={audioRef}
-          src={currentSong.audio}
-          onLoadedMetadata={timeUpdateHandler}
-          onTimeUpdate={timeUpdateHandler}
-          // eslint-disable-next-line @typescript-eslint/no-misused-promises, react/jsx-sort-props
-          onEnded={songEndHandler}
-        >
-          <track kind='captions' />
-          <source src={currentSong.audio} />
-        </audio>
+        <div className={styles.nets_wrapper}>
+          {' '}
+          <a
+            aria-label='Перейти на Apple Podcast'
+            className={styles.net_link}
+            href='https://podcasts.apple.com/podcast/id1551530393'
+            rel='noreferrer'
+            target='_blank'
+          >
+            <IconLogoApplePodcast className={styles.net_logo} />
+            <Typography className={styles.net_tooltip} tag='span' variant='text6'>
+              Apple Podcast
+            </Typography>
+          </a>
+          <a
+            aria-label='Перейти на Звук'
+            className={styles.net_link}
+            href='https://st.zvuk.com/okapella'
+            rel='noreferrer'
+            target='_blank'
+          >
+            <IconLogoZvuk className={styles.net_logo} />{' '}
+            <Typography className={styles.net_tooltip} tag='span' variant='text6'>
+              Звук
+            </Typography>
+          </a>
+          <a
+            aria-label='Перейти на Castbox'
+            className={styles.net_link}
+            href='https://castbox.fm/channel/id3666927?utm_campaign=ex_share_ch&utm_medium=exlink&country=ru'
+            rel='noreferrer'
+            target='_blank'
+          >
+            <IconLogoCastbox className={styles.net_logo} />{' '}
+            <Typography className={styles.net_tooltip} tag='span' variant='text6'>
+              Castbox
+            </Typography>
+          </a>
+          <a
+            aria-label='Перейти на Overcast'
+            className={styles.net_link}
+            href='https://overcast.fm/itunes1551530393'
+            rel='noreferrer'
+            target='_blank'
+          >
+            <IconLogoOvercast className={styles.net_logo} />
+            <Typography className={styles.net_tooltip} tag='span' variant='text6'>
+              Overcast
+            </Typography>
+          </a>
+        </div>
       </div>
-    </>
+      <Player.Library
+        overSign
+        audioRef={audioRef}
+        isPlaying={isPlaying}
+        setCurrentSong={setCurrentSong}
+        setIsPlaying={setIsPlaying}
+        setSongs={setSongs}
+        songs={songs}
+      />
+      <audio
+        ref={audioRef}
+        src={currentSong.audio}
+        onLoadedMetadata={timeUpdateHandler}
+        onTimeUpdate={timeUpdateHandler}
+        // eslint-disable-next-line @typescript-eslint/no-misused-promises, react/jsx-sort-props
+        onEnded={songEndHandler}
+      >
+        <track kind='captions' />
+        <source src={currentSong.audio} />
+      </audio>
+    </PodcastPageWrapper>
   );
 };

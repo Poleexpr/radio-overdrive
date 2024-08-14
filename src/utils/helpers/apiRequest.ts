@@ -17,7 +17,6 @@ const parser: Parser<Feed> = new Parser();
 
 export const fetchEpisodes = async (rss: string) => {
   const feed = await parser.parseURL(rss);
-  console.log(feed.items);
   const episodes = feed.items.map((item, i) => ({
     name: item.title,
     date: item.isoDate,

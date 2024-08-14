@@ -1,6 +1,6 @@
 import type { RefObject } from 'react';
 
-import type { ISong, ISongInfo } from '@/app/ocapella/Ocapella';
+import type { ISong, ISongInfo } from '@/wrappers/podcastPageWrapper/types';
 
 export interface LibraryProps {
   songs: ISong[];

@@ -4,27 +4,13 @@ import { useQuery } from '@tanstack/react-query';
 import type { FC } from 'react';
 import { useEffect, useRef, useState } from 'react';
 
-import { Typography, Player, Loader, ErrorText } from '@/components';
+import { Player, Loader, ErrorText } from '@/components';
 import { fetchEpisodes } from '@/utils';
 import dataNative from '@/utils/data/aliensInfo';
+import { PodcastPageWrapper } from '@/wrappers';
+import type { ISong } from '@/wrappers/podcastPageWrapper/types';
 
 import styles from './page.module.scss';
-
-export interface ISong {
-  name: string;
-  date: string;
-  cover: string;
-  description: string;
-  audio: string;
-  id: string;
-  active: boolean;
-}
-
-export interface ISongInfo {
-  currentTime: number;
-  duration: number;
-  animationPercentage: number;
-}
 
 export const Aliens: FC = () => {
   const [songs, setSongs] = useState<ISong[]>(dataNative);
@@ -47,7 +33,6 @@ export const Aliens: FC = () => {
     if (status === 'success') {
       setSongs(data);
       setCurrentSong(data[0]);
-      console.log(data);
     }
   }, [status, data]);
 
@@ -102,47 +87,40 @@ export const Aliens: FC = () => {
   };
 
   return (
-    <>
-      <div className={styles.title}>
-        <Typography tag='h2' variant='title2'>
-          пришельцы
-        </Typography>
-        <Typography className={styles.description} tag='p' variant='text2'>
-          Прямые эфиры с музыкантами, писателями, философами и другими гостями не от мира сего
-        </Typography>
-      </div>
-      <div className={styles.wrapper}>
-        <div className={styles.subContainer}>
-          <Player.Song currentSong={currentSong} overSign={false} />
-          <Player.PlayerSong
-            audioRef={audioRef}
-            isPlaying={isPlaying}
-            setIsPlaying={setIsPlaying}
-            setSongInfo={setSongInfo}
-            songInfo={songInfo}
-          />
-        </div>
-        <Player.Library
+    <PodcastPageWrapper
+      description='Прямые эфиры с музыкантами, писателями, философами и другими гостями не от мира сего'
+      title='пришельцы'
+    >
+      <div className={styles.subContainer}>
+        <Player.Song currentSong={currentSong} overSign={false} />
+        <Player.PlayerSong
           audioRef={audioRef}
           isPlaying={isPlaying}
-          overSign={false}
-          setCurrentSong={setCurrentSong}
           setIsPlaying={setIsPlaying}
-          setSongs={setSongs}
-          songs={songs}
+          setSongInfo={setSongInfo}
+          songInfo={songInfo}
         />
-        <audio
-          ref={audioRef}
-          src={currentSong.audio}
-          onLoadedMetadata={timeUpdateHandler}
-          onTimeUpdate={timeUpdateHandler}
-          // eslint-disable-next-line @typescript-eslint/no-misused-promises, react/jsx-sort-props
-          onEnded={songEndHandler}
-        >
-          <track kind='captions' />
-          <source src={currentSong.audio} />
-        </audio>
       </div>
-    </>
+      <Player.Library
+        audioRef={audioRef}
+        isPlaying={isPlaying}
+        overSign={false}
+        setCurrentSong={setCurrentSong}
+        setIsPlaying={setIsPlaying}
+        setSongs={setSongs}
+        songs={songs}
+      />
+      <audio
+        ref={audioRef}
+        src={currentSong.audio}
+        onLoadedMetadata={timeUpdateHandler}
+        onTimeUpdate={timeUpdateHandler}
+        // eslint-disable-next-line @typescript-eslint/no-misused-promises, react/jsx-sort-props
+        onEnded={songEndHandler}
+      >
+        <track kind='captions' />
+        <source src={currentSong.audio} />
+      </audio>
+    </PodcastPageWrapper>
   );
 };
