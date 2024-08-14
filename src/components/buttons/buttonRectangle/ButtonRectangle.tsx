@@ -1,13 +1,8 @@
 import classnames from 'classnames';
-import type { ComponentPropsWithRef, FC, ReactNode } from 'react';
+import type { FC } from 'react';
 
 import styles from './buttonRectangle.module.scss';
-
-export interface ButtonProps extends ComponentPropsWithRef<'button'> {
-  onClick?: () => void;
-  loading?: boolean;
-  children: ReactNode;
-}
+import type { ButtonProps } from './types';
 
 export const ButtonRectangle: FC<ButtonProps> = ({
   type = 'button',

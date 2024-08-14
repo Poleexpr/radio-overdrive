@@ -5,14 +5,7 @@ import { Typography } from '@/components';
 import { presentersBlurData } from '@/utils/helpers';
 
 import styles from './presenters.module.scss';
-
-// TODO:  cardsElements typeof CONST*
-
-interface PresentersCardProps {
-  cardsElements:
-    | { name: string; city: string; day: string; biography: string; img: string }[]
-    | { name: string; city: string; day: string; biography: string; img: string };
-}
+import type { PresentersCardProps } from './types';
 
 export const PresentersCard: FC<PresentersCardProps> = ({ cardsElements }) =>
   Array.isArray(cardsElements) ? (

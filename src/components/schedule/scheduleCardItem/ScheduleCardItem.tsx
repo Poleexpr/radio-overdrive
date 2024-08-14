@@ -2,14 +2,9 @@ import type { FC } from 'react';
 
 import { Typography } from '@/components';
 
-import styles from './scheduleCardItem.module.scss';
+import type { ScheduleCardItemProps } from '../types';
 
-interface ScheduleCardItemProps {
-  items: {
-    time: string;
-    event: string;
-  }[];
-}
+import styles from './scheduleCardItem.module.scss';
 
 export const ScheduleCardItem: FC<ScheduleCardItemProps> = ({ items }) =>
   items.map((item, i) => (

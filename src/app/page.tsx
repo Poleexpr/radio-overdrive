@@ -12,12 +12,11 @@ import {
   LinkUnderline,
   Schedule,
   Radio,
-  LinkSubscribeWrapper,
   VideoAbout,
   VideoWelcome,
 } from '@/components';
 import { IconArrowNextLong, IconButtonPlayText } from '@/components/icons';
-import { AnimationTextWrapper } from '@/wrappers';
+import { AnimationTextWrapper, LinkSubscribeWrapper } from '@/wrappers';
 
 import aboutPicPath1 from '../../public/images/about-pic-path1.png';
 import aboutPicPath2 from '../../public/images/about-pic-path2.png';

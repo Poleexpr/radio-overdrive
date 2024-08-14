@@ -7,14 +7,7 @@ import { IconArrowNext, IconArrowPrev } from '@/components/icons';
 import { scheduleConfig } from '@/utils';
 
 import { ScheduleCard } from '../scheduleCard/ScheduleCard';
-
-interface ScheduleData {
-  day: string;
-  schedule: {
-    time: string;
-    event: string;
-  }[];
-}
+import type { ScheduleData } from '../types';
 
 export const ScheduleSlider = () => {
   const [scheduleData, setScheduleInfo] = useState<ScheduleData | ScheduleData[] | null>(null);

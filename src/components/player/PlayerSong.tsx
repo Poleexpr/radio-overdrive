@@ -1,25 +1,12 @@
 'use client';
 
-import type { FC, RefObject } from 'react';
+import type { FC } from 'react';
 
 import { Typography } from '@/components';
 import { IconButtonPlay, IconButtonStop } from '@/components/icons';
 
-import type { ISongInfo } from '../../app/ocapella/Ocapella';
-
 import styles from './player.module.scss';
-
-interface PlayerSongProps {
-  // currentSong: ISong;
-  isPlaying: boolean;
-  setIsPlaying: (value: boolean) => void;
-  audioRef: RefObject<HTMLMediaElement>;
-  setSongInfo?: (value: ISongInfo) => void;
-  songInfo?: ISongInfo;
-  // songs: ISong[];
-  // setCurrentSong: (value: ISong) => void;
-  // setSongs: (value: ISong[]) => void;
-}
+import type { PlayerSongProps } from './types';
 
 export const PlayerSong: FC<PlayerSongProps> = ({
   // currentSong,

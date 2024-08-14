@@ -8,14 +8,7 @@ import { Typography, Player } from '@/components';
 import { radioConfig } from '@/utils';
 
 import styles from './radio.module.scss';
-
-interface RadioData {
-  name: string;
-  presenter: string;
-  date: string;
-  audio: string;
-  tracklist: string[];
-}
+import type { RadioData } from './types';
 
 const tp = new Typograf({ locale: ['ru', 'en-US'] });
 

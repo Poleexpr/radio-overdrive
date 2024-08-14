@@ -2,11 +2,7 @@ import classnames from 'classnames';
 import type { FC } from 'react';
 
 import styles from './burger.module.scss';
-
-interface BurgerProps {
-  isMenuOpen: boolean;
-  toggleNav: () => void;
-}
+import type { BurgerProps } from './types';
 
 export const Burger: FC<BurgerProps> = ({ toggleNav, isMenuOpen }) => {
   const menuOpen = isMenuOpen ? styles.menuOpen : '';

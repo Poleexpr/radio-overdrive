@@ -3,10 +3,7 @@ import type { FC } from 'react';
 import { Typography, LinkUnderline } from '@/components';
 
 import styles from './errorText.module.scss';
-
-interface ErrorTextProps {
-  link: string;
-}
+import type { ErrorTextProps } from './types';
 
 export const ErrorText: FC<ErrorTextProps> = ({ link }) => (
   <div className={styles.link_container}>

@@ -3,20 +3,10 @@
 import { useGSAP } from '@gsap/react';
 import classnames from 'classnames';
 import gsap from 'gsap';
-import { useRef, type FC, type ReactNode } from 'react';
+import { useRef, type FC } from 'react';
 
 import styles from './linkRectangle.module.scss';
-
-interface LinkRectangleProps {
-  children: ReactNode;
-  href: string;
-  className?: string;
-  isNewWindow?: boolean;
-  tl: gsap.core.Timeline | undefined;
-  mouseEnterHandler: (q: HTMLElement[]) => void;
-  mouseLeaveHandler: (q: HTMLElement[]) => void;
-  id: number;
-}
+import type { LinkRectangleProps } from './types';
 
 gsap.registerPlugin(useGSAP);
 // gsap.registerPlugin(EasePack);

@@ -15,7 +15,7 @@
       "yarn format",
       "yarn lint --fix"
     ],
-    "*.{css,sass}": [
+    "*.{css,scss}": [
       "stylelint --fix"
     ]
   },

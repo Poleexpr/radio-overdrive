@@ -8,14 +8,8 @@ import Typograf from 'typograf';
 import { Typography } from '@/components';
 import { podcastBlurData } from '@/utils/helpers';
 
-import type { ISong } from '../../app/ocapella/Ocapella';
-
 import styles from './player.module.scss';
-
-interface SongProps {
-  currentSong: ISong;
-  overSign: boolean;
-}
+import type { SongProps } from './types';
 
 const tp = new Typograf({ locale: ['ru', 'en-US'] });
 

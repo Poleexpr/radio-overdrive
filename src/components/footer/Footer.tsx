@@ -10,12 +10,9 @@ import {
 } from '@/components/icons';
 
 import styles from './footer.module.scss';
+import type { FooterProps } from './types';
 
 const currentYear = new Date().getFullYear();
-
-interface FooterProps {
-  id?: string;
-}
 
 export const Footer: FC<FooterProps> = ({ id }) => (
   <footer className={styles.footer} id={id}>

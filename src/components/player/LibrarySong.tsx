@@ -2,26 +2,13 @@
 
 import classnames from 'classnames';
 import Image from 'next/image';
-import type { FC, RefObject } from 'react';
+import type { FC } from 'react';
 
 import { Typography } from '@/components';
 import { podcastBlurData } from '@/utils/helpers';
 
-import type { ISong } from '../../app/ocapella/Ocapella';
-
 import styles from './player.module.scss';
-
-interface LibrarySongProps {
-  song: ISong;
-  songs: ISong[];
-  setCurrentSong: (value: ISong) => void;
-  audioRef: RefObject<HTMLAudioElement>;
-  isPlaying: boolean;
-  setIsPlaying: (value: boolean) => void;
-  setSongs: (value: ISong[]) => void;
-  id: string;
-  overSign: boolean;
-}
+import type { LibrarySongProps } from './types';
 
 export const LibrarySong: FC<LibrarySongProps> = ({
   song,

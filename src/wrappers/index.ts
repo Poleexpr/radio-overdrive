@@ -1,2 +1,2 @@
 export * from './AnimationTextWrapper';
-export * from './sceletonAbout';
+export * from './linkWrappers';

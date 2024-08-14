@@ -7,11 +7,7 @@ import Marquee from 'react-fast-marquee';
 import { IconEllipse } from '@/components/icons';
 
 import styles from './marqueeText.module.scss';
-
-interface MarqueeTextProps {
-  children: React.ReactNode;
-  className?: string;
-}
+import type { MarqueeTextProps } from './types';
 
 export const MarqueeText: FC<MarqueeTextProps> = ({ children, className }) => (
   <Marquee autoFill>
