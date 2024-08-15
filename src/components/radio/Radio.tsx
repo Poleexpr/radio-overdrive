@@ -42,7 +42,7 @@ export const Radio = () => {
                 isPlaying={isPlaying}
                 setIsPlaying={setIsPlaying}
               />
-              <audio ref={audioRef} loop>
+              <audio ref={audioRef} loop src={radioData?.audio}>
                 <track kind='captions' />
                 <source src={radioData?.audio} type='audio/mp3' />
               </audio>
