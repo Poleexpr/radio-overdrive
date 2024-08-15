@@ -47,12 +47,17 @@ export const ScheduleSlider = () => {
         </button>
       </div>
       <SplideTrack>
-        {Array.isArray(scheduleData) &&
-          scheduleData.map((info: ScheduleData, i) => (
-            <SplideSlide key={i}>
-              <ScheduleCard info={info} />
-            </SplideSlide>
-          ))}
+        {scheduleData && Array.isArray(scheduleData)
+          ? scheduleData.map((info: ScheduleData, i) => (
+              <SplideSlide key={i}>
+                <ScheduleCard info={info} />
+              </SplideSlide>
+            ))
+          : scheduleData && (
+              <SplideSlide>
+                <ScheduleCard info={scheduleData} />
+              </SplideSlide>
+            )}
       </SplideTrack>
     </Splide>
   );
