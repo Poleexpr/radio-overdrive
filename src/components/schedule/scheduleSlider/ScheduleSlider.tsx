@@ -3,11 +3,14 @@
 import { Splide, SplideTrack, SplideSlide } from '@splidejs/react-splide';
 import { useEffect, useState } from 'react';
 
+import { Typography } from '@/components';
 import { IconArrowNext, IconArrowPrev } from '@/components/icons';
 import { scheduleConfig } from '@/utils';
 
 import { ScheduleCard } from '../scheduleCard/ScheduleCard';
 import type { ScheduleData } from '../types';
+
+import styles from './scheduleSlider.module.scss';
 
 export const ScheduleSlider = () => {
   const [scheduleData, setScheduleInfo] = useState<ScheduleData | ScheduleData[] | null>(null);
@@ -19,6 +22,14 @@ export const ScheduleSlider = () => {
     // eslint-disable-next-line @typescript-eslint/no-floating-promises
     getScheduleData();
   }, []);
+
+  let firstSlide;
+  let allSlides;
+
+  if (scheduleData && Array.isArray(scheduleData)) {
+    firstSlide = scheduleData.slice(0, 1);
+    allSlides = scheduleData.slice(1);
+  }
 
   return (
     <Splide
@@ -48,19 +59,27 @@ export const ScheduleSlider = () => {
       </div>
       <SplideTrack>
         <SplideSlide>
-          <div>test</div>
+          <Typography className={styles.title} tag='h3' variant='title4'>
+            {firstSlide && firstSlide[0].day}
+          </Typography>
+          {firstSlide &&
+            firstSlide[0].schedule.map((item, i) => (
+              <div key={i} className={styles.card}>
+                <Typography className={styles.time} tag='p' variant='title5'>
+                  {item.time}
+                </Typography>
+                <Typography className={styles.name} tag='p' variant='text'>
+                  {item.event}
+                </Typography>
+              </div>
+            ))}
         </SplideSlide>
-        {scheduleData && Array.isArray(scheduleData)
-          ? scheduleData.map((info: ScheduleData, i) => (
-              <SplideSlide key={i}>
-                <ScheduleCard info={info} />
-              </SplideSlide>
-            ))
-          : scheduleData && (
-              <SplideSlide>
-                <ScheduleCard info={scheduleData} />
-              </SplideSlide>
-            )}
+        {allSlides &&
+          allSlides.map((info: ScheduleData, i) => (
+            <SplideSlide key={i}>
+              <ScheduleCard info={info} />
+            </SplideSlide>
+          ))}
       </SplideTrack>
     </Splide>
   );
