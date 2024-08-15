@@ -29,10 +29,11 @@ export const ScheduleSlider = () => {
         gap: '1rem',
         type: 'loop',
         focus: 'center',
-        perPage: 3,
+        perPage: 1,
+        mediaQuery: 'min',
         breakpoints: {
           1024: {
-            perPage: 1,
+            perPage: 3,
           },
         },
       }}
