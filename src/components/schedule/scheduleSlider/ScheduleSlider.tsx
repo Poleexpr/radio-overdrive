@@ -23,12 +23,15 @@ export const ScheduleSlider = () => {
     getScheduleData();
   }, []);
 
+  // solving the 'splide has no child at all' problem with the map method on android
   let firstSlide;
   let allSlides;
 
   if (scheduleData && Array.isArray(scheduleData)) {
-    firstSlide = scheduleData.slice(0, 1);
+    [firstSlide] = scheduleData.slice(0, 1);
     allSlides = scheduleData.slice(1);
+  } else if (scheduleData && !Array.isArray(scheduleData)) {
+    firstSlide = scheduleData;
   }
 
   return (
@@ -60,10 +63,10 @@ export const ScheduleSlider = () => {
       <SplideTrack>
         <SplideSlide>
           <Typography className={styles.title} tag='h3' variant='title4'>
-            {firstSlide && firstSlide[0].day}
+            {firstSlide && firstSlide.day}
           </Typography>
           {firstSlide &&
-            firstSlide[0].schedule.map((item, i) => (
+            firstSlide.schedule.map((item, i) => (
               <div key={i} className={styles.card}>
                 <Typography className={styles.time} tag='p' variant='title5'>
                   {item.time}
