@@ -47,6 +47,9 @@ export const ScheduleSlider = () => {
         </button>
       </div>
       <SplideTrack>
+        <SplideSlide>
+          <div>test</div>
+        </SplideSlide>
         {scheduleData && Array.isArray(scheduleData)
           ? scheduleData.map((info: ScheduleData, i) => (
               <SplideSlide key={i}>
