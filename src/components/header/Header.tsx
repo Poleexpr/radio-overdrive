@@ -65,7 +65,9 @@ export const Header = () => {
             aria-label='На главную'
             className={styles.logoMobile}
             href='/#welcome'
-            onClick={() => toggleNav()}
+            onClick={() => {
+              if (isMenuOpen) toggleNav();
+            }}
           >
             <IconLogoOverdrive />
           </Link>
