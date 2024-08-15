@@ -1,16 +1,15 @@
 'use client';
 
-import { Splide, SplideTrack, SplideSlide } from '@splidejs/react-splide';
+import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import { useEffect, useState } from 'react';
 
 import { Typography } from '@/components';
 import { IconArrowNext, IconArrowPrev } from '@/components/icons';
 import { scheduleConfig } from '@/utils';
 
-import { ScheduleCard } from '../scheduleCard/ScheduleCard';
-import type { ScheduleData } from '../types';
-
+import { ScheduleCard } from './ScheduleCard';
 import styles from './scheduleSlider.module.scss';
+import type { ScheduleData } from './types';
 
 export const ScheduleSlider = () => {
   const [scheduleData, setScheduleInfo] = useState<ScheduleData | ScheduleData[] | null>(null);

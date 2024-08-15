@@ -1,5 +1,5 @@
-import { ScheduleCard } from './scheduleCard/ScheduleCard';
-import { ScheduleSlider } from './scheduleSlider/ScheduleSlider';
+import { ScheduleCard } from './ScheduleCard';
+import { ScheduleSlider } from './ScheduleSlider';
 
 export const Schedule = {
   Card: ScheduleCard,
