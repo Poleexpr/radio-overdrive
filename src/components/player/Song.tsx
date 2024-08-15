@@ -20,6 +20,7 @@ export const Song: FC<SongProps> = ({ currentSong, overSign }) => (
       blurDataURL={podcastBlurData}
       className={styles.image}
       height={120}
+      layout='responsive'
       placeholder='blur'
       src={currentSong.cover}
       width={120}

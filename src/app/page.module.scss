@@ -107,7 +107,7 @@
   }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: $laptop-query) {
   .welcome {
     .container {
       padding-top: 200px;
@@ -121,7 +121,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: $tablet-query) {
   .welcome {
     .container {
       padding-top: 200px;
@@ -283,7 +283,7 @@
   }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: $laptop-query) {
   .about {
     .container {
       padding: 130px 0 0 0;
@@ -319,7 +319,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: $tablet-query) {
   .about {
     .container {
       padding: 110px 0 0 0;
@@ -380,6 +380,10 @@
       gap: 20px;
     }
 
+    .img_wrapper {
+      display: none;
+    }
+
     .img {
       display: none;
     }
@@ -416,7 +420,7 @@
   }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: $laptop-query) {
   .planet {
     .container {
       padding-top: 40px;
@@ -429,7 +433,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: $tablet-query) {
   .planet {
     .container {
       padding-top: 30px;
@@ -481,7 +485,7 @@
   }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: $laptop-query) {
   .program {
     .description_wrapper {
       margin-top: 110px;
@@ -493,7 +497,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: $tablet-query) {
   .program {
     .description_wrapper {
       margin-top: 40px;
@@ -505,7 +509,7 @@
   }
 }
 
-@media screen and (max-width: 744px) {
+@media screen and (max-width: $mobile-query) {
   .program {
     .description {
       width: 280px;
