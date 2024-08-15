@@ -61,7 +61,12 @@ export const Header = () => {
     <header className={styles.header} id='header'>
       <div ref={main} className={styles.wrapper}>
         <div className={styles.container}>
-          <Link aria-label='На главную' className={styles.logoMobile} href='/#welcome'>
+          <Link
+            aria-label='На главную'
+            className={styles.logoMobile}
+            href='/#welcome'
+            onClick={() => toggleNav()}
+          >
             <IconLogoOverdrive />
           </Link>
           <Nav ref={navRef} isMenuOpen={isMenuOpen} items={navItemsInfo} toggleNav={toggleNav} />
