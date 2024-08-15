@@ -330,14 +330,14 @@
   }
 }
 
-@media screen and (max-width: $mobile-query) {
+@media screen and (max-width: 900px) {
   .songContainer {
     grid-template-columns: 1fr;
     gap: 22px;
     margin-bottom: 5px;
 
-    .image {
-      width: 60%;
+    span {
+      width: 60% !important;
     }
 
     .date {
@@ -378,6 +378,7 @@
   }
 
   .library {
+    width: 85vw;
     height: 330px;
   }
 
