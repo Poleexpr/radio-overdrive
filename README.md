@@ -34,12 +34,12 @@ $ git clone https://github.com/Poleexpr/radio-overdrive.git
 
 # Install dependencies
 $ npm install
-  or
+# or
 $ yarn install
 
 # Run the app
 $ npm run dev
-  or
+# or
 $ yarn dev
 
 ```
